@@ -181,8 +181,8 @@
       {
         "id": "path-lm-Patient.PatientIdentification.CitizenServiceNumberStatus",
         "path": "path-lm-Patient.PatientIdentification.CitizenServiceNumberStatus",
-        "short": "Read only field used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is 'Onbekend'.",
-        "definition": "Read only field used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is 'Onbekend'.",
+        "short": "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is _Onbekend_.",
+        "definition": "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is _Onbekend_.",
         "alias": [
           "StatusBSN"
         ],
@@ -207,7 +207,7 @@
         "short": "Name of the patient.",
         "definition": "Name of the patient.",
         "alias": [
-          "Naamgegevens"
+          "Naam"
         ],
         "min": 0,
         "max": "1",
@@ -611,7 +611,7 @@
           {
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-102",
-            "comment": "geboorteland"
+            "comment": "datumoverlijden"
           }
         ]
       },
