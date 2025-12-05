@@ -11,6 +11,7 @@ Description: "TODO"
 * ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
 * ^abstract = true
+// Add cardinalities based on dataset, or add separate logical model for transaction
 * .
   * ^alias = "Patiënt"
 * PatientIdentification 0..1 BackboneElement "Information on patient identification."
@@ -24,10 +25,10 @@ Description: "TODO"
       * ^alias = "ExternPatiëntnummerLocatie"
   * CitizenServiceNumber 0..1 Identifier "The citizen service number (BSN) as introduced nationally."
     * ^alias = "BSN"
-  * CitizenServiceNumberStatus 0..1 code "Read only field used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is 'Onbekend'."
+  * CitizenServiceNumberStatus 0..1 code "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is _Onbekend_."
     * ^alias = "StatusBSN"
 * Name 0..1 BackboneElement "Name of the patient."
-  * ^alias = "Naamgegevens"
+  * ^alias = "Naam"
   * Initials 0..1 string "Initials of the patient in capitals, divided by dots."
     * ^alias = "Voorletters"
   * FamilyName 0..1 BackboneElement "Family name of the patient."
@@ -37,7 +38,7 @@ Description: "TODO"
     * LastName 0..1 string "Last name of the patient."
       * ^alias = "Achternaam"
 * Gender 0..1 code "Gender of the patient."
-* Gender from http://medmij.nl/fhir/ValueSet/Gender (required)
+* Gender from $GenderValueSetURL (required)
   * ^alias = "Geslacht"
 * BirthInformation 0..1 BackboneElement "Information on the birth of the patient."
   * BirthDate 0..1 dateTime "Birth date."
@@ -112,5 +113,5 @@ Title: "Mercurius Core Dataset 2.0"
   * PostalCode -> "mercurius-core-rubriek-20" "postcodebuitenland"
   * City -> "mercurius-core-rubriek-19" "woonplaats"
 * DeceaseInformation
-  * DeceaseDate -> "mercurius-core-rubriek-102" "geboorteland"
+  * DeceaseDate -> "mercurius-core-rubriek-102" "datumoverlijden"
   * DeceaseTime -> "mercurius-core-rubriek-103" "tijdoverlijden"
