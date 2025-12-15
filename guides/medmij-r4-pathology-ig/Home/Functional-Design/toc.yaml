@@ -1,0 +1,8 @@
+- name: Functioneel ontwerp
+  filename: Functional-design.page.md
+- name: Requirements
+  filename: Requirements.page.md
+- name: Weergaverichtlijn
+  filename: Display-guideline.page.md
+- name: Deduplicatierichtlijn
+  filename: Deduplication-guideline.page.md
