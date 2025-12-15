@@ -1,35 +1,31 @@
 // All custom ValueSets used in Pathology
 
-CodeSystem: Gender_CS
-Id: Gender
-Title: "Gender CodeSystem."
-Description: "Codes for the gender of the patient."
+ValueSet: MercuriusGender_VS
+Id: MercuriusGender
+Title: "MercuriusGender ValueSet."
+Description: "ValueSet for the gender of the patient as used in Mercurius."
 * insert DefaultNarrative
-* ^url = $GenderCodeSystemURL
+* ^url = $MercuriusGenderValueSetURL
 // * ^identifier.use = #official
 // * ^identifier.system = $URI
-// * ^identifier.value = $GenderCodeSystemOID
+// * ^identifier.value = $MercuriusGenderValueSetOID
 * ^name = "Gender"
 * ^status = #draft
 * ^experimental = false
 * insert PublisherAndContact
-* ^caseSensitive = false
-* ^content = #complete
-* ^count = 2
-* #m "Man"
-* #v "Vrouw"
+* include codes from system $MercuriusGenderCodeSystemURL
 
-ValueSet: Gender_VS
-Id: Gender
-Title: "Gender ValueSet."
-Description: "ValueSet for the gender of the patient."
+ValueSet: RequestType_VS
+Id: RequestType
+Title: "RequestType ValueSet."
+Description: "ValueSet for the type of the request."
 * insert DefaultNarrative
-* ^url = $GenderValueSetURL
+* ^url = $RequestTypeValueSetURL
 // * ^identifier.use = #official
 // * ^identifier.system = $URI
-// * ^identifier.value = $GenderValueSetOID
-* ^name = "Gender"
+// * ^identifier.value = $RequestTypeValueSetOID
+* ^name = "RequestType"
 * ^status = #draft
 * ^experimental = false
 * insert PublisherAndContact
-* include codes from system $GenderCodeSystemURL
+* include codes from system $RequestTypeCodeSystemURL

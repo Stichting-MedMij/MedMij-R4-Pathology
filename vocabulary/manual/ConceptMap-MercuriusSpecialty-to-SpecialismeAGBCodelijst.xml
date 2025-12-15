@@ -1,0 +1,307 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="MercuriusSpecialty-to-SpecialismeAGBCodelijst" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="false" />
+  </extension>
+  <url value="http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst" />
+  <name value="MercuriusSpecialty_to_SpecialismeAGBCodelijst" />
+  <title value="MercuriusSpecialty to SpecialismeAGBCodelijst" />
+  <status value="draft" />
+  <publisher value="MedMij" />
+  <contact>
+    <name value="MedMij" />
+    <telecom>
+      <system value="email" />
+      <value value="info@medmij.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Maps specialty codes as found in the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO) to the SpecialismeAGBCodelijst as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) HealthProfessional v3.5 (2020)](https://zibs.nl/wiki/HealthProfessional-v3.5(2020EN))." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="http://medmij.nl/fhir/ValueSet/MercuriusSpecialty" />
+  <targetCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.7--20200901000000" />
+  <group>
+    <source value="http://medmij.nl/fhir/CodeSystem/MercuriusSpecialty" />
+    <target value="urn:oid:2.16.840.1.113883.2.4.6.7" />
+    <element>
+      <code value="allergologie" />
+      <target>
+        <code value="0326" />
+        <display value="Medisch specialisten, allergologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="anesthesiologie" />
+      <target>
+        <code value="0389" />
+        <display value="Anesthesiologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="cardiologie" />
+      <target>
+        <code value="0320" />
+        <display value="Medisch specialisten, cardiologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="cardiopulmonale chirurgie" />
+      <target>
+        <code value="0328" />
+        <display value="Medisch specialisten, cardio thoracale chirurgie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="dermatologie" />
+      <target>
+        <code value="0310" />
+        <display value="Dermatologie en Venerologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="gastro-enterologie" />
+      <target>
+        <code value="0318" />
+        <display value="Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="heelkunde" />
+      <target>
+        <code value="0303" />
+        <display value="Chirurgie (Heelkunde)" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="huisarts" />
+      <target>
+        <code value="0101" />
+        <display value="Huisarts" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="inwendige geneeskunde" />
+      <target>
+        <code value="0313" />
+        <display value="Interne geneeskunde" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="keel, neus, oorheelkunde" />
+      <target>
+        <code value="0302" />
+        <display value="Medisch specialisten, keel-, neus- en oorheelkunde" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="kindergeneeskunde" />
+      <target>
+        <code value="0316" />
+        <display value="Medisch specialisten, kindergeneeskunde" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="klinische chemie" />
+      <target>
+        <code value="0386" />
+        <display value="Medisch specialisten, klinische chemie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="klinische genetica" />
+      <target>
+        <code value="0390" />
+        <display value="Medisch specialisten, klinische genetica" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="klinische geriatrie" />
+      <target>
+        <code value="0335" />
+        <display value="Medisch specialisten, geriatrie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="longziekten" />
+      <target>
+        <code value="0322" />
+        <display value="Medisch specialisten, longziekten" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="medische microbiologie" />
+      <target>
+        <code value="0387" />
+        <display value="Medisch specialisten, medische microbiologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="mondziekte, kaakchirurgie" />
+      <target>
+        <code value="1100" />
+        <display value="Tandartsspecialisten mondziekten en kaakchirurgie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="neurochirurgie" />
+      <target>
+        <code value="0308" />
+        <display value="Medisch specialisten, neurochirurgie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="neurologie" />
+      <target>
+        <code value="0330" />
+        <display value="Medisch specialisten, neurologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="nucleaire geneeskunde" />
+      <target>
+        <code value="0363" />
+        <display value="Medisch specialisten, nucleaire geneeskunde" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="oogheelkunde" />
+      <target>
+        <code value="0301" />
+        <display value="Medisch specialisten, oogheelkunde" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="orthodontie" />
+      <target>
+        <code value="1300" />
+        <display value="Tandartsspecialisten dentomaxillaire orthopaedie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="orthopedie" />
+      <target>
+        <code value="0305" />
+        <display value="Medisch specialisten, orthopedie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="overige specialismen" />
+      <target>
+        <code value="0300" />
+        <display value="Medisch specialisten, niet nader gespecificeerd" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="pathologische anatomie" />
+      <target>
+        <code value="0388" />
+        <display value="Medisch specialisten, pathologische anatomie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="plastische chirurgie" />
+      <target>
+        <code value="0304" />
+        <display value="Medisch specialisten, plastische chirurgie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="psychiatrie" />
+      <target>
+        <code value="0329" />
+        <display value="Medisch specialisten, psychiatrie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="radiodiagnostiek" />
+      <target>
+        <code value="0360" />
+        <display value="Medisch specialisten, radiologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="radiotherapie" />
+      <target>
+        <code value="0361" />
+        <display value="Medisch specialisten, radiotherapie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="reumatologie" />
+      <target>
+        <code value="0324" />
+        <display value="Medisch specialisten, reumatologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="revalidatie" />
+      <target>
+        <code value="0327" />
+        <display value="Medisch specialisten, revalidatie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="urologie" />
+      <target>
+        <code value="0306" />
+        <display value="Medisch specialisten, urologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="verloskunde, gynaecologie" />
+      <target>
+        <code value="0307" />
+        <display value="Medisch specialisten, obstetrie en gynaecologie" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://medmij.nl/fhir/CodeSystem/MercuriusSpecialty" />
+    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor" />
+    <element>
+      <code value="specialisme onbekend" />
+      <target>
+        <code value="UNK" />
+        <display value="unknown" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

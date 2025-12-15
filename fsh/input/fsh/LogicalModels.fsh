@@ -38,7 +38,7 @@ Description: "TODO"
     * LastName 0..1 string "Last name of the patient."
       * ^alias = "Achternaam"
 * Gender 0..1 code "Gender of the patient."
-* Gender from $GenderValueSetURL (required)
+* Gender from $MercuriusGenderValueSetURL (required)
   * ^alias = "Geslacht"
 * BirthInformation 0..1 BackboneElement "Information on the birth of the patient."
   * BirthDate 0..1 dateTime "Birth date."
@@ -78,6 +78,44 @@ Description: "TODO"
   * DeceaseTime 0..1 time "Time of decease."
     * ^alias = "TijdOverlijden"
 
+Logical: LmRequest
+Parent: http://hl7.org/fhir/StructureDefinition/Element
+Id: path-lm-Request
+Title: "Request"
+Description: "TODO"
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
+* insert Copyright
+* ^abstract = true
+// Add cardinalities based on dataset, or add separate logical model for transaction
+* .
+  * ^alias = "Aanvraag"
+* RequestType 0..1 CodeableConcept "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab. Default when empty is _normaal_."
+  * ^alias = "SoortAanvraag"
+* Requester 0..1 BackboneElement "Requester of the pathology study."
+  * ^alias = "Aanvrager"
+  * Code 0..1 CodeableConcept "Code of requester."
+    * ^alias = "Code"
+    * ^comment = "For _electronic consult report_, the LabID of the requesting lab must be used."
+  * Name 0..1 string "Name of the requester."
+    * ^alias = "Naam"
+  * Specialty 0..1 CodeableConcept "Specialty of the requester."
+    * ^alias = "Specialisme"
+  * Location 0..1 string "Location of requesting institute."
+    * ^alias = "Locatie"
+* Specimen 0..1 BackboneElement "Specimen that will be examined by a laboratory."
+  * ^alias = "Monster"
+  * SpecimenMaterial 0..1 CodeableConcept "Type of specimen."
+    * ^alias = "AardMateriaal"
+  * CollectionDate 0..1 date "Date when specimen is taken from patient."
+    * ^alias = "DatumAfname"
+  * ReceivedDate 0..1 date "Date when specimen is received at the laboratory."
+    * ^alias = "DatumOntvangst"
+  * CollectionMethod 0..1 CodeableConcept "The way the specimen is collected (biopsy, resection, etc.)."
+    * ^alias = "Verkrijgingswijze"
+
 Mapping: LmPatientMercuriusCore
 Source: LmPatient
 Target: "TODO"
@@ -115,3 +153,20 @@ Title: "Mercurius Core Dataset 2.0"
 * DeceaseInformation
   * DeceaseDate -> "mercurius-core-rubriek-102" "datumoverlijden"
   * DeceaseTime -> "mercurius-core-rubriek-103" "tijdoverlijden"
+
+Mapping: LmRequestMercuriusCore
+Source: LmRequest
+Target: "TODO"
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* RequestType -> "mercurius-core-rubriek-89" "soortaanvraag"
+* Requester
+  * Code -> "mercurius-core-rubriek-66" "codeaanvrager"
+  * Name -> "mercurius-core-rubriek-68" "aanvrager"
+  * Specialty -> "mercurius-core-rubriek-71" "specialisme"
+  * Location -> "mercurius-core-rubriek-67" "locatie"
+* Specimen
+  * SpecimenMaterial -> "mercurius-core-rubriek-76" "aardmateriaal"
+  * CollectionDate -> "mercurius-core-rubriek-77" "datumafname"
+  * ReceivedDate -> "mercurius-core-rubriek-80" "datumontvangst"
+  * CollectionMethod -> "mercurius-core-rubriek-87" "verkrijgingswijze"
