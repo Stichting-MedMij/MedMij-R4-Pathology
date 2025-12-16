@@ -5,27 +5,53 @@ Id: MercuriusGender
 Title: "MercuriusGender ValueSet."
 Description: "ValueSet for the gender of the patient as used in Mercurius."
 * insert DefaultNarrative
-* ^url = $MercuriusGenderValueSetURL
 // * ^identifier.use = #official
 // * ^identifier.system = $URI
 // * ^identifier.value = $MercuriusGenderValueSetOID
-* ^name = "Gender"
+* ^name = "MercuriusGender"
 * ^status = #draft
 * ^experimental = false
 * insert PublisherAndContact
-* include codes from system $MercuriusGenderCodeSystemURL
+* include codes from system MercuriusGender_CS
 
-ValueSet: RequestType_VS
-Id: RequestType
-Title: "RequestType ValueSet."
-Description: "ValueSet for the type of the request."
+ValueSet: MercuriusHealthScreeningType_VS
+Id: MercuriusHealthScreeningType
+Title: "MercuriusHealthScreeningType ValueSet."
+Description: "ValueSet for the type of national trial for the request as used in Mercurius."
 * insert DefaultNarrative
-* ^url = $RequestTypeValueSetURL
 // * ^identifier.use = #official
 // * ^identifier.system = $URI
-// * ^identifier.value = $RequestTypeValueSetOID
-* ^name = "RequestType"
+// * ^identifier.value = $MercuriusHealthScreeningTypeValueSetOID
+* ^name = "MercuriusHealthScreeningType"
 * ^status = #draft
 * ^experimental = false
 * insert PublisherAndContact
-* include codes from system $RequestTypeCodeSystemURL
+* include codes from system MercuriusHealthScreeningType_CS
+
+ValueSet: MercuriusRequestType_VS
+Id: MercuriusRequestType
+Title: "MercuriusRequestType ValueSet."
+Description: "ValueSet for the type of the request as used in Mercurius."
+* insert DefaultNarrative
+// * ^identifier.use = #official
+// * ^identifier.system = $URI
+// * ^identifier.value = $MercuriusRequestTypeValueSetOID
+* ^name = "MercuriusRequestType"
+* ^status = #draft
+* ^experimental = false
+* insert PublisherAndContact
+* include codes from system MercuriusRequestType_CS
+
+ValueSet: MercuriusSpecialty_VS
+Id: MercuriusSpecialty
+Title: "MercuriusSpecialty ValueSet."
+Description: "ValueSet for the type of the request as used in Mercurius."
+* insert DefaultNarrative
+// * ^identifier.use = #official
+// * ^identifier.system = $URI
+// * ^identifier.value = $MercuriusSpecialtyValueSetOID
+* ^name = "MercuriusSpecialty"
+* ^status = #draft
+* ^experimental = false
+* insert PublisherAndContact
+* include codes from system MercuriusSpecialty_CS

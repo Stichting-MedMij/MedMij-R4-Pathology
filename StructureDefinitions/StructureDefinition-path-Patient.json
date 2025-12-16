@@ -303,13 +303,13 @@
             }
           ],
           "strength": "required",
-          "description": "Use ConceptMap Gender-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender.",
+          "description": "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender.",
           "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1",
           "_valueSet": {
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
-                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/Gender-to-AdministrativeGender"
+                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
               }
             ]
           }

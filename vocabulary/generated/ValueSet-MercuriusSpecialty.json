@@ -1,22 +1,11 @@
 {
-  "resourceType": "CodeSystem",
+  "resourceType": "ValueSet",
   "status": "draft",
-  "content": "complete",
-  "name": "Gender",
-  "id": "Gender",
-  "title": "Gender CodeSystem.",
-  "description": "Codes for the gender of the patient.",
-  "url": "http://medmij.nl/fhir/CodeSystem/Gender",
-  "concept": [
-    {
-      "code": "m",
-      "display": "Man"
-    },
-    {
-      "code": "v",
-      "display": "Vrouw"
-    }
-  ],
+  "name": "MercuriusSpecialty",
+  "id": "MercuriusSpecialty",
+  "title": "MercuriusSpecialty ValueSet.",
+  "description": "ValueSet for the type of the request as used in Mercurius.",
+  "url": "http://medmij.nl/fhir/ValueSet/MercuriusSpecialty",
   "text": {
     "status": "empty",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
@@ -35,6 +24,11 @@
       ]
     }
   ],
-  "caseSensitive": false,
-  "count": 2
+  "compose": {
+    "include": [
+      {
+        "system": "http://medmij.nl/fhir/CodeSystem/MercuriusSpecialty"
+      }
+    ]
+  }
 }

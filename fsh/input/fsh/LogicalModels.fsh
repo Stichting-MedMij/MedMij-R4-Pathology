@@ -25,8 +25,10 @@ Description: "TODO"
       * ^alias = "ExternPatiëntnummerLocatie"
   * CitizenServiceNumber 0..1 Identifier "The citizen service number (BSN) as introduced nationally."
     * ^alias = "BSN"
-  * CitizenServiceNumberStatus 0..1 code "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is _Onbekend_."
+  * CitizenServiceNumberStatus 0..1 code "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available."
+  // Specify ValueSet
     * ^alias = "StatusBSN"
+    * ^comment = "Default when empty is _Onbekend_."
 * Name 0..1 BackboneElement "Name of the patient."
   * ^alias = "Naam"
   * Initials 0..1 string "Initials of the patient in capitals, divided by dots."
@@ -38,7 +40,7 @@ Description: "TODO"
     * LastName 0..1 string "Last name of the patient."
       * ^alias = "Achternaam"
 * Gender 0..1 code "Gender of the patient."
-* Gender from $MercuriusGenderValueSetURL (required)
+* Gender from MercuriusGender_VS (required)
   * ^alias = "Geslacht"
 * BirthInformation 0..1 BackboneElement "Information on the birth of the patient."
   * BirthDate 0..1 dateTime "Birth date."
@@ -60,14 +62,13 @@ Description: "TODO"
     * ^alias = "Straat"
   * HouseNumber 0..1 string "House number of the address."
     * ^alias = "Huisnummer"
-  * PostalCode 0..1 string "Postal code, either Dutch or foreign." """
-    Postal code, either Dutch or foreign.
-    
+  * PostalCode 0..1 string "Postal code, either Dutch or foreign."
+    * ^alias = "Postcode"
+    * ^comment = """
     Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy 0000 XX is used.
     
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy 0009 XX is used.
     """
-    * ^alias = "Postcode"
   * City 0..1 CodeableConcept "Place name."
   // * City from GBA33 (required) // Binding needs to be checked
     * ^alias = "Woonplaats"
@@ -89,31 +90,41 @@ Description: "TODO"
 * ^purpose = "This LogicalModel represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
 * ^abstract = true
-// Add cardinalities based on dataset, or add separate logical model for transaction
+// Add cardinalities based on dataset, or add separate logical model for transaction?
 * .
   * ^alias = "Aanvraag"
-* RequestType 0..1 CodeableConcept "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab. Default when empty is _normaal_."
+* RequestType 0..1 CodeableConcept "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab."
+* RequestType from MercuriusRequestType_VS (required)
   * ^alias = "SoortAanvraag"
+  * ^comment = "Default when empty is _normaal_."
+* HealthScreeningType 0..1 CodeableConcept "Type of national trial for this request." // Tweak description
+* HealthScreeningType from MercuriusHealthScreeningType_VS (required)
+  * ^alias = "BVOSoort"
+  * ^comment = "Obligatory if request is national trail. For cervical cancer trail this will be derived by (Core)U-DPS from 'cr_aanleiding'. Default _0_ or empty if not a national trial."
 * Requester 0..1 BackboneElement "Requester of the pathology study."
   * ^alias = "Aanvrager"
   * Code 0..1 CodeableConcept "Code of requester."
+  // Specify ValueSet
     * ^alias = "Code"
     * ^comment = "For _electronic consult report_, the LabID of the requesting lab must be used."
   * Name 0..1 string "Name of the requester."
     * ^alias = "Naam"
   * Specialty 0..1 CodeableConcept "Specialty of the requester."
+  * Specialty from MercuriusSpecialty_VS (required)
     * ^alias = "Specialisme"
   * Location 0..1 string "Location of requesting institute."
     * ^alias = "Locatie"
 * Specimen 0..1 BackboneElement "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
   * SpecimenMaterial 0..1 CodeableConcept "Type of specimen."
+  // Specify ValueSet
     * ^alias = "AardMateriaal"
   * CollectionDate 0..1 date "Date when specimen is taken from patient."
     * ^alias = "DatumAfname"
   * ReceivedDate 0..1 date "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
   * CollectionMethod 0..1 CodeableConcept "The way the specimen is collected (biopsy, resection, etc.)."
+  // Specify ValueSet
     * ^alias = "Verkrijgingswijze"
 
 Mapping: LmPatientMercuriusCore
@@ -160,6 +171,7 @@ Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * RequestType -> "mercurius-core-rubriek-89" "soortaanvraag"
+* HealthScreeningType -> "mercurius-core-rubriek-97" "bvosoort"
 * Requester
   * Code -> "mercurius-core-rubriek-66" "codeaanvrager"
   * Name -> "mercurius-core-rubriek-68" "aanvrager"
