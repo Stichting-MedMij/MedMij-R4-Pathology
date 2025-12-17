@@ -377,11 +377,6 @@
       {
         "id": "Patient.address.line.extension:streetName.value[x]",
         "path": "Patient.address.line.extension.value[x]",
-        "short": "BirthDate",
-        "definition": "Birth date.",
-        "alias": [
-          "Geboortedatum"
-        ],
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -398,11 +393,6 @@
       {
         "id": "Patient.address.line.extension:houseNumber.value[x]",
         "path": "Patient.address.line.extension.value[x]",
-        "short": "BirthDate",
-        "definition": "Birth date.",
-        "alias": [
-          "Geboortedatum"
-        ],
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -414,10 +404,10 @@
       {
         "id": "Patient.address.city",
         "path": "Patient.address.city",
-        "short": "BirthDate",
-        "definition": "Birth date.",
+        "short": "City",
+        "definition": "Place name.",
         "alias": [
-          "Geboortedatum",
+          "Woonplaats",
           "Woonplaats"
         ],
         "min": 1,
@@ -432,10 +422,11 @@
       {
         "id": "Patient.address.postalCode",
         "path": "Patient.address.postalCode",
-        "short": "BirthDate",
-        "definition": "Birth date.",
+        "short": "PostalCode",
+        "definition": "Postal code, either Dutch or foreign.",
+        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy 0000 XX is used.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy 0009 XX is used.",
         "alias": [
-          "Geboortedatum",
+          "Postcode",
           "Postcode"
         ],
         "mapping": [

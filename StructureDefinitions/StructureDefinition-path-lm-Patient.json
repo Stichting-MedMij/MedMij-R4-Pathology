@@ -486,8 +486,8 @@
       {
         "id": "path-lm-Patient.Address.Street",
         "path": "path-lm-Patient.Address.Street",
-        "short": "Street name of the address..",
-        "definition": "Street name of the address..",
+        "short": "Street name of the address.",
+        "definition": "Street name of the address.",
         "alias": [
           "Straat"
         ],

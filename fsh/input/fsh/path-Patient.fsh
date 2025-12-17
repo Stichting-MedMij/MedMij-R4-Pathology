@@ -38,7 +38,8 @@ Description: "TO DO"
   // * extension[http://medmij.nl/fhir/StructureDefinition/ext-CitizenServiceNumberStatus]
   //  * valueCodeableConcept
   //    * ^short = "CitizenServiceNumberStatus"
-  //    * ^definition = "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available. Default when empty is _Onbekend_."
+  //    * ^definition = "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available."
+  //    * ^comment = "Default when empty is _Onbekend_."
   //    * ^alias = "StatusBSN"
 * identifier[patientNumber]
   * ^short = "PatientNumber"
@@ -94,22 +95,27 @@ Description: "TO DO"
   * line
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName]
       * valueString
-        * ^short = "BirthDate"
-        * ^definition = "Birth date."
-        * ^alias = "Geboortedatum"
+        * ^short = "Street"
+        * ^definition = "Street name of the address."
+        * ^alias = "Straat"
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber]
       * valueString
-        * ^short = "BirthDate"
-        * ^definition = "Birth date."
-        * ^alias = "Geboortedatum"
+        * ^short = "HouseNumber"
+        * ^definition = "House number of the address."
+        * ^alias = "Huisnummer"
   * city 1..1
-    * ^short = "BirthDate"
-    * ^definition = "Birth date."
-    * ^alias = "Geboortedatum"
+    * ^short = "City"
+    * ^definition = "Place name."
+    * ^alias = "Woonplaats"
   * postalCode
-    * ^short = "BirthDate"
-    * ^definition = "Birth date."
-    * ^alias = "Geboortedatum"
+    * ^short = "PostalCode"
+    * ^definition = "Postal code, either Dutch or foreign."
+    * ^comment = """
+    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy 0000 XX is used.
+    
+    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy 0009 XX is used.
+    """
+    * ^alias = "Postcode"
 
 Mapping: PathPatientMercuriusCore
 Source: PathPatient
