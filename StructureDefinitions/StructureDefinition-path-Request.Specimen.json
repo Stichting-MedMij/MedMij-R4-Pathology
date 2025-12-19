@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-Request.Specimen",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen",
+  "name": "PathRequestSpecimen",
+  "title": "path Request.Specimen",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "TO DO",
+  "purpose": "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Specimen",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Specimen",
+        "path": "Specimen",
+        "short": "Specimen",
+        "definition": "Specimen that will be examined by a laboratory.",
+        "alias": [
+          "Monster"
+        ]
+      },
+      {
+        "id": "Specimen.type",
+        "path": "Specimen.type",
+        "short": "SpecimenMaterial",
+        "definition": "Type of specimen.",
+        "alias": [
+          "AardMateriaal"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-76",
+            "comment": "aardmateriaal"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.subject",
+        "path": "Specimen.subject",
+        "short": "Patient",
+        "alias": [
+          "Patiënt"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://medmij.nl/fhir/StructureDefinition/path-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Specimen.receivedTime",
+        "path": "Specimen.receivedTime",
+        "short": "ReceivedDate",
+        "definition": "Date when specimen is received at the laboratory.",
+        "alias": [
+          "DatumOntvangst"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-80",
+            "comment": "datumontvangst"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.collection.collected[x]",
+        "path": "Specimen.collection.collected[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Specimen.collection.collected[x]:collectedDateTime",
+        "path": "Specimen.collection.collected[x]",
+        "sliceName": "collectedDateTime",
+        "short": "CollectionDate",
+        "definition": "Date when specimen is taken from patient.",
+        "alias": [
+          "DatumAfname"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-77",
+            "comment": "datumafname"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.collection.method",
+        "path": "Specimen.collection.method",
+        "short": "CollectionMethod",
+        "definition": "The way the specimen is collected (biopsy, resection, etc.).",
+        "alias": [
+          "Verkrijgingswijze"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-87",
+            "comment": "verkrijgingswijze"
+          }
+        ]
+      }
+    ]
+  }
+}

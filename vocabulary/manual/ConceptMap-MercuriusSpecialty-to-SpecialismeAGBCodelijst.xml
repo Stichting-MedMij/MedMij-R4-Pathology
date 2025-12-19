@@ -292,7 +292,7 @@
       </target>
     </element>
   </group>
-  <group>
+  <!-- <group>
     <source value="http://medmij.nl/fhir/CodeSystem/MercuriusSpecialty" />
     <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor" />
     <element>
@@ -303,5 +303,5 @@
         <equivalence value="equal" />
       </target>
     </element>
-  </group>
+  </group> -->
 </ConceptMap>
