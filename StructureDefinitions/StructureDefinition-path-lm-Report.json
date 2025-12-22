@@ -1,0 +1,208 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-lm-Report",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-lm-Report",
+  "name": "LmReport",
+  "title": "Report",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "TODO",
+  "purpose": "This LogicalModel represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
+    }
+  ],
+  "kind": "logical",
+  "abstract": true,
+  "type": "http://medmij.nl/fhir/StructureDefinition/path-lm-Report",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "path-lm-Report",
+        "path": "path-lm-Report",
+        "short": "Report",
+        "definition": "TODO",
+        "alias": [
+          "Verslag"
+        ]
+      },
+      {
+        "id": "path-lm-Report.Pathologist",
+        "path": "path-lm-Report.Pathologist",
+        "short": "Responsible pathologist who has to authorise the report.",
+        "definition": "Responsible pathologist who has to authorise the report.",
+        "alias": [
+          "Patholoog"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Pathologist.PathologistCode",
+        "path": "path-lm-Report.Pathologist.PathologistCode",
+        "short": "Code for the responsible pathologist who has to authorise the report.",
+        "definition": "Code for the responsible pathologist who has to authorise the report.",
+        "alias": [
+          "PatholoogCode"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-37",
+            "comment": "codepatholoog"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Pathologist.PathologistName",
+        "path": "path-lm-Report.Pathologist.PathologistName",
+        "short": "Name (expanded code) for the responsible pathologist who has to authorise the report.",
+        "definition": "Name (expanded code) for the responsible pathologist who has to authorise the report.",
+        "alias": [
+          "PatholoogNaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-38",
+            "comment": "patholoog"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Authorizer",
+        "path": "path-lm-Report.Authorizer",
+        "short": "Name of the pathologist who has authorized the report.",
+        "definition": "Name of the pathologist who has authorized the report.",
+        "alias": [
+          "Autorisator"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-41",
+            "comment": "autorisator"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.AuthorizationDate",
+        "path": "path-lm-Report.AuthorizationDate",
+        "short": "Date of authorization.",
+        "definition": "Date of authorization.",
+        "alias": [
+          "DatumAutorisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-44",
+            "comment": "datumautorisatie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.FirstAuthorizationDate",
+        "path": "path-lm-Report.FirstAuthorizationDate",
+        "short": "Date of first authorization. Not to be overwritten when authorized again.",
+        "definition": "Date of first authorization. Not to be overwritten when authorized again.",
+        "alias": [
+          "DatumEersteAutorisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-47",
+            "comment": "datumeersteautorisatie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Conclusion",
+        "path": "path-lm-Report.Conclusion",
+        "short": "Conclusion of the report.",
+        "definition": "Conclusion of the report.",
+        "alias": [
+          "Conclusie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-224",
+            "comment": "conclusie"
+          }
+        ]
+      }
+    ]
+  }
+}

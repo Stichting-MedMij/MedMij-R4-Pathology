@@ -129,6 +129,35 @@ Description: "TODO"
   // Specify ValueSet
     * ^alias = "Verkrijgingswijze"
 
+Logical: LmReport
+Parent: http://hl7.org/fhir/StructureDefinition/Element
+Id: path-lm-Report
+Title: "Report"
+Description: "TODO"
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
+* insert Copyright
+* ^abstract = true
+// Add cardinalities based on dataset, or add separate logical model for transaction?
+* .
+  * ^alias = "Verslag"
+* Pathologist 0..1 BackboneElement "Responsible pathologist who has to authorise the report."
+  * ^alias = "Patholoog"
+  * PathologistCode 0..1 string "Code for the responsible pathologist who has to authorise the report."
+    * ^alias = "PatholoogCode"
+  * PathologistName 0..1 string "Name (expanded code) for the responsible pathologist who has to authorise the report."
+    * ^alias = "PatholoogNaam"
+* Authorizer 0..1 string "Name of the pathologist who has authorized the report."
+  * ^alias = "Autorisator"
+* AuthorizationDate 0..1 date "Date of authorization."
+  * ^alias = "DatumAutorisatie"
+* FirstAuthorizationDate 0..1 date "Date of first authorization. Not to be overwritten when authorized again."
+  * ^alias = "DatumEersteAutorisatie"
+* Conclusion 0..1 string "Conclusion of the report."
+  * ^alias = "Conclusie"
+
 Mapping: LmPatientMercuriusCore
 Source: LmPatient
 Target: "TODO"
@@ -185,3 +214,16 @@ Title: "Mercurius Core Dataset 2.0"
   * CollectionDate -> "mercurius-core-rubriek-77" "datumafname"
   * ReceivedDate -> "mercurius-core-rubriek-80" "datumontvangst"
   * CollectionMethod -> "mercurius-core-rubriek-87" "verkrijgingswijze"
+
+Mapping: LmReportMercuriusCore
+Source: LmReport
+Target: "TODO"
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* Pathologist
+  * PathologistCode -> "mercurius-core-rubriek-37" "codepatholoog"
+  * PathologistName -> "mercurius-core-rubriek-38" "patholoog"
+* Authorizer -> "mercurius-core-rubriek-41" "autorisator"
+* AuthorizationDate -> "mercurius-core-rubriek-44" "datumautorisatie"
+* FirstAuthorizationDate -> "mercurius-core-rubriek-47" "datumeersteautorisatie"
+* Conclusion -> "mercurius-core-rubriek-224" "conclusie"

@@ -1,0 +1,232 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-Report",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Report",
+  "name": "PathReport",
+  "title": "path Report",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "TO DO",
+  "purpose": "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "Report",
+        "definition": "TO DO",
+        "alias": [
+          "Verslag",
+          "Test",
+          "Result",
+          "Results",
+          "Labs",
+          "Laboratory"
+        ],
+        "constraint": [
+          {
+            "key": "path-Report-1",
+            "severity": "error",
+            "human": "The status of a report is either 'final' or 'amended'.",
+            "expression": "status = 'final' or status = 'amended'",
+            "source": "http://medmij.nl/fhir/StructureDefinition/path-Report"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://medmij.nl/fhir/StructureDefinition/path-Request"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "comment": "For reports that have been authorized only one, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used.",
+        "condition": [
+          "path-Report-1"
+        ]
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "short": "Patient",
+        "alias": [
+          "Patiënt"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://medmij.nl/fhir/StructureDefinition/path-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DiagnosticReport.effective[x]:effectivePeriod",
+        "path": "DiagnosticReport.effective[x]",
+        "sliceName": "effectivePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]:effectivePeriod.start",
+        "path": "DiagnosticReport.effective[x].start",
+        "short": "ReceivedDate",
+        "definition": "Date when specimen is received at the laboratory.",
+        "alias": [
+          "DatumOntvangst"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-80",
+            "comment": "datumontvangst"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]:effectivePeriod.end",
+        "path": "DiagnosticReport.effective[x].end",
+        "short": "AuthorizationDate / FirstAuthorizationDate",
+        "definition": "Date of authorization.",
+        "comment": "In case a report has been authorized only one, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and the Report.FirstAuthorizationDate extension is optional. If a report is autorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension.",
+        "alias": [
+          "DatumEersteAutorisatie"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-44",
+            "comment": "datumautorisatie"
+          },
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-47",
+            "comment": "datumeersteautorisatie"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "short": "Authorizer",
+        "definition": "Name of the pathologist who has authorized the report.",
+        "alias": [
+          "Autorisator",
+          "Reported by"
+        ],
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-41",
+            "comment": "autorisator (implicit, main mapping is on Practitioner.name)"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "short": "Specimen",
+        "definition": "Specimen that will be examined by a laboratory.",
+        "alias": [
+          "Monster"
+        ],
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.conclusion",
+        "path": "DiagnosticReport.conclusion",
+        "short": "Conclusion",
+        "definition": "Conclusion of the report.",
+        "alias": [
+          "Conclusie"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-224",
+            "comment": "conclusie"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -95,7 +95,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
-                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/SpecialismeAGBCodelijst"
+                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst"
               }
             ]
           }
