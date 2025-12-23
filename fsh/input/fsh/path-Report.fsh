@@ -4,7 +4,7 @@ Profile: PathReport
 Parent: DiagnosticReport
 Id: path-Report
 Title: "path Report"
-Description: "TO DO"
+Description: "Pathology report which contains the findings and interpretation of a pathology study."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -12,7 +12,7 @@ Description: "TO DO"
 * insert Copyright
 * . obeys path-Report-1
   * ^short = "Report"
-  * ^definition = "TO DO"
+  * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
 * extension contains ExtReportFirstAuthorizationDate named firstAuthorizationDate 0..1
 * basedOn 1..*
@@ -32,15 +32,16 @@ Description: "TO DO"
   * end
     * ^short = "AuthorizationDate / FirstAuthorizationDate"
     * ^definition = "Date of authorization."
-    * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and the Report.FirstAuthorizationDate extension is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension."
+    * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and `.extension:firstAuthorizationDate` is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension."
     * ^alias[0] = "DatumAutorisatie"
-    * ^alias[0] = "DatumEersteAutorisatie"
+    * ^alias[1] = "DatumEersteAutorisatie"
 * resultsInterpreter only Reference(Practitioner or PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   // Mapping naar Pathologist toevoegen, inclusief comment over mapping (i.e. alleen als Autorisator leeg is)
   * ^short = "Authorizer"
   * ^definition = "Name of the pathologist who has authorized the report."
+  * ^comment = "The actual mapping of the Authorizer concept is on `Practitioner.name[nameInformation].text`."
   * ^alias = "Autorisator"
-  * ^comment = "The actual mapping of the Authorizer concept is on `Practitioner.name[nameInformation].text`." // If Authorizer is empty, fall back on Pathologist?
+* specimen 1..*
 * specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."

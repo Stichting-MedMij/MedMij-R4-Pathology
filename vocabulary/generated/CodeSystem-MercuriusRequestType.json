@@ -9,43 +9,43 @@
   "url": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
   "concept": [
     {
-      "code": "1",
+      "code": "normaal",
       "display": "normaal"
     },
     {
-      "code": "2",
+      "code": "spoed",
       "display": "spoed"
     },
     {
-      "code": "3",
+      "code": "advies",
       "display": "advies"
     },
     {
-      "code": "4",
+      "code": "panel",
       "display": "panel"
     },
     {
-      "code": "5",
+      "code": "consult tbv derden",
       "display": "consult tbv derden"
     },
     {
-      "code": "6",
+      "code": "revisie tbv derden",
       "display": "revisie tbv derden"
     },
     {
-      "code": "7",
+      "code": "moleculair onderzoek",
       "display": "moleculair onderzoek"
     },
     {
-      "code": "8",
+      "code": "project",
       "display": "project"
     },
     {
-      "code": "9",
+      "code": "oud",
       "display": "oud"
     },
     {
-      "code": "10",
+      "code": "onderzoek tbv derden",
       "display": "onderzoek tbv derden"
     }
   ],

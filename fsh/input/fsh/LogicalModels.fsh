@@ -4,7 +4,7 @@ Logical: LmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: path-lm-Patient
 Title: "Patient"
-Description: "TODO"
+Description: "The person whose human tissue is analyzed in a pathology study."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -40,11 +40,9 @@ Description: "TODO"
   * BirthDate 0..1 dateTime "Birth date."
     * ^alias = "Geboortedatum"
   * BirthPlace 0..1 CodeableConcept "Place of birth."
-  // * BirthPlace from GBA33 (required) // Binding needs to be checked
     * ^alias = "Geboorteplaats"
     * ^comment = "The place of birth is part of the CIS personalia as delivered by the CIS-GBA."
   * BirthCountry 0..1 CodeableConcept "Country of birth."
-  // * BirthCountry from GBA34 (required) // Binding needs to be checked
     * ^alias = "Geboorteland"
     * ^comment = "Not obligatory, but desirable."
 * Address 0..1 Address "Address of the patient."
@@ -60,7 +58,6 @@ Description: "TODO"
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.
     """
   * City 0..1 CodeableConcept "Place name."
-  // * City from GBA33 (required) // Binding needs to be checked
     * ^alias = "Woonplaats"
 * DeceaseInformation 0..1 BackboneElement "Information of the decease of the patient."
   * DeceaseDate 0..1 date "Date of decease."
@@ -72,7 +69,7 @@ Logical: LmRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: path-lm-Request
 Title: "Request"
-Description: "TODO"
+Description: "Request for a pathology study to be performed by a certain laboratory."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -86,16 +83,12 @@ Description: "TODO"
 * RequestType from MercuriusRequestType_VS (required)
   * ^alias = "SoortAanvraag"
   * ^comment = "Default when empty is _normaal_."
-* HealthScreeningType 0..1 CodeableConcept "Type of national trial for this request." // Tweak description
+* HealthScreeningType 0..1 CodeableConcept "Type of national trial for this request."
 * HealthScreeningType from MercuriusHealthScreeningType_VS (required)
   * ^alias = "BVOSoort"
   * ^comment = "Obligatory if request is national trail. Default _0_ or empty if not a national trial."
 * Requester 0..1 BackboneElement "Requester of the pathology study."
   * ^alias = "Aanvrager"
-  * RequesterCode 0..1 CodeableConcept "Code of requester."
-  // Specify ValueSet
-    * ^alias = "AanvragerCode"
-    // * ^comment = "For _electronic consult report_, the LabID of the requesting lab must be used."
   * RequesterName 0..1 string "Name of the requester."
     * ^alias = "AanvragerNaam"
   * Specialty 0..1 CodeableConcept "Specialty of the requester."
@@ -122,7 +115,7 @@ Logical: LmReport
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: path-lm-Report
 Title: "Report"
-Description: "TODO"
+Description: "Pathology report which contains the findings and interpretation of a pathology study."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -189,7 +182,6 @@ Title: "Mercurius Core Dataset 2.0"
 * RequestType -> "mercurius-core-rubriek-89" "soortaanvraag"
 * HealthScreeningType -> "mercurius-core-rubriek-97" "bvosoort"
 * Requester
-  * RequesterCode -> "mercurius-core-rubriek-66" "codeaanvrager"
   * RequesterName -> "mercurius-core-rubriek-68" "aanvrager"
   * Specialty -> "mercurius-core-rubriek-71" "specialisme"
   * Hospital -> "mercurius-core-rubriek-72" "ziekenhuis"

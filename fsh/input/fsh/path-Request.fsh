@@ -4,7 +4,7 @@ Profile: PathRequest
 Parent: ServiceRequest
 Id: path-Request
 Title: "path Request"
-Description: "TO DO"
+Description: "Request for a pathology study to be performed by a certain laboratory."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -12,7 +12,7 @@ Description: "TO DO"
 * insert Copyright
 * .
   * ^short = "Request"
-  * ^definition = "TO DO"
+  * ^definition = "Request for a pathology study to be performed by a certain laboratory."
   * ^alias = "Aanvraag"
 * status
   * ^patternCode = #completed
@@ -103,19 +103,24 @@ Description: "TO DO"
 * practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)
   * ^short = "RequesterName"
   * ^definition = "Name of the requester."
-  * ^alias = "AanvragerNaam"
   * ^comment = "The actual mapping of the RequesterName concept is on `Practitioner.name[nameInformation].text`."
+  * ^alias = "AanvragerNaam"
 * organization only Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
   * ^short = "Hospital"
   * ^definition = "Name of the hospital from where the specimen is sent."
-  * ^alias = "Ziekenhuis"
   * ^comment = "The actual mapping of the Hospital concept is on `Organization.name`."
+  * ^alias = "Ziekenhuis"
 * specialty[specialty]
   * ^short = "Specialty"
   * ^definition = "Specialty of the requester."
   * ^alias = "Specialisme"
   * ^binding.description = "Use ConceptMap MercuriusSpecialty-to-SpecialismeAGBCodelijst to translate terminology from the functional model to profile terminology in ValueSet SpecialismeAGBCodelijst."
   * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst"
+* location only Reference(Location or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)
+  * ^short = "Location"
+  * ^definition = "Location of requesting institute."
+  * ^comment = "The actual mapping of the Location concept is on `Location.name`."
+  * ^alias = "Locatie"
 
 Mapping: PathRequestMercuriusCore
 Source: PathRequest
@@ -144,3 +149,4 @@ Title: "Mercurius Core Dataset 2.0"
 * practitioner -> "mercurius-core-rubriek-68" "aanvrager (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
 * organization -> "mercurius-core-rubriek-72" "ziekenhuis (implicit, actual mapping is on Organization.name)"
 * specialty[specialty] -> "mercurius-core-rubriek-71" "specialisme"
+* location -> "mercurius-core-rubriek-67" "locatie (implicit, actual mapping is on Location.name)"

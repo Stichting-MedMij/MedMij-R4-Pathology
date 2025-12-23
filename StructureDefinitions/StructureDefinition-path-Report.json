@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "TO DO",
+  "description": "Pathology report which contains the findings and interpretation of a pathology study.",
   "purpose": "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
@@ -44,7 +44,7 @@
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "Report",
-        "definition": "TO DO",
+        "definition": "Pathology report which contains the findings and interpretation of a pathology study.",
         "alias": [
           "Verslag",
           "Test",
@@ -179,8 +179,9 @@
         "path": "DiagnosticReport.effective[x].end",
         "short": "AuthorizationDate / FirstAuthorizationDate",
         "definition": "Date of authorization.",
-        "comment": "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and the Report.FirstAuthorizationDate extension is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension.",
+        "comment": "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and `.extension:firstAuthorizationDate` is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension.",
         "alias": [
+          "DatumAutorisatie",
           "DatumEersteAutorisatie"
         ],
         "mapping": [
@@ -233,6 +234,7 @@
         "alias": [
           "Monster"
         ],
+        "min": 1,
         "type": [
           {
             "code": "Reference",

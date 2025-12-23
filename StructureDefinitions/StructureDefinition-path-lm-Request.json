@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "TODO",
+  "description": "Request for a pathology study to be performed by a certain laboratory.",
   "purpose": "This LogicalModel represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
@@ -44,7 +44,7 @@
         "id": "path-lm-Request",
         "path": "path-lm-Request",
         "short": "Request",
-        "definition": "TODO",
+        "definition": "Request for a pathology study to be performed by a certain laboratory.",
         "alias": [
           "Aanvraag"
         ]
@@ -118,29 +118,6 @@
         "type": [
           {
             "code": "BackboneElement"
-          }
-        ]
-      },
-      {
-        "id": "path-lm-Request.Requester.RequesterCode",
-        "path": "path-lm-Request.Requester.RequesterCode",
-        "short": "Code of requester.",
-        "definition": "Code of requester.",
-        "alias": [
-          "AanvragerCode"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-66",
-            "comment": "codeaanvrager"
           }
         ]
       },

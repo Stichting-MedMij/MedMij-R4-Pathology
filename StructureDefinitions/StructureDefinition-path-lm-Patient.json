@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "TODO",
+  "description": "The person whose human tissue is analyzed in a pathology study.",
   "purpose": "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
@@ -44,7 +44,7 @@
         "id": "path-lm-Patient",
         "path": "path-lm-Patient",
         "short": "Patient",
-        "definition": "TODO",
+        "definition": "The person whose human tissue is analyzed in a pathology study.",
         "alias": [
           "Patiënt"
         ]

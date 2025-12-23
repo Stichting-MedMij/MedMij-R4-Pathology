@@ -4,7 +4,7 @@ Profile: PathPatient
 Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Id: path-Patient
 Title: "path Patient"
-Description: "TO DO"
+Description: "The person whose human tissue is analyzed in a pathology study."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -12,7 +12,7 @@ Description: "TO DO"
 * insert Copyright
 * .
   * ^short = "Patient"
-  * ^definition = "TO DO"
+  * ^definition = "The person whose human tissue is analyzed in a pathology study."
   * ^alias = "Patient"
 * extension contains http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birthPlace 0..1
 * extension[birthPlace]
@@ -27,8 +27,7 @@ Description: "TO DO"
       * ^definition = "Country of birth."
       * ^comment = "Not obligatory, but desirable."
       * ^alias = "Geboorteland"
-      // Add codeSpecification extension for structured data exchange?
-* identifier contains // How to distinguish between the different slices?
+* identifier contains
     patientNumber 0..1 and
     externalPatientNumber 0..2
 * identifier[patientNumber]

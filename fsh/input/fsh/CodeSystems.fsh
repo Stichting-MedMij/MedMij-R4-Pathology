@@ -33,9 +33,9 @@ Description: "Codes for the type of national trial for the request as used in Me
 * ^caseSensitive = false
 * ^content = #complete
 * ^count = 4
-* #0 "geen BVO" "Geen Bevolkingsonderzoek"
+* #0 "Geen BVO" "Geen Bevolkingsonderzoek"
 * #2 "BVO BK" "Bevolkingsonderzoek Borstkanker"
-* #3 "BVO DDK" "Bevolkingsonderzoek Darmkanker"
+* #3 "BVO DDK" "Bevolkingsonderzoek (Dikke)darmkanker"
 * #4 "BVO BMHK" "Bevolkingsonderzoek Baarmoederhalskanker"
 
 CodeSystem: MercuriusRequestType_CS
@@ -53,16 +53,16 @@ Description: "Codes for the type of the request as used in Mercurius."
 * ^caseSensitive = false
 * ^content = #complete
 * ^count = 10
-* #1 "normaal"
-* #2 "spoed"
-* #3 "advies"
-* #4 "panel"
-* #5 "consult tbv derden"
-* #6 "revisie tbv derden"
-* #7 "moleculair onderzoek"
-* #8 "project"
-* #9 "oud"
-* #10 "onderzoek tbv derden"
+* #normaal "normaal"
+* #spoed "spoed"
+* #advies "advies"
+* #panel "panel"
+* #"consult tbv derden" "consult tbv derden"
+* #"revisie tbv derden" "revisie tbv derden"
+* #"moleculair onderzoek" "moleculair onderzoek"
+* #project "project"
+* #oud "oud"
+* #"onderzoek tbv derden" "onderzoek tbv derden"
 
 CodeSystem: MercuriusSpecialty_CS
 Id: MercuriusSpecialty

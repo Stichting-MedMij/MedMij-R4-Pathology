@@ -10,7 +10,7 @@
   "concept": [
     {
       "code": "0",
-      "display": "geen BVO",
+      "display": "Geen BVO",
       "definition": "Geen Bevolkingsonderzoek"
     },
     {
@@ -21,7 +21,7 @@
     {
       "code": "3",
       "display": "BVO DDK",
-      "definition": "Bevolkingsonderzoek Darmkanker"
+      "definition": "Bevolkingsonderzoek (Dikke)darmkanker"
     },
     {
       "code": "4",

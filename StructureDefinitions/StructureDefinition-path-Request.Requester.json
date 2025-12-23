@@ -115,6 +115,23 @@
             "comment": "specialisme"
           }
         ]
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "short": "Location",
+        "definition": "Location of requesting institute.",
+        "comment": "The actual mapping of the Location concept is on `Location.name`.",
+        "alias": [
+          "Locatie"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-67",
+            "comment": "locatie (implicit, actual mapping is on Location.name)"
+          }
+        ]
       }
     ]
   }
