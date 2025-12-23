@@ -82,7 +82,7 @@
         "path": "path-lm-Request.HealthScreeningType",
         "short": "Type of national trial for this request.",
         "definition": "Type of national trial for this request.",
-        "comment": "Obligatory if request is national trail. For cervical cancer trail this will be derived by (Core)U-DPS from 'cr_aanleiding'. Default _0_ or empty if not a national trial.",
+        "comment": "Obligatory if request is national trail. Default _0_ or empty if not a national trial.",
         "alias": [
           "BVOSoort"
         ],

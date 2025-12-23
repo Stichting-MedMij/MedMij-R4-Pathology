@@ -100,30 +100,6 @@
         ]
       },
       {
-        "id": "Patient.identifier",
-        "path": "Patient.identifier",
-        "min": 1
-      },
-      {
-        "id": "Patient.identifier:bsn",
-        "path": "Patient.identifier",
-        "sliceName": "bsn",
-        "short": "CitizenServiceNumber",
-        "definition": "The citizen service number (BSN) as introduced nationally.",
-        "alias": [
-          "BSN"
-        ],
-        "min": 1,
-        "max": "1",
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-34",
-            "comment": "bsnummer"
-          }
-        ]
-      },
-      {
         "id": "Patient.identifier:patientNumber",
         "path": "Patient.identifier",
         "sliceName": "patientNumber",
@@ -189,11 +165,6 @@
         ]
       },
       {
-        "id": "Patient.name",
-        "path": "Patient.name",
-        "min": 1
-      },
-      {
         "id": "Patient.name:nameInformation",
         "path": "Patient.name",
         "sliceName": "nameInformation",
@@ -202,8 +173,7 @@
         "alias": [
           "Naam",
           "nl-core-NameInformation"
-        ],
-        "min": 1
+        ]
       },
       {
         "id": "Patient.name:nameInformation.family",
@@ -212,13 +182,7 @@
         "definition": "Family name of the patient.",
         "alias": [
           "Geslachtsnaam"
-        ],
-        "min": 1
-      },
-      {
-        "id": "Patient.name:nameInformation.family.extension",
-        "path": "Patient.name.family.extension",
-        "min": 1
+        ]
       },
       {
         "id": "Patient.name:nameInformation.family.extension:prefix",
@@ -245,8 +209,7 @@
       {
         "id": "Patient.name:nameInformation.family.extension:lastName",
         "path": "Patient.name.family.extension",
-        "sliceName": "lastName",
-        "min": 1
+        "sliceName": "lastName"
       },
       {
         "id": "Patient.name:nameInformation.family.extension:lastName.value[x]",
@@ -276,8 +239,6 @@
           "Voornaam",
           "Initiaal"
         ],
-        "min": 1,
-        "max": "1",
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -290,7 +251,6 @@
         "id": "Patient.gender",
         "path": "Patient.gender",
         "definition": "Gender of the patient.",
-        "min": 1,
         "binding": {
           "extension": [
             {
@@ -327,7 +287,6 @@
         "path": "Patient.birthDate",
         "short": "BirthDate",
         "definition": "Birth date.",
-        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -342,6 +301,7 @@
         "sliceName": "deceasedDateTime",
         "short": "DeceaseDate / DeceaseTime",
         "definition": "Date and time of decease.",
+        "comment": "The values of the DeceaseDate and DeceaseTime concepts should be concatenated and reformatted to a proper FHIR dateTime.",
         "alias": [
           "DatumOverlijden",
           "TijdOverlijden"
@@ -363,11 +323,6 @@
             "comment": "tijdoverlijden"
           }
         ]
-      },
-      {
-        "id": "Patient.address",
-        "path": "Patient.address",
-        "min": 1
       },
       {
         "id": "Patient.address.line.extension:streetName",
@@ -410,7 +365,6 @@
           "Woonplaats",
           "Woonplaats"
         ],
-        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -424,7 +378,7 @@
         "path": "Patient.address.postalCode",
         "short": "PostalCode",
         "definition": "Postal code, either Dutch or foreign.",
-        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy 0000 XX is used.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy 0009 XX is used.",
+        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.\n\nIf the PostalCode concept attains one of the dummy values indicated above, the `.address.postalCode` element SHALL be omitted.",
         "alias": [
           "Postcode",
           "Postcode"
