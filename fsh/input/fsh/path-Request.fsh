@@ -34,11 +34,11 @@ Description: "TO DO"
   * ^short = "HealthScreeningType"
   * ^definition = "Type of national trial for this request."
   * ^alias = "BVOSoort"
-  * ^comment = "Obligatory if request is national trail. For cervical cancer trail this will be derived by (Core)U-DPS from 'cr_aanleiding'. Default _0_ or empty if not a national trial."
+  * ^comment = "Obligatory if request is national trail. Default _0_ or empty if not a national trial."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
-* requester only Reference(PractitionerRole or http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-PractitionerRole)
+* requester only Reference(PractitionerRole or http://medmij.nl/fhir/StructureDefinition/path-Request.Requester)
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
@@ -86,10 +86,10 @@ Description: "TO DO"
     * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
     * ^alias = "Verkrijgingswijze"
 
-Profile: PathRequestRequesterPractitionerRole
+Profile: PathRequestRequester
 Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
-Id: path-Request.Requester-PractitionerRole
-Title: "path Request.Requester PractitionerRole"
+Id: path-Request.Requester
+Title: "path Request.Requester"
 Description: "TO DO"
 * insert DefaultNarrative
 * ^status = #active
@@ -100,45 +100,22 @@ Description: "TO DO"
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
-* practitioner only Reference(Practitioner or http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-Practitioner)
-* organization only Reference(Organization or http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-Organization)
+* practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)
+  * ^short = "RequesterName"
+  * ^definition = "Name of the requester."
+  * ^alias = "AanvragerNaam"
+  * ^comment = "The actual mapping of the RequesterName concept is on `Practitioner.name[nameInformation].text`."
+* organization only Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
+  * ^short = "Hospital"
+  * ^definition = "Name of the hospital from where the specimen is sent."
+  * ^alias = "Ziekenhuis"
+  * ^comment = "The actual mapping of the Hospital concept is on `Organization.name`."
 * specialty[specialty]
   * ^short = "Specialty"
   * ^definition = "Specialty of the requester."
   * ^alias = "Specialisme"
   * ^binding.description = "Use ConceptMap MercuriusSpecialty-to-SpecialismeAGBCodelijst to translate terminology from the functional model to profile terminology in ValueSet SpecialismeAGBCodelijst."
   * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst"
-
-Profile: PathRequestRequesterPractitioner
-Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
-Id: path-Request.Requester-Practitioner
-Title: "path Request.Requester Practitioner"
-Description: "TO DO"
-* insert DefaultNarrative
-* ^status = #active
-* insert PublisherAndContact
-* ^purpose = "This Practitioner resource represents the RequesterName concept from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
-* insert Copyright
-* name[nameInformation]
-  * text
-    * ^short = "RequesterName"
-    * ^definition = "Name of the requester."
-    * ^alias = "AanvragerNaam"
-
-Profile: PathRequestRequesterOrganization
-Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
-Id: path-Request.Requester-Organization
-Title: "path Request.Requester Organization"
-Description: "TO DO"
-* insert DefaultNarrative
-* ^status = #active
-* insert PublisherAndContact
-* ^purpose = "This Organization resource represents the Hospital concept from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
-* insert Copyright
-* name
-  * ^short = "Hospital"
-  * ^definition = "Name of the hospital from where the specimen is sent."
-  * ^alias = "Ziekenhuis"
 
 Mapping: PathRequestMercuriusCore
 Source: PathRequest
@@ -159,24 +136,11 @@ Title: "Mercurius Core Dataset 2.0"
   * collectedDateTime -> "mercurius-core-rubriek-77" "datumafname"
   * method -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
-Mapping: PathRequestRequesterPractitionerRoleMercuriusCore
-Source: PathRequestRequesterPractitionerRole
+Mapping: PathRequestRequesterMercuriusCore
+Source: PathRequestRequester
 Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
+* practitioner -> "mercurius-core-rubriek-68" "aanvrager (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
+* organization -> "mercurius-core-rubriek-72" "ziekenhuis (implicit, actual mapping is on Organization.name)"
 * specialty[specialty] -> "mercurius-core-rubriek-71" "specialisme"
-
-Mapping: PathRequestRequesterPractitionerMercuriusCore
-Source: PathRequestRequesterPractitioner
-Target: "TODO"
-Id: mercurius-core-dataset-2-0
-Title: "Mercurius Core Dataset 2.0"
-* name[nameInformation]
-  * text -> "mercurius-core-rubriek-68" "aanvrager"
-
-Mapping: PathRequestRequesterOrganizationMercuriusCore
-Source: PathRequestRequesterOrganization
-Target: "TODO"
-Id: mercurius-core-dataset-2-0
-Title: "Mercurius Core Dataset 2.0"
-* name -> "mercurius-core-rubriek-72" "ziekenhuis"

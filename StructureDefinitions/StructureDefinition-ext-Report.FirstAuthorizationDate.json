@@ -1,0 +1,91 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-Report.FirstAuthorizationDate",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/ext-Report.FirstAuthorizationDate",
+  "name": "ExtReportFirstAuthorizationDate",
+  "title": "ext Report.FirstAuthorizationDate",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "An extension to provide the date of first authorization.",
+  "purpose": "This extension represents the FirstAuthorizationDate concept of the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "DiagnosticReport",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "ext Report.FirstAuthorizationDate",
+        "definition": "An extension to provide the date of first authorization.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://medmij.nl/fhir/StructureDefinition/ext-Report.FirstAuthorizationDate"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "FirstAuthorizationDate",
+        "definition": "Date of first authorization. Not to be overwritten when authorized again.",
+        "comment": "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and this extension is optional. If a report is authorized more than once, the FirstAuthorizationDate is conveyed here, while the AuthorizationDate is conveyed via `.effectivePeriod.end`.",
+        "alias": [
+          "DatumEersteAutorisatie"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-47",
+            "comment": "datumeersteautorisatie"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -154,7 +154,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-PractitionerRole"
+              "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester"
             ]
           }
         ]

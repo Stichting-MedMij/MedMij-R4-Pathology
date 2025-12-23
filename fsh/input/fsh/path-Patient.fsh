@@ -31,16 +31,6 @@ Description: "TO DO"
 * identifier contains // How to distinguish between the different slices?
     patientNumber 0..1 and
     externalPatientNumber 0..2
-* identifier[bsn] 1..1
-  * ^short = "CitizenServiceNumber"
-  * ^definition = "The citizen service number (BSN) as introduced nationally."
-  * ^alias = "BSN"
-  // * extension[http://medmij.nl/fhir/StructureDefinition/ext-CitizenServiceNumberStatus]
-  //  * valueCodeableConcept
-  //    * ^short = "CitizenServiceNumberStatus"
-  //    * ^definition = "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available."
-  //    * ^comment = "Default when empty is _Onbekend_."
-  //    * ^alias = "StatusBSN"
 * identifier[patientNumber]
   * ^short = "PatientNumber"
   * ^definition = "Patient number."
@@ -54,11 +44,11 @@ Description: "TO DO"
     * ^short = "ExternalPatientNumberLocation"
     * ^definition = "Location belonging to external patient number."
     * ^alias = "ExternPatiëntnummerLocatie"
-* name[nameInformation] 1..2
+* name[nameInformation]
   * ^short = "Name"
   * ^definition = "Name of the patient."
   * ^alias = "Naam"
-  * family 1..1
+  * family
     * ^short = "FamilyName"
     * ^definition = "Family name of the patient."
     * ^alias = "Geslachtsnaam"
@@ -67,31 +57,32 @@ Description: "TO DO"
         * ^short = "Prefix"
         * ^definition = "Prefix to the last name of the patient."
         * ^alias = "Voorvoegsels"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name] 1..1
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name]
       * valueString
         * ^short = "LastName"
         * ^definition = "Last name of the patient."
         * ^alias = "Achternaam"
-  * given 1..1 // Better to make it 1..* and separate all individual Initials. If so, change the definition.
+  * given
     * ^short = "Initials"
     * ^definition = "Initials of the patient in capitals, divided by dots."
     * ^alias = "Voorletters"
-* gender 1..1 // Add reference to ConceptMap
+* gender
   * ^short = "Gender"
   * ^definition = "Gender of the patient."
   * ^alias = "Geslacht"
   * ^binding.description = "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender."
   * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
-* birthDate 1..1
+* birthDate
   * ^short = "BirthDate"
   * ^definition = "Birth date."
   * ^alias = "Geboortedatum"
 * deceasedDateTime
   * ^short = "DeceaseDate / DeceaseTime"
   * ^definition = "Date and time of decease."
+  * ^comment = "The values of the DeceaseDate and DeceaseTime concepts should be concatenated and reformatted to a proper FHIR dateTime."
   * ^alias[0] = "DatumOverlijden"
   * ^alias[1] = "TijdOverlijden"
-* address 1..*
+* address
   * line
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName]
       * valueString
@@ -103,7 +94,7 @@ Description: "TO DO"
         * ^short = "HouseNumber"
         * ^definition = "House number of the address."
         * ^alias = "Huisnummer"
-  * city 1..1
+  * city
     * ^short = "City"
     * ^definition = "Place name."
     * ^alias = "Woonplaats"
@@ -111,9 +102,11 @@ Description: "TO DO"
     * ^short = "PostalCode"
     * ^definition = "Postal code, either Dutch or foreign."
     * ^comment = """
-    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy 0000 XX is used.
+    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.
     
-    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy 0009 XX is used.
+    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.
+
+    If the PostalCode concept attains one of the dummy values indicated above, the `.address.postalCode` element SHALL be omitted.
     """
     * ^alias = "Postcode"
 
@@ -126,9 +119,6 @@ Title: "Mercurius Core Dataset 2.0"
   * valueAddress
     * city -> "mercurius-core-rubriek-14" "geboorteplaats"
     * country -> "mercurius-core-rubriek-15" "geboorteland"
-* identifier[bsn] -> "mercurius-core-rubriek-34" "bsnummer"
-//  * extension[http://medmij.nl/fhir/StructureDefinition/ext-CitizenServiceNumberStatus]
-//    * valueCodeableConcept -> "mercurius-core-rubriek-35" "statusbsn"
 * identifier[patientNumber] -> "mercurius-core-rubriek-4" "patientnummer"
 * identifier[externalPatientNumber] -> "mercurius-core-rubriek-30" "expatientnr1"
 * identifier[externalPatientNumber] -> "mercurius-core-rubriek-32" "expatientnr2"

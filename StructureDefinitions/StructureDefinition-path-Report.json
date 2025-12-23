@@ -64,6 +64,35 @@
         ]
       },
       {
+        "id": "DiagnosticReport.extension",
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:firstAuthorizationDate",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "firstAuthorizationDate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://medmij.nl/fhir/StructureDefinition/ext-Report.FirstAuthorizationDate"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "min": 1,
@@ -80,7 +109,7 @@
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
-        "comment": "For reports that have been authorized only one, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used.",
+        "comment": "For reports that have been authorized only once, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used.",
         "condition": [
           "path-Report-1"
         ]
@@ -150,7 +179,7 @@
         "path": "DiagnosticReport.effective[x].end",
         "short": "AuthorizationDate / FirstAuthorizationDate",
         "definition": "Date of authorization.",
-        "comment": "In case a report has been authorized only one, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and the Report.FirstAuthorizationDate extension is optional. If a report is autorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension.",
+        "comment": "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and the Report.FirstAuthorizationDate extension is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension.",
         "alias": [
           "DatumEersteAutorisatie"
         ],
@@ -172,6 +201,7 @@
         "path": "DiagnosticReport.resultsInterpreter",
         "short": "Authorizer",
         "definition": "Name of the pathologist who has authorized the report.",
+        "comment": "The actual mapping of the Authorizer concept is on `Practitioner.name[nameInformation].text`.",
         "alias": [
           "Autorisator",
           "Reported by"
@@ -181,7 +211,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
             ]
           }
         ],
@@ -189,7 +221,7 @@
           {
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-41",
-            "comment": "autorisator (implicit, main mapping is on Practitioner.name)"
+            "comment": "autorisator (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
           }
         ]
       },

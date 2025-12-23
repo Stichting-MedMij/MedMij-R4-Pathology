@@ -23,12 +23,6 @@ Description: "TODO"
       * ^alias = "ExternPatiëntnummer"
     * ExternalPatientNumberLocation 0..1 string "Location belonging to external patient number."
       * ^alias = "ExternPatiëntnummerLocatie"
-  * CitizenServiceNumber 0..1 Identifier "The citizen service number (BSN) as introduced nationally."
-    * ^alias = "BSN"
-  * CitizenServiceNumberStatus 0..1 code "Status used to present the origin of the supplier of the BSN (ZIS, SBV-Z, etc.) or the reason why no BSN is available."
-  // Specify ValueSet
-    * ^alias = "StatusBSN"
-    * ^comment = "Default when empty is _Onbekend_."
 * Name 0..1 BackboneElement "Name of the patient."
   * ^alias = "Naam"
   * Initials 0..1 string "Initials of the patient in capitals, divided by dots."
@@ -45,8 +39,6 @@ Description: "TODO"
 * BirthInformation 0..1 BackboneElement "Information on the birth of the patient."
   * BirthDate 0..1 dateTime "Birth date."
     * ^alias = "Geboortedatum"
-  * BirthCentury 0..1 integer "Century of birth date."
-    * ^alias = "Geboorte-eeuw"
   * BirthPlace 0..1 CodeableConcept "Place of birth."
   // * BirthPlace from GBA33 (required) // Binding needs to be checked
     * ^alias = "Geboorteplaats"
@@ -55,8 +47,6 @@ Description: "TODO"
   // * BirthCountry from GBA34 (required) // Binding needs to be checked
     * ^alias = "Geboorteland"
     * ^comment = "Not obligatory, but desirable."
-* Age 0..1 Age "Age, calculated on day of registration."
-  * ^alias = "Leeftijd"
 * Address 0..1 Address "Address of the patient."
   * Street 0..1 string "Street name of the address."
     * ^alias = "Straat"
@@ -65,14 +55,13 @@ Description: "TODO"
   * PostalCode 0..1 string "Postal code, either Dutch or foreign."
     * ^alias = "Postcode"
     * ^comment = """
-    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy 0000 XX is used.
+    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.
     
-    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy 0009 XX is used.
+    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.
     """
   * City 0..1 CodeableConcept "Place name."
   // * City from GBA33 (required) // Binding needs to be checked
     * ^alias = "Woonplaats"
-  // Concept toevoegen voor land?
 * DeceaseInformation 0..1 BackboneElement "Information of the decease of the patient."
   * DeceaseDate 0..1 date "Date of decease."
     * ^alias = "DatumOverlijden"
@@ -100,7 +89,7 @@ Description: "TODO"
 * HealthScreeningType 0..1 CodeableConcept "Type of national trial for this request." // Tweak description
 * HealthScreeningType from MercuriusHealthScreeningType_VS (required)
   * ^alias = "BVOSoort"
-  * ^comment = "Obligatory if request is national trail. For cervical cancer trail this will be derived by (Core)U-DPS from 'cr_aanleiding'. Default _0_ or empty if not a national trial."
+  * ^comment = "Obligatory if request is national trail. Default _0_ or empty if not a national trial."
 * Requester 0..1 BackboneElement "Requester of the pathology study."
   * ^alias = "Aanvrager"
   * RequesterCode 0..1 CodeableConcept "Code of requester."
@@ -170,8 +159,6 @@ Title: "Mercurius Core Dataset 2.0"
     * ExternalPatientNumber -> "mercurius-core-rubriek-32" "expatientnr2"
     * ExternalPatientNumberLocation -> "mercurius-core-rubriek-31" "extpatientnr1loc"
     * ExternalPatientNumberLocation -> "mercurius-core-rubriek-33" "extpatientnr2loc"
-  * CitizenServiceNumber -> "mercurius-core-rubriek-34" "bsnummer"
-  * CitizenServiceNumberStatus -> "mercurius-core-rubriek-35" "statusbsn"
 * Name
   * Initials -> "mercurius-core-rubriek-9" "voorletters"
   * FamilyName
@@ -182,10 +169,8 @@ Title: "Mercurius Core Dataset 2.0"
 * Gender -> "mercurius-core-rubriek-10" "geslacht"
 * BirthInformation
   * BirthDate -> "mercurius-core-rubriek-11" "geboortedatum"
-  * BirthCentury -> "mercurius-core-rubriek-13" "geboorteeeuw"
   * BirthPlace -> "mercurius-core-rubriek-14" "geboorteplaats"
   * BirthCountry -> "mercurius-core-rubriek-15" "geboorteland"
-* Age -> "mercurius-core-rubriek-12" "leeftijd"
 * Address
   * Street -> "mercurius-core-rubriek-16" "straat"
   * HouseNumber -> "mercurius-core-rubriek-17" "huisnummer"

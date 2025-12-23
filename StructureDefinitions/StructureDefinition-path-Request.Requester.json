@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "path-Request.Requester-PractitionerRole",
+  "id": "path-Request.Requester",
   "text": {
     "status": "empty",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
-  "url": "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-PractitionerRole",
-  "name": "PathRequestRequesterPractitionerRole",
-  "title": "path Request.Requester PractitionerRole",
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
+  "name": "PathRequestRequester",
+  "title": "path Request.Requester",
   "status": "active",
   "publisher": "MedMij",
   "contact": [
@@ -53,26 +53,34 @@
       {
         "id": "PractitionerRole.practitioner",
         "path": "PractitionerRole.practitioner",
-        "type": [
+        "short": "RequesterName",
+        "definition": "Name of the requester.",
+        "comment": "The actual mapping of the RequesterName concept is on `Practitioner.name[nameInformation].text`.",
+        "alias": [
+          "AanvragerNaam"
+        ],
+        "mapping": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-Practitioner"
-            ]
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-68",
+            "comment": "aanvrager (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
           }
         ]
       },
       {
         "id": "PractitionerRole.organization",
         "path": "PractitionerRole.organization",
-        "type": [
+        "short": "Hospital",
+        "definition": "Name of the hospital from where the specimen is sent.",
+        "comment": "The actual mapping of the Hospital concept is on `Organization.name`.",
+        "alias": [
+          "Ziekenhuis"
+        ],
+        "mapping": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester-Organization"
-            ]
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-72",
+            "comment": "ziekenhuis (implicit, actual mapping is on Organization.name)"
           }
         ]
       },
