@@ -6,7 +6,7 @@ Id: path-Patient
 Title: "path Patient"
 Description: "The person whose human tissue is analyzed in a pathology study."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This Patient resource represents the Patient building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright

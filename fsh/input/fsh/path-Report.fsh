@@ -6,7 +6,7 @@ Id: path-Report
 Title: "path Report"
 Description: "Pathology report which contains the findings and interpretation of a pathology study."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
@@ -57,7 +57,7 @@ Title: "ext Report.FirstAuthorizationDate"
 Description: "An extension to provide the date of first authorization."
 Context: DiagnosticReport
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This extension represents the FirstAuthorizationDate concept of the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright

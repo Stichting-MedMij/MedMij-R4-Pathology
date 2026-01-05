@@ -6,7 +6,7 @@ Id: path-lm-Patient
 Title: "Patient"
 Description: "The person whose human tissue is analyzed in a pathology study."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
@@ -71,7 +71,7 @@ Id: path-lm-Request
 Title: "Request"
 Description: "Request for a pathology study to be performed by a certain laboratory."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
@@ -117,7 +117,7 @@ Id: path-lm-Report
 Title: "Report"
 Description: "Pathology report which contains the findings and interpretation of a pathology study."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright

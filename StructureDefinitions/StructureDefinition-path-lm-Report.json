@@ -8,7 +8,7 @@
   "url": "http://medmij.nl/fhir/StructureDefinition/path-lm-Report",
   "name": "LmReport",
   "title": "Report",
-  "status": "active",
+  "status": "draft",
   "publisher": "MedMij",
   "contact": [
     {

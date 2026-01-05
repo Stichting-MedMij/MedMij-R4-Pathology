@@ -8,7 +8,7 @@
   "url": "http://medmij.nl/fhir/StructureDefinition/ext-Report.FirstAuthorizationDate",
   "name": "ExtReportFirstAuthorizationDate",
   "title": "ext Report.FirstAuthorizationDate",
-  "status": "active",
+  "status": "draft",
   "publisher": "MedMij",
   "contact": [
     {

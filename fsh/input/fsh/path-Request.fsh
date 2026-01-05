@@ -6,7 +6,7 @@ Id: path-Request
 Title: "path Request"
 Description: "Request for a pathology study to be performed by a certain laboratory."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
@@ -52,9 +52,9 @@ Profile: PathRequestSpecimen
 Parent: Specimen
 Id: path-Request.Specimen
 Title: "path Request.Specimen"
-Description: "TO DO"
+Description: "Specimen that will be examined by a laboratory."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright
@@ -90,9 +90,9 @@ Profile: PathRequestRequester
 Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Id: path-Request.Requester
 Title: "path Request.Requester"
-Description: "TO DO"
+Description: "Requester of the pathology study."
 * insert DefaultNarrative
-* ^status = #active
+* ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This PractitionerRole resource represents the requester-related concepts from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
 * insert Copyright

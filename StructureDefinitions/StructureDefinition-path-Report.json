@@ -8,7 +8,7 @@
   "url": "http://medmij.nl/fhir/StructureDefinition/path-Report",
   "name": "PathReport",
   "title": "path Report",
-  "status": "active",
+  "status": "draft",
   "publisher": "MedMij",
   "contact": [
     {
