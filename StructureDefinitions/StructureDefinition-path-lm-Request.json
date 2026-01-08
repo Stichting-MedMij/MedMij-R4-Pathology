@@ -52,7 +52,7 @@
       {
         "id": "path-lm-Request.RequestType",
         "path": "path-lm-Request.RequestType",
-        "short": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
+        "short": "Request type",
         "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
         "alias": [
           "SoortAanvraag"
@@ -87,7 +87,7 @@
       {
         "id": "path-lm-Request.HealthScreeningType",
         "path": "path-lm-Request.HealthScreeningType",
-        "short": "Type of national trial for this request.",
+        "short": "Health screening type",
         "definition": "Type of national trial for this request.",
         "alias": [
           "BVOSoort"
@@ -122,7 +122,7 @@
       {
         "id": "path-lm-Request.Requester",
         "path": "path-lm-Request.Requester",
-        "short": "Requester of the pathology study.",
+        "short": "Requester",
         "definition": "Requester of the pathology study.",
         "alias": [
           "Aanvrager"
@@ -138,7 +138,7 @@
       {
         "id": "path-lm-Request.Requester.RequesterName",
         "path": "path-lm-Request.Requester.RequesterName",
-        "short": "Name of the requester.",
+        "short": "Requester name",
         "definition": "Name of the requester.",
         "alias": [
           "AanvragerNaam"
@@ -161,7 +161,7 @@
       {
         "id": "path-lm-Request.Requester.Specialty",
         "path": "path-lm-Request.Requester.Specialty",
-        "short": "Specialty of the requester.",
+        "short": "Specialty",
         "definition": "Specialty of the requester.",
         "alias": [
           "Specialisme"
@@ -188,7 +188,7 @@
       {
         "id": "path-lm-Request.Requester.Hospital",
         "path": "path-lm-Request.Requester.Hospital",
-        "short": "Name of the hospital from where the specimen is sent.",
+        "short": "Hospital",
         "definition": "Name of the hospital from where the specimen is sent.",
         "alias": [
           "Ziekenhuis"
@@ -211,7 +211,7 @@
       {
         "id": "path-lm-Request.Requester.Location",
         "path": "path-lm-Request.Requester.Location",
-        "short": "Location of requesting institute.",
+        "short": "Location",
         "definition": "Location of requesting institute.",
         "alias": [
           "Locatie"
@@ -234,7 +234,7 @@
       {
         "id": "path-lm-Request.ClinicalQuestion",
         "path": "path-lm-Request.ClinicalQuestion",
-        "short": "Clinical request information.",
+        "short": "Clinical question",
         "definition": "Clinical request information.",
         "alias": [
           "KlinischeVraag"
@@ -257,7 +257,7 @@
       {
         "id": "path-lm-Request.Specimen",
         "path": "path-lm-Request.Specimen",
-        "short": "Specimen that will be examined by a laboratory.",
+        "short": "Specimen",
         "definition": "Specimen that will be examined by a laboratory.",
         "alias": [
           "Monster"
@@ -273,7 +273,7 @@
       {
         "id": "path-lm-Request.Specimen.SpecimenMaterial",
         "path": "path-lm-Request.Specimen.SpecimenMaterial",
-        "short": "Type of specimen.",
+        "short": "Specimen material",
         "definition": "Type of specimen.",
         "alias": [
           "AardMateriaal"
@@ -296,7 +296,7 @@
       {
         "id": "path-lm-Request.Specimen.CollectionDate",
         "path": "path-lm-Request.Specimen.CollectionDate",
-        "short": "Date when specimen is taken from patient.",
+        "short": "Collection date",
         "definition": "Date when specimen is taken from patient.",
         "alias": [
           "DatumAfname"
@@ -319,7 +319,7 @@
       {
         "id": "path-lm-Request.Specimen.ReceivedDate",
         "path": "path-lm-Request.Specimen.ReceivedDate",
-        "short": "Date when specimen is received at the laboratory.",
+        "short": "Received date",
         "definition": "Date when specimen is received at the laboratory.",
         "alias": [
           "DatumOntvangst"
@@ -342,7 +342,7 @@
       {
         "id": "path-lm-Request.Specimen.CollectionMethod",
         "path": "path-lm-Request.Specimen.CollectionMethod",
-        "short": "The way the specimen is collected (biopsy, resection, etc.).",
+        "short": "Collection method",
         "definition": "The way the specimen is collected (biopsy, resection, etc.).",
         "alias": [
           "Verkrijgingswijze"

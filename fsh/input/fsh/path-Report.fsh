@@ -18,7 +18,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * extension contains ExtReportFirstAuthorizationDate named firstAuthorizationDate 1..1
 * identifier 1..*
   * ^short = "ReportIdentifier"
-  * ^definition = "Identifier of the report."
+  * ^definition = "Identifier of the pathology report."
   * ^alias = "VerslagIdentificatienummer"
 * basedOn 1..*
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)

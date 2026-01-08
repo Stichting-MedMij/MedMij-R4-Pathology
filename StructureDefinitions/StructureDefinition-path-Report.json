@@ -97,7 +97,7 @@
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "short": "ReportIdentifier",
-        "definition": "Identifier of the report.",
+        "definition": "Identifier of the pathology report.",
         "alias": [
           "VerslagIdentificatienummer",
           "Filler ID",
