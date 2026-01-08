@@ -188,6 +188,27 @@ Title: "Mercurius Core Dataset 2.0"
 * resultsInterpreter -> "mercurius-core-rubriek-41" "autorisator (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
 
+Mapping: PathReportClinicalInformationMercuriusCore
+Source: PathReportClinicalInformation
+Target: "TODO"
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* valueString -> "mercurius-core-rubriek-142" "klinischegegevens"
+
+Mapping: PathReportMacroscopyMercuriusCore
+Source: PathReportMacroscopy
+Target: "TODO"
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* valueString -> "mercurius-core-rubriek-184" "macroscopie"
+
+Mapping: PathReportMicroscopyMercuriusCore
+Source: PathReportMicroscopy
+Target: "TODO"
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* valueString -> "mercurius-core-rubriek-222" "microscopie"
+
 Mapping: ExtReportFirstAuthorizationDateMercuriusCore
 Source: ExtReportFirstAuthorizationDate
 Target: "TODO"
