@@ -23,7 +23,7 @@
     }
   ],
   "description": "Request for a pathology study to be performed by a certain laboratory.",
-  "purpose": "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "purpose": "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -73,19 +73,20 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "min": 2
       },
       {
         "id": "ServiceRequest.category:requestType",
         "path": "ServiceRequest.category",
         "sliceName": "requestType",
         "short": "RequestType",
-        "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab.",
-        "comment": "Default when empty is _normaal_.",
+        "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
+        "comment": "When the RequestType concept (i.e. _soortaanvraag_, mercurius-core-rubriek-89) has an empty value, _normaal_ SHOULD be used as default value.",
         "alias": [
           "SoortAanvraag"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "binding": {
           "strength": "required",
@@ -105,11 +106,11 @@
         "sliceName": "healthScreeningType",
         "short": "HealthScreeningType",
         "definition": "Type of national trial for this request.",
-        "comment": "Obligatory if request is national trail. Default _0_ or empty if not a national trial.",
+        "comment": "When the HealthScreeningType concept (i.e. _bvosoort_, mercurius-core-rubriek-97) has an empty value, _0_ SHOULD be used as default value.",
         "alias": [
           "BVOSoort"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "binding": {
           "strength": "required",
@@ -122,6 +123,15 @@
             "comment": "bvosoort"
           }
         ]
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "min": 1,
+        "patternCoding": {
+          "code": "108257001",
+          "system": "http://snomed.info/sct"
+        }
       },
       {
         "id": "ServiceRequest.subject",
@@ -149,6 +159,7 @@
           "Aanvrager",
           "orderer"
         ],
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -156,6 +167,29 @@
               "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
               "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester"
             ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.reasonCode.text",
+        "path": "ServiceRequest.reasonCode.text",
+        "short": "ClinicalQuestion",
+        "definition": "Clinical request information.",
+        "alias": [
+          "KlinischeVraag"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-139",
+            "comment": "klinischevraag"
           }
         ]
       },
@@ -168,6 +202,7 @@
           "Monster"
         ],
         "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Reference",

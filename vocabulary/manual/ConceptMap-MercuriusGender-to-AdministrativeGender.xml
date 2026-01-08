@@ -20,7 +20,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Maps gender codes as found in the Patient building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO) to &lt;http://hl7.org/fhir/ValueSet/administrative-gender&gt; as found in `Patient.gender` in FHIR R4." />
+  <description value="Maps gender codes as found in the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie) to &lt;http://hl7.org/fhir/ValueSet/administrative-gender&gt; as found in `Patient.gender` in FHIR R4." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <sourceCanonical value="http://medmij.nl/fhir/ValueSet/MercuriusGender" />
   <targetCanonical value="http://hl7.org/fhir/ValueSet/administrative-gender" />

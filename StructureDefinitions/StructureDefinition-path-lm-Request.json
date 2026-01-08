@@ -23,7 +23,7 @@
     }
   ],
   "description": "Request for a pathology study to be performed by a certain laboratory.",
-  "purpose": "This LogicalModel represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "purpose": "This LogicalModel represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -52,19 +52,26 @@
       {
         "id": "path-lm-Request.RequestType",
         "path": "path-lm-Request.RequestType",
-        "short": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab.",
-        "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab.",
-        "comment": "Default when empty is _normaal_.",
+        "short": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
+        "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
         "alias": [
           "SoortAanvraag"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
+        "defaultValueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
+              "code": "normaal"
+            }
+          ]
+        },
         "binding": {
           "strength": "required",
           "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusRequestType"
@@ -82,17 +89,24 @@
         "path": "path-lm-Request.HealthScreeningType",
         "short": "Type of national trial for this request.",
         "definition": "Type of national trial for this request.",
-        "comment": "Obligatory if request is national trail. Default _0_ or empty if not a national trial.",
         "alias": [
           "BVOSoort"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
+        "defaultValueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
+              "code": "0"
+            }
+          ]
+        },
         "binding": {
           "strength": "required",
           "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType"
@@ -113,7 +127,7 @@
         "alias": [
           "Aanvrager"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -129,7 +143,7 @@
         "alias": [
           "AanvragerNaam"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -152,7 +166,7 @@
         "alias": [
           "Specialisme"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -160,7 +174,7 @@
           }
         ],
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusSpecialty"
         },
         "mapping": [
@@ -179,7 +193,7 @@
         "alias": [
           "Ziekenhuis"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -202,7 +216,7 @@
         "alias": [
           "Locatie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -218,6 +232,29 @@
         ]
       },
       {
+        "id": "path-lm-Request.ClinicalQuestion",
+        "path": "path-lm-Request.ClinicalQuestion",
+        "short": "Clinical request information.",
+        "definition": "Clinical request information.",
+        "alias": [
+          "KlinischeVraag"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-139",
+            "comment": "klinischevraag"
+          }
+        ]
+      },
+      {
         "id": "path-lm-Request.Specimen",
         "path": "path-lm-Request.Specimen",
         "short": "Specimen that will be examined by a laboratory.",
@@ -225,7 +262,7 @@
         "alias": [
           "Monster"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -241,7 +278,7 @@
         "alias": [
           "AardMateriaal"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -287,7 +324,7 @@
         "alias": [
           "DatumOntvangst"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -310,7 +347,7 @@
         "alias": [
           "Verkrijgingswijze"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {

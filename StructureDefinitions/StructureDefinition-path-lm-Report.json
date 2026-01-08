@@ -23,7 +23,7 @@
     }
   ],
   "description": "Pathology report which contains the findings and interpretation of a pathology study.",
-  "purpose": "This LogicalModel represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "purpose": "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -50,64 +50,26 @@
         ]
       },
       {
-        "id": "path-lm-Report.Pathologist",
-        "path": "path-lm-Report.Pathologist",
-        "short": "Responsible pathologist who has to authorise the report.",
-        "definition": "Responsible pathologist who has to authorise the report.",
+        "id": "path-lm-Report.ReportIdentifier",
+        "path": "path-lm-Report.ReportIdentifier",
+        "short": "Identifier of the report.",
+        "definition": "Identifier of the report.",
+        "comment": "These identifiers attain values of the form [TCSB]YY-nnnnn or [TCSB]YY-nnnnnn (based on the laboratory the report originates from), e.g. T26-012345.",
         "alias": [
-          "Patholoog"
+          "VerslagIdentificatienummer"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "BackboneElement"
-          }
-        ]
-      },
-      {
-        "id": "path-lm-Report.Pathologist.PathologistCode",
-        "path": "path-lm-Report.Pathologist.PathologistCode",
-        "short": "Code for the responsible pathologist who has to authorise the report.",
-        "definition": "Code for the responsible pathologist who has to authorise the report.",
-        "alias": [
-          "PatholoogCode"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
+            "code": "Identifier"
           }
         ],
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-37",
-            "comment": "codepatholoog"
-          }
-        ]
-      },
-      {
-        "id": "path-lm-Report.Pathologist.PathologistName",
-        "path": "path-lm-Report.Pathologist.PathologistName",
-        "short": "Name (expanded code) for the responsible pathologist who has to authorise the report.",
-        "definition": "Name (expanded code) for the responsible pathologist who has to authorise the report.",
-        "alias": [
-          "PatholoogNaam"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-38",
-            "comment": "patholoog"
+            "map": "mercurius-core-rubriek-3",
+            "comment": "rapnaam"
           }
         ]
       },
@@ -119,7 +81,7 @@
         "alias": [
           "Autorisator"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -142,7 +104,7 @@
         "alias": [
           "DatumAutorisatie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -165,7 +127,7 @@
         "alias": [
           "DatumEersteAutorisatie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -181,6 +143,98 @@
         ]
       },
       {
+        "id": "path-lm-Report.Protocol",
+        "path": "path-lm-Report.Protocol",
+        "short": "Name of the protocol that is used in the Palga Protocol Module to fill the report.",
+        "definition": "Name of the protocol that is used in the Palga Protocol Module to fill the report.",
+        "alias": [
+          "Protocol"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-140",
+            "comment": "protocolnaam"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ClinicalInformation",
+        "path": "path-lm-Report.ClinicalInformation",
+        "short": "Clinical information section of the report.",
+        "definition": "Clinical information section of the report.",
+        "alias": [
+          "KlinischeGegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-142",
+            "comment": "klinischegegevens"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Macroscopy",
+        "path": "path-lm-Report.Macroscopy",
+        "short": "Macroscopy-related results.",
+        "definition": "Macroscopy-related results.",
+        "alias": [
+          "Macroscopie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-184",
+            "comment": "macroscopie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Microscopy",
+        "path": "path-lm-Report.Microscopy",
+        "short": "Microscopy-related results.",
+        "definition": "Microscopy-related results.",
+        "alias": [
+          "Microscopie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-222",
+            "comment": "microscopie"
+          }
+        ]
+      },
+      {
         "id": "path-lm-Report.Conclusion",
         "path": "path-lm-Report.Conclusion",
         "short": "Conclusion of the report.",
@@ -188,7 +242,7 @@
         "alias": [
           "Conclusie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -200,6 +254,29 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-224",
             "comment": "conclusie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolOutput",
+        "path": "path-lm-Report.ProtocolOutput",
+        "short": "Output from National Palga Protocols, created in the Palga Protocol Module.",
+        "definition": "Output from National Palga Protocols, created in the Palga Protocol Module.",
+        "alias": [
+          "ProtocolOutput"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-228",
+            "comment": "protocollair"
           }
         ]
       }

@@ -23,7 +23,7 @@
     }
   ],
   "description": "Specimen that will be examined by a laboratory.",
-  "purpose": "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "purpose": "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -57,6 +57,7 @@
         "alias": [
           "AardMateriaal"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -91,6 +92,7 @@
         "alias": [
           "DatumOntvangst"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -98,6 +100,11 @@
             "comment": "datumontvangst"
           }
         ]
+      },
+      {
+        "id": "Specimen.collection",
+        "path": "Specimen.collection",
+        "min": 1
       },
       {
         "id": "Specimen.collection.collected[x]",
@@ -145,6 +152,7 @@
         "alias": [
           "Verkrijgingswijze"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",

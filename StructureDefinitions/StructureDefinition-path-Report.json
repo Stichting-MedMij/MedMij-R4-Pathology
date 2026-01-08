@@ -23,7 +23,7 @@
     }
   ],
   "description": "Pathology report which contains the findings and interpretation of a pathology study.",
-  "purpose": "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO).",
+  "purpose": "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -75,13 +75,14 @@
           ],
           "ordered": false,
           "rules": "open"
-        }
+        },
+        "min": 1
       },
       {
         "id": "DiagnosticReport.extension:firstAuthorizationDate",
         "path": "DiagnosticReport.extension",
         "sliceName": "firstAuthorizationDate",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -89,6 +90,25 @@
             "profile": [
               "http://medmij.nl/fhir/StructureDefinition/ext-Report.FirstAuthorizationDate"
             ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.identifier",
+        "path": "DiagnosticReport.identifier",
+        "short": "ReportIdentifier",
+        "definition": "Identifier of the report.",
+        "alias": [
+          "VerslagIdentificatienummer",
+          "Filler ID",
+          "Placer ID"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-3",
+            "comment": "rapnaam"
           }
         ]
       },
@@ -112,6 +132,50 @@
         "comment": "For reports that have been authorized only once, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used.",
         "condition": [
           "path-Report-1"
+        ]
+      },
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2
+      },
+      {
+        "id": "DiagnosticReport.code.coding:pathologyProcedure",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "pathologyProcedure",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "108257001",
+          "system": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "DiagnosticReport.code.coding:protocol",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "protocol",
+        "short": "Protocol",
+        "definition": "Name of the protocol that is used in the Palga Protocol Module to fill the report.",
+        "alias": [
+          "Protocol"
+        ],
+        "min": 1,
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-140",
+            "comment": "protocolnaam"
+          }
         ]
       },
       {
@@ -144,13 +208,14 @@
           ],
           "ordered": false,
           "rules": "open"
-        }
+        },
+        "min": 1
       },
       {
         "id": "DiagnosticReport.effective[x]:effectivePeriod",
         "path": "DiagnosticReport.effective[x]",
         "sliceName": "effectivePeriod",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -166,6 +231,7 @@
         "alias": [
           "DatumOntvangst"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -184,6 +250,7 @@
           "DatumAutorisatie",
           "DatumEersteAutorisatie"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -207,6 +274,8 @@
           "Autorisator",
           "Reported by"
         ],
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -235,12 +304,72 @@
           "Monster"
         ],
         "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Specimen",
               "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3
+      },
+      {
+        "id": "DiagnosticReport.result:clinicalInformation",
+        "path": "DiagnosticReport.result",
+        "sliceName": "clinicalInformation",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:macroscopy",
+        "path": "DiagnosticReport.result",
+        "sliceName": "macroscopy",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:microscopy",
+        "path": "DiagnosticReport.result",
+        "sliceName": "microscopy",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy"
             ]
           }
         ]
@@ -253,6 +382,7 @@
         "alias": [
           "Conclusie"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",

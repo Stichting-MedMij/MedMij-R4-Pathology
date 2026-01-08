@@ -8,7 +8,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
+* ^purpose = "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
 * .
   * ^short = "Request"
@@ -18,31 +18,39 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^patternCode = #completed
 * intent
   * ^patternCode = #order
-* category
+* category 2..*
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * category contains
-    requestType 0..1 and
-    healthScreeningType 0..1
+    requestType 1..1 and
+    healthScreeningType 1..1
 * category[requestType] from MercuriusRequestType_VS (required)
   * ^short = "RequestType"
-  * ^definition = "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, Nat. Dababase or others, or to send a consultation report (electronically) to another lab."
+  * ^definition = "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab."
   * ^alias = "SoortAanvraag"
-  * ^comment = "Default when empty is _normaal_."
+  * ^comment = "When the RequestType concept (i.e. _soortaanvraag_, mercurius-core-rubriek-89) has an empty value, _normaal_ SHOULD be used as default value."
 * category[healthScreeningType] from MercuriusHealthScreeningType_VS (required)
   * ^short = "HealthScreeningType"
   * ^definition = "Type of national trial for this request."
   * ^alias = "BVOSoort"
-  * ^comment = "Obligatory if request is national trail. Default _0_ or empty if not a national trial."
+  * ^comment = "When the HealthScreeningType concept (i.e. _bvosoort_, mercurius-core-rubriek-97) has an empty value, _0_ SHOULD be used as default value."
+* code 1..1
+  * ^patternCoding = $SCT#108257001
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
+* requester 1..1
 * requester only Reference(PractitionerRole or http://medmij.nl/fhir/StructureDefinition/path-Request.Requester)
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
-* specimen 1..*
+* reasonCode 1..1
+  * text 1..1
+    * ^short = "ClinicalQuestion"
+    * ^definition = "Clinical request information."
+    * ^alias = "KlinischeVraag"
+* specimen 1..1
 * specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
@@ -56,13 +64,13 @@ Description: "Specimen that will be examined by a laboratory."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
+* ^purpose = "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
 * .
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
-* type
+* type 1..1
   // Specify ValueSet
   * ^short = "SpecimenMaterial"
   * ^definition = "Type of specimen."
@@ -71,16 +79,16 @@ Description: "Specimen that will be examined by a laboratory."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
-* receivedTime
+* receivedTime 1..1
   * ^short = "ReceivedDate"
   * ^definition = "Date when specimen is received at the laboratory."
   * ^alias = "DatumOntvangst"
-* collection
+* collection 1..1
   * collectedDateTime
     * ^short = "CollectionDate"
     * ^definition = "Date when specimen is taken from patient."
     * ^alias = "DatumAfname"
-  * method
+  * method 1..1
     // Specify ValueSet
     * ^short = "CollectionMethod"
     * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
@@ -94,28 +102,32 @@ Description: "Requester of the pathology study."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This PractitionerRole resource represents the requester-related concepts from the Request building block for patient use cases in the context of the information standard [Pathology (Pathologie)](TODO)."
+* ^purpose = "This PractitionerRole resource represents the requester-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
 * .
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
+* practitioner 1..1
 * practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)
   * ^short = "RequesterName"
   * ^definition = "Name of the requester."
   * ^comment = "The actual mapping of the RequesterName concept is on `Practitioner.name[nameInformation].text`."
   * ^alias = "AanvragerNaam"
+* organization 1..1
 * organization only Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
   * ^short = "Hospital"
   * ^definition = "Name of the hospital from where the specimen is sent."
   * ^comment = "The actual mapping of the Hospital concept is on `Organization.name`."
   * ^alias = "Ziekenhuis"
-* specialty[specialty]
+* specialty 1..1
+* specialty[specialty] 1..1
   * ^short = "Specialty"
   * ^definition = "Specialty of the requester."
   * ^alias = "Specialisme"
   * ^binding.description = "Use ConceptMap MercuriusSpecialty-to-SpecialismeAGBCodelijst to translate terminology from the functional model to profile terminology in ValueSet SpecialismeAGBCodelijst."
   * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst"
+* location 1..1
 * location only Reference(Location or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)
   * ^short = "Location"
   * ^definition = "Location of requesting institute."
@@ -129,6 +141,8 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * category[requestType] -> "mercurius-core-rubriek-89" "soortaanvraag"
 * category[healthScreeningType] -> "mercurius-core-rubriek-97" "bvosoort"
+* reasonCode
+  * text -> "mercurius-core-rubriek-139" "klinischevraag"
 
 Mapping: PathRequestSpecimenMercuriusCore
 Source: PathRequestSpecimen
