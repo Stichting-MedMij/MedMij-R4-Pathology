@@ -91,6 +91,13 @@ Description: "Clinical information section of the report."
 * insert PublisherAndContact
 * ^purpose = "This Observation resource represents the ClinicalInformation concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
+* text 1..1
+  * status
+    * ^patternCode = #additional
+  * div
+    * ^short = "ClinicalInformation"
+    * ^definition = "Clinical information section of the report."
+    * ^alias = "KlinischeGegevens"
 * status
   * ^patternCode = #final
 * code
@@ -99,10 +106,6 @@ Description: "Clinical information section of the report."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
-* valueString 1..1
-  * ^short = "ClinicalInformation"
-  * ^definition = "Clinical information section of the report."
-  * ^alias = "KlinischeGegevens"
 
 Profile: PathReportMacroscopy
 Parent: Observation
@@ -114,6 +117,13 @@ Description: "Macroscopy-related results."
 * insert PublisherAndContact
 * ^purpose = "This Observation resource represents the Macroscopy concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
+* text 1..1
+  * status
+    * ^patternCode = #additional
+  * div
+    * ^short = "Macroscopy"
+    * ^definition = "Macroscopy-related results."
+    * ^alias = "Macroscopie"
 * status
   * ^patternCode = #final
 * code
@@ -122,10 +132,6 @@ Description: "Macroscopy-related results."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
-* valueString 1..1
-  * ^short = "Macroscopy"
-  * ^definition = "Macroscopy-related results."
-  * ^alias = "Macroscopie"
 
 Profile: PathReportMicroscopy
 Parent: Observation
@@ -137,6 +143,13 @@ Description: "Microscopy-related results."
 * insert PublisherAndContact
 * ^purpose = "This Observation resource represents the Microscopy concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
+* text 1..1
+  * status
+    * ^patternCode = #additional
+  * div
+    * ^short = "Microscopy"
+    * ^definition = "Microscopy-related results."
+    * ^alias = "Microscopie"
 * status
   * ^patternCode = #final
 * code
@@ -145,10 +158,6 @@ Description: "Microscopy-related results."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
-* valueString 1..1
-  * ^short = "Microscopy"
-  * ^definition = "Microscopy-related results."
-  * ^alias = "Microscopie"
 
 Extension: ExtReportFirstAuthorizationDate
 Id: ext-Report.FirstAuthorizationDate
@@ -193,21 +202,24 @@ Source: PathReportClinicalInformation
 Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* valueString -> "mercurius-core-rubriek-142" "klinischegegevens"
+* text
+  * div -> "mercurius-core-rubriek-142" "klinischegegevens"
 
 Mapping: PathReportMacroscopyMercuriusCore
 Source: PathReportMacroscopy
 Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* valueString -> "mercurius-core-rubriek-184" "macroscopie"
+* text
+  * div -> "mercurius-core-rubriek-184" "macroscopie"
 
 Mapping: PathReportMicroscopyMercuriusCore
 Source: PathReportMicroscopy
 Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* valueString -> "mercurius-core-rubriek-222" "microscopie"
+* text
+  * div -> "mercurius-core-rubriek-222" "microscopie"
 
 Mapping: ExtReportFirstAuthorizationDateMercuriusCore
 Source: ExtReportFirstAuthorizationDate

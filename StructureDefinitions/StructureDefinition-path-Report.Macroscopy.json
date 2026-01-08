@@ -41,6 +41,32 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.text",
+        "path": "Observation.text",
+        "min": 1
+      },
+      {
+        "id": "Observation.text.status",
+        "path": "Observation.text.status",
+        "patternCode": "additional"
+      },
+      {
+        "id": "Observation.text.div",
+        "path": "Observation.text.div",
+        "short": "Macroscopy",
+        "definition": "Macroscopy-related results.",
+        "alias": [
+          "Macroscopie"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-184",
+            "comment": "macroscopie"
+          }
+        ]
+      },
+      {
         "id": "Observation.status",
         "path": "Observation.status",
         "patternCode": "final"
@@ -72,45 +98,6 @@
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://medmij.nl/fhir/StructureDefinition/path-Patient"
             ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "Observation.value[x]:valueString",
-        "path": "Observation.value[x]",
-        "sliceName": "valueString",
-        "short": "Macroscopy",
-        "definition": "Macroscopy-related results.",
-        "alias": [
-          "Macroscopie"
-        ],
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-184",
-            "comment": "macroscopie"
           }
         ]
       }
