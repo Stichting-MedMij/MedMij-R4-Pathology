@@ -26,7 +26,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
       * ^short = "BirthCountry"
       * ^definition = "Country of birth."
       * ^alias = "Geboorteland"
-* name[nameInformation] 1..2
+* name[nameInformation] 1..1
   * ^short = "Name"
   * ^definition = "Name of the patient."
   * ^alias = "Naam"
@@ -48,6 +48,9 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     * ^short = "Initials"
     * ^definition = "Initials of the patient in capitals, divided by dots."
     * ^alias = "Voorletters"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier]
+      * valueCode
+        * ^patternCode = #IN
 * gender 1..1
   * ^short = "Gender"
   * ^definition = "Gender of the patient."
@@ -59,7 +62,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * ^definition = "Birth date."
   * ^comment = "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a valid FHIR date of the form YYYY-MM-DD."
   * ^alias = "Geboortedatum"
-* address 1..*
+* address 1..1
   * line
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName]
       * valueString
@@ -75,7 +78,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     * ^short = "City"
     * ^definition = "Place name."
     * ^alias = "Woonplaats"
-  * postalCode 1..1
+  * postalCode 0..1
     * ^short = "PostalCode"
     * ^definition = "Postal code, either Dutch or foreign."
     * ^comment = """

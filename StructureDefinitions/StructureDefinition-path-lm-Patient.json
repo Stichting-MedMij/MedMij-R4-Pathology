@@ -192,6 +192,9 @@
         "path": "path-lm-Patient.BirthInformation",
         "short": "Birth information",
         "definition": "Information on the birth of the patient.",
+        "alias": [
+          "GeboorteInformatie"
+        ],
         "min": 1,
         "max": "1",
         "type": [
@@ -280,6 +283,9 @@
         "path": "path-lm-Patient.Address",
         "short": "Address",
         "definition": "Address of the patient.",
+        "alias": [
+          "Adres"
+        ],
         "min": 1,
         "max": "1",
         "type": [

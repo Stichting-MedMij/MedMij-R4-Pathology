@@ -29,12 +29,12 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^short = "RequestType"
   * ^definition = "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab."
   * ^alias = "SoortAanvraag"
-  * ^comment = "When the RequestType concept (i.e. _soortaanvraag_, mercurius-core-rubriek-89) has an empty value, _normaal_ SHOULD be used as default value."
+  * ^comment = "When the RequestType concept has an empty value, _normaal_ SHALL be used as default value."
 * category[healthScreeningType] from MercuriusHealthScreeningType_VS (required)
   * ^short = "HealthScreeningType"
   * ^definition = "Type of national trial for this request."
   * ^alias = "BVOSoort"
-  * ^comment = "When the HealthScreeningType concept (i.e. _bvosoort_, mercurius-core-rubriek-97) has an empty value, _0_ SHOULD be used as default value."
+  * ^comment = "When the HealthScreeningType concept has an empty value, _0_ SHALL be used as default value."
 * code 1..1
   * ^patternCoding = $SCT#108257001
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)

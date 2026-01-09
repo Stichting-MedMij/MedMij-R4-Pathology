@@ -116,6 +116,7 @@
         "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -245,7 +246,7 @@
         "path": "DiagnosticReport.effective[x].end",
         "short": "AuthorizationDate / FirstAuthorizationDate",
         "definition": "Date of authorization.",
-        "comment": "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and `.extension:firstAuthorizationDate` is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension.",
+        "comment": "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via `.extension:firstAuthorizationDate`.",
         "alias": [
           "DatumAutorisatie",
           "DatumEersteAutorisatie"
@@ -321,8 +322,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
-              "path": "$this"
+              "type": "profile",
+              "path": "resolve()"
             }
           ],
           "rules": "open"

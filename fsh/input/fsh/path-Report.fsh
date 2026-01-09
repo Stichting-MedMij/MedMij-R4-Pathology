@@ -20,7 +20,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^short = "ReportIdentifier"
   * ^definition = "Identifier of the pathology report."
   * ^alias = "VerslagIdentificatienummer"
-* basedOn 1..*
+* basedOn 1..1
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
 * status
   * ^comment = "For reports that have been authorized only once, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used."
@@ -51,7 +51,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * end 1..1
     * ^short = "AuthorizationDate / FirstAuthorizationDate"
     * ^definition = "Date of authorization."
-    * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and `.extension:firstAuthorizationDate` is optional. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via the aforementioned extension."
+    * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via `.extension:firstAuthorizationDate`."
     * ^alias[0] = "DatumAutorisatie"
     * ^alias[1] = "DatumEersteAutorisatie"
 * resultsInterpreter 1..1
@@ -66,8 +66,8 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
 * result 3..*
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "$this"
+  * ^slicing.discriminator.type = #profile
+  * ^slicing.discriminator.path = "resolve()"
   * ^slicing.rules = #open
 * result contains
     clinicalInformation 1..1 and
