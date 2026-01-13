@@ -194,3 +194,12 @@ Title: "Mercurius Core Dataset 2.0"
 * Microscopy -> "mercurius-core-rubriek-222" "microscopie"
 * Conclusion -> "mercurius-core-rubriek-224" "conclusie"
 * ProtocolOutput -> "mercurius-core-rubriek-228" "protocollair"
+
+Mapping: LmReportSNOMED
+Source: LmReport
+Target: "http://snomed.info/sct"
+Id: SNOMED
+Title: "SNOMED CT"
+* ClinicalInformation -> "404684003" "klinische bevinding"
+* Macroscopy -> "168126000" "Sample macroscopy"
+* Microscopy -> "117259009" "microscopisch onderzoek"

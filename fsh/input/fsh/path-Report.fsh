@@ -101,7 +101,7 @@ Description: "Clinical information section of the report."
 * status
   * ^patternCode = #final
 * code
-  * ^patternCodeableConcept = $SCT#TBD
+  * ^patternCodeableConcept = $SCT#404684003
 * subject 1..1
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"

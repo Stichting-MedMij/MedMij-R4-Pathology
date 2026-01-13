@@ -31,6 +31,11 @@
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0",
       "uri": "TODO"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
     }
   ],
   "kind": "logical",
@@ -185,6 +190,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-142",
             "comment": "klinischegegevens"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "404684003",
+            "comment": "klinische bevinding"
           }
         ]
       },
@@ -208,6 +218,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-184",
             "comment": "macroscopie"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "168126000",
+            "comment": "Sample macroscopy"
           }
         ]
       },
@@ -231,6 +246,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-222",
             "comment": "microscopie"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "117259009",
+            "comment": "microscopisch onderzoek"
           }
         ]
       },

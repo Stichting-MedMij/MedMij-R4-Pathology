@@ -77,7 +77,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "TBD",
+              "code": "404684003",
               "system": "http://snomed.info/sct"
             }
           ]
