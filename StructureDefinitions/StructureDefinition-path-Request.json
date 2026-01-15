@@ -128,9 +128,13 @@
         "id": "ServiceRequest.code",
         "path": "ServiceRequest.code",
         "min": 1,
-        "patternCoding": {
-          "code": "108257001",
-          "system": "http://snomed.info/sct"
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "108257001",
+              "system": "http://snomed.info/sct"
+            }
+          ]
         }
       },
       {

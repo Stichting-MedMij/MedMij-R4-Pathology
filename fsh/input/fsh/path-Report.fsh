@@ -25,20 +25,8 @@ Description: "Pathology report which contains the findings and interpretation of
 * status
   * ^comment = "For reports that have been authorized only once, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used."
   * ^condition = "path-Report-1"
-* code
-  * coding 2..*
-    * ^slicing.discriminator.type = #value
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-  * coding contains
-      pathologyProcedure 1..1 and
-      protocol 1..1
-  * coding[pathologyProcedure] 
-    * ^patternCoding = $SCT#108257001
-  * coding[protocol]
-    * ^short = "Protocol"
-    * ^definition = "Name of the protocol that is used in the Palga Protocol Module to fill the report."
-    * ^alias = "Protocol"
+* code 1..1
+  * ^patternCodeableConcept = $SCT#108257001
 * subject 1..1
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
@@ -188,8 +176,6 @@ Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * identifier -> "mercurius-core-rubriek-3" "rapnaam"
-* code
-  * coding[protocol] -> "mercurius-core-rubriek-140" "protocolnaam"
 * effectivePeriod
   * start -> "mercurius-core-rubriek-80" "datumontvangst"
   * end -> "mercurius-core-rubriek-44" "datumautorisatie"

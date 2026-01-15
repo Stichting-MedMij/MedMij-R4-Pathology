@@ -36,7 +36,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^alias = "BVOSoort"
   * ^comment = "When the HealthScreeningType concept has an empty value, _0_ SHALL be used as default value."
 * code 1..1
-  * ^patternCoding = $SCT#108257001
+  * ^patternCodeableConcept = $SCT#108257001
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"

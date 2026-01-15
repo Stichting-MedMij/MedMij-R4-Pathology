@@ -136,48 +136,16 @@
         ]
       },
       {
-        "id": "DiagnosticReport.code.coding",
-        "path": "DiagnosticReport.code.coding",
-        "slicing": {
-          "discriminator": [
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "patternCodeableConcept": {
+          "coding": [
             {
-              "type": "value",
-              "path": "$this"
+              "code": "108257001",
+              "system": "http://snomed.info/sct"
             }
-          ],
-          "rules": "open"
-        },
-        "min": 2
-      },
-      {
-        "id": "DiagnosticReport.code.coding:pathologyProcedure",
-        "path": "DiagnosticReport.code.coding",
-        "sliceName": "pathologyProcedure",
-        "min": 1,
-        "max": "1",
-        "patternCoding": {
-          "code": "108257001",
-          "system": "http://snomed.info/sct"
+          ]
         }
-      },
-      {
-        "id": "DiagnosticReport.code.coding:protocol",
-        "path": "DiagnosticReport.code.coding",
-        "sliceName": "protocol",
-        "short": "Protocol",
-        "definition": "Name of the protocol that is used in the Palga Protocol Module to fill the report.",
-        "alias": [
-          "Protocol"
-        ],
-        "min": 1,
-        "max": "1",
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-140",
-            "comment": "protocolnaam"
-          }
-        ]
       },
       {
         "id": "DiagnosticReport.subject",
