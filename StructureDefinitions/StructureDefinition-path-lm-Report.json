@@ -58,8 +58,8 @@
         "id": "path-lm-Report.ReportIdentifier",
         "path": "path-lm-Report.ReportIdentifier",
         "short": "Report identifier",
-        "definition": "Identifier of the pathology report.",
-        "comment": "These identifiers attain values of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
+        "definition": "Identifier of the pathology report assigned by the laboratory doing the analysis.",
+        "comment": "This identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
         "alias": [
           "VerslagIdentificatienummer"
         ],

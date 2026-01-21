@@ -113,9 +113,9 @@ Description: "Pathology report which contains the findings and interpretation of
 * ^abstract = true
 * .
   * ^alias = "Verslag"
-* ReportIdentifier 1..1 Identifier "Report identifier" "Identifier of the pathology report."
+* ReportIdentifier 1..1 Identifier "Report identifier" "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^alias = "VerslagIdentificatienummer"
-  * ^comment = "These identifiers attain values of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
+  * ^comment = "This identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
 * Authorizer 0..1 string "Authorizer" "Name of the pathologist who has authorized the report."
   * ^alias = "Autorisator"
 * AuthorizationDate 0..1 date "Authorization date" "Date of authorization."

@@ -14,12 +14,20 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
-* extension
 * extension contains ExtReportFirstAuthorizationDate named firstAuthorizationDate 0..1
 * identifier 1..*
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* identifier contains reportIdentifier 1..1
+* identifier[reportIdentifier]
   * ^short = "ReportIdentifier"
-  * ^definition = "Identifier of the pathology report."
+  * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
+  * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
   * ^alias = "VerslagIdentificatienummer"
+  * ^condition = "path-Report-2"
+  * system
+    * ^condition = "path-Report-2"
 * basedOn 1..1
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
 * status
@@ -170,12 +178,17 @@ Description: "The status of a report is either 'final' or 'amended'."
 Severity: #error
 Expression: "status = 'final' or status = 'amended'"
 
+Invariant: path-Report-2
+Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
+Severity: #error
+Expression: "identifier.system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')"
+
 Mapping: PathReportMercuriusCore
 Source: PathReport
 Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* identifier -> "mercurius-core-rubriek-3" "rapnaam"
+* identifier[reportIdentifier] -> "mercurius-core-rubriek-3" "rapnaam"
 * effectivePeriod
   * start -> "mercurius-core-rubriek-80" "datumontvangst"
   * end -> "mercurius-core-rubriek-44" "datumautorisatie"
