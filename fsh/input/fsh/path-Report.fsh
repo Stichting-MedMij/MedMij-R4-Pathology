@@ -26,8 +26,9 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
   * ^alias = "VerslagIdentificatienummer"
   * ^condition = "path-Report-2"
-  * system
+  * system 1..1
     * ^condition = "path-Report-2"
+  * value 1..1
 * basedOn 1..1
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
 * status

@@ -134,9 +134,15 @@
       {
         "id": "DiagnosticReport.identifier:reportIdentifier.system",
         "path": "DiagnosticReport.identifier.system",
+        "min": 1,
         "condition": [
           "path-Report-2"
         ]
+      },
+      {
+        "id": "DiagnosticReport.identifier:reportIdentifier.value",
+        "path": "DiagnosticReport.identifier.value",
+        "min": 1
       },
       {
         "id": "DiagnosticReport.basedOn",
