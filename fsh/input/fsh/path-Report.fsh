@@ -14,8 +14,8 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
-* extension 1..*
-* extension contains ExtReportFirstAuthorizationDate named firstAuthorizationDate 1..1
+* extension
+* extension contains ExtReportFirstAuthorizationDate named firstAuthorizationDate 0..1
 * identifier 1..*
   * ^short = "ReportIdentifier"
   * ^definition = "Identifier of the pathology report."
@@ -36,13 +36,13 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^short = "ReceivedDate"
     * ^definition = "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
-  * end 1..1
+  * end
     * ^short = "AuthorizationDate / FirstAuthorizationDate"
     * ^definition = "Date of authorization."
     * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via `.extension:firstAuthorizationDate`."
     * ^alias[0] = "DatumAutorisatie"
     * ^alias[1] = "DatumEersteAutorisatie"
-* resultsInterpreter 1..1
+* resultsInterpreter 0..1
 * resultsInterpreter only Reference(Practitioner or PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   * ^short = "Authorizer"
   * ^definition = "Name of the pathologist who has authorized the report."
@@ -53,18 +53,18 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
-* result 3..*
+* result
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "resolve()"
   * ^slicing.rules = #open
 * result contains
-    clinicalInformation 1..1 and
-    macroscopy 1..1 and
-    microscopy 1..1
+    clinicalInformation 0..1 and
+    macroscopy 0..1 and
+    microscopy 0..1
 * result[clinicalInformation] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation)
 * result[macroscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy)
 * result[microscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy)
-* conclusion 1..1
+* conclusion
   * ^short = "Conclusion"
   * ^definition = "Conclusion of the report."
   * ^alias = "Conclusie"

@@ -75,14 +75,13 @@
           ],
           "ordered": false,
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "DiagnosticReport.extension:firstAuthorizationDate",
         "path": "DiagnosticReport.extension",
         "sliceName": "firstAuthorizationDate",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -219,7 +218,6 @@
           "DatumAutorisatie",
           "DatumEersteAutorisatie"
         ],
-        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -243,7 +241,6 @@
           "Autorisator",
           "Reported by"
         ],
-        "min": 1,
         "max": "1",
         "type": [
           {
@@ -295,14 +292,13 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 3
+        }
       },
       {
         "id": "DiagnosticReport.result:clinicalInformation",
         "path": "DiagnosticReport.result",
         "sliceName": "clinicalInformation",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -317,7 +313,7 @@
         "id": "DiagnosticReport.result:macroscopy",
         "path": "DiagnosticReport.result",
         "sliceName": "macroscopy",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -332,7 +328,7 @@
         "id": "DiagnosticReport.result:microscopy",
         "path": "DiagnosticReport.result",
         "sliceName": "microscopy",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -351,7 +347,6 @@
         "alias": [
           "Conclusie"
         ],
-        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",

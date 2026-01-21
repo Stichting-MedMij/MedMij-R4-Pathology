@@ -86,7 +86,7 @@
         "alias": [
           "Autorisator"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -109,7 +109,7 @@
         "alias": [
           "DatumAutorisatie"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -132,7 +132,7 @@
         "alias": [
           "DatumEersteAutorisatie"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -155,7 +155,7 @@
         "alias": [
           "KlinischeGegevens"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -183,7 +183,7 @@
         "alias": [
           "Macroscopie"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -211,7 +211,7 @@
         "alias": [
           "Microscopie"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -239,7 +239,7 @@
         "alias": [
           "Conclusie"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -262,7 +262,7 @@
         "alias": [
           "ProtocolOutput"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {

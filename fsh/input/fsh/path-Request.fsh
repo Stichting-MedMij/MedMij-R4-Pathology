@@ -70,7 +70,7 @@ Description: "Specimen that will be examined by a laboratory."
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
-* type 1..1
+* type
   // Specify ValueSet
   * ^short = "SpecimenMaterial"
   * ^definition = "Type of specimen."
@@ -83,12 +83,12 @@ Description: "Specimen that will be examined by a laboratory."
   * ^short = "ReceivedDate"
   * ^definition = "Date when specimen is received at the laboratory."
   * ^alias = "DatumOntvangst"
-* collection 1..1
+* collection
   * collectedDateTime
     * ^short = "CollectionDate"
     * ^definition = "Date when specimen is taken from patient."
     * ^alias = "DatumAfname"
-  * method 1..1
+  * method
     // Specify ValueSet
     * ^short = "CollectionMethod"
     * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
@@ -108,7 +108,7 @@ Description: "Requester of the pathology study."
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
-* practitioner 1..1
+* practitioner
 * practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)
   * ^short = "RequesterName"
   * ^definition = "Name of the requester."
@@ -127,7 +127,7 @@ Description: "Requester of the pathology study."
   * ^alias = "Specialisme"
   * ^binding.description = "Use ConceptMap MercuriusSpecialty-to-SpecialismeAGBCodelijst to translate terminology from the functional model to profile terminology in ValueSet SpecialismeAGBCodelijst."
   * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst"
-* location 1..1
+* location 0..1
 * location only Reference(Location or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)
   * ^short = "Location"
   * ^definition = "Location of requesting institute."
