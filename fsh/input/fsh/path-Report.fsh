@@ -10,11 +10,10 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert PublisherAndContact
 * ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* . obeys path-Report-1
+* .
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
-* extension contains ExtReportFirstAuthorizationDate named firstAuthorizationDate 0..1
 * identifier 1..*
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
@@ -25,15 +24,14 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
   * ^alias = "VerslagIdentificatienummer"
-  * ^condition = "path-Report-2"
+  * ^condition = "path-Report-1"
   * system 1..1
-    * ^condition = "path-Report-2"
+    * ^condition = "path-Report-1"
   * value 1..1
 * basedOn 1..1
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
 * status
-  * ^comment = "For reports that have been authorized only once, status _final_ is used. For reports that have been authorized multiple times, status _amended_ is used."
-  * ^condition = "path-Report-1"
+  * ^patternCode = #final
 * code 1..1
   * ^patternCodeableConcept = $SCT#108257001
 * subject 1..1
@@ -45,13 +43,11 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^short = "ReceivedDate"
     * ^definition = "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
-  * end
-    * ^short = "AuthorizationDate / FirstAuthorizationDate"
+  * end 1..1
+    * ^short = "AuthorizationDate"
     * ^definition = "Date of authorization."
-    * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide. If a report is authorized more than once, the latest AuthorizationDate is conveyed here, while the FirstAuthorizationDate is conveyed via `.extension:firstAuthorizationDate`."
-    * ^alias[0] = "DatumAutorisatie"
-    * ^alias[1] = "DatumEersteAutorisatie"
-* resultsInterpreter 0..1
+    * ^alias = "DatumAutorisatie"
+* resultsInterpreter 1..1
 * resultsInterpreter only Reference(Practitioner or PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   * ^short = "Authorizer"
   * ^definition = "Name of the pathologist who has authorized the report."
@@ -62,18 +58,18 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
-* result
+* result 1..*
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "resolve()"
   * ^slicing.rules = #open
 * result contains
     clinicalInformation 0..1 and
     macroscopy 0..1 and
-    microscopy 0..1
+    microscopy 1..1
 * result[clinicalInformation] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation)
 * result[macroscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy)
 * result[microscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy)
-* conclusion
+* conclusion 1..1
   * ^short = "Conclusion"
   * ^definition = "Conclusion of the report."
   * ^alias = "Conclusie"
@@ -156,30 +152,7 @@ Description: "Microscopy-related results."
   * ^short = "Patient"
   * ^alias = "Patiënt"
 
-Extension: ExtReportFirstAuthorizationDate
-Id: ext-Report.FirstAuthorizationDate
-Title: "ext Report.FirstAuthorizationDate"
-Description: "An extension to provide the date of first authorization."
-Context: DiagnosticReport
-* insert DefaultNarrative
-* ^status = #draft
-* insert PublisherAndContact
-* ^purpose = "This extension represents the FirstAuthorizationDate concept of the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
-* insert Copyright
-* . 0..1
-* value[x] 1..1
-* value[x] only dateTime
-  * ^short = "FirstAuthorizationDate"
-  * ^definition = "Date of first authorization. Not to be overwritten when authorized again."
-  * ^comment = "In case a report has been authorized only once, the AuthorizationDate and FirstAuthorizationDate concepts coincide, and this extension is optional. If a report is authorized more than once, the FirstAuthorizationDate is conveyed here, while the AuthorizationDate is conveyed via `.effectivePeriod.end`."
-  * ^alias = "DatumEersteAutorisatie"
-
 Invariant: path-Report-1
-Description: "The status of a report is either 'final' or 'amended'."
-Severity: #error
-Expression: "status = 'final' or status = 'amended'"
-
-Invariant: path-Report-2
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
 Severity: #error
 Expression: "identifier.system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')"
@@ -193,7 +166,6 @@ Title: "Mercurius Core Dataset 2.0"
 * effectivePeriod
   * start -> "mercurius-core-rubriek-80" "datumontvangst"
   * end -> "mercurius-core-rubriek-44" "datumautorisatie"
-  * end -> "mercurius-core-rubriek-47" "datumeersteautorisatie"
 * resultsInterpreter -> "mercurius-core-rubriek-41" "autorisator (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
 
@@ -220,10 +192,3 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-222" "microscopie"
-
-Mapping: ExtReportFirstAuthorizationDateMercuriusCore
-Source: ExtReportFirstAuthorizationDate
-Target: "TODO"
-Id: mercurius-core-dataset-2-0
-Title: "Mercurius Core Dataset 2.0"
-* valueDateTime -> "mercurius-core-rubriek-47" "datumeersteautorisatie"

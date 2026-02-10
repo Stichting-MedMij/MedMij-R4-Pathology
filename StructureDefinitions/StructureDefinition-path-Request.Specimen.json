@@ -52,11 +52,17 @@
       {
         "id": "Specimen.type",
         "path": "Specimen.type",
+        "min": 1
+      },
+      {
+        "id": "Specimen.type.text",
+        "path": "Specimen.type.text",
         "short": "SpecimenMaterial",
         "definition": "Type of specimen.",
         "alias": [
           "AardMateriaal"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -139,8 +145,8 @@
         ]
       },
       {
-        "id": "Specimen.collection.method",
-        "path": "Specimen.collection.method",
+        "id": "Specimen.collection.method.text",
+        "path": "Specimen.collection.method.text",
         "short": "CollectionMethod",
         "definition": "The way the specimen is collected (biopsy, resection, etc.).",
         "alias": [

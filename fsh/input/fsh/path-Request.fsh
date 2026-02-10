@@ -70,11 +70,11 @@ Description: "Specimen that will be examined by a laboratory."
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
-* type
-  // Specify ValueSet
-  * ^short = "SpecimenMaterial"
-  * ^definition = "Type of specimen."
-  * ^alias = "AardMateriaal"
+* type 1..1
+  * text 1..1
+    * ^short = "SpecimenMaterial"
+    * ^definition = "Type of specimen."
+    * ^alias = "AardMateriaal"
 * subject 1..1
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
@@ -89,10 +89,10 @@ Description: "Specimen that will be examined by a laboratory."
     * ^definition = "Date when specimen is taken from patient."
     * ^alias = "DatumAfname"
   * method
-    // Specify ValueSet
-    * ^short = "CollectionMethod"
-    * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
-    * ^alias = "Verkrijgingswijze"
+    * text
+      * ^short = "CollectionMethod"
+      * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
+      * ^alias = "Verkrijgingswijze"
 
 Profile: PathRequestRequester
 Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
@@ -108,13 +108,13 @@ Description: "Requester of the pathology study."
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
-* practitioner
+* practitioner 1..1
 * practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)
   * ^short = "RequesterName"
   * ^definition = "Name of the requester."
   * ^comment = "The actual mapping of the RequesterName concept is on `Practitioner.name[nameInformation].text`."
   * ^alias = "AanvragerNaam"
-* organization 1..1
+* organization 0..1
 * organization only Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
   * ^short = "Hospital"
   * ^definition = "Name of the hospital from where the specimen is sent."
@@ -149,11 +149,13 @@ Source: PathRequestSpecimen
 Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* type -> "mercurius-core-rubriek-76" "aardmateriaal"
+* type
+  * text -> "mercurius-core-rubriek-76" "aardmateriaal"
 * receivedTime -> "mercurius-core-rubriek-80" "datumontvangst"
 * collection
   * collectedDateTime -> "mercurius-core-rubriek-77" "datumafname"
-  * method -> "mercurius-core-rubriek-87" "verkrijgingswijze"
+  * method
+    * text -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
 Mapping: PathRequestRequesterMercuriusCore
 Source: PathRequestRequester

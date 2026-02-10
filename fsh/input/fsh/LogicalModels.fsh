@@ -76,12 +76,12 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^defaultValueCodeableConcept.coding.code = #0
 * Requester 1..1 BackboneElement "Requester" "Requester of the pathology study."
   * ^alias = "Aanvrager"
-  * RequesterName 0..1 string "Requester name" "Name of the requester."
+  * RequesterName 1..1 string "Requester name" "Name of the requester."
     * ^alias = "AanvragerNaam"
   * Specialty 1..1 CodeableConcept "Specialty" "Specialty of the requester."
   * Specialty from MercuriusSpecialty_VS (extensible)
     * ^alias = "Specialisme"
-  * Hospital 1..1 string "Hospital" "Name of the hospital from where the specimen is sent."
+  * Hospital 0..1 string "Hospital" "Name of the hospital from where the specimen is sent."
     * ^alias = "Ziekenhuis"
   * Location 0..1 string "Location" "Location of requesting institute."
     * ^alias = "Locatie"
@@ -89,15 +89,13 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^alias = "KlinischeVraag"
 * Specimen 1..1 BackboneElement "Specimen" "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
-  * SpecimenMaterial 0..1 CodeableConcept "Specimen material" "Type of specimen."
-  // Specify ValueSet
+  * SpecimenMaterial 1..1 string "Specimen material" "Type of specimen."
     * ^alias = "AardMateriaal"
   * CollectionDate 0..1 date "Collection date" "Date when specimen is taken from patient."
     * ^alias = "DatumAfname"
   * ReceivedDate 1..1 date "Received date" "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
-  * CollectionMethod 0..1 CodeableConcept "Collection method" "The way the specimen is collected (biopsy, resection, etc.)."
-  // Specify ValueSet
+  * CollectionMethod 0..1 string "Collection method" "The way the specimen is collected (biopsy, resection, etc.)."
     * ^alias = "Verkrijgingswijze"
 
 Logical: LmReport
@@ -116,22 +114,22 @@ Description: "Pathology report which contains the findings and interpretation of
 * ReportIdentifier 1..1 Identifier "Report identifier" "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^alias = "VerslagIdentificatienummer"
   * ^comment = "This identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
-* Authorizer 0..1 string "Authorizer" "Name of the pathologist who has authorized the report."
+* Authorizer 1..1 string "Authorizer" "Name of the pathologist who has authorized the report."
   * ^alias = "Autorisator"
-* AuthorizationDate 0..1 date "Authorization date" "Date of authorization."
+* AuthorizationDate 1..1 date "Authorization date" "Date of authorization."
   * ^alias = "DatumAutorisatie"
-* FirstAuthorizationDate 0..1 date "First authorization date" "Date of first authorization. Not to be overwritten when authorized again."
-  * ^alias = "DatumEersteAutorisatie"
 * ClinicalInformation 0..1 string "Clinical information" "Clinical information section of the report."
   * ^alias = "KlinischeGegevens"
 * Macroscopy 0..1 string "Macroscopy" "Macroscopy-related results."
   * ^alias = "Macroscopie"
-* Microscopy 0..1 string "Microscopy" "Microscopy-related results."
+* Microscopy 1..1 string "Microscopy" "Microscopy-related results."
   * ^alias = "Microscopie"
-* Conclusion 0..1 string "Conclusion" "Conclusion of the report."
+* Conclusion 1..1 string "Conclusion" "Conclusion of the report."
   * ^alias = "Conclusie"
-* ProtocolOutput 0..1 string "Protocol output" "Output from National Palga Protocols, created in the Palga Protocol Module."
-  * ^alias = "ProtocolOutput"
+* ProtocolData 0..* BackboneElement "Protocol data" "Data from National Palga Protocols, created in the Palga Protocol Module."
+  * ^alias = "Protocoldata"
+  * ProtocolItemName 1..1 CodeableConcept "Protocol item name" "Name of the protocol item, expressed by a SNOMED code."
+  * ProtocolItemResult[x] 1..1 CodeableConcept or string or Quantity or dateTime "Protocol item result" "Result of the protocol item."
 
 Mapping: LmPatientMercuriusCore
 Source: LmPatient
@@ -185,12 +183,11 @@ Title: "Mercurius Core Dataset 2.0"
 * ReportIdentifier -> "mercurius-core-rubriek-3" "rapnaam"
 * Authorizer -> "mercurius-core-rubriek-41" "autorisator"
 * AuthorizationDate -> "mercurius-core-rubriek-44" "datumautorisatie"
-* FirstAuthorizationDate -> "mercurius-core-rubriek-47" "datumeersteautorisatie"
 * ClinicalInformation -> "mercurius-core-rubriek-142" "klinischegegevens"
 * Macroscopy -> "mercurius-core-rubriek-184" "macroscopie"
 * Microscopy -> "mercurius-core-rubriek-222" "microscopie"
 * Conclusion -> "mercurius-core-rubriek-224" "conclusie"
-* ProtocolOutput -> "mercurius-core-rubriek-228" "protocollair"
+* ProtocolData -> "mercurius-core-rubriek-308" "protocoldata"
 
 Mapping: LmReportSNOMED
 Source: LmReport

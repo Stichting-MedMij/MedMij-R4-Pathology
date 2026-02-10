@@ -59,6 +59,7 @@
         "alias": [
           "AanvragerNaam"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -76,7 +77,6 @@
         "alias": [
           "Ziekenhuis"
         ],
-        "min": 1,
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",

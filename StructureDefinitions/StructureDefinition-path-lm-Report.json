@@ -86,7 +86,7 @@
         "alias": [
           "Autorisator"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -109,7 +109,7 @@
         "alias": [
           "DatumAutorisatie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -121,29 +121,6 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-44",
             "comment": "datumautorisatie"
-          }
-        ]
-      },
-      {
-        "id": "path-lm-Report.FirstAuthorizationDate",
-        "path": "path-lm-Report.FirstAuthorizationDate",
-        "short": "First authorization date",
-        "definition": "Date of first authorization. Not to be overwritten when authorized again.",
-        "alias": [
-          "DatumEersteAutorisatie"
-        ],
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-47",
-            "comment": "datumeersteautorisatie"
           }
         ]
       },
@@ -211,7 +188,7 @@
         "alias": [
           "Microscopie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -239,7 +216,7 @@
         "alias": [
           "Conclusie"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -255,25 +232,60 @@
         ]
       },
       {
-        "id": "path-lm-Report.ProtocolOutput",
-        "path": "path-lm-Report.ProtocolOutput",
-        "short": "Protocol output",
-        "definition": "Output from National Palga Protocols, created in the Palga Protocol Module.",
+        "id": "path-lm-Report.ProtocolData",
+        "path": "path-lm-Report.ProtocolData",
+        "short": "Protocol data",
+        "definition": "Data from National Palga Protocols, created in the Palga Protocol Module.",
         "alias": [
-          "ProtocolOutput"
+          "Protocoldata"
         ],
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
-            "code": "string"
+            "code": "BackboneElement"
           }
         ],
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-228",
-            "comment": "protocollair"
+            "map": "mercurius-core-rubriek-308",
+            "comment": "protocoldata"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolData.ProtocolItemName",
+        "path": "path-lm-Report.ProtocolData.ProtocolItemName",
+        "short": "Protocol item name",
+        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolData.ProtocolItemResult[x]",
+        "path": "path-lm-Report.ProtocolData.ProtocolItemResult[x]",
+        "short": "Protocol item result",
+        "definition": "Result of the protocol item.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "dateTime"
           }
         ]
       }

@@ -143,7 +143,7 @@
         "alias": [
           "AanvragerNaam"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -193,7 +193,7 @@
         "alias": [
           "Ziekenhuis"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -278,11 +278,11 @@
         "alias": [
           "AardMateriaal"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "string"
           }
         ],
         "mapping": [
@@ -351,7 +351,7 @@
         "max": "1",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "string"
           }
         ],
         "mapping": [
