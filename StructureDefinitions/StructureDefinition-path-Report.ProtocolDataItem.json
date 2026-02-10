@@ -45,12 +45,14 @@
         "definition": "Name of the protocol item, expressed by a SNOMED code.",
         "alias": [
           "ProtocolitemNaam"
-        ]
-      },
-      {
-        "id": "Observation.code.coding.system",
-        "path": "Observation.code.coding.system",
-        "patternUri": "http://snomed.info/sct"
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
       },
       {
         "id": "Observation.subject",

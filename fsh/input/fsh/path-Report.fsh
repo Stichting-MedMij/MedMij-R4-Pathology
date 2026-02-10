@@ -173,9 +173,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^short = "ProtocolItemName"
   * ^definition = "Name of the protocol item, expressed by a SNOMED code."
   * ^alias = "ProtocolitemNaam"
-  * coding
-    * system
-      * ^patternUri = $SCT
+  * ^patternCodeableConcept.coding.system = $SCT
 * subject 1..1
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
