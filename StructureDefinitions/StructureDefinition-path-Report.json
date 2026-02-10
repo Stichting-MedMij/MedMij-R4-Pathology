@@ -328,6 +328,41 @@
         ]
       },
       {
+        "id": "DiagnosticReport.result:protocolData",
+        "path": "DiagnosticReport.result",
+        "sliceName": "protocolData",
+        "short": "ProtocolData",
+        "definition": "Data from National Palga Protocols, created in the Palga Protocol Module.",
+        "alias": [
+          "Protocoldata",
+          "Atomic Value",
+          "Result",
+          "Atomic result",
+          "Data",
+          "Test",
+          "Analyte",
+          "Battery",
+          "Organizer"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-308",
+            "comment": "protocoldata"
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "short": "Conclusion",

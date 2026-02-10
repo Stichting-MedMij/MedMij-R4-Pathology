@@ -1,0 +1,99 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-Report.ProtocolDataItem",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem",
+  "name": "PathReportProtocolDataItem",
+  "title": "path Report.ProtocolDataItem",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Data item from National Palga Protocols, created in the Palga Protocol Module.",
+  "purpose": "This Observation resource represents a single item within the ProtocolData concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "patternCode": "final"
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "ProtocolItemName",
+        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "alias": [
+          "ProtocolitemNaam"
+        ]
+      },
+      {
+        "id": "Observation.code.coding.system",
+        "path": "Observation.code.coding.system",
+        "patternUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "short": "Patient",
+        "alias": [
+          "Patiënt"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://medmij.nl/fhir/StructureDefinition/path-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "ProtocolItemResult",
+        "definition": "Result of the protocol item.",
+        "alias": [
+          "ProtocolitemResultaat"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

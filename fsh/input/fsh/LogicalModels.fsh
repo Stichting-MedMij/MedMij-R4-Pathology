@@ -129,7 +129,9 @@ Description: "Pathology report which contains the findings and interpretation of
 * ProtocolData 0..* BackboneElement "Protocol data" "Data from National Palga Protocols, created in the Palga Protocol Module."
   * ^alias = "Protocoldata"
   * ProtocolItemName 1..1 CodeableConcept "Protocol item name" "Name of the protocol item, expressed by a SNOMED code."
+    * ^alias = "ProtocolitemNaam"
   * ProtocolItemResult[x] 1..1 CodeableConcept or string or Quantity or dateTime "Protocol item result" "Result of the protocol item."
+    * ^alias = "ProtocolitemResultaat"
 
 Mapping: LmPatientMercuriusCore
 Source: LmPatient

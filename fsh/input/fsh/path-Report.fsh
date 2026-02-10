@@ -65,10 +65,15 @@ Description: "Pathology report which contains the findings and interpretation of
 * result contains
     clinicalInformation 0..1 and
     macroscopy 0..1 and
-    microscopy 1..1
+    microscopy 1..1 and
+    protocolData 0..*
 * result[clinicalInformation] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation)
 * result[macroscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy)
 * result[microscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy)
+* result[protocolData] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem)
+  * ^short = "ProtocolData"
+  * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
+  * ^alias = "Protocoldata"
 * conclusion 1..1
   * ^short = "Conclusion"
   * ^definition = "Conclusion of the report."
@@ -152,6 +157,35 @@ Description: "Microscopy-related results."
   * ^short = "Patient"
   * ^alias = "Patiënt"
 
+Profile: PathReportProtocolDataItem
+Parent: Observation
+Id: path-Report.ProtocolDataItem
+Title: "path Report.ProtocolDataItem"
+Description: "Data item from National Palga Protocols, created in the Palga Protocol Module."
+* insert DefaultNarrative
+* ^status = #draft
+* insert PublisherAndContact
+* ^purpose = "This Observation resource represents a single item within the ProtocolData concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* insert Copyright
+* status
+  * ^patternCode = #final
+* code
+  * ^short = "ProtocolItemName"
+  * ^definition = "Name of the protocol item, expressed by a SNOMED code."
+  * ^alias = "ProtocolitemNaam"
+  * coding
+    * system
+      * ^patternUri = $SCT
+* subject 1..1
+* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+  * ^short = "Patient"
+  * ^alias = "Patiënt"
+* value[x] 1..1
+* value[x] only CodeableConcept or string or Quantity or dateTime
+  * ^short = "ProtocolItemResult"
+  * ^definition = "Result of the protocol item."
+  * ^alias = "ProtocolitemResultaat"
+
 Invariant: path-Report-1
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
 Severity: #error
@@ -167,6 +201,7 @@ Title: "Mercurius Core Dataset 2.0"
   * start -> "mercurius-core-rubriek-80" "datumontvangst"
   * end -> "mercurius-core-rubriek-44" "datumautorisatie"
 * resultsInterpreter -> "mercurius-core-rubriek-41" "autorisator (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
+* result[protocolData] -> "mercurius-core-rubriek-308" "protocoldata"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
 
 Mapping: PathReportClinicalInformationMercuriusCore
