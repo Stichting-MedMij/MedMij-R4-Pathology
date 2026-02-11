@@ -10,7 +10,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert PublisherAndContact
 * ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* .
+* . obeys path-Report-2
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
@@ -18,7 +18,8 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* identifier contains reportIdentifier 1..1
+* identifier contains
+    reportIdentifier 1..1
 * identifier[reportIdentifier]
   * ^short = "ReportIdentifier"
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
@@ -32,8 +33,29 @@ Description: "Pathology report which contains the findings and interpretation of
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
 * status
   * ^patternCode = #final
-* code 1..1
+* category 1..*
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* category contains
+    pathology 1..1
+* category[pathology]
   * ^patternCodeableConcept = $SCT#108257001
+* code 1..1
+  * ^comment = "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either a _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with a _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+  * coding 1..*
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * coding contains
+      cytology 0..1 and
+      histology 0..1
+  * coding[cytology] 
+    * ^patternCoding = $SCT#1348332002
+    * ^condition = "path-Report-2"
+  * coding[histology]
+    * ^patternCoding = $SCT#252416005
+    * ^condition = "path-Report-2"
 * subject 1..1
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
@@ -188,6 +210,11 @@ Invariant: path-Report-1
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
 Severity: #error
 Expression: "identifier.system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')"
+
+Invariant: path-Report-2
+Description: "Either a code for cytology or histology is present."
+Severity: #error
+Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()"
 
 Mapping: PathReportMercuriusCore
 Source: PathReport

@@ -10,7 +10,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * insert PublisherAndContact
 * ^purpose = "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* .
+* . obeys path-Request-1
   * ^short = "Request"
   * ^definition = "Request for a pathology study to be performed by a certain laboratory."
   * ^alias = "Aanvraag"
@@ -18,13 +18,16 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^patternCode = #completed
 * intent
   * ^patternCode = #order
-* category 2..*
+* category 3..*
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * category contains
+    pathology 1..1 and
     requestType 1..1 and
     healthScreeningType 1..1
+* category[pathology]
+  * ^patternCodeableConcept = $SCT#108257001
 * category[requestType] from MercuriusRequestType_VS (required)
   * ^short = "RequestType"
   * ^definition = "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab."
@@ -36,7 +39,20 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^alias = "BVOSoort"
   * ^comment = "When the HealthScreeningType concept has an empty value, _0_ SHALL be used as default value."
 * code 1..1
-  * ^patternCodeableConcept = $SCT#108257001
+  * ^comment = "If the requested pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either a _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with a _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+  * coding 1..*
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * coding contains
+      cytology 0..1 and
+      histology 0..1
+  * coding[cytology] 
+    * ^patternCoding = $SCT#1348332002
+    * ^condition = "path-Request-1"
+  * coding[histology]
+    * ^patternCoding = $SCT#252416005
+    * ^condition = "path-Request-1"
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
@@ -133,6 +149,11 @@ Description: "Requester of the pathology study."
   * ^definition = "Location of requesting institute."
   * ^comment = "The actual mapping of the Location concept is on `Location.name`."
   * ^alias = "Locatie"
+
+Invariant: path-Request-1
+Description: "Either a code for cytology or histology is present."
+Severity: #error
+Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()"
 
 Mapping: PathRequestMercuriusCore
 Source: PathRequest

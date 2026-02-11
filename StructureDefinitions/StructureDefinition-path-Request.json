@@ -50,6 +50,15 @@
           "referral",
           "referral request",
           "transfer of care request"
+        ],
+        "constraint": [
+          {
+            "key": "path-Request-1",
+            "severity": "error",
+            "human": "Either a code for cytology or histology is present.",
+            "expression": "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/path-Request"
+          }
         ]
       },
       {
@@ -74,7 +83,22 @@
           ],
           "rules": "open"
         },
-        "min": 2
+        "min": 3
+      },
+      {
+        "id": "ServiceRequest.category:pathology",
+        "path": "ServiceRequest.category",
+        "sliceName": "pathology",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "108257001",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
       },
       {
         "id": "ServiceRequest.category:requestType",
@@ -127,15 +151,50 @@
       {
         "id": "ServiceRequest.code",
         "path": "ServiceRequest.code",
-        "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
+        "comment": "If the requested pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either a _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with a _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope.",
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "code": "108257001",
-              "system": "http://snomed.info/sct"
+              "type": "value",
+              "path": "$this"
             }
-          ]
-        }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding:cytology",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "cytology",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "1348332002",
+          "system": "http://snomed.info/sct"
+        },
+        "condition": [
+          "path-Request-1"
+        ]
+      },
+      {
+        "id": "ServiceRequest.code.coding:histology",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "histology",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "252416005",
+          "system": "http://snomed.info/sct"
+        },
+        "condition": [
+          "path-Request-1"
+        ]
       },
       {
         "id": "ServiceRequest.subject",

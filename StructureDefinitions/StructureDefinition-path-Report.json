@@ -52,6 +52,15 @@
           "Results",
           "Labs",
           "Laboratory"
+        ],
+        "constraint": [
+          {
+            "key": "path-Report-2",
+            "severity": "error",
+            "human": "Either a code for cytology or histology is present.",
+            "expression": "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/path-Report"
+          }
         ]
       },
       {
@@ -127,8 +136,25 @@
         "patternCode": "final"
       },
       {
-        "id": "DiagnosticReport.code",
-        "path": "DiagnosticReport.code",
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.category:pathology",
+        "path": "DiagnosticReport.category",
+        "sliceName": "pathology",
+        "min": 1,
+        "max": "1",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -137,6 +163,53 @@
             }
           ]
         }
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "comment": "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either a _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with a _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+      },
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.code.coding:cytology",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "cytology",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "1348332002",
+          "system": "http://snomed.info/sct"
+        },
+        "condition": [
+          "path-Report-2"
+        ]
+      },
+      {
+        "id": "DiagnosticReport.code.coding:histology",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "histology",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "252416005",
+          "system": "http://snomed.info/sct"
+        },
+        "condition": [
+          "path-Report-2"
+        ]
       },
       {
         "id": "DiagnosticReport.subject",
