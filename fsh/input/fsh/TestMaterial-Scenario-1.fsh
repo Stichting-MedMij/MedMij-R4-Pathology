@@ -135,6 +135,8 @@ Usage: #example
 Instance: Pathology-Patient-Olivander
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
 Usage: #example
+* meta
+  * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
@@ -155,6 +157,8 @@ Usage: #example
 Instance: Pathology-PractitionerRole-TestDoctor
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
 Usage: #example
+* meta
+  * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
 * practitioner = Reference(Pathology-Practitioner-TestDoctor) "TestDoctor"
 * organization = Reference(Pathology-Organization-LUMC) "LUMC"
 * specialty[specialty]

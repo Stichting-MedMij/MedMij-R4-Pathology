@@ -3,7 +3,8 @@
   "id": "Pathology-PractitionerRole-TestDoctor",
   "meta": {
     "profile": [
-      "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester"
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
     ]
   },
   "specialty": [

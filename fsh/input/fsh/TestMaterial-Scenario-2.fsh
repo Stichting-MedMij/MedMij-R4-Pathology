@@ -204,6 +204,8 @@ Usage: #example
 Instance: Pathology-Patient-Rommella
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
 Usage: #example
+* meta
+  * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked

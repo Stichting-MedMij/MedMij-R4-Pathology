@@ -3,7 +3,8 @@
   "id": "Pathology-Patient-Olivander",
   "meta": {
     "profile": [
-      "http://medmij.nl/fhir/StructureDefinition/path-Patient"
+      "http://medmij.nl/fhir/StructureDefinition/path-Patient",
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
     ]
   },
   "name": [

@@ -2,7 +2,7 @@
 
 ## Patient data
 
-| Scenario 1 |
+| | |
 | --- | --- |
 | Name.Initials | G. |
 | Name.FamilyName.Prefix | |
@@ -19,7 +19,7 @@
 
 ## Request data
 
-| Scenario 1 |
+| | |
 | --- | --- |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen BVO (code '0' from code system 'MercuriusHealthScreeningType') |
@@ -32,10 +32,11 @@
 | Specimen.CollectionDate | |
 | Specimen.ReceivedDate | 03-02-2026 |
 | Specimen.CollectionMethod | |
+| Specimen.NumberOfSamples | 1 |
 
 ## Report data
 
-| Scenario 1 |
+| | |
 | --- | --- |
 | ReportIdentifier | T26-60066 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | Authorizer | Jan Oosting |
