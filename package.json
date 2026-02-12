@@ -1,0 +1,21 @@
+{
+  "name": "medmij.fhir.nl.r4.pathology",
+  "version": "1.0.0-alpha.1",
+  "description": "Package of FHIR R4 conformance resources for MedMij Pathology version 1.0.0-alpha.1.",
+  "author": "MedMij",
+  "license": "CC0-1.0",
+  "title": "FHIR implementation of Pathology",
+  "maintainers": [
+    {
+      "name": "MedMij"
+    }
+  ],
+  "dependencies": {
+    "nictiz.fhir.nl.r4.nl-core": "0.12.0-beta.4",
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "jurisdiction": "urn:iso:std:iso:3166#NL"
+}
