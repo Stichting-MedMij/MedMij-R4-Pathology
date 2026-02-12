@@ -66,10 +66,11 @@ Description: "Request for a pathology study to be performed by a certain laborat
     * ^short = "ClinicalQuestion"
     * ^definition = "Clinical request information."
     * ^alias = "KlinischeVraag"
-* specimen 1..1
+* specimen 1..*
 * specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
   * ^alias = "Monster"
 
 Profile: PathRequestSpecimen
@@ -85,6 +86,7 @@ Description: "Specimen that will be examined by a laboratory."
 * .
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "This resource is used to convey either the primary specimen or an individual sample taken from that specimen. In the latter case, the `.parent` refers to the Specimen resource corresponding to the primary specimen."
   * ^alias = "Monster"
 * type 1..1
   * text 1..1
@@ -99,6 +101,8 @@ Description: "Specimen that will be examined by a laboratory."
   * ^short = "ReceivedDate"
   * ^definition = "Date when specimen is received at the laboratory."
   * ^alias = "DatumOntvangst"
+* parent only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+  * ^comment = "If this Specimen resource corresponds to a sample taken from the primary specimen, the latter is referenced here."
 * collection
   * collectedDateTime
     * ^short = "CollectionDate"

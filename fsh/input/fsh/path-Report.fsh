@@ -10,7 +10,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert PublisherAndContact
 * ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* . obeys path-Report-2
+* . obeys path-Report-1 and path-Report-2
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
@@ -75,10 +75,11 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^definition = "Name of the pathologist who has authorized the report."
   * ^comment = "The actual mapping of the Authorizer concept is on `Practitioner.name[nameInformation].text`."
   * ^alias = "Autorisator"
-* specimen 1..1
+* specimen 1..*
 * specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
   * ^alias = "Monster"
 * result 1..*
   * ^slicing.discriminator.type = #profile
@@ -126,6 +127,12 @@ Description: "Clinical information section of the report."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
+* specimen 1..1
+* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+  * ^short = "Specimen"
+  * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen."
+  * ^alias = "Monster"
 
 Profile: PathReportMacroscopy
 Parent: Observation
@@ -152,6 +159,12 @@ Description: "Macroscopy-related results."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
+* specimen 1..1
+* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+  * ^short = "Specimen"
+  * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen."
+  * ^alias = "Monster"
 
 Profile: PathReportMicroscopy
 Parent: Observation
@@ -178,6 +191,12 @@ Description: "Microscopy-related results."
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
+* specimen 1..1
+* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+  * ^short = "Specimen"
+  * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen."
+  * ^alias = "Monster"
 
 Profile: PathReportProtocolDataItem
 Parent: Observation
@@ -205,6 +224,12 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^short = "ProtocolItemResult"
   * ^definition = "Result of the protocol item."
   * ^alias = "ProtocolitemResultaat"
+* specimen 1..1
+* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+  * ^short = "Specimen"
+  * ^definition = "Specimen that will be examined by a laboratory."
+  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to."
+  * ^alias = "Monster"
 
 Invariant: path-Report-1
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."

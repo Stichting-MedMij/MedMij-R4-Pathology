@@ -361,6 +361,22 @@
             "comment": "verkrijgingswijze"
           }
         ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.NumberOfSamples",
+        "path": "path-lm-Request.Specimen.NumberOfSamples",
+        "short": "Number of samples",
+        "definition": "The number of samples taken from the primary specimen, each sent to the laboratory in a different container.",
+        "alias": [
+          "AantalSamples"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
       }
     ]
   }

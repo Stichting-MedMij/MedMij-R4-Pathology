@@ -100,6 +100,26 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "short": "Specimen",
+        "definition": "Specimen that will be examined by a laboratory.",
+        "comment": "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen.",
+        "alias": [
+          "Monster"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+            ]
+          }
+        ]
       }
     ]
   }

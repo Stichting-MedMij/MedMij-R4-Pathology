@@ -97,6 +97,8 @@ Description: "Request for a pathology study to be performed by a certain laborat
     * ^alias = "DatumOntvangst"
   * CollectionMethod 0..1 string "Collection method" "The way the specimen is collected (biopsy, resection, etc.)."
     * ^alias = "Verkrijgingswijze"
+  * NumberOfSamples 1..1 integer "Number of samples" "The number of samples taken from the primary specimen, each sent to the laboratory in a different container."
+    * ^alias = "AantalSamples"
 
 Logical: LmReport
 Parent: http://hl7.org/fhir/StructureDefinition/Element

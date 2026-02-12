@@ -45,6 +45,7 @@
         "path": "Specimen",
         "short": "Specimen",
         "definition": "Specimen that will be examined by a laboratory.",
+        "comment": "This resource is used to convey either the primary specimen or an individual sample taken from that specimen. In the latter case, the `.parent` refers to the Specimen resource corresponding to the primary specimen.",
         "alias": [
           "Monster"
         ]
@@ -103,6 +104,20 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-80",
             "comment": "datumontvangst"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.parent",
+        "path": "Specimen.parent",
+        "comment": "If this Specimen resource corresponds to a sample taken from the primary specimen, the latter is referenced here.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+            ]
           }
         ]
       },
