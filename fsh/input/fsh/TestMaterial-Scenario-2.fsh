@@ -1,0 +1,222 @@
+// FHIR test instances in FSH format for Pathology test scenario 2
+
+Instance: Pathology-Request-Rommella
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request
+Usage: #example
+* status = #completed
+* intent = #order
+* category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
+* category[requestType] = $MercuriusRequestType#normaal "normaal"
+* category[healthScreeningType] = $MercuriusHealthScreeningType#0 "Geen BVO"
+* code
+  * coding[histology] = $SCT#252416005 "Histopathology test"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* requester = Reference(Pathology-PractitionerRole-TestDoctor) "TestDoctor, LUMC"
+* reasonCode
+  * text = "<par>Vraagstelling</par><par>Afwijkingen?</par><par/>"
+* specimen[0] = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+* specimen[1] = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+* specimen[2] = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+
+Instance: Pathology-Specimen-Rommella
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+Usage: #example
+* type
+  * text = "Colon Biopt"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* receivedTime = "2026-01-26"
+
+Instance: Pathology-Specimen-Rommella-Sample-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+Usage: #example
+* type
+  * text = "Colon Biopt"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* receivedTime = "2026-01-26"
+* parent = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Specimen-Rommella-Sample-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+Usage: #example
+* type
+  * text = "Colon Biopt"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* receivedTime = "2026-01-26"
+* parent = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Report-Rommella
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report
+Usage: #example
+* identifier[reportIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60065"
+* basedOn = Reference(Pathology-Request-Rommella) "Request for Histopathology test"
+* status = #final
+* category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
+* code
+  * coding[histology] = $SCT#252416005 "Histopathology test"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectivePeriod
+  * start = "2026-01-26"
+  * end = "2026-02-03"
+* resultsInterpreter = Reference(Pathology-PractitionerRole-Oosting) "Jan Oosting, LUMC, patholoog"
+* specimen[0] = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+* specimen[1] = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+* specimen[2] = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+* result[clinicalInformation] = Reference(Pathology-Observation-Rommella-ClinicalInformation) "Klinische gegevens"
+* result[macroscopy] = Reference(Pathology-Observation-Rommella-Macroscopy) "Macroscopie"
+* result[microscopy] = Reference(Pathology-Observation-Rommella-Microscopy) "Microscopie"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-1) "Sample 1, Primaire afwijking"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-2) "Sample 1, Type biopt"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-3) "Sample 1, Consult"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-4) "Sample 1, Lokalisatie"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-5) "Sample 1, Bevinding"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-1) "Sample 2, Primaire afwijking"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-2) "Sample 2, Type biopt"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-3) "Sample 2, Consult"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-4) "Sample 2, Lokalisatie"
+* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-5) "Sample 2, Bevinding"
+* conclusion = "<par>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</par><par>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</par><par> </par>"
+
+Instance: Pathology-Observation-Rommella-ClinicalInformation
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation
+Usage: #example
+* text
+  * status = #additional
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Klinische gegevens</par><par>Binnengekomen via BVO, geen klachten</par><par>Aard materiaal</par><par>2 colon biopten</par><par/></div>"
+* status = #final
+* code = $SCT#404684003 "klinische bevinding"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Observation-Rommella-Macroscopy
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy
+Usage: #example
+* text
+  * status = #additional
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Macroscopie</par><par>1, 2 : biopt, ti ingesloten in 1/A en 2/A</par><par/></div>"
+* status = #final
+* code = $SCT#168126000 "Sample macroscopy"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Observation-Rommella-Microscopy
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy
+Usage: #example
+* text
+  * status = #additional
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</par><par/><par>Aantal inzendingen: I-II</par><par/><par>I  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: flexura lienalis</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasie</par><par/><par>II  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: colon descendens</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasieMicroscopie</par><par/></div>"
+* status = #final
+* code = $SCT#117259009 "microscopisch onderzoek"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#396984004 "histologisch kenmerk van tumor"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#1156654007 "benigne tubulair adenoom"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#310991000146109 "aantal slijmvliesbiopten"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueString = "1 slijmvliesbiopt"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#11429006 "consult"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#262008008 "Not performed"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-4
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#399687005 "locatie van primaire tumor"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#72592005 "flexura lienalis"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#1155708003 "Low histologic grade"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#396984004 "histologisch kenmerk van tumor"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#1156654007 "benigne tubulair adenoom"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#310991000146109 "aantal slijmvliesbiopten"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueString = "1 slijmvliesbiopt"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#11429006 "consult"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#262008008 "Not performed"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-4
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#399687005 "locatie van primaire tumor"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#32622004 "colon descendens"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#1155708003 "Low histologic grade"
+* specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
+
+Instance: Pathology-Patient-Rommella
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
+Usage: #example
+* identifier
+  * system = $BSN
+  * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
+* name[nameInformation]
+  * use = #official
+  * text = "L. Rommella"
+  * family = "Rommella"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Rommella"
+  * given = "L."
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
+* gender = #female
+* birthDate = "1956-04-05"
+* address
+  * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
+  * city
+    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown

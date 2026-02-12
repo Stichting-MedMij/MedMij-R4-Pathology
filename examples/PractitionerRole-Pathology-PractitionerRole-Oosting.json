@@ -1,0 +1,28 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Pathology-PractitionerRole-Oosting",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/Pathology-Practitioner-Oosting",
+    "display": "Jan Oosting"
+  },
+  "organization": {
+    "reference": "Organization/Pathology-Organization-LUMC",
+    "display": "LUMC"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "0388",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+          "display": "Medisch specialisten, pathologische anatomie"
+        }
+      ]
+    }
+  ]
+}

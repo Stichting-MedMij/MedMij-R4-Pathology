@@ -1,0 +1,27 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Pathology-PractitionerRole-TestDoctor",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester"
+    ]
+  },
+  "specialty": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    }
+  ],
+  "practitioner": {
+    "reference": "Practitioner/Pathology-Practitioner-TestDoctor",
+    "display": "TestDoctor"
+  },
+  "organization": {
+    "reference": "Organization/Pathology-Organization-LUMC",
+    "display": "LUMC"
+  }
+}

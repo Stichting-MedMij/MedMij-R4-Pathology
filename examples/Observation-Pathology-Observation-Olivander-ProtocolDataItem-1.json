@@ -1,0 +1,34 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-1",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "371489008",
+        "display": "afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "valueQuantity": {
+    "value": 1,
+    "code": "cm",
+    "system": "http://unitsofmeasure.org",
+    "comparator": ">=",
+    "unit": "cm"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}

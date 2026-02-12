@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-4",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1597451000004100",
+        "display": "Presence of direct invasion by primary malignant neoplasm"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "52101004",
+        "system": "http://snomed.info/sct",
+        "display": "aanwezig"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}

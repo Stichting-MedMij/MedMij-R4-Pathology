@@ -1,0 +1,17 @@
+{
+  "resourceType": "Specimen",
+  "id": "Pathology-Specimen-Olivander",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+    ]
+  },
+  "type": {
+    "text": "Colon Resectie"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "receivedTime": "2026-02-03"
+}
