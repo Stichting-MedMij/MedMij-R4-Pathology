@@ -10,7 +10,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* ^abstract = true
+* ^abstract = false
 * .
   * ^alias = "Patiënt"
 * Name 1..1 BackboneElement "Name" "Name of the patient."
@@ -61,7 +61,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* ^abstract = true
+* ^abstract = false
 * .
   * ^alias = "Aanvraag"
 * RequestType 1..1 CodeableConcept "Request type" "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab."
@@ -110,7 +110,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* ^abstract = true
+* ^abstract = false
 * .
   * ^alias = "Verslag"
 * ReportIdentifier 1..1 Identifier "Report identifier" "Identifier of the pathology report assigned by the laboratory doing the analysis."

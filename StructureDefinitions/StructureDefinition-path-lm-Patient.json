@@ -34,7 +34,7 @@
     }
   ],
   "kind": "logical",
-  "abstract": true,
+  "abstract": false,
   "type": "http://medmij.nl/fhir/StructureDefinition/path-lm-Patient",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
