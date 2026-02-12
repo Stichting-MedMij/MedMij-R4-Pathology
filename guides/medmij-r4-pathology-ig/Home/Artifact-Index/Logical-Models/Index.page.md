@@ -1,0 +1,11 @@
+---
+topic: LogicalModelsIndex
+---
+
+# Logical models
+Logical Models represent data structures, and contain data elements and their constraints and relationships. They allow data requirements to be described from a functional perspective. In this IG, the functional dataset and the underlying use cases are represented by [FHIR Logical Models](https://build.fhir.org/logical.html) (only for the information models that are not yet present in ART-DECOR). These use FHIR to capture the data structures (namely by specifying a [StructureDefinition](https://hl7.org/fhir/STU3/structuredefinition.html) and underlying [ElementDefinitions](https://hl7.org/fhir/STU3/elementdefinition.html), for each data structure), but they are not (directly) attached to FHIR resources.
+
+The Logical Models contain all functional concepts, including corresponding datatype, terminology binding (if applicable) and an id.
+- For each concept, an id is assigned by MedMij based on the corresponding element in the Mercurius dataset defined by Palga. These ids are also added as mappings in the FHIR profiles, and therefore form the linking pin between Logical Models and FHIR profiles.
+- For each concept it is indicated whether it is repeating (i.e. by setting its maximum cardinality to `1` or `*`). Moreover, for each concept it is indicated whether it is (conditionally) required by setting the minimum cardinality to `1` (or adding a constraint which specifies when the concept is required).
+- The [FHIR datatypes](https://hl7.org/fhir/R4/datatypes.html) are used in the Logical Models, even though these might bring 'physical' constraints, formats, etc. into the abstract logical data models which are not intended or applicable on the logical level. For instance, elements of the Attachment datatype need to satisfy the *att-1* constraint, which states that the element SHALL have a `contentType`, provided the element has non-empty `data`. Even though this constraint makes sense on a technical level, the aforementioned attributes `contentType` and `data` are not present in a logical data model. Therefore, such constraints may be 'ignored' in the Logical Models; instead, these constraints are taken into account in the corresponding FHIR profiles.
