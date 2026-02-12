@@ -2,7 +2,7 @@
 topic: PathLmRequest
 ---
 
-# path-lm-Request
+# Request
 
 <tabs>
     <tab title="Tree view" active="true">

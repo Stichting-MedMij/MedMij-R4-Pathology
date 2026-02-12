@@ -1,6 +1,8 @@
 - name: Index
   filename: Index.page.md
-- name: path-lm-Patient
-  filename: path-lm-Patient.page.md
-- name: path-lm-Request
-  filename: path-lm-Request.page.md
+- name: Patient
+  filename: Patient.page.md
+- name: Report
+  filename: Report.page.md
+- name: Request
+  filename: Request.page.md

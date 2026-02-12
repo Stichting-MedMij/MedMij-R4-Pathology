@@ -2,7 +2,7 @@
 topic: PathPatient
 ---
 
-# path-Patient
+# Patient
 
 <tabs>
     <tab title="Tree view" active="true">
