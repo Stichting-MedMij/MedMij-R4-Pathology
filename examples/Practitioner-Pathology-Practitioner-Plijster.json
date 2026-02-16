@@ -1,6 +1,6 @@
 {
   "resourceType": "Practitioner",
-  "id": "Pathology-Practitioner-TestDoctor",
+  "id": "Pathology-Practitioner-Plijster",
   "meta": {
     "profile": [
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
@@ -9,7 +9,7 @@
   "name": [
     {
       "use": "official",
-      "text": "TestDoctor"
+      "text": "P. Plijster"
     }
   ]
 }

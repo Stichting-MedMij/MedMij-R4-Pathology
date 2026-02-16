@@ -23,7 +23,7 @@
 | --- | --- |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen BVO (code '0' from code system 'MercuriusHealthScreeningType') |
-| Requester.RequesterName | TestDoctor |
+| Requester.RequesterName | P. Plijster |
 | Requester.Specialty | |
 | Requester.Hospital | LUMC |
 | Requester.Location | |
@@ -46,6 +46,13 @@
 | Microscopy | <par>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</par><par/><par>Aantal inzendingen: I-II</par><par/><par>I  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: flexura lienalis</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasie</par><par/><par>II  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: colon descendens</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasieMicroscopie</par><par/> |
 | Conclusion | <par>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</par><par>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</par><par> </par> |
 
+### Protocol data (general)
+
+| ProtocolItemName | ProtocolItemResult |
+| --- | --- |
+| Eerdere therapie (code '1279827005' from code system 'SNOMED CT') | chemotherapie (code '1255831008' from code system 'SNOMED CT') |
+| Respons op eerdere therapie (code '1255588004' from code system 'SNOMED CT') | partiële regressie (code '1285141002' from code system 'SNOMED CT') |
+
 ### Protocol data (sample 1)
 
 | ProtocolItemName | ProtocolItemResult |
@@ -56,7 +63,7 @@
 | Lokalisatie (code '399687005' from code system 'SNOMED CT') | flexura lienalis (code '72592005' from code system 'SNOMED CT') |
 | Bevinding (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (code '1155708003' from code system 'SNOMED CT') |
 
-### Protocol data (sample 1)
+### Protocol data (sample 2)
 
 | ProtocolItemName | ProtocolItemResult |
 | --- | --- |

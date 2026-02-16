@@ -11,7 +11,7 @@ Usage: #example
 * code
   * coding[histology] = $SCT#252416005 "Histopathology test"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
-* requester = Reference(Pathology-PractitionerRole-TestDoctor) "TestDoctor, LUMC"
+* requester = Reference(Pathology-PractitionerRole-Plijster) "P. Plijster, LUMC"
 * reasonCode
   * text = "<par>Vraagstelling</par><par>Afwijkingen?</par><par/>"
 * specimen[0] = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
@@ -66,16 +66,18 @@ Usage: #example
 * result[clinicalInformation] = Reference(Pathology-Observation-Rommella-ClinicalInformation) "Klinische gegevens"
 * result[macroscopy] = Reference(Pathology-Observation-Rommella-Macroscopy) "Macroscopie"
 * result[microscopy] = Reference(Pathology-Observation-Rommella-Microscopy) "Microscopie"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-1) "Sample 1, Primaire afwijking"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-2) "Sample 1, Type biopt"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-3) "Sample 1, Consult"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-4) "Sample 1, Lokalisatie"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-5) "Sample 1, Bevinding"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-1) "Sample 2, Primaire afwijking"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-2) "Sample 2, Type biopt"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-3) "Sample 2, Consult"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-4) "Sample 2, Lokalisatie"
-* result[protocolData] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-5) "Sample 2, Bevinding"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1) "Eerdere therapie"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2) "Respons op eerdere therapie"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-1) "Sample 1, Primaire afwijking"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-2) "Sample 1, Type biopt"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-3) "Sample 1, Consult"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-4) "Sample 1, Lokalisatie"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-5) "Sample 1, Bevinding"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-1) "Sample 2, Primaire afwijking"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-2) "Sample 2, Type biopt"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-3) "Sample 2, Consult"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-4) "Sample 2, Lokalisatie"
+* result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-5) "Sample 2, Bevinding"
 * conclusion = "<par>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</par><par>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</par><par> </par>"
 
 Instance: Pathology-Observation-Rommella-ClinicalInformation
@@ -109,6 +111,24 @@ Usage: #example
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#1255831008 "chemotherapie met gerichte medicatie tegen maligne tumor"
+* specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+
+Instance: Pathology-Observation-Rommella-ProtocolDataItem-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+Usage: #example
+* status = #final
+* code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
+* subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* valueCodeableConcept = $SCT#1285141002 "gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling"
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-1

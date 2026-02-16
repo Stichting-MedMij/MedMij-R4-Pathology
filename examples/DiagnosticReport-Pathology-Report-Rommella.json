@@ -81,6 +81,50 @@
       "display": "Microscopie"
     },
     {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1",
+      "display": "Eerdere therapie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2",
+      "display": "Respons op eerdere therapie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1-1",
+      "display": "Sample 1, Primaire afwijking"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1-2",
+      "display": "Sample 1, Type biopt"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1-3",
+      "display": "Sample 1, Consult"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1-4",
+      "display": "Sample 1, Lokalisatie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1-5",
+      "display": "Sample 1, Bevinding"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-1",
+      "display": "Sample 2, Primaire afwijking"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-2",
+      "display": "Sample 2, Type biopt"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-3",
+      "display": "Sample 2, Consult"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-4",
+      "display": "Sample 2, Lokalisatie"
+    },
+    {
       "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-5",
       "display": "Sample 2, Bevinding"
     }

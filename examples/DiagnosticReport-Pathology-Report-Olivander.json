@@ -73,6 +73,22 @@
       "display": "Microscopie"
     },
     {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-1",
+      "display": "Afstand tot dichtstbijzijnde darmsnijvlak"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-2",
+      "display": "Type resectie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-3",
+      "display": "Perineurale groei"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-4",
+      "display": "Tumor aanwezig"
+    },
+    {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-5",
       "display": "Aantal tumoren"
     }

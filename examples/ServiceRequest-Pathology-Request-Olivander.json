@@ -51,8 +51,8 @@
     "display": "G. Olivander"
   },
   "requester": {
-    "reference": "PractitionerRole/Pathology-PractitionerRole-TestDoctor",
-    "display": "TestDoctor, LUMC"
+    "reference": "PractitionerRole/Pathology-PractitionerRole-Plijster",
+    "display": "P. Plijster, LUMC"
   },
   "reasonCode": [
     {

@@ -23,7 +23,7 @@
 | --- | --- |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen BVO (code '0' from code system 'MercuriusHealthScreeningType') |
-| Requester.RequesterName | TestDoctor |
+| Requester.RequesterName | P. Plijster |
 | Requester.Specialty | |
 | Requester.Hospital | LUMC |
 | Requester.Location | |

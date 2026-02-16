@@ -11,7 +11,7 @@ Usage: #example
 * code
   * coding[histology] = $SCT#252416005 "Histopathology test"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
-* requester = Reference(Pathology-PractitionerRole-TestDoctor) "TestDoctor, LUMC"
+* requester = Reference(Pathology-PractitionerRole-Plijster) "P. Plijster, LUMC"
 * reasonCode
   * text = "<par>Vraagstelling</par><par>Classificatie</par><par/>"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
@@ -44,11 +44,11 @@ Usage: #example
 * result[clinicalInformation] = Reference(Pathology-Observation-Olivander-ClinicalInformation) "Klinische gegevens"
 * result[macroscopy] = Reference(Pathology-Observation-Olivander-Macroscopy) "Macroscopie"
 * result[microscopy] = Reference(Pathology-Observation-Olivander-Microscopy) "Microscopie"
-* result[protocolData] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-1) "Afstand tot dichtstbijzijnde darmsnijvlak"
-* result[protocolData] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-2) "Type resectie"
-* result[protocolData] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-3) "Perineurale groei"
-* result[protocolData] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-4) "Tumor aanwezig"
-* result[protocolData] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-5) "Aantal tumoren"
+* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-1) "Afstand tot dichtstbijzijnde darmsnijvlak"
+* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-2) "Type resectie"
+* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-3) "Perineurale groei"
+* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-4) "Tumor aanwezig"
+* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-5) "Aantal tumoren"
 * conclusion = "<par>Hemicolectomie links: type  tumor (WHO):goed/matig gedifferentieerd (laaggradig)   adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei:  submucosa.</par><par>Dichtstbijzijnde darmsnijvlak  vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak  vrij (afstand 0,8 cm).</par><par>Angio-invasie: lymfvat invasie.</par><par>Perineurale invasie: niet aangetroffen.</par><par>Aantal lymfklieren: 15 waarvan met metastasen: 0.</par><par/><par/><par>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</par><par>Patient is bekend met: morbus Crohn.</par><par> </par>"
 
 Instance: Pathology-Observation-Olivander-ClinicalInformation
@@ -154,12 +154,12 @@ Usage: #example
   * city
     * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
 
-Instance: Pathology-PractitionerRole-TestDoctor
+Instance: Pathology-PractitionerRole-Plijster
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
-* practitioner = Reference(Pathology-Practitioner-TestDoctor) "TestDoctor"
+* practitioner = Reference(Pathology-Practitioner-Plijster) "P. Plijster"
 * organization = Reference(Pathology-Organization-LUMC) "LUMC"
 * specialty[specialty]
   * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
@@ -171,12 +171,12 @@ Usage: #example
 * organization = Reference(Pathology-Organization-LUMC) "LUMC"
 * specialty[specialty] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 
-Instance: Pathology-Practitioner-TestDoctor
+Instance: Pathology-Practitioner-Plijster
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * name[nameInformation]
   * use = #official
-  * text = "TestDoctor"
+  * text = "P. Plijster"
 
 Instance: Pathology-Practitioner-Oosting
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner

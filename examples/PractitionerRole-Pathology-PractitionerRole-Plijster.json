@@ -1,6 +1,6 @@
 {
   "resourceType": "PractitionerRole",
-  "id": "Pathology-PractitionerRole-TestDoctor",
+  "id": "Pathology-PractitionerRole-Plijster",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
@@ -18,8 +18,8 @@
     }
   ],
   "practitioner": {
-    "reference": "Practitioner/Pathology-Practitioner-TestDoctor",
-    "display": "TestDoctor"
+    "reference": "Practitioner/Pathology-Practitioner-Plijster",
+    "display": "P. Plijster"
   },
   "organization": {
     "reference": "Organization/Pathology-Organization-LUMC",
