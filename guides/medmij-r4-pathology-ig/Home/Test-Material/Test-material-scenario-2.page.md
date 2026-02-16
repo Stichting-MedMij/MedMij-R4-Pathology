@@ -27,7 +27,7 @@
 | Requester.Specialty | |
 | Requester.Hospital | LUMC |
 | Requester.Location | |
-| ClinicalQuestion | <par>Vraagstelling</par><par>Afwijkingen?</par><par/> |
+| ClinicalQuestion | Vraagstelling <br/> Afwijkingen? |
 | Specimen.SpecimenMaterial | Colon Biopt |
 | Specimen.CollectionDate | |
 | Specimen.ReceivedDate | 26-01-2026 |
@@ -43,8 +43,8 @@
 | AuthorizationDate | 03-02-2026 |
 | ClinicalInformation | Klinische gegevens <br/> Binnengekomen via BVO, geen klachten <br/> <br/> Aard materiaal <br/> 2 colon biopten |
 | Macroscopy | Macroscopie <br/> 1, 2 : biopt, ti ingesloten in 1/A en 2/A |
-| Microscopy | Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022) <br/> <br/> Aantal inzendingen: I-II <br/> <br/> I  Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: flexura lienalis <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie <br/> <br/> II  Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: colon descendens <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie  <br/> <br/> Microscopie |
-| Conclusion | I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie. <br/> II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie. |
+| Microscopy | Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022) <br/> <br/> Aantal inzendingen: I-II <br/> <br/> I Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: flexura lienalis <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie <br/> <br/> II Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: colon descendens <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie <br/> <br/> Microscopie |
+| Conclusion | I: Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie. <br/> II: Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie. |
 
 ### Protocol data (general)
 

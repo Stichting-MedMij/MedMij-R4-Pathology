@@ -13,7 +13,7 @@ Usage: #example
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
 * requester = Reference(Pathology-PractitionerRole-Plijster) "P. Plijster, LUMC"
 * reasonCode
-  * text = "<par>Vraagstelling</par><par>Afwijkingen?</par><par/>"
+  * text = "<div>Vraagstelling</div><div>Afwijkingen?</div><div/>"
 * specimen[0] = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 * specimen[1] = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 * specimen[2] = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
@@ -78,14 +78,14 @@ Usage: #example
 * result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-3) "Sample 2, Consult"
 * result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-4) "Sample 2, Lokalisatie"
 * result[protocolData][+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-5) "Sample 2, Bevinding"
-* conclusion = "<par>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</par><par>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</par><par> </par>"
+* conclusion = "<div>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</div><div>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</div><div> </div>"
 
 Instance: Pathology-Observation-Rommella-ClinicalInformation
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Klinische gegevens</par><par>Binnengekomen via BVO, geen klachten</par><par>Aard materiaal</par><par>2 colon biopten</par><par/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Binnengekomen via BVO, geen klachten</div><div>Aard materiaal</div><div>2 colon biopten</div><div/></div>"
 * status = #final
 * code = $SCT#404684003 "klinische bevinding"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -96,7 +96,7 @@ InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Macroscopie</par><par>1, 2 : biopt, ti ingesloten in 1/A en 2/A</par><par/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>1, 2 : biopt, ti ingesloten in 1/A en 2/A</div><div/></div>"
 * status = #final
 * code = $SCT#168126000 "Sample macroscopy"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -107,7 +107,7 @@ InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</par><par/><par>Aantal inzendingen: I-II</par><par/><par>I  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: flexura lienalis</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasie</par><par/><par>II  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: colon descendens</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasieMicroscopie</par><par/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</div><div/><div>Aantal inzendingen: I-II</div><div/><div>I Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: flexura lienalis</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasie</div><div/><div>II Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: colon descendens</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasieMicroscopie</div><div/></div>"
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"

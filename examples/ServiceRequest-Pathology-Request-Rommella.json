@@ -56,7 +56,7 @@
   },
   "reasonCode": [
     {
-      "text": "<par>Vraagstelling</par><par>Afwijkingen?</par><par/>"
+      "text": "<div>Vraagstelling</div><div>Afwijkingen?</div><div/>"
     }
   ],
   "specimen": [

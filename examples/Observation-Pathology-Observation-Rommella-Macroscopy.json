@@ -18,7 +18,7 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Macroscopie</par><par>1, 2 : biopt, ti ingesloten in 1/A en 2/A</par><par/></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>1, 2 : biopt, ti ingesloten in 1/A en 2/A</div><div/></div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",

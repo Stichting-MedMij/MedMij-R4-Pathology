@@ -18,7 +18,7 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Klinische gegevens</par><par>Binnengekomen via BVO, geen klachten</par><par>Aard materiaal</par><par>2 colon biopten</par><par/></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Binnengekomen via BVO, geen klachten</div><div>Aard materiaal</div><div>2 colon biopten</div><div/></div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",

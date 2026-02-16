@@ -18,7 +18,7 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Klinische gegevens</par><par>Adnenocarcinoom bij BVO</par><par>Aard materiaal</par><par>Hemicolectomie</par><par/></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Adnenocarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",

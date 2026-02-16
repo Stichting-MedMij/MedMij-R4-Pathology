@@ -18,7 +18,7 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Macroscopie</par><par>Colon resectie met lengte van 20 cm</par><par/></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>Colon resectie met lengte van 20 cm</div><div/></div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",

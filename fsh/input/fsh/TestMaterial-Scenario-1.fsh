@@ -13,7 +13,7 @@ Usage: #example
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * requester = Reference(Pathology-PractitionerRole-Plijster) "P. Plijster, LUMC"
 * reasonCode
-  * text = "<par>Vraagstelling</par><par>Classificatie</par><par/>"
+  * text = "<div>Vraagstelling</div><div>Classificatie</div><div/>"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Specimen-Olivander
@@ -49,14 +49,14 @@ Usage: #example
 * result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-3) "Perineurale groei"
 * result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-4) "Tumor aanwezig"
 * result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-5) "Aantal tumoren"
-* conclusion = "<par>Hemicolectomie links: type  tumor (WHO):goed/matig gedifferentieerd (laaggradig)   adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei:  submucosa.</par><par>Dichtstbijzijnde darmsnijvlak  vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak  vrij (afstand 0,8 cm).</par><par>Angio-invasie: lymfvat invasie.</par><par>Perineurale invasie: niet aangetroffen.</par><par>Aantal lymfklieren: 15 waarvan met metastasen: 0.</par><par/><par/><par>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</par><par>Patient is bekend met: morbus Crohn.</par><par> </par>"
+* conclusion = "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patient is bekend met: morbus Crohn.</div><div> </div>"
 
 Instance: Pathology-Observation-Olivander-ClinicalInformation
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Klinische gegevens</par><par>Adnenocarcinoom bij BVO</par><par>Aard materiaal</par><par>Hemicolectomie</par><par/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Adnenocarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
 * status = #final
 * code = $SCT#404684003 "klinische bevinding"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -67,7 +67,7 @@ InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Macroscopie</par><par>Colon resectie met lengte van 20 cm</par><par/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>Colon resectie met lengte van 20 cm</div><div/></div>"
 * status = #final
 * code = $SCT#168126000 "Sample macroscopy"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -78,7 +78,7 @@ InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><par>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN  versie 2017</par><par/><par>Klinische Gegevens en Macroscopie</par><par>Type resectie: hemicolectomie links</par><par>Niveau van resectie mesocolon: in het mesocolische vet</par><par>Perforatie: niet aanwezig</par><par>Klinisch obstructie / ileus: nee</par><par>Lokalisatie  tumor: colon descendens</par><par>Aspect  tumor: schotelvormig</par><par>Maximale diameter  tumor: 3,0 cm</par><par>Lengte preparaat: 20 cm</par><par>Ingevroren materiaal aanwezig: nee</par><par>Tumor aanwezig: ja, 1 tumor</par><par>Patient is bekend met: morbus Crohn</par><par>Metastase(n): niet gevonden</par><par>Eerdere (neo-adjuvante) therapie: geen</par><par>Vriescoupe tumor: niet verricht</par><par/><par>Microscopie</par><par>Type  tumor (WHO): adenocarcinoom</par><par>Differentiatiegraad: goed/matig gedifferentieerd (laaggradig)</par><par>Diepste tumordoorgroei: submucosa</par><par>Angio-invasie: lymfvat invasie</par><par>Angio-invasie opmerking: geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</par><par>Tumor budding: laag (Bd1)</par><par>Perineurale groei: niet aangetroffen</par><par>Lymfocytaire infiltratie: ja</par><par/><par>Snijvlakken</par><par>Dichtstbijzijnde darmsnijvlak: distaal vrij op &gt;= 1 cm</par><par>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij op 0,8 cm</par><par/><par>Lymfklieren</par><par>Aantal lymfklieren: 15</par><par>Aantal lymfklieren met metastasen: 0</par><par>Aantal tumordeposits: 0</par><par/><par>Overige</par><par>Poliep(en): niet aanwezig</par><par/><par>Moleculaire bepaling</par><par>Mutatie analyse: niet uitgevoerdMicroscopie</par><par/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie links</div><div>Niveau van resectie mesocolon: in het mesocolische vet</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie tumor: colon descendens</div><div>Aspect tumor: schotelvormig</div><div>Maximale diameter tumor: 3,0 cm</div><div>Lengte preparaat: 20 cm</div><div>Ingevroren materiaal aanwezig: nee</div><div>Tumor aanwezig: ja, 1 tumor</div><div>Patient is bekend met: morbus Crohn</div><div>Metastase(n): niet gevonden</div><div>Eerdere (neo-adjuvante) therapie: geen</div><div>Vriescoupe tumor: niet verricht</div><div/><div>Microscopie</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed/matig gedifferentieerd (laaggradig)</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie</div><div>Angio-invasie opmerking: geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: laag (Bd1)</div><div>Perineurale groei: niet aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div/><div>Snijvlakken</div><div>Dichtstbijzijnde darmsnijvlak: distaal vrij op &gt;= 1 cm</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij op 0,8 cm</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 15</div><div>Aantal lymfklieren met metastasen: 0</div><div>Aantal tumordeposits: 0</div><div/><div>Overige</div><div>Poliep(en): niet aanwezig</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerdMicroscopie</div><div/></div>"
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
