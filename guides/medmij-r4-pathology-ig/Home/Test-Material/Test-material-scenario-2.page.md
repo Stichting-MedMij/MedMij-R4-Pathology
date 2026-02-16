@@ -41,10 +41,10 @@
 | ReportIdentifier | T26-60065 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | Authorizer | Jan Oosting |
 | AuthorizationDate | 03-02-2026 |
-| ClinicalInformation | <par>Klinische gegevens</par><par>Binnengekomen via BVO, geen klachten</par><par>Aard materiaal</par><par>2 colon biopten</par><par/> |
-| Macroscopy | <par>Macroscopie</par><par>1, 2 : biopt, ti ingesloten in 1/A en 2/A</par><par/> |
-| Microscopy | <par>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</par><par/><par>Aantal inzendingen: I-II</par><par/><par>I  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: flexura lienalis</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasie</par><par/><par>II  Type biopt / resectie: 1 slijmvliesbiopt</par><par>Lokalisatie: colon descendens</par><par>Primaire afwijking: tubulair adenoom</par><par>Bevinding: met laaggradige dysplasieMicroscopie</par><par/> |
-| Conclusion | <par>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</par><par>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</par><par> </par> |
+| ClinicalInformation | Klinische gegevens <br/> Binnengekomen via BVO, geen klachten <br/> <br/> Aard materiaal <br/> 2 colon biopten |
+| Macroscopy | Macroscopie <br/> 1, 2 : biopt, ti ingesloten in 1/A en 2/A |
+| Microscopy | Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022) <br/> <br/> Aantal inzendingen: I-II <br/> <br/> I  Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: flexura lienalis <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie <br/> <br/> II  Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: colon descendens <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie  <br/> <br/> Microscopie |
+| Conclusion | I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie. <br/> II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie. |
 
 ### Protocol data (general)
 
