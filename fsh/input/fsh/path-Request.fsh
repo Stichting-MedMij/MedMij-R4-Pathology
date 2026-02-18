@@ -30,7 +30,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^patternCodeableConcept = $SCT#108257001
 * category[requestType] from MercuriusRequestType_VS (required)
   * ^short = "RequestType"
-  * ^definition = "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab."
+  * ^definition = "This typing of the examination provides additional context for the request."
   * ^alias = "SoortAanvraag"
   * ^comment = "When the RequestType concept has an empty value, _normaal_ SHALL be used as default value."
 * category[healthScreeningType] from MercuriusHealthScreeningType_VS (required)
@@ -140,8 +140,8 @@ Description: "Requester of the pathology study."
   * ^definition = "Name of the hospital from where the specimen is sent."
   * ^comment = "The actual mapping of the Hospital concept is on `Organization.name`."
   * ^alias = "Ziekenhuis"
-* specialty 1..1
-* specialty[specialty] 1..1
+* specialty 0..1
+* specialty[specialty]
   * ^short = "Specialty"
   * ^definition = "Specialty of the requester."
   * ^alias = "Specialisme"

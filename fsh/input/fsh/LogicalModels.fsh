@@ -35,20 +35,20 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     * ^comment = "The place of birth is part of the CIS personalia as delivered by the CIS-GBA."
   * BirthCountry 0..1 string "Birth country" "Country of birth."
     * ^alias = "Geboorteland"
-* Address 1..1 BackboneElement "Address" "Address of the patient."
+* Address 0..1 BackboneElement "Address" "Address of the patient."
   * ^alias = "Adres"
   * Street 0..1 string "Street" "Street name of the address."
     * ^alias = "Straat"
   * HouseNumber 0..1 string "House number" "House number of the address."
     * ^alias = "Huisnummer"
-  * PostalCode 1..1 string "Postal code" "Postal code, either Dutch or foreign."
+  * PostalCode 0..1 string "Postal code" "Postal code, either Dutch or foreign."
     * ^alias = "Postcode"
     * ^comment = """
     Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.
     
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.
     """
-  * City 1..1 string "City" "Place name."
+  * City 0..1 string "City" "Place name."
     * ^alias = "Woonplaats"
 
 Logical: LmRequest
@@ -64,7 +64,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * ^abstract = false
 * .
   * ^alias = "Aanvraag"
-* RequestType 1..1 CodeableConcept "Request type" "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab."
+* RequestType 1..1 CodeableConcept "Request type" "This typing of the examination provides additional context for the request."
 * RequestType from MercuriusRequestType_VS (required)
   * ^alias = "SoortAanvraag"
   * ^defaultValueCodeableConcept.coding.system = "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType"
@@ -78,7 +78,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^alias = "Aanvrager"
   * RequesterName 1..1 string "Requester name" "Name of the requester."
     * ^alias = "AanvragerNaam"
-  * Specialty 1..1 CodeableConcept "Specialty" "Specialty of the requester."
+  * Specialty 0..1 CodeableConcept "Specialty" "Specialty of the requester."
   * Specialty from MercuriusSpecialty_VS (extensible)
     * ^alias = "Specialisme"
   * Hospital 0..1 string "Hospital" "Name of the hospital from where the specimen is sent."

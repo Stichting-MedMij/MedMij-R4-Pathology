@@ -53,7 +53,7 @@
         "id": "path-lm-Request.RequestType",
         "path": "path-lm-Request.RequestType",
         "short": "Request type",
-        "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
+        "definition": "This typing of the examination provides additional context for the request.",
         "alias": [
           "SoortAanvraag"
         ],
@@ -166,7 +166,7 @@
         "alias": [
           "Specialisme"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {

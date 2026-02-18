@@ -62,7 +62,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * ^definition = "Birth date."
   * ^comment = "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a valid FHIR date of the form YYYY-MM-DD."
   * ^alias = "Geboortedatum"
-* address 1..1
+* address 0..1
   * line
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName]
       * valueString
@@ -74,11 +74,11 @@ Description: "The person whose human tissue is analyzed in a pathology study."
         * ^short = "HouseNumber"
         * ^definition = "House number of the address."
         * ^alias = "Huisnummer"
-  * city 1..1
+  * city
     * ^short = "City"
     * ^definition = "Place name."
     * ^alias = "Woonplaats"
-  * postalCode 0..1
+  * postalCode
     * ^short = "PostalCode"
     * ^definition = "Postal code, either Dutch or foreign."
     * ^comment = """
