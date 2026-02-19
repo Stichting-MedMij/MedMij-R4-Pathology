@@ -1,0 +1,14 @@
+{
+  "resourceType": "Location",
+  "id": "Pathology-Location-LUMC-Polikliniek-MDL",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
+    ]
+  },
+  "name": "Polikliniek MDL",
+  "managingOrganization": {
+    "reference": "Organization/Pathology-Organization-LUMC",
+    "display": "LUMC"
+  }
+}

@@ -19,5 +19,11 @@
       "reference": "Specimen/Pathology-Specimen-Rommella",
       "display": "Colon Biopt"
     }
-  ]
+  ],
+  "collection": {
+    "collectedDateTime": "2026-01-25",
+    "method": {
+      "text": "biopsie"
+    }
+  }
 }

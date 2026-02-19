@@ -23,6 +23,10 @@ Usage: #example
   * text = "Colon Resectie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * receivedTime = "2026-02-03"
+* collection
+  * collectedDateTime = "2026-02-01"
+  * method
+    * text = "resectie"
 
 Instance: Pathology-Report-Olivander
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report
@@ -137,6 +141,10 @@ InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+* extension[http://hl7.org/fhir/StructureDefinition/patient-birthPlace]
+  * valueAddress
+    * city = "Londen"
+    * country = "Groot-Brittanië"
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
@@ -150,9 +158,11 @@ Usage: #example
 * gender = #male
 * birthDate = "1921-09-25"
 * address
-  * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
-  * city
-    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
+  * line = "Diagonaalstraat 687"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Diagonaalstraat"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "687"
+  * city = "Londen"
+  * postalCode = "5972 XX"
 
 Instance: Pathology-PractitionerRole-Plijster
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
@@ -161,8 +171,8 @@ Usage: #example
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
 * practitioner = Reference(Pathology-Practitioner-Plijster) "P. Plijster"
 * organization = Reference(Pathology-Organization-LUMC) "LUMC"
-* specialty[specialty]
-  * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
+* specialty[specialty] = $VektisAGB#0318 "Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)"
+* location = Reference(Pathology-Location-LUMC-Polikliniek-MDL) "LUMC, Polikliniek MDL"
 
 Instance: Pathology-PractitionerRole-Oosting
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
@@ -189,3 +199,9 @@ Instance: Pathology-Organization-LUMC
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
 * name = "LUMC"
+
+Instance: Pathology-Location-LUMC-Polikliniek-MDL
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider
+Usage: #example
+* name = "Polikliniek MDL"
+* managingOrganization = Reference(Pathology-Organization-LUMC) "LUMC"

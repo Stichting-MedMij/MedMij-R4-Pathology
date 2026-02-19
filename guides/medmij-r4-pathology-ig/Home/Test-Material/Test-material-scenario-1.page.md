@@ -9,12 +9,12 @@
 | Name.FamilyName.LastName | Olivander |
 | Gender | Man (code 'm' from code system 'http://medmij.nl/fhir/CodeSystem/MercuriusGender') |
 | BirthInformation.BirthDate | 25-09-1921 |
-| BirthInformation.BirthPlace | |
-| BirthInformation.BirthCountry | |
-| Address.Street | |
-| Address.HouseNumber | |
-| Address.PostalCode | |
-| Address.City | |
+| BirthInformation.BirthPlace | Londen |
+| BirthInformation.BirthCountry | Groot-Brittanië |
+| Address.Street | Diagonaalstraat |
+| Address.HouseNumber | 687 |
+| Address.PostalCode | 5972 XX |
+| Address.City | Londen |
 | PatientIdentificationNumber (not part of the functional data model) | 524895478 |
 
 ## Request data
@@ -24,14 +24,14 @@
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen BVO (code '0' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | P. Plijster |
-| Requester.Specialty | |
+| Requester.Specialty | gastro-enterologie (code 'gastro-enterologie' from code system 'MercuriusSpecialty') |
 | Requester.Hospital | LUMC |
-| Requester.Location | |
+| Requester.Location | Polikliniek MDL |
 | ClinicalQuestion | Vraagstelling <br/> Classificatie |
 | Specimen.SpecimenMaterial | Colon Resectie |
-| Specimen.CollectionDate | |
+| Specimen.CollectionDate | 01-02-2026 |
 | Specimen.ReceivedDate | 03-02-2026 |
-| Specimen.CollectionMethod | |
+| Specimen.CollectionMethod | resectie |
 | Specimen.NumberOfSamples | 1 |
 
 ## Report data

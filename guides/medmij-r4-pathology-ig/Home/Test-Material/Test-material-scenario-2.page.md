@@ -24,14 +24,14 @@
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen BVO (code '0' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | P. Plijster |
-| Requester.Specialty | |
+| Requester.Specialty | gastro-enterologie (code 'gastro-enterologie' from code system 'MercuriusSpecialty') |
 | Requester.Hospital | LUMC |
-| Requester.Location | |
+| Requester.Location | Polikliniek MDL |
 | ClinicalQuestion | Vraagstelling <br/> Afwijkingen? |
 | Specimen.SpecimenMaterial | Colon Biopt |
-| Specimen.CollectionDate | |
+| Specimen.CollectionDate | 25-01-2026 |
 | Specimen.ReceivedDate | 26-01-2026 |
-| Specimen.CollectionMethod | |
+| Specimen.CollectionMethod | biopsie |
 | Specimen.NumberOfSamples | 2 |
 
 ## Report data

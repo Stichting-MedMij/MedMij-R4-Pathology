@@ -48,24 +48,6 @@
       }
     }
   ],
-  "address": [
-    {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-          "valueCode": "unknown"
-        }
-      ],
-      "_city": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode": "unknown"
-          }
-        ]
-      }
-    }
-  ],
   "gender": "female",
   "birthDate": "1956-04-05"
 }

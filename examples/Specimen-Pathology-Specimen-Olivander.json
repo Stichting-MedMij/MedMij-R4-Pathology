@@ -13,5 +13,11 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
-  "receivedTime": "2026-02-03"
+  "receivedTime": "2026-02-03",
+  "collection": {
+    "collectedDateTime": "2026-02-01",
+    "method": {
+      "text": "resectie"
+    }
+  }
 }

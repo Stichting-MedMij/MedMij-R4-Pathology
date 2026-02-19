@@ -25,6 +25,10 @@ Usage: #example
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
 * receivedTime = "2026-01-26"
+* collection
+  * collectedDateTime = "2026-01-25"
+  * method
+    * text = "biopsie"
 
 Instance: Pathology-Specimen-Rommella-Sample-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
@@ -34,6 +38,10 @@ Usage: #example
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
 * receivedTime = "2026-01-26"
 * parent = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+* collection
+  * collectedDateTime = "2026-01-25"
+  * method
+    * text = "biopsie"
 
 Instance: Pathology-Specimen-Rommella-Sample-2
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
@@ -43,6 +51,10 @@ Usage: #example
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
 * receivedTime = "2026-01-26"
 * parent = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
+* collection
+  * collectedDateTime = "2026-01-25"
+  * method
+    * text = "biopsie"
 
 Instance: Pathology-Report-Rommella
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report
@@ -238,7 +250,3 @@ Usage: #example
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
 * gender = #female
 * birthDate = "1956-04-05"
-* address
-  * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown
-  * city
-    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #unknown

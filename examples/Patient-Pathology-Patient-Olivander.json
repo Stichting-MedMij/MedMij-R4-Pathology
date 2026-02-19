@@ -35,6 +35,15 @@
       }
     }
   ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+      "valueAddress": {
+        "city": "Londen",
+        "country": "Groot-Brittanië"
+      }
+    }
+  ],
   "identifier": [
     {
       "system": "http://fhir.nl/fhir/NamingSystem/bsn",
@@ -50,20 +59,25 @@
   ],
   "address": [
     {
-      "extension": [
+      "line": [
+        "Diagonaalstraat 687"
+      ],
+      "_line": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-          "valueCode": "unknown"
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Diagonaalstraat"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "687"
+            }
+          ]
         }
       ],
-      "_city": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-            "valueCode": "unknown"
-          }
-        ]
-      }
+      "city": "Londen",
+      "postalCode": "5972 XX"
     }
   ],
   "gender": "male",
