@@ -105,7 +105,7 @@
         "path": "ServiceRequest.category",
         "sliceName": "requestType",
         "short": "RequestType",
-        "definition": "This additional typing of the examination can provide a trigger to avoid sending to ZIS, CIS, National Dababase or others, or to send a consultation report (electronically) to another lab.",
+        "definition": "This typing of the examination provides additional context for the request.",
         "comment": "When the RequestType concept has an empty value, _normaal_ SHALL be used as default value.",
         "alias": [
           "SoortAanvraag"

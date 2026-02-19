@@ -4,8 +4,8 @@ topic: FHIRProfilesIndex
 
 # FHIR profiles
 ## Profiling guidelines
-- The [Nictiz Profiling Guidelines for FHIR R4](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4) have been used as guidelines for creating the profile.
-- The (element) descriptions present in the profile are taken from the respective Logical Model the mapped concept originates from.
+- The [Nictiz Profiling Guidelines for FHIR R4](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4) have been used as guidelines for creating the profiles.
+- The (element) descriptions present in the profiles are taken from the respective Logical Model the mapped concept originates from.
 - The ['open world' modeling](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4#Open_vs._closed_world_modeling) approach is adopted as much as possible. Notable exceptions are cardinalities that have been restricted based on the functional dataset of the MedMij use case, such as several minimum cardinalities.
 
 ## Other profiles
