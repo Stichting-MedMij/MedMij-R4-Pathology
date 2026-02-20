@@ -1,0 +1,145 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-Request.Requester",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
+  "name": "PathRequestRequester",
+  "title": "path Request.Requester",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Requester of the pathology study.",
+  "purpose": "This PractitionerRole resource represents the requester-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole",
+        "path": "PractitionerRole",
+        "short": "Requester",
+        "definition": "Requester of the pathology study.",
+        "alias": [
+          "Aanvrager",
+          "nl-core-HealthProfessional-PractitionerRole"
+        ]
+      },
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "short": "RequesterName",
+        "definition": "Name of the requester.",
+        "comment": "The actual mapping of the RequesterName concept is on `Practitioner.name[nameInformation].text`.",
+        "alias": [
+          "AanvragerNaam"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-68",
+            "comment": "aanvrager (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "short": "Hospital",
+        "definition": "Name of the hospital from where the specimen is sent.",
+        "comment": "The actual mapping of the Hospital concept is on `Organization.name`.",
+        "alias": [
+          "Ziekenhuis"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-72",
+            "comment": "ziekenhuis (implicit, actual mapping is on Organization.name)"
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "max": "1"
+      },
+      {
+        "id": "PractitionerRole.specialty:specialty",
+        "path": "PractitionerRole.specialty",
+        "sliceName": "specialty",
+        "definition": "Specialty of the requester.",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "PractitionerSpecialty"
+            }
+          ],
+          "strength": "required",
+          "description": "Use ConceptMap MercuriusSpecialty-to-SpecialismeAGBCodelijst to translate terminology from the functional model to profile terminology in ValueSet SpecialismeAGBCodelijst.",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000",
+          "_valueSet": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusSpecialty-to-SpecialismeAGBCodelijst"
+              }
+            ]
+          }
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-71",
+            "comment": "specialisme"
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "short": "Location",
+        "definition": "Location of requesting institute.",
+        "comment": "The actual mapping of the Location concept is on `Location.name`.",
+        "alias": [
+          "Locatie"
+        ],
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-67",
+            "comment": "locatie (implicit, actual mapping is on Location.name)"
+          }
+        ]
+      }
+    ]
+  }
+}

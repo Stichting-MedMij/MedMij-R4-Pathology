@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MercuriusRequestType",
+  "id": "MercuriusRequestType",
+  "title": "MercuriusRequestType ValueSet.",
+  "description": "ValueSet for the type of the request as used in Mercurius.",
+  "url": "http://medmij.nl/fhir/ValueSet/MercuriusRequestType",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "experimental": false,
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType"
+      }
+    ]
+  }
+}

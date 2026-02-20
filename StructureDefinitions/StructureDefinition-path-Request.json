@@ -1,0 +1,281 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-Request",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Request",
+  "name": "PathRequest",
+  "title": "path Request",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Request for a pathology study to be performed by a certain laboratory.",
+  "purpose": "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "short": "Request",
+        "definition": "Request for a pathology study to be performed by a certain laboratory.",
+        "alias": [
+          "Aanvraag",
+          "referral",
+          "referral request",
+          "transfer of care request"
+        ],
+        "constraint": [
+          {
+            "key": "path-Request-1",
+            "severity": "error",
+            "human": "Either a code for cytology or histology is present.",
+            "expression": "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/path-Request"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "patternCode": "completed"
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "patternCode": "order"
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3
+      },
+      {
+        "id": "ServiceRequest.category:pathology",
+        "path": "ServiceRequest.category",
+        "sliceName": "pathology",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "108257001",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ServiceRequest.category:requestType",
+        "path": "ServiceRequest.category",
+        "sliceName": "requestType",
+        "short": "RequestType",
+        "definition": "This typing of the examination provides additional context for the request.",
+        "comment": "When the RequestType concept has an empty value, _normaal_ SHALL be used as default value.",
+        "alias": [
+          "SoortAanvraag"
+        ],
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusRequestType"
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-89",
+            "comment": "soortaanvraag"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.category:healthScreeningType",
+        "path": "ServiceRequest.category",
+        "sliceName": "healthScreeningType",
+        "short": "HealthScreeningType",
+        "definition": "Type of national trial for this request.",
+        "comment": "When the HealthScreeningType concept has an empty value, _0_ SHALL be used as default value.",
+        "alias": [
+          "BVOSoort"
+        ],
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType"
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-97",
+            "comment": "bvosoort"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "comment": "If the requested pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope.",
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding:cytology",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "cytology",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "1348332002",
+          "system": "http://snomed.info/sct"
+        },
+        "condition": [
+          "path-Request-1"
+        ]
+      },
+      {
+        "id": "ServiceRequest.code.coding:histology",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "histology",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "252416005",
+          "system": "http://snomed.info/sct"
+        },
+        "condition": [
+          "path-Request-1"
+        ]
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "short": "Patient",
+        "alias": [
+          "Patiënt"
+        ],
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://medmij.nl/fhir/StructureDefinition/path-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "short": "Requester",
+        "definition": "Requester of the pathology study.",
+        "alias": [
+          "Aanvrager",
+          "orderer"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.reasonCode.text",
+        "path": "ServiceRequest.reasonCode.text",
+        "short": "ClinicalQuestion",
+        "definition": "Clinical request information.",
+        "alias": [
+          "KlinischeVraag"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-139",
+            "comment": "klinischevraag"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "short": "Specimen",
+        "definition": "Specimen that will be examined by a laboratory.",
+        "comment": "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample.",
+        "alias": [
+          "Monster"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

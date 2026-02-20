@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Patient
+  filename: Patient.page.md
+- name: Report
+  filename: Report.page.md
+- name: Request
+  filename: Request.page.md

@@ -1,0 +1,40 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MercuriusGender",
+  "id": "MercuriusGender",
+  "title": "MercuriusGender CodeSystem.",
+  "description": "Codes for the gender of the patient as used in Mercurius.",
+  "url": "http://medmij.nl/fhir/CodeSystem/MercuriusGender",
+  "concept": [
+    {
+      "code": "m",
+      "display": "Man"
+    },
+    {
+      "code": "v",
+      "display": "Vrouw"
+    }
+  ],
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "experimental": false,
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": false,
+  "count": 2
+}
