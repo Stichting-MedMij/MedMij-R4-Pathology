@@ -55,7 +55,7 @@ GET [base]/DiagnosticReport?category=http://snomed.info/sct|108257001&status=fin
 
 The search parameters listed in the table below SHALL be supported by the XIS and MAY be supported by the PHR, with the exception of the `category` and `status` parameters, which SHALL be supported by the PHR as well (as these are always part of the search query in this transaction).
 
-Note that the PHR MAY request that the XIS returns resources related to the search results, in order to reduce the overall network delay of repeated retrievals of related resources. Supporting the `include` of the Observation, Practitioner, PractitionerRole, ServiceRequest and Specimen resources via the parameters specified in the table below is required for the XIS, while support of the `include` of the Patient resource (via the `patient` parameter) is optional. However, all resources referenced per literal reference SHALL be resolvable per the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Including_referenced_resources).
+Note that the PHR MAY request that the XIS returns resources related to the search results, in order to reduce the overall network delay of repeated retrievals of related resources. Supporting the `_include` of the Observation, Practitioner, PractitionerRole, ServiceRequest and Specimen resources via the parameters specified in the table below is required for the XIS, while support of the `_include` of the Patient resource (via the `patient` parameter) is optional. However, all resources referenced per literal reference SHALL be resolvable per the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Including_referenced_resources).
 
 | Description | FHIR search parameter | Examples |
 | --- | --- | --- | --- | --- | --- |
@@ -68,13 +68,13 @@ Note that the PHR MAY request that the XIS returns resources related to the sear
 
 **Table 3: Supported search parameters**
 
-Even though the different `include`s specified in the above table are optional for the PHR to be added to the request, it is recommended to add all of these to minimize the number of individual `read` operations needed to retrieve all relevant data. This results in the following request:
+Even though the different `_include`s specified in the above table are optional for the PHR to be added to the request, it is recommended to add all of these to minimize the number of individual `read` operations needed to retrieve all relevant data. This results in the following request:
 
 ```
 GET [base]/DiagnosticReport?category=http://snomed.info/sct|108257001&status=final&_include=DiagnosticReport:based-on&_include=DiagnosticReport:result&_include=DiagnosticReport:results-interpreter&_include=DiagnosticReport:specimen
 ```
 
-Note that, even though the above request returns most of the relevant data for this use case, it does not contain the data on the requester of the pathology study, unless the XIS includes this data by default. The requester corresponds to a PractitionerRole resource (conforming to the {{pagelink: FHIRProfilesIndex, text: path-Request.Requester, anchor: PathRequestRequester}} profile) that is referenced from `ServiceRequest.requester` in the {{pagelink: FHIRProfilesIndex, text: path-Request, anchor: PathRequest}} profile. As the ServiceRequest resource is returned in the Bundle resulting from the above request, this PractitionerRole resource is easily retrieved via a `read` operation.
+Note that, even though the above request returns most of the relevant data for this use case, it does not contain the data on the requester of the pathology study, unless the XIS includes this data by default. The requester corresponds to a PractitionerRole resource (conforming to the {{pagelink: FHIRProfilesIndex, text: path-Request.Requester, anchor: PathRequestRequester}} profile) that is referenced from `ServiceRequest.requester` in the {{pagelink: FHIRProfilesIndex, text: path-Request, anchor: PathRequest}} profile. As the ServiceRequest resource is returned in the Bundle that is part of the response to the above request, this PractitionerRole resource is easily retrieved by the PHR via a `read` operation.
 
 ##### XIS: response message
 The XIS returns an HTTP Status code appropriate to the processing outcome as well as a Bundle, with `Bundle.type` equal to *searchset*, including the resources matching the search query. The resources included in the Bundle SHALL conform the the profiles listed {{pagelink: FHIRProfilesIndex, text: here}}.
