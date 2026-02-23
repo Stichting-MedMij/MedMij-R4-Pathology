@@ -43,11 +43,11 @@ In this use case, available pathology reports for a patient are retrieved based 
 ##### PHR: request message
 The PHR executes an HTTP search conform the [FHIR specification](https://hl7.org/fhir/R4/search.html) against the DiagnosticReport endpoint of the XIS using the following URL:
 
-`GET [base]/DiagnosticReport{?[parameters]}`
+```GET [base]/DiagnosticReport{?[parameters]}```
 
 Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Since only complete and verified pathology reports are to be exchanged in this use case, the PHR SHALL always include the search parameter `category` with value *<span>http://snomed.info/sct|108257001</span>* in their request, as well as the search parameter `status` with value *final*:
 
-`GET [base]/DocumentReference?category=http://snomed.info/sct|108257001&status=current{&[additional parameters]}`
+```GET [base]/DocumentReference?category=http://snomed.info/sct|108257001&status=current{&[additional parameters]}```
 
 The search parameters listed in the table below SHALL be supported by the XIS and MAY be supported by the PHR, with the exception of the `category` and `status` parameters, which SHALL be supported by the PHR as well (as these are always part of the search query in this transaction).
 
@@ -55,18 +55,18 @@ Note that the PHR MAY request that the XIS returns resources related to the sear
 
 | Description | FHIR search parameter | Examples |
 | --- | --- | --- | --- | --- | --- |
-| Search on the category of the DiagnosticReport. | `category` | Retrieve all DiagnosticReport resources that correspond to a pathology report (i.e. a {{pagelink: LogicalModelsIndex, text: Report, anchor: PathLmReport}} CIM). <br/> `GET [base]/DiagnosticReport?category=http://snomed.info/sct|108257001` |
-| Search on the status of the DiagnosticReport. | `status` | Retrieve all DiagnosticReport resources that correspond to a complete and verified report. <br/> `GET [base]/DiagnosticReport?status=final` |
-| Include the request (i.e. {{pagelink: LogicalModelsIndex, text: Request, anchor: PathLmRequest}} CIM) on which the pathology report is based. | `_include=DiagnosticReport:based-on` | Retrieve all DiagnosticReport resources as well as the ServiceRequest resources on which they are based. <br/> `GET [base]/DiagnosticReport?_include=DiagnosticReport:based-on` |
-| Include the observations (i.e. ClinicalInformation, Macroscopy, Microscopy and ProtocolDataItem concepts within the {{pagelink: LogicalModelsIndex, text: Report, anchor: PathLmReport}} CIM) that are part of the report. | `_include=DiagnosticReport:result` | Retrieve all DiagnosticReport resources as well as the Observation resources that are part of the reports. <br/> `GET [base]/DiagnosticReport?_include=DiagnosticReport:result` |
-| Include the pathologist (i.e. Pathologist concept within the {{pagelink: LogicalModelsIndex, text: Report, anchor: PathLmReport}} CIM) who authorized the report. | `_include=DiagnosticReport:results-interpreter` | Retrieve all DiagnosticReport resources as well as the Practitioner(Role) resources corresponding to the pathologists who authorized the reports. <br/> `GET [base]/DiagnosticReport?_include=DiagnosticReport:results-interpreter` |
-| Include the specimens (i.e. Specimen concept within the {{pagelink: LogicalModelsIndex, text: Request, anchor: PathLmRequest}} CIM) that have been examined in the pathology study the report corresponds to. | `_include=DiagnosticReport:specimen` | Retrieve all DiagnosticReport resources as well as the Specimen resources on which they are based. <br/> `GET [base]/DiagnosticReport?_include=DiagnosticReport:specimen` |
+| Search on the category of the DiagnosticReport. | `category` | Retrieve all DiagnosticReport resources that correspond to a pathology report (i.e. a {{pagelink: LogicalModelsIndex, text: Report, anchor: PathLmReport}} CIM). <br/> ```GET [base]/DiagnosticReport?category=http://snomed.info/sct|108257001``` |
+| Search on the status of the DiagnosticReport. | `status` | Retrieve all DiagnosticReport resources that correspond to a complete and verified report. <br/> ```GET [base]/DiagnosticReport?status=final``` |
+| Include the request (i.e. {{pagelink: LogicalModelsIndex, text: Request, anchor: PathLmRequest}} CIM) on which the pathology report is based. | `_include=DiagnosticReport:based-on` | Retrieve all DiagnosticReport resources as well as the ServiceRequest resources on which they are based. <br/> ```GET [base]/DiagnosticReport?_include=DiagnosticReport:based-on``` |
+| Include the observations (i.e. ClinicalInformation, Macroscopy, Microscopy and ProtocolDataItem concepts within the {{pagelink: LogicalModelsIndex, text: Report, anchor: PathLmReport}} CIM) that are part of the report. | `_include=DiagnosticReport:result` | Retrieve all DiagnosticReport resources as well as the Observation resources that are part of the reports. <br/> ```GET [base]/DiagnosticReport?_include=DiagnosticReport:result``` |
+| Include the pathologist (i.e. Pathologist concept within the {{pagelink: LogicalModelsIndex, text: Report, anchor: PathLmReport}} CIM) who authorized the report. | `_include=DiagnosticReport:results-interpreter` | Retrieve all DiagnosticReport resources as well as the Practitioner(Role) resources corresponding to the pathologists who authorized the reports. <br/> ```GET [base]/DiagnosticReport?_include=DiagnosticReport:results-interpreter``` |
+| Include the specimens (i.e. Specimen concept within the {{pagelink: LogicalModelsIndex, text: Request, anchor: PathLmRequest}} CIM) that have been examined in the pathology study the report corresponds to. | `_include=DiagnosticReport:specimen` | Retrieve all DiagnosticReport resources as well as the Specimen resources on which they are based. <br/> ```GET [base]/DiagnosticReport?_include=DiagnosticReport:specimen``` |
 
 **Table 3: Supported search parameters**
 
 Even though the different `include`s specified in the above table are optional for the PHR to be added to the request, it is recommended to add all of these to minimize the number of individual `read` operations needed to retrieve all relevant data. This results in the following request:
 
-`GET [base]/DocumentReference?category=http://snomed.info/sct|108257001&status=current&_include=DiagnosticReport:based-on&_include=DiagnosticReport:result&_include=DiagnosticReport:results-interpreter&_include=DiagnosticReport:specimen`
+```GET [base]/DocumentReference?category=http://snomed.info/sct|108257001&status=current&_include=DiagnosticReport:based-on&_include=DiagnosticReport:result&_include=DiagnosticReport:results-interpreter&_include=DiagnosticReport:specimen```
 
 ##### XIS: response message
 The XIS returns an HTTP Status code appropriate to the processing outcome as well as a Bundle, with `Bundle.type` equal to *searchset*, including the resources matching the search query. The resources included in the Bundle SHALL conform the the profiles listed {{pagelink: FHIRProfilesIndex, text: here}}.
