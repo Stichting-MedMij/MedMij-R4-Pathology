@@ -3,11 +3,11 @@
 ValueSet: MercuriusGender_VS
 Id: MercuriusGender
 Title: "MercuriusGender ValueSet."
-Description: "ValueSet for the gender of the patient as used in Mercurius."
+Description: "ValueSet for the gender of the patient as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusGenderValueSetOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusGenderValueSetOID
 * ^name = "MercuriusGender"
 * ^status = #draft
 * ^experimental = false
@@ -17,11 +17,11 @@ Description: "ValueSet for the gender of the patient as used in Mercurius."
 ValueSet: MercuriusHealthScreeningType_VS
 Id: MercuriusHealthScreeningType
 Title: "MercuriusHealthScreeningType ValueSet."
-Description: "ValueSet for the type of national trial for the request as used in Mercurius."
+Description: "ValueSet for the type of national trial for the request as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusHealthScreeningTypeValueSetOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusHealthScreeningTypeValueSetOID
 * ^name = "MercuriusHealthScreeningType"
 * ^status = #draft
 * ^experimental = false
@@ -31,11 +31,11 @@ Description: "ValueSet for the type of national trial for the request as used in
 ValueSet: MercuriusRequestType_VS
 Id: MercuriusRequestType
 Title: "MercuriusRequestType ValueSet."
-Description: "ValueSet for the type of the request as used in Mercurius."
+Description: "ValueSet for the type of the request as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusRequestTypeValueSetOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusRequestTypeValueSetOID
 * ^name = "MercuriusRequestType"
 * ^status = #draft
 * ^experimental = false
@@ -45,11 +45,11 @@ Description: "ValueSet for the type of the request as used in Mercurius."
 ValueSet: MercuriusSpecialty_VS
 Id: MercuriusSpecialty
 Title: "MercuriusSpecialty ValueSet."
-Description: "ValueSet for the type of the request as used in Mercurius."
+Description: "ValueSet for the type of the request as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusSpecialtyValueSetOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusSpecialtyValueSetOID
 * ^name = "MercuriusSpecialty"
 * ^status = #draft
 * ^experimental = false
