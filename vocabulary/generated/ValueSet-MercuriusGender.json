@@ -4,19 +4,12 @@
   "name": "MercuriusGender",
   "id": "MercuriusGender",
   "title": "MercuriusGender ValueSet.",
-  "description": "ValueSet for the gender of the patient as defined by Palga and used in Mercurius.",
+  "description": "ValueSet for the gender of the patient as used in Mercurius.",
   "url": "http://medmij.nl/fhir/ValueSet/MercuriusGender",
   "text": {
     "status": "empty",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
-  "identifier": [
-    {
-      "use": "official",
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.528.1.1023.4.5.1"
-    }
-  ],
   "experimental": false,
   "publisher": "MedMij",
   "contact": [

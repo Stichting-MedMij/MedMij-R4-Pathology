@@ -92,6 +92,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
 
 Mapping: PathPatientMercuriusCore
 Source: PathPatient
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * extension[birthPlace]

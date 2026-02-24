@@ -29,7 +29,8 @@
   "mapping": [
     {
       "identity": "mercurius-core-dataset-2-0",
-      "name": "Mercurius Core Dataset 2.0"
+      "name": "Mercurius Core Dataset 2.0",
+      "uri": "TODO"
     }
   ],
   "kind": "resource",

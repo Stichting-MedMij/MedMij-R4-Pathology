@@ -6,9 +6,6 @@ Id: path-lm-Patient
 Title: "Patient"
 Description: "The person whose human tissue is analyzed in a pathology study."
 * insert DefaultNarrative
-* ^identifier.use = #official
-* ^identifier.system = $URI
-* ^identifier.value = $PathLmPatientOID
 * ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie)."
@@ -60,9 +57,6 @@ Id: path-lm-Request
 Title: "Request"
 Description: "Request for a pathology study to be performed by a certain laboratory."
 * insert DefaultNarrative
-* ^identifier.use = #official
-* ^identifier.system = $URI
-* ^identifier.value = $PathLmRequestOID
 * ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
@@ -112,9 +106,6 @@ Id: path-lm-Report
 Title: "Report"
 Description: "Pathology report which contains the findings and interpretation of a pathology study."
 * insert DefaultNarrative
-* ^identifier.use = #official
-* ^identifier.system = $URI
-* ^identifier.value = $PathLmReportOID
 * ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
@@ -146,6 +137,7 @@ Description: "Pathology report which contains the findings and interpretation of
 
 Mapping: LmPatientMercuriusCore
 Source: LmPatient
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * Name
@@ -170,6 +162,7 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: LmRequestMercuriusCore
 Source: LmRequest
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * RequestType -> "mercurius-core-rubriek-89" "soortaanvraag"
@@ -188,6 +181,7 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: LmReportMercuriusCore
 Source: LmReport
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * ReportIdentifier -> "mercurius-core-rubriek-3" "rapnaam"

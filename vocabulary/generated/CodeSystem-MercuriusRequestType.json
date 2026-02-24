@@ -5,7 +5,7 @@
   "name": "MercuriusRequestType",
   "id": "MercuriusRequestType",
   "title": "MercuriusRequestType CodeSystem.",
-  "description": "Codes for the type of the request as defined by Palga and used in Mercurius.",
+  "description": "Codes for the type of the request as used in Mercurius.",
   "url": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
   "concept": [
     {
@@ -53,13 +53,6 @@
     "status": "empty",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
-  "identifier": [
-    {
-      "use": "official",
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.528.1.1023.2.5.3"
-    }
-  ],
   "experimental": false,
   "publisher": "MedMij",
   "contact": [

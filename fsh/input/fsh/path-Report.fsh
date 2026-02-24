@@ -243,6 +243,7 @@ Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '134
 
 Mapping: PathReportMercuriusCore
 Source: PathReport
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * identifier[reportIdentifier] -> "mercurius-core-rubriek-3" "rapnaam"
@@ -255,6 +256,7 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportClinicalInformationMercuriusCore
 Source: PathReportClinicalInformation
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
@@ -262,6 +264,7 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportMacroscopyMercuriusCore
 Source: PathReportMacroscopy
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
@@ -269,6 +272,7 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportMicroscopyMercuriusCore
 Source: PathReportMicroscopy
+Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
