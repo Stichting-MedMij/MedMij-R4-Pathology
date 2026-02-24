@@ -3,11 +3,11 @@
 CodeSystem: MercuriusGender_CS
 Id: MercuriusGender
 Title: "MercuriusGender CodeSystem."
-Description: "Codes for the gender of the patient as used in Mercurius."
+Description: "Codes for the gender of the patient as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusGenderCodeSystemOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusGenderCodeSystemOID
 * ^name = "MercuriusGender"
 * ^status = #draft
 * ^experimental = false
@@ -21,11 +21,11 @@ Description: "Codes for the gender of the patient as used in Mercurius."
 CodeSystem: MercuriusHealthScreeningType_CS
 Id: MercuriusHealthScreeningType
 Title: "MercuriusHealthScreeningType CodeSystem."
-Description: "Codes for the type of national trial for the request as used in Mercurius."
+Description: "Codes for the type of national trial for the request as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusHealthScreeningTypeCodeSystemOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusHealthScreeningTypeCodeSystemOID
 * ^name = "MercuriusHealthScreeningType"
 * ^status = #draft
 * ^experimental = false
@@ -41,11 +41,11 @@ Description: "Codes for the type of national trial for the request as used in Me
 CodeSystem: MercuriusRequestType_CS
 Id: MercuriusRequestType
 Title: "MercuriusRequestType CodeSystem."
-Description: "Codes for the type of the request as used in Mercurius."
+Description: "Codes for the type of the request as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusRequestTypeCodeSystemOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusRequestTypeCodeSystemOID
 * ^name = "MercuriusRequestType"
 * ^status = #draft
 * ^experimental = false
@@ -67,11 +67,11 @@ Description: "Codes for the type of the request as used in Mercurius."
 CodeSystem: MercuriusSpecialty_CS
 Id: MercuriusSpecialty
 Title: "MercuriusSpecialty CodeSystem."
-Description: "Codes for the specialty of the requester as used in Mercurius."
+Description: "Codes for the specialty of the requester as defined by Palga and used in Mercurius."
 * insert DefaultNarrative
-// * ^identifier.use = #official
-// * ^identifier.system = $URI
-// * ^identifier.value = $MercuriusSpecialtyCodeSystemOID
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $MercuriusSpecialtyCodeSystemOID
 * ^name = "MercuriusSpecialty"
 * ^status = #draft
 * ^experimental = false
