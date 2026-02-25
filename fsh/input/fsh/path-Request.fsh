@@ -161,7 +161,6 @@ Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '134
 
 Mapping: PathRequestMercuriusCore
 Source: PathRequest
-Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * category[requestType] -> "mercurius-core-rubriek-89" "soortaanvraag"
@@ -171,7 +170,6 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathRequestSpecimenMercuriusCore
 Source: PathRequestSpecimen
-Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * type
@@ -184,7 +182,6 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathRequestRequesterMercuriusCore
 Source: PathRequestRequester
-Target: "TODO"
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * practitioner -> "mercurius-core-rubriek-68" "aanvrager (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
