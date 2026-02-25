@@ -5,7 +5,7 @@ topic: FO
 # Functioneel ontwerp
 
 ## Algemeen 
-Dit functioneel ontwerp beschrijft hoe pathologiegegevens beschikbaar worden gesteld aan de persoon via een Persoonlijke Gezondheidsomgeving (PGO). Hierdoor kan de persoon zijn/haar pathologieverslagen inzien om een beter en vollediger beeld te krijgen van de eigen medische situatie. In dit document gebruiken we de term patiënt om de persoon aan te duiden.
+Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden gesteld aan de persoon via een Persoonlijke Gezondheidsomgeving (PGO). Hierdoor kan de persoon zijn/haar pathologieverslagen inzien om een beter en vollediger beeld te krijgen van de eigen medische situatie. In dit document gebruiken we de term patiënt om de persoon aan te duiden.
 
 Dit functioneel ontwerp sluit aan op de pathologie-uitwisseling van Palga (LINK??).
 
