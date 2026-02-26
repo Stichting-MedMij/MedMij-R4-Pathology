@@ -1,0 +1,53 @@
+{
+  "resourceType": "Patient",
+  "id": "Pathology-Patient-Rommella",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Patient",
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "given": [
+        "L."
+      ],
+      "_given": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "IN"
+            }
+          ]
+        }
+      ],
+      "text": "L. Rommella",
+      "family": "Rommella",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Rommella"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+      "_value": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "masked"
+          }
+        ]
+      }
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1956-04-05"
+}

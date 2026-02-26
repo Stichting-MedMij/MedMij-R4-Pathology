@@ -1,0 +1,389 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-lm-Request",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-lm-Request",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.3.5.2"
+    }
+  ],
+  "name": "LmRequest",
+  "title": "Request",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Request for a pathology study to be performed by a certain laboratory.",
+  "purpose": "This LogicalModel represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://medmij.nl/fhir/StructureDefinition/path-lm-Request",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "path-lm-Request",
+        "path": "path-lm-Request",
+        "short": "Request",
+        "definition": "Request for a pathology study to be performed by a certain laboratory.",
+        "alias": [
+          "Aanvraag"
+        ]
+      },
+      {
+        "id": "path-lm-Request.RequestType",
+        "path": "path-lm-Request.RequestType",
+        "short": "Request type",
+        "definition": "This typing of the examination provides additional context for the request.",
+        "alias": [
+          "SoortAanvraag"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "defaultValueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
+              "code": "normaal"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusRequestType"
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-89",
+            "comment": "soortaanvraag"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.HealthScreeningType",
+        "path": "path-lm-Request.HealthScreeningType",
+        "short": "Health screening type",
+        "definition": "Type of national trial for this request.",
+        "alias": [
+          "BVOSoort"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "defaultValueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
+              "code": "0"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType"
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-97",
+            "comment": "bvosoort"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Requester",
+        "path": "path-lm-Request.Requester",
+        "short": "Requester",
+        "definition": "Requester of the pathology study.",
+        "alias": [
+          "Aanvrager"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Requester.RequesterName",
+        "path": "path-lm-Request.Requester.RequesterName",
+        "short": "Requester name",
+        "definition": "Name of the requester.",
+        "alias": [
+          "AanvragerNaam"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-68",
+            "comment": "aanvrager"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Requester.Specialty",
+        "path": "path-lm-Request.Requester.Specialty",
+        "short": "Specialty",
+        "definition": "Specialty of the requester.",
+        "alias": [
+          "Specialisme"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusSpecialty"
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-71",
+            "comment": "specialisme"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Requester.Hospital",
+        "path": "path-lm-Request.Requester.Hospital",
+        "short": "Hospital",
+        "definition": "Name of the hospital from where the specimen is sent.",
+        "alias": [
+          "Ziekenhuis"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-72",
+            "comment": "ziekenhuis"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Requester.Location",
+        "path": "path-lm-Request.Requester.Location",
+        "short": "Location",
+        "definition": "Location of requesting institute.",
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-67",
+            "comment": "locatie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.ClinicalQuestion",
+        "path": "path-lm-Request.ClinicalQuestion",
+        "short": "Clinical question",
+        "definition": "Clinical request information.",
+        "alias": [
+          "KlinischeVraag"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-139",
+            "comment": "klinischevraag"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen",
+        "path": "path-lm-Request.Specimen",
+        "short": "Specimen",
+        "definition": "Specimen that will be examined by a laboratory.",
+        "alias": [
+          "Monster"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.SpecimenMaterial",
+        "path": "path-lm-Request.Specimen.SpecimenMaterial",
+        "short": "Specimen material",
+        "definition": "Type of specimen.",
+        "alias": [
+          "AardMateriaal"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-76",
+            "comment": "aardmateriaal"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.CollectionDate",
+        "path": "path-lm-Request.Specimen.CollectionDate",
+        "short": "Collection date",
+        "definition": "Date when specimen is taken from patient.",
+        "alias": [
+          "DatumAfname"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-77",
+            "comment": "datumafname"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.ReceivedDate",
+        "path": "path-lm-Request.Specimen.ReceivedDate",
+        "short": "Received date",
+        "definition": "Date when specimen is received at the laboratory.",
+        "alias": [
+          "DatumOntvangst"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-80",
+            "comment": "datumontvangst"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.CollectionMethod",
+        "path": "path-lm-Request.Specimen.CollectionMethod",
+        "short": "Collection method",
+        "definition": "The way the specimen is collected (biopsy, resection, etc.).",
+        "alias": [
+          "Verkrijgingswijze"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-87",
+            "comment": "verkrijgingswijze"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.NumberOfSamples",
+        "path": "path-lm-Request.Specimen.NumberOfSamples",
+        "short": "Number of samples",
+        "definition": "The number of samples taken from the primary specimen, each sent to the laboratory in a different container.",
+        "alias": [
+          "AantalSamples"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+- name: Index
+  filename: Index.page.md
+- name: Patient
+  filename: Patient.page.md
+- name: Report
+  filename: Report.page.md
+- name: Report (ClinicalInformation)
+  filename: ReportClinicalInformation.page.md
+- name: Report (Macroscopy)
+  filename: ReportMacroscopy.page.md
+- name: Report (Microscopy)
+  filename: ReportMicroscopy.page.md
+- name: Report (ProtocolDataItem)
+  filename: ReportProtocolDataItem.page.md
+- name: Request
+  filename: Request.page.md
+- name: Request (Requester)
+  filename: RequestRequester.page.md
+- name: Request (Specimen)
+  filename: RequestSpecimen.page.md

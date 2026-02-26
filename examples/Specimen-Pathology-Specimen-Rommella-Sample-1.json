@@ -1,0 +1,29 @@
+{
+  "resourceType": "Specimen",
+  "id": "Pathology-Specimen-Rommella-Sample-1",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+    ]
+  },
+  "type": {
+    "text": "Colon Biopt"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "receivedTime": "2026-01-26",
+  "parent": [
+    {
+      "reference": "Specimen/Pathology-Specimen-Rommella",
+      "display": "Colon Biopt"
+    }
+  ],
+  "collection": {
+    "collectedDateTime": "2026-01-25",
+    "method": {
+      "text": "biopsie"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-Microscopy",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "117259009",
+        "system": "http://snomed.info/sct",
+        "display": "microscopisch onderzoek"
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</div><div/><div>Aantal inzendingen: I-II</div><div/><div>I Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: flexura lienalis</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasie</div><div/><div>II Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: colon descendens</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasieMicroscopie</div><div/></div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella",
+    "display": "Colon Biopt"
+  }
+}

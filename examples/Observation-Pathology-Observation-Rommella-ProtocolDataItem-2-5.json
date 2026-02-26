@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-ProtocolDataItem-2-5",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1850001000004102",
+        "display": "Histologic grade of primary malignant neoplasm"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "1155708003",
+        "system": "http://snomed.info/sct",
+        "display": "Low histologic grade"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella-Sample-2",
+    "display": "Colon Biopt, Sample 2"
+  }
+}

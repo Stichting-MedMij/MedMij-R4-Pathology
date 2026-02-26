@@ -1,0 +1,343 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-Patient",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-Patient",
+  "name": "PathPatient",
+  "title": "path Patient",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "The person whose human tissue is analyzed in a pathology study.",
+  "purpose": "This Patient resource represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "definition": "The person whose human tissue is analyzed in a pathology study.",
+        "alias": [
+          "Patient",
+          "Patient",
+          "nl-core-Patient"
+        ]
+      },
+      {
+        "id": "Patient.extension:birthPlace",
+        "path": "Patient.extension",
+        "sliceName": "birthPlace",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:birthPlace.value[x].city",
+        "path": "Patient.extension.value[x].city",
+        "short": "BirthPlace",
+        "definition": "Place of birth.",
+        "comment": "The place of birth is part of the CIS personalia as delivered by the CIS-GBA.",
+        "alias": [
+          "Geboorteplaats"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-14",
+            "comment": "geboorteplaats"
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:birthPlace.value[x].country",
+        "path": "Patient.extension.value[x].country",
+        "short": "BirthCountry",
+        "definition": "Country of birth.",
+        "alias": [
+          "Geboorteland"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-15",
+            "comment": "geboorteland"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1
+      },
+      {
+        "id": "Patient.name:nameInformation",
+        "path": "Patient.name",
+        "sliceName": "nameInformation",
+        "short": "Name",
+        "definition": "Name of the patient.",
+        "alias": [
+          "Naam",
+          "nl-core-NameInformation"
+        ],
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.name:nameInformation.family",
+        "path": "Patient.name.family",
+        "short": "FamilyName",
+        "definition": "Family name of the patient.",
+        "alias": [
+          "Geslachtsnaam"
+        ],
+        "min": 1
+      },
+      {
+        "id": "Patient.name:nameInformation.family.extension",
+        "path": "Patient.name.family.extension",
+        "min": 1
+      },
+      {
+        "id": "Patient.name:nameInformation.family.extension:prefix",
+        "path": "Patient.name.family.extension",
+        "sliceName": "prefix"
+      },
+      {
+        "id": "Patient.name:nameInformation.family.extension:prefix.value[x]",
+        "path": "Patient.name.family.extension.value[x]",
+        "definition": "Prefix to the last name of the patient.",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-6",
+            "comment": "vvnaamman"
+          },
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-8",
+            "comment": "vvnaamvrouw"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name:nameInformation.family.extension:lastName",
+        "path": "Patient.name.family.extension",
+        "sliceName": "lastName",
+        "min": 1
+      },
+      {
+        "id": "Patient.name:nameInformation.family.extension:lastName.value[x]",
+        "path": "Patient.name.family.extension.value[x]",
+        "definition": "Last name of the patient.",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-5",
+            "comment": "naamman"
+          },
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-7",
+            "comment": "naamvrouw"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name:nameInformation.given",
+        "path": "Patient.name.given",
+        "short": "Initials",
+        "definition": "Initials of the patient in capitals, divided by dots.",
+        "alias": [
+          "Voorletters",
+          "middle name",
+          "Voornaam",
+          "Initiaal"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-9",
+            "comment": "voorletters"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name:nameInformation.given.extension:givenOrInitial",
+        "path": "Patient.name.given.extension",
+        "sliceName": "givenOrInitial"
+      },
+      {
+        "id": "Patient.name:nameInformation.given.extension:givenOrInitial.value[x]",
+        "path": "Patient.name.given.extension.value[x]",
+        "patternCode": "IN"
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "definition": "Gender of the patient.",
+        "min": 1,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "AdministrativeGender"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+              "valueBoolean": true
+            }
+          ],
+          "strength": "required",
+          "description": "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1",
+          "_valueSet": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
+              }
+            ]
+          }
+        },
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-10",
+            "comment": "geslacht"
+          }
+        ]
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "short": "BirthDate",
+        "definition": "Birth date.",
+        "comment": "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a valid FHIR date of the form YYYY-MM-DD.",
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-11",
+            "comment": "geboortedatum"
+          },
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-13",
+            "comment": "geboorteeeuw (implicit)"
+          }
+        ]
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "max": "1"
+      },
+      {
+        "id": "Patient.address.line.extension:streetName",
+        "path": "Patient.address.line.extension",
+        "sliceName": "streetName"
+      },
+      {
+        "id": "Patient.address.line.extension:streetName.value[x]",
+        "path": "Patient.address.line.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-16",
+            "comment": "straat"
+          }
+        ]
+      },
+      {
+        "id": "Patient.address.line.extension:houseNumber",
+        "path": "Patient.address.line.extension",
+        "sliceName": "houseNumber"
+      },
+      {
+        "id": "Patient.address.line.extension:houseNumber.value[x]",
+        "path": "Patient.address.line.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-17",
+            "comment": "huisnummer"
+          }
+        ]
+      },
+      {
+        "id": "Patient.address.city",
+        "path": "Patient.address.city",
+        "short": "City",
+        "definition": "Place name.",
+        "alias": [
+          "Woonplaats",
+          "Woonplaats"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-19",
+            "comment": "woonplaats"
+          }
+        ]
+      },
+      {
+        "id": "Patient.address.postalCode",
+        "path": "Patient.address.postalCode",
+        "short": "PostalCode",
+        "definition": "Postal code, either Dutch or foreign.",
+        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.\n\nIf the PostalCode concept (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, the `.address.postalCode` element SHALL be omitted.",
+        "alias": [
+          "Postcode",
+          "Postcode"
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-18",
+            "comment": "postcode"
+          },
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-20",
+            "comment": "postcodebuitenland"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "path-lm-Report",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/path-lm-Report",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.3.5.3"
+    }
+  ],
+  "name": "LmReport",
+  "title": "Report",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Pathology report which contains the findings and interpretation of a pathology study.",
+  "purpose": "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://medmij.nl/fhir/StructureDefinition/path-lm-Report",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "path-lm-Report",
+        "path": "path-lm-Report",
+        "short": "Report",
+        "definition": "Pathology report which contains the findings and interpretation of a pathology study.",
+        "alias": [
+          "Verslag"
+        ]
+      },
+      {
+        "id": "path-lm-Report.ReportIdentifier",
+        "path": "path-lm-Report.ReportIdentifier",
+        "short": "Report identifier",
+        "definition": "Identifier of the pathology report assigned by the laboratory doing the analysis.",
+        "comment": "This identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
+        "alias": [
+          "VerslagIdentificatienummer"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-3",
+            "comment": "rapnaam"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Authorizer",
+        "path": "path-lm-Report.Authorizer",
+        "short": "Authorizer",
+        "definition": "Name of the pathologist who has authorized the report.",
+        "alias": [
+          "Autorisator"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-41",
+            "comment": "autorisator"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.AuthorizationDate",
+        "path": "path-lm-Report.AuthorizationDate",
+        "short": "Authorization date",
+        "definition": "Date of authorization.",
+        "alias": [
+          "DatumAutorisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-44",
+            "comment": "datumautorisatie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ClinicalInformation",
+        "path": "path-lm-Report.ClinicalInformation",
+        "short": "Clinical information",
+        "definition": "Clinical information section of the report.",
+        "alias": [
+          "KlinischeGegevens"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-142",
+            "comment": "klinischegegevens"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "404684003",
+            "comment": "klinische bevinding"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Macroscopy",
+        "path": "path-lm-Report.Macroscopy",
+        "short": "Macroscopy",
+        "definition": "Macroscopy-related results.",
+        "alias": [
+          "Macroscopie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-184",
+            "comment": "macroscopie"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "168126000",
+            "comment": "Sample macroscopy"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Microscopy",
+        "path": "path-lm-Report.Microscopy",
+        "short": "Microscopy",
+        "definition": "Microscopy-related results.",
+        "alias": [
+          "Microscopie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-222",
+            "comment": "microscopie"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "117259009",
+            "comment": "microscopisch onderzoek"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Conclusion",
+        "path": "path-lm-Report.Conclusion",
+        "short": "Conclusion",
+        "definition": "Conclusion of the report.",
+        "alias": [
+          "Conclusie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-224",
+            "comment": "conclusie"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolData",
+        "path": "path-lm-Report.ProtocolData",
+        "short": "Protocol data",
+        "definition": "Data from National Palga Protocols, created in the Palga Protocol Module.",
+        "alias": [
+          "Protocoldata"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-308",
+            "comment": "protocoldata"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolData.ProtocolItemName",
+        "path": "path-lm-Report.ProtocolData.ProtocolItemName",
+        "short": "Protocol item name",
+        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "alias": [
+          "ProtocolitemNaam"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolData.ProtocolItemResult[x]",
+        "path": "path-lm-Report.ProtocolData.ProtocolItemResult[x]",
+        "short": "Protocol item result",
+        "definition": "Result of the protocol item.",
+        "alias": [
+          "ProtocolitemResultaat"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}
