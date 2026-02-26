@@ -1,0 +1,28 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-ProtocolDataItem-2-2",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "310991000146109",
+        "display": "aantal slijmvliesbiopten"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "valueString": "1 slijmvliesbiopt",
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella-Sample-2",
+    "display": "Colon Biopt, Sample 2"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "Pathology-Request-Olivander",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request"
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108257001",
+          "system": "http://snomed.info/sct",
+          "display": "pathologisch-anatomische verrichting"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "normaal",
+          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
+          "display": "normaal"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "0",
+          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
+          "display": "Geen BVO"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "252416005",
+        "system": "http://snomed.info/sct",
+        "display": "Histopathology test"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "requester": {
+    "reference": "PractitionerRole/Pathology-PractitionerRole-Plijster",
+    "display": "P. Plijster, LUMC"
+  },
+  "reasonCode": [
+    {
+      "text": "<div>Vraagstelling</div><div>Classificatie</div><div/>"
+    }
+  ],
+  "specimen": [
+    {
+      "reference": "Specimen/Pathology-Specimen-Olivander",
+      "display": "Colon Resectie"
+    }
+  ]
+}

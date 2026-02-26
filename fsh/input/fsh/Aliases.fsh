@@ -15,4 +15,6 @@ Alias: $PathLmPatientOID = urn:oid:2.16.528.1.1023.3.5.1
 Alias: $PathLmReportOID = urn:oid:2.16.528.1.1023.3.5.3
 Alias: $PathLmRequestOID = urn:oid:2.16.528.1.1023.3.5.2
 Alias: $SCT = http://snomed.info/sct
+Alias: $UCUM = http://unitsofmeasure.org
 Alias: $URI = urn:ietf:rfc:3986
+Alias: $VektisAGB = urn:oid:2.16.840.1.113883.2.4.6.7

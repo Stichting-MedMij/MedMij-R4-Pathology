@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-Microscopy",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "117259009",
+        "system": "http://snomed.info/sct",
+        "display": "microscopisch onderzoek"
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie links</div><div>Niveau van resectie mesocolon: in het mesocolische vet</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie tumor: colon descendens</div><div>Aspect tumor: schotelvormig</div><div>Maximale diameter tumor: 3,0 cm</div><div>Lengte preparaat: 20 cm</div><div>Ingevroren materiaal aanwezig: nee</div><div>Tumor aanwezig: ja, 1 tumor</div><div>Patient is bekend met: morbus Crohn</div><div>Metastase(n): niet gevonden</div><div>Eerdere (neo-adjuvante) therapie: geen</div><div>Vriescoupe tumor: niet verricht</div><div/><div>Microscopie</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed/matig gedifferentieerd (laaggradig)</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie</div><div>Angio-invasie opmerking: geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: laag (Bd1)</div><div>Perineurale groei: niet aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div/><div>Snijvlakken</div><div>Dichtstbijzijnde darmsnijvlak: distaal vrij op &gt;= 1 cm</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij op 0,8 cm</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 15</div><div>Aantal lymfklieren met metastasen: 0</div><div>Aantal tumordeposits: 0</div><div/><div>Overige</div><div>Poliep(en): niet aanwezig</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerdMicroscopie</div><div/></div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}

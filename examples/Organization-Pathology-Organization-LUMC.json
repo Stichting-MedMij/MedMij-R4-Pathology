@@ -1,0 +1,10 @@
+{
+  "resourceType": "Organization",
+  "id": "Pathology-Organization-LUMC",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    ]
+  },
+  "name": "LUMC"
+}
