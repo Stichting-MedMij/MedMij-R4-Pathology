@@ -5,8 +5,8 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "path Retrieve"
-* status = #active
-* date = "2026-02-27"
+* status = #draft
+* date = "2026-02-26"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction within Pathology."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -97,8 +97,8 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "path Serve"
-* status = #active
-* date = "2026-02-27"
+* status = #draft
+* date = "2026-02-26"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a server to fulfill the 'Serve pathology reports' transaction within Pathology."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
