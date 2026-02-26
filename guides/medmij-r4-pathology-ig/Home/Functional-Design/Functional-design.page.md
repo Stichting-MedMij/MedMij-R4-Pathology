@@ -116,8 +116,8 @@ Tabel 2 Systeemrol
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | PathologieRapportenRaadplegend | MM-1.0-PRR-FHIR (PHR)| Raadplegen pathologieverslagen bij de zorgaanbieder |
-| XIS | PathologieRapportenBeschikbaarstellend | MM-1.0-PRB-FHIR (XIS)| Beschikbaar stellen pathologieverslagen aan de Patiënt |
+| PGO | PathologieRapportenRaadplegend | | PA-1.0.0-alpha.1-PRR-FHIR | Raadplegen pathologieverslagen bij de zorgaanbieder |
+| XIS | PathologieRapportenBeschikbaarstellend | PA-1.0.0-alpha.1-PRB-FHIR| Beschikbaar stellen pathologieverslagen aan de Patiënt |
  
 ### Transacties en transactiegroepen
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de technische specificaties, zie het {{pagelink: TD, text: technisch ontwerp}}.
@@ -126,8 +126,8 @@ Tabel 3 Transactiegroep
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-1.0.0-alpha.1-PRR-FHIR (PHR) | PGO | Patiënt |
-| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen| PA-1.0.0-alpha.1-PRB-FHIR (XIS) | XIS | Zorgaanbieder |
+| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-1.0.0-alpha.1-PRR-FHIR | PGO | Patiënt |
+| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen| PA-1.0.0-alpha.1-PRB-FHIR | XIS | Zorgaanbieder |
 
 ### Dataset 
 De dataset wordt beschreven in de bijbehorende Logical Models:
