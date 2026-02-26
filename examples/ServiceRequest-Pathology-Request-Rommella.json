@@ -1,0 +1,76 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "Pathology-Request-Rommella",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request"
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108257001",
+          "system": "http://snomed.info/sct",
+          "display": "pathologisch-anatomische verrichting"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "normaal",
+          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
+          "display": "normaal"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "0",
+          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
+          "display": "Geen BVO"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "252416005",
+        "system": "http://snomed.info/sct",
+        "display": "Histopathology test"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "requester": {
+    "reference": "PractitionerRole/Pathology-PractitionerRole-Plijster",
+    "display": "P. Plijster, LUMC"
+  },
+  "reasonCode": [
+    {
+      "text": "<div>Vraagstelling</div><div>Afwijkingen?</div><div/>"
+    }
+  ],
+  "specimen": [
+    {
+      "reference": "Specimen/Pathology-Specimen-Rommella",
+      "display": "Colon Biopt"
+    },
+    {
+      "reference": "Specimen/Pathology-Specimen-Rommella-Sample-1",
+      "display": "Colon Biopt, Sample 1"
+    },
+    {
+      "reference": "Specimen/Pathology-Specimen-Rommella-Sample-2",
+      "display": "Colon Biopt, Sample 2"
+    }
+  ]
+}

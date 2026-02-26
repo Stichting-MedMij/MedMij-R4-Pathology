@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-ClinicalInformation",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "404684003",
+        "system": "http://snomed.info/sct",
+        "display": "klinische bevinding"
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Adnenocarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}
