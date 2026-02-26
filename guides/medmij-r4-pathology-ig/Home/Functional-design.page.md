@@ -5,9 +5,11 @@ topic: FO
 # Functioneel ontwerp
 
 ## Algemeen 
-Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden gesteld aan de persoon via een Persoonlijke Gezondheidsomgeving (PGO). Hierdoor kan de persoon zijn pathologieverslagen inzien om een beter en vollediger beeld te krijgen van de eigen medische situatie. In dit ontwerp gebruiken we de term patiënt om de persoon aan te duiden.
+Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden gesteld aan de persoon via een Persoonlijke Gezondheidsomgeving (PGO). Hierdoor kan de persoon zijn pathologieverslagen inzien om een beter en vollediger beeld te krijgen van de eigen medische situatie. In dit ontwerp gebruiken we de term 'patiënt' om de persoon aan te duiden, maar hier kan ook 'burger' gelezen worden.
 
 Dit functioneel ontwerp sluit aan op de pathologie-uitwisseling van [Palga](https://www.palga.nl/).
+
+Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de door Nictiz gepubliceerde [Ontwerpen MedMij](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
 
 **Zorgaanbieder en laboratorium** <br/>
 Een laboratorium wordt in dit ontwerp als eigen entiteit beschouwd. Een laboratorium kan:
@@ -48,7 +50,7 @@ Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https:
 ### Kwalificatie en testen
 Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept (PoC). Later volgt meer informatie over kwalificatie.
 
-In de alpha-testfase vindt geïsoleerd testen plaats met behulp van MedMij-simulatoren. Deze simulatoren simuleren de relevante systeemrollen (PGO en XIS) en ondersteunen leveranciers bij het valideren van de technische en functionele uitwisseling.
+In de alpha-testfase vindt geïsoleerd testen plaats met behulp van MedMij-simulatoren. Deze simulatoren simuleren de relevante systeemrollen (PGO en XIS) en ondersteunen leveranciers bij het zowel functioneel als technisch valideren van de uitwisseling.
 
 De simulatoren voeren geautomatiseerde validaties uit om te bepalen of een leverancier implementeert conform de geldende specificaties, waaronder de afspraken en profielen zoals beschreven in deze Implementation Guide (en de van toepassing zijnde MedMij-richtlijnen). De uitkomsten van deze validaties geven inzicht in conformiteit en eventuele afwijkingen, en vormen input voor door te voeren correcties voordat vervolgtesten (bijv. ketentesten) plaatsvinden.
 
@@ -113,7 +115,7 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
 | PGO | PathologieRapportenRaadplegend | PA-PRR-1.0.0-alpha.1-FHIR | Raadplegen pathologieverslagen bij de zorgaanbieder |
-| XIS | PathologieRapportenBeschikbaarstellend | PA-PRB-1.0.0-alpha.1-FHIR | Beschikbaar stellen pathologieverslagen aan de Patiënt |
+| XIS | PathologieRapportenBeschikbaarstellend | PA-PRB-1.0.0-alpha.1-FHIR | Beschikbaar stellen pathologieverslagen aan de patiënt |
 
 **Tabel 2: Systeemrollen**
  
