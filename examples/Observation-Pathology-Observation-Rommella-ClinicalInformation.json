@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-ClinicalInformation",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "404684003",
+        "system": "http://snomed.info/sct",
+        "display": "klinische bevinding"
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Binnengekomen via BVO, geen klachten</div><div>Aard materiaal</div><div>2 colon biopten</div><div/></div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella",
+    "display": "Colon Biopt"
+  }
+}

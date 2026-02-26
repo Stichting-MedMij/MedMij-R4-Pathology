@@ -1,0 +1,35 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Pathology-PractitionerRole-Plijster",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/Pathology-Practitioner-Plijster",
+    "display": "P. Plijster"
+  },
+  "organization": {
+    "reference": "Organization/Pathology-Organization-LUMC",
+    "display": "LUMC"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "0318",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+          "display": "Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/Pathology-Location-LUMC-Polikliniek-MDL",
+      "display": "LUMC, Polikliniek MDL"
+    }
+  ]
+}
