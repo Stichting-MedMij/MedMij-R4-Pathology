@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-3",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "371513001",
+        "display": "status van ingroei van tumor rondom zenuw"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "2667000",
+        "system": "http://snomed.info/sct",
+        "display": "niet aanwezig"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}

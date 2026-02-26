@@ -1,0 +1,30 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-5",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "246214002",
+        "display": "aantal tumoren"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "valueQuantity": {
+    "value": 1
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}

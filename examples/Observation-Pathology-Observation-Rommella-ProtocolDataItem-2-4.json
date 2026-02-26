@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-ProtocolDataItem-2-4",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "399687005",
+        "display": "locatie van primaire tumor"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "32622004",
+        "system": "http://snomed.info/sct",
+        "display": "colon descendens"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella-Sample-2",
+    "display": "Colon Biopt, Sample 2"
+  }
+}

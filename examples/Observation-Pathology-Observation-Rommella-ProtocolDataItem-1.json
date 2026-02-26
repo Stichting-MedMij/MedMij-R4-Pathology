@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-ProtocolDataItem-1",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1279827005",
+        "display": "Neoadjuvant antineoplastic therapy procedure prior to surgery"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "1255831008",
+        "system": "http://snomed.info/sct",
+        "display": "chemotherapie met gerichte medicatie tegen maligne tumor"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella",
+    "display": "Colon Biopt"
+  }
+}

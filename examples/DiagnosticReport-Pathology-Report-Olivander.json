@@ -1,0 +1,97 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "Pathology-Report-Olivander",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108257001",
+          "system": "http://snomed.info/sct",
+          "display": "pathologisch-anatomische verrichting"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "252416005",
+        "system": "http://snomed.info/sct",
+        "display": "Histopathology test"
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1",
+      "value": "T26-60066"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/Pathology-Request-Olivander",
+      "display": "Request for Histopathology test"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "effectivePeriod": {
+    "start": "2026-02-03",
+    "end": "2026-02-03"
+  },
+  "resultsInterpreter": [
+    {
+      "reference": "PractitionerRole/Pathology-PractitionerRole-Oosting",
+      "display": "Jan Oosting, LUMC, patholoog"
+    }
+  ],
+  "specimen": [
+    {
+      "reference": "Specimen/Pathology-Specimen-Olivander",
+      "display": "Colon Resectie"
+    }
+  ],
+  "result": [
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ClinicalInformation",
+      "display": "Klinische gegevens"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-Macroscopy",
+      "display": "Macroscopie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-Microscopy",
+      "display": "Microscopie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-1",
+      "display": "Afstand tot dichtstbijzijnde darmsnijvlak"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-2",
+      "display": "Type resectie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-3",
+      "display": "Perineurale groei"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-4",
+      "display": "Tumor aanwezig"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-5",
+      "display": "Aantal tumoren"
+    }
+  ],
+  "conclusion": "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patient is bekend met: morbus Crohn.</div><div> </div>"
+}

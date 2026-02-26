@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Rommella-ProtocolDataItem-1-1",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "396984004",
+        "display": "histologisch kenmerk van tumor"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Rommella",
+    "display": "L. Rommella"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "1156654007",
+        "system": "http://snomed.info/sct",
+        "display": "benigne tubulair adenoom"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Rommella-Sample-1",
+    "display": "Colon Biopt, Sample 1"
+  }
+}
