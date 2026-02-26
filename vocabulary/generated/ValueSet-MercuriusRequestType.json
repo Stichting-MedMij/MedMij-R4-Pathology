@@ -4,12 +4,19 @@
   "name": "MercuriusRequestType",
   "id": "MercuriusRequestType",
   "title": "MercuriusRequestType ValueSet.",
-  "description": "ValueSet for the type of the request as used in Mercurius.",
+  "description": "ValueSet for the type of the request as defined by Palga and used in Mercurius.",
   "url": "http://medmij.nl/fhir/ValueSet/MercuriusRequestType",
   "text": {
     "status": "empty",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.4.5.3"
+    }
+  ],
   "experimental": false,
   "publisher": "MedMij",
   "contact": [
