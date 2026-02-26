@@ -2,7 +2,7 @@
 topic: PathRequestSpecimen
 ---
 
-# Request - Specimen
+# Request (Specimen)
 
 <tabs>
     <tab title="Tree view" active="true">

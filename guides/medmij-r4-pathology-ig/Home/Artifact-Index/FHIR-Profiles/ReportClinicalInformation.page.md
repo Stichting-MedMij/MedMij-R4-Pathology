@@ -2,7 +2,7 @@
 topic: PathReportClinicalInformation
 ---
 
-# Report - ClinicalInformation
+# Report (ClinicalInformation)
 
 <tabs>
     <tab title="Tree view" active="true">

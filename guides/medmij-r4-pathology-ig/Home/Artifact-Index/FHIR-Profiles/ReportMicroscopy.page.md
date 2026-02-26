@@ -2,7 +2,7 @@
 topic: PathReportMicroscopy
 ---
 
-# Report - Microscopy
+# Report (Microscopy)
 
 <tabs>
     <tab title="Tree view" active="true">

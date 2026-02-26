@@ -2,7 +2,7 @@
 topic: PathReportProtocolDataItem
 ---
 
-# Report - ProtocolDataItem
+# Report (ProtocolDataItem)
 
 <tabs>
     <tab title="Tree view" active="true">

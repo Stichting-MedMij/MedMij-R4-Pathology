@@ -2,7 +2,7 @@
 topic: PathRequestRequester
 ---
 
-# Request - Requester
+# Request (Requester)
 
 <tabs>
     <tab title="Tree view" active="true">

@@ -2,7 +2,7 @@
 topic: PathReportMacroscopy
 ---
 
-# Report - Macroscopy
+# Report (Macroscopy)
 
 <tabs>
     <tab title="Tree view" active="true">

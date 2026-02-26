@@ -1,6 +1,6 @@
 # {{page-title}}
 
-This is the implementation guide for MedMij R4 Pathology, also known as "Pathologie" or "PiPP".
+This is the implementation guide for MedMij R4 Pathology, also known as "Pathologie".
 
 Please note that this guide is currently in its alpha phase. As we progress through this phase, we are actively gathering feedback, identifying areas for improvement, and documenting lessons learned.
 
