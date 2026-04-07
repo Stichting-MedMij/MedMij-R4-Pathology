@@ -31,6 +31,7 @@ In Figure 1, the profiles listed above are visualized, as well as the relations 
 {{render: guides/medmij-r4-pathology-ig/images/Overview FHIR profiles.png}}
 
 **Figure 1: Overview of FHIR profiles**
+
 ## Other profiles
 FHIR R4 conformance resources developed by Nictiz (based on zib publication 2020) from the [nl-core 0.12.0-beta.4 package](https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.4) are used and referenced where possible. In particular, the zibs and corresponding nl-core profiles collected in the table below are used.
 

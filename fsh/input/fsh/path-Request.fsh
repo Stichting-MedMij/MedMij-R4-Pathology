@@ -1,4 +1,4 @@
-// Profiles on ServiceRequest and Specimen to be used in Pathology
+// Profiles on ServiceRequest and Specimen used in Pathology
 
 Profile: PathRequest
 Parent: ServiceRequest
@@ -47,7 +47,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * coding contains
       cytology 0..1 and
       histology 0..1
-  * coding[cytology] 
+  * coding[cytology]
     * ^patternCoding = $SCT#1348332002
     * ^condition = "path-Request-1"
   * coding[histology]

@@ -1,4 +1,4 @@
-// Profile on DiagnosticReport to be used in Pathology
+// Profile on DiagnosticReport used in Pathology
 
 Profile: PathReport
 Parent: DiagnosticReport
@@ -50,7 +50,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * coding contains
       cytology 0..1 and
       histology 0..1
-  * coding[cytology] 
+  * coding[cytology]
     * ^patternCoding = $SCT#1348332002
     * ^condition = "path-Report-2"
   * coding[histology]
