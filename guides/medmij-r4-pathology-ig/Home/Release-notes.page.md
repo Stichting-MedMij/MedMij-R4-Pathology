@@ -4,6 +4,7 @@
 
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
+| FHIR artifacts        | The system roles mentioned in the CapabilityStatements have been corrected. | [PG-486](https://medmij.atlassian.net/browse/PG-486) |
 
 ## 1.0.0-alpha.1
 

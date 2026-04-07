@@ -17,7 +17,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #client
-  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction (system role: MM-1.0-PRR-FHIR)."
+  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction (system role: PA-PRR-1.0.0-alpha.2-FHIR)."
   * resource[+]
     * type = #DiagnosticReport
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Report"
@@ -109,7 +109,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #server
-  * documentation = "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: MM-1.0-PRB-FHIR)."
+  * documentation = "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.2-FHIR)."
   * resource[+]
     * type = #DiagnosticReport
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Report"

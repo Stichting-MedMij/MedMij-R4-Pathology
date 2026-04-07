@@ -15,8 +15,8 @@ Note that in addition to this design, the (technical) guidelines as specified in
 | Actor | | System | | FHIR CapabilityStatement |
 | --- | --- | --- | --- | --- | --- |
 | **Name** | **Description** | **Name** | **Description** | **Name** | **Description** |
-| Patient | The user of a personal healthcare environment | PHR | Personal health record | [CapabilityStatement Retrieve pathology reports](https://simplifier.net/resolve?canonical=http://medmij.nl/fhir/CapabilityStatement/path-Retrieve&scope=medmij.fhir.nl.r4.pathology@1.0.0-alpha.1) | FHIR client requirements |
-| Healthcare provider | The user of a XIS | XIS | Healthcare information system | [CapabilityStatement Serve pathology reports](https://simplifier.net/resolve?canonical=http://medmij.nl/fhir/CapabilityStatement/path-Serve&scope=medmij.fhir.nl.r4.pathology@1.0.0-alpha.1) | FHIR server requirements |
+| Patient | The user of a personal healthcare environment | PHR | Personal health record | [CapabilityStatement Retrieve pathology reports](https://simplifier.net/resolve?canonical=http://medmij.nl/fhir/CapabilityStatement/path-Retrieve&scope=medmij.fhir.nl.r4.pathology@1.0.0-alpha.2) | FHIR client requirements |
+| Healthcare provider | The user of a XIS | XIS | Healthcare information system | [CapabilityStatement Serve pathology reports](https://simplifier.net/resolve?canonical=http://medmij.nl/fhir/CapabilityStatement/path-Serve&scope=medmij.fhir.nl.r4.pathology@1.0.0-alpha.2) | FHIR server requirements |
 
 **Table 1: Actors**
 
@@ -35,8 +35,8 @@ In this use case, available pathology reports for a patient are retrieved based 
 
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
-| Pathology reports (PULL) | Retrieve pathology reports | Patient (using a PHR) | PA-PRR-1.0.0-alpha.1-FHIR |
-| Pathology reports (PULL) | Serve pathology reports | Healthcare provider (using a XIS) | PA-PRB-1.0.0-alpha.1-FHIR |
+| Pathology reports (PULL) | Retrieve pathology reports | Patient (using a PHR) | PA-PRR-1.0.0-alpha.2-FHIR |
+| Pathology reports (PULL) | Serve pathology reports | Healthcare provider (using a XIS) | PA-PRB-1.0.0-alpha.2-FHIR |
 
 **Table 2: Transactions within use case Retrieve Pathology Reports**
 
