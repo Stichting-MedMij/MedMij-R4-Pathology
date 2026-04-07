@@ -121,7 +121,7 @@ Instance: Pathology-Observation-Olivander-ProtocolDataItem-4
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
 Usage: #example
 * status = #final
-* code = $SCT#1597451000004100 "Presence of direct invasion by primary malignant neoplasm"
+* code = $SCT#1597451000004100 "Primary tumor site extension"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
