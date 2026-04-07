@@ -300,6 +300,22 @@
             "code": "dateTime"
           }
         ]
+      },
+      {
+        "id": "path-lm-Report.ProtocolData.SampleNumber",
+        "path": "path-lm-Report.ProtocolData.SampleNumber",
+        "short": "Sample number",
+        "definition": "The number of the sample to which this protocol item corresponds.",
+        "alias": [
+          "Samplenummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
       }
     ]
   }
