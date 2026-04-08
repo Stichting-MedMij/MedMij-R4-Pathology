@@ -228,7 +228,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
 * specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to."
+  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
   * ^alias = "Monster"
 
 Invariant: path-Report-1

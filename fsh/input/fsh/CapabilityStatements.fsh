@@ -89,6 +89,13 @@ Usage: #definition
     * interaction
       * code = #read
       * documentation = "If the server includes this (secondary) resource in the Bundle, the client does not need to execute a `read`. However, since a server may choose to not include it in the Bundle, support of the `read` interaction is mandatory for a client."
+  * resource[+]
+    * type = #Location
+    * supportedProfile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
+    * documentation = "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle."
+    * interaction
+      * code = #read
+      * documentation = "If the server includes this (secondary) resource in the Bundle, the client does not need to execute a `read`. However, since a server may choose to not include it in the Bundle, support of the `read` interaction is mandatory for a client."
   * interaction
     * code = #search-system
 
@@ -176,6 +183,13 @@ Usage: #definition
   * resource[+]
     * type = #Organization
     * supportedProfile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    * documentation = "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle."
+    * interaction
+      * code = #read
+      * documentation = "If the server always includes this resource in the Bundle, support of the `read` interaction is optional."
+  * resource[+]
+    * type = #Location
+    * supportedProfile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
     * documentation = "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle."
     * interaction
       * code = #read

@@ -1,6 +1,6 @@
 // All LogicalModels used in Pathology
 
-Logical: LmPatient
+Logical: PathLmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: path-lm-Patient
 Title: "Patient"
@@ -54,7 +54,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * City 0..1 string "City" "Place name."
     * ^alias = "Woonplaats"
 
-Logical: LmRequest
+Logical: PathLmRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: path-lm-Request
 Title: "Request"
@@ -106,7 +106,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * NumberOfSamples 1..1 integer "Number of samples" "The number of samples taken from the primary specimen, each sent to the laboratory in a different container."
     * ^alias = "AantalSamples"
 
-Logical: LmReport
+Logical: PathLmReport
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: path-lm-Report
 Title: "Report"
@@ -143,9 +143,11 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^alias = "ProtocolitemNaam"
   * ProtocolItemResult[x] 1..1 CodeableConcept or string or Quantity or dateTime "Protocol item result" "Result of the protocol item."
     * ^alias = "ProtocolitemResultaat"
+  * SampleNumber 0..1 integer "Sample number" "The number of the sample to which this protocol item corresponds."
+    * ^alias = "Samplenummer"
 
-Mapping: LmPatientMercuriusCore
-Source: LmPatient
+Mapping: PathLmPatientMercuriusCore
+Source: PathLmPatient
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * Name
@@ -168,8 +170,8 @@ Title: "Mercurius Core Dataset 2.0"
   * PostalCode -> "mercurius-core-rubriek-20" "postcodebuitenland"
   * City -> "mercurius-core-rubriek-19" "woonplaats"
 
-Mapping: LmRequestMercuriusCore
-Source: LmRequest
+Mapping: PathLmRequestMercuriusCore
+Source: PathLmRequest
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * RequestType -> "mercurius-core-rubriek-89" "soortaanvraag"
@@ -186,8 +188,8 @@ Title: "Mercurius Core Dataset 2.0"
   * ReceivedDate -> "mercurius-core-rubriek-80" "datumontvangst"
   * CollectionMethod -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
-Mapping: LmReportMercuriusCore
-Source: LmReport
+Mapping: PathLmReportMercuriusCore
+Source: PathLmReport
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * ReportIdentifier -> "mercurius-core-rubriek-3" "rapnaam"
@@ -199,8 +201,8 @@ Title: "Mercurius Core Dataset 2.0"
 * Conclusion -> "mercurius-core-rubriek-224" "conclusie"
 * ProtocolData -> "mercurius-core-rubriek-308" "protocoldata"
 
-Mapping: LmReportSNOMED
-Source: LmReport
+Mapping: PathLmReportSNOMED
+Source: PathLmReport
 Target: "http://snomed.info/sct"
 Id: SNOMED
 Title: "SNOMED CT"
