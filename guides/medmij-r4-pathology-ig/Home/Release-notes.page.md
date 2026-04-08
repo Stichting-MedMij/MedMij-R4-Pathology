@@ -4,6 +4,7 @@
 
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
+| FHIR artifacts        | In the CapabilityStatements, the nl-core-HealthcareProvider profile, as well as the corresponding Location resource, have been added. | [PG-489](https://medmij.atlassian.net/browse/PG-489) |
 | Test material         | Several displays of SNOMED codes present in the test material have been updated. | [PG-490](https://medmij.atlassian.net/browse/PG-490) |
 
 ## 1.0.0-alpha.1
