@@ -114,8 +114,8 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | PathologieRapportenRaadplegend | PA-PRR-1.0.0-alpha.2-FHIR | Raadplegen pathologieverslagen bij de zorgaanbieder |
-| XIS | PathologieRapportenBeschikbaarstellend | PA-PRB-1.0.0-alpha.2-FHIR | Beschikbaar stellen pathologieverslagen aan de patiënt |
+| PGO | PathologieRapportenRaadplegend | PA-PRR-1.0.0-alpha.2 | Raadplegen pathologieverslagen bij de zorgaanbieder |
+| XIS | PathologieRapportenBeschikbaarstellend | PA-PRB-1.0.0-alpha.2 | Beschikbaar stellen pathologieverslagen aan de patiënt |
 
 **Tabel 2: Systeemrollen**
 
@@ -124,8 +124,8 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.2-FHIR | PGO | Patiënt |
-| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.2-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.2 | PGO | Patiënt |
+| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 

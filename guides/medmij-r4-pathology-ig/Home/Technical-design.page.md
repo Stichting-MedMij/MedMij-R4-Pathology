@@ -35,8 +35,8 @@ In this use case, available pathology reports for a patient are retrieved based 
 
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
-| Pathology reports (PULL) | Retrieve pathology reports | Patient (using a PHR) | PA-PRR-1.0.0-alpha.2-FHIR |
-| Pathology reports (PULL) | Serve pathology reports | Healthcare provider (using a XIS) | PA-PRB-1.0.0-alpha.2-FHIR |
+| Pathology reports (PULL) | Retrieve pathology reports | Patient (using a PHR) | PA-PRR-1.0.0-alpha.2 |
+| Pathology reports (PULL) | Serve pathology reports | Healthcare provider (using a XIS) | PA-PRB-1.0.0-alpha.2 |
 
 **Table 2: Transactions within use case Retrieve Pathology Reports**
 
