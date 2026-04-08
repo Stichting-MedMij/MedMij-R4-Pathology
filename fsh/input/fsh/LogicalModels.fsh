@@ -143,6 +143,8 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^alias = "ProtocolitemNaam"
   * ProtocolItemResult[x] 1..1 CodeableConcept or string or Quantity or dateTime "Protocol item result" "Result of the protocol item."
     * ^alias = "ProtocolitemResultaat"
+  * SampleNumber 0..1 integer "Sample number" "The number of the sample to which this protocol item corresponds."
+    * ^alias = "Samplenummer"
 
 Mapping: PathLmPatientMercuriusCore
 Source: PathLmPatient

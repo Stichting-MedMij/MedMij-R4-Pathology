@@ -48,10 +48,10 @@
 
 ### Protocol data
 
-| ProtocolItemName | ProtocolItemResult |
-| --- | --- |
-| afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie (code '371489008' from code system 'SNOMED CT') | >= 1 cm |
-| Type resectie (Specimen collection procedure) (code '2620001000004108' from code system 'SNOMED CT') | hemicolectomie links (code '82619000' from code system 'SNOMED CT') |
-| status van ingroei van tumor rondom zenuw (code '371513001' from code system 'SNOMED CT') | niet aanwezig (code '2667000' from code system 'SNOMED CT') |
-| Tumor aanwezig (Primary tumor site extension) (code '1597451000004100' from code system 'SNOMED CT') | aanwezig (code '52101004' from code system 'SNOMED CT') |
-| aantal tumoren (code '246214002' from code system 'SNOMED CT') | 1 |
+| ProtocolItemName | ProtocolItemResult | SampleNumber |
+| --- | --- | --- |
+| afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie (code '371489008' from code system 'SNOMED CT') | >= 1 cm | |
+| Type resectie (Specimen collection procedure) (code '2620001000004108' from code system 'SNOMED CT') | hemicolectomie links (code '82619000' from code system 'SNOMED CT') | |
+| status van ingroei van tumor rondom zenuw (code '371513001' from code system 'SNOMED CT') | niet aanwezig (code '2667000' from code system 'SNOMED CT') | |
+| Tumor aanwezig (Primary tumor site extension) (code '1597451000004100' from code system 'SNOMED CT') | aanwezig (code '52101004' from code system 'SNOMED CT') | |
+| aantal tumoren (code '246214002' from code system 'SNOMED CT') | 1 | |

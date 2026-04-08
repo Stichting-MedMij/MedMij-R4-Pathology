@@ -48,27 +48,27 @@
 
 ### Protocol data (general)
 
-| ProtocolItemName | ProtocolItemResult |
-| --- | --- |
-| Eerdere therapie (Neoadjuvant antineoplastic therapy procedure prior to surgery) (code '1279827005' from code system 'SNOMED CT') | chemotherapie met gerichte medicatie tegen maligne tumor (code '1255831008' from code system 'SNOMED CT') |
-| Respons op eerdere therapie (Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy) (code '1255588004' from code system 'SNOMED CT') | gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling (code '1285141002' from code system 'SNOMED CT') |
+| ProtocolItemName | ProtocolItemResult | SampleNumber |
+| --- | --- | --- |
+| Eerdere therapie (Neoadjuvant antineoplastic therapy procedure prior to surgery) (code '1279827005' from code system 'SNOMED CT') | chemotherapie met gerichte medicatie tegen maligne tumor (code '1255831008' from code system 'SNOMED CT') | |
+| Respons op eerdere therapie (Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy) (code '1255588004' from code system 'SNOMED CT') | gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling (code '1285141002' from code system 'SNOMED CT') | |
 
 ### Protocol data (sample 1)
 
-| ProtocolItemName | ProtocolItemResult |
-| --- | --- |
-| histologisch kenmerk van tumor (code '396984004' from code system 'SNOMED CT') | benigne tubulair adenoom (code '1156654007' from code system 'SNOMED CT') |
-| aantal slijmvliesbiopten (code '310991000146109' from code system 'SNOMED CT') | 1 slijmvliesbiopt |
-| consult (code '11429006' from code system 'SNOMED CT') | geen (Not performed) (code '262008008' from code system 'SNOMED CT') |
-| locatie van primaire tumor (code '399687005' from code system 'SNOMED CT') | flexura lienalis (code '72592005' from code system 'SNOMED CT') |
-| Bevinding (Histologic grade of primary malignant neoplasm) (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') |
+| ProtocolItemName | ProtocolItemResult | SampleNumber |
+| --- | --- | --- |
+| histologisch kenmerk van tumor (code '396984004' from code system 'SNOMED CT') | benigne tubulair adenoom (code '1156654007' from code system 'SNOMED CT') | 1 |
+| aantal slijmvliesbiopten (code '310991000146109' from code system 'SNOMED CT') | 1 slijmvliesbiopt | 1 |
+| consult (code '11429006' from code system 'SNOMED CT') | geen (Not performed) (code '262008008' from code system 'SNOMED CT') | 1 |
+| locatie van primaire tumor (code '399687005' from code system 'SNOMED CT') | flexura lienalis (code '72592005' from code system 'SNOMED CT') | 1 |
+| Bevinding (Histologic grade of primary malignant neoplasm) (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') | 1 |
 
 ### Protocol data (sample 2)
 
-| ProtocolItemName | ProtocolItemResult |
-| --- | --- |
-| histologisch kenmerk van tumor (code '396984004' from code system 'SNOMED CT') | benigne tubulair adenoom (code '1156654007' from code system 'SNOMED CT') |
-| aantal slijmvliesbiopten (code '310991000146109' from code system 'SNOMED CT') | 1 slijmvliesbiopt |
-| consult (code '11429006' from code system 'SNOMED CT') | geen (Not performed) (code '262008008' from code system 'SNOMED CT') |
-| locatie van primaire tumor (code '399687005' from code system 'SNOMED CT') | colon descendens (code '32622004' from code system 'SNOMED CT') |
-| Bevinding (Histologic grade of primary malignant neoplasm) (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') |
+| ProtocolItemName | ProtocolItemResult | SampleNumber |
+| --- | --- | --- |
+| histologisch kenmerk van tumor (code '396984004' from code system 'SNOMED CT') | benigne tubulair adenoom (code '1156654007' from code system 'SNOMED CT') | 2 |
+| aantal slijmvliesbiopten (code '310991000146109' from code system 'SNOMED CT') | 1 slijmvliesbiopt | 2 |
+| consult (code '11429006' from code system 'SNOMED CT') | geen (Not performed) (code '262008008' from code system 'SNOMED CT') | 2 |
+| locatie van primaire tumor (code '399687005' from code system 'SNOMED CT') | colon descendens (code '32622004' from code system 'SNOMED CT') | 2 |
+| Bevinding (Histologic grade of primary malignant neoplasm) (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') | 2 |
