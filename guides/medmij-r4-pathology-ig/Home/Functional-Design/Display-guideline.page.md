@@ -49,6 +49,7 @@ De acceptatiecriteria voor het weergeven van pathologieverslagen zijn hieronder 
 Hieronder is een voorbeeld weergegeven van het overzichtsscherm van alle pathologieverslagen die zijn opgehaald bij de zorgaanbieders.
 
 **Onderzoeken die voor u zijn aangevraagd**
+
 | Zorgorganisatie | Verslagnummer | Datum van autorisatie |
 | --- | --- | --- |
 | LUMC | T26-60066 | 03-02-2026 |
@@ -96,13 +97,15 @@ Dit detailscherm wordt (aanvullend) getoond naast/onder het detailscherm met alg
 Het is van belang dat voor elke term die correspondeert met een SNOMED-code op verzoek van de gebruiker een patiëntvriendelijke term getoond kan worden. De PGO is hiervoor gekoppeld met de NTS-server.
 
 **Algemeen**
-| Onderdeel | Resultaat |
+
+| Bevinding | Resultaat |
 | --- | --- |
 | Eerdere therapie | chemotherapie |
 | Respons op eerdere therapie | partiële regressie |
 
 **Monster 1**
-| Onderdeel | Resultaat |
+
+| Bevinding | Resultaat |
 | --- | --- |
 | Primaire afwijking | tubulair adenoom |
 | Type biopt | 1 slijmvliesbiopt |
@@ -111,7 +114,8 @@ Het is van belang dat voor elke term die correspondeert met een SNOMED-code op v
 | Bevinding | met laaggradige dysplasie |
 
 **Monster 2**
-| Onderdeel | Resultaat |
+
+| Bevinding | Resultaat |
 | --- | --- |
 | Primaire afwijking | tubulair adenoom |
 | Type biopt | 1 slijmvliesbiopt |
@@ -144,7 +148,7 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | **Aanvrager** | **Container** | | | a of b | Aanvrager | | |
 | AanvragerNaam | Item | mercurius-core-rubriek-68 | P. Plijster | b | Aanvrager | | M |
 | Specialisme | Item | mercurius-core-rubriek-71 | huisarts (code 'huisarts' in codesysteem 'MercuriusSpecialty') | b | Specialisme | | M |
-| Ziekenhuis | Item | mercurius-core-rubriek-72 | LUMC | a | Ziekenhuis | | M |
+| Ziekenhuis | Item | mercurius-core-rubriek-72 | LUMC | a | Zorgorganisatie | | M |
 | Locatie | Item | mercurius-core-rubriek-67 | Polikliniek MDL | b | Locatie | | M |
 | KlinischeVraag | Item | mercurius-core-rubriek-139 | Afwijkingen aanwezig? | b | Onderzoeksvraag | | M |
 | **Monster** | **Container** | | | b | Monster | | |
@@ -162,6 +166,9 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | DatumAutorisatie | Item | mercurius-core-rubriek-44 | 03-02-2026 | a | Datum van autorisatie | | M |
 | KlinischeGegevens | Item | mercurius-core-rubriek-142 | Adenocarcinoom vastgesteld bij BVO | b | Medische gegevens | | M |
 | Macroscopie | Item | mercurius-core-rubriek-184 | Colon resectie met lengte van 20 cm | b | Macroscopie | | M |
-| Microscopie | Item | mercurius-core-rubriek-222 | TODO | b | Microscopie | | M |
-| Conclusie | Item | mercurius-core-rubriek-224 | TODO | b | Conclusie | | M |
+| Microscopie | Item | mercurius-core-rubriek-222 | Zie voorbeeld in Tabel 5. | b | Microscopie | | M |
+| Conclusie | Item | mercurius-core-rubriek-224 | Zie voorbeeld in Tabel 5. | b | Conclusie | | M |
 | **Protocoldata** | **Container** | mercurius-core-rubriek-308 | | b | Protocolgegevens | | |
+| ProtocolitemNaam | Item | | locatie van primaire tumor (code '399687005' in codesysteem 'SNOMED CT') | b | Bevinding | | M |
+| ProtocolitemResultaat | Item | | colon descendens (code '32622004' in codesysteem 'SNOMED CT') | b | Resultaat | | M |
+| Samplenummer | Item | | 1 | b | Monster | | M |
