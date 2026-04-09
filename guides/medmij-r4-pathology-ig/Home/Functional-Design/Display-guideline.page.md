@@ -41,7 +41,7 @@ De acceptatiecriteria voor het weergeven van pathologieverslagen zijn hieronder 
 | 2 | Voor het dataveld datum van autorisatie (DatumAutorisatie, mercurius-core-rubriek-44) kan een specifieke periode geselecteerd worden. |
 | 3 | Alle datavelden in het overzichtsscherm zijn sorteerbaar. |
 | 4 | De datavelden in het overzichtsscherm zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
-| 5 | Look en feel moeten aansluiten op weergave van bestaande gegevensdiensten. |
+| 5 | De uitstraling en gebruikerservaring moeten aansluiten op de weergave van bestaande gegevensdiensten. |
 
 **Tabel 1: Acceptatiecriteria**
 
@@ -73,16 +73,16 @@ Dit detailscherm wordt getoond als een specifiek onderzoek in het overzichtssche
 
 | Monster | |
 | --- | --- |
-| Aard van materiaal | Colon Biopt |
-| Datum van afname | 01-02-2026 |
-| Datum van ontvangst | 03-02-2026 |
-| Verkrijgingswijze | biopsie |
+| Materiaal | Colon Biopt |
+| Afgenomen op | 01-02-2026 |
+| Ontvangen door lab op | 03-02-2026 |
+| Manier van verkrijgen | biopsie |
 | Aantal monsters | 2 |
 
 | Verslag | |
 | --- | --- |
 | Verslagnummer | T26-60066 |
-| Autorisator | Jan Oosting |
+| Patholoog | Jan Oosting |
 | Datum van autorisatie | 03-02-2026 |
 | Medische gegevens | Adenocarcinoom <br/> Hemicolectomie |
 | Macroscopie | Colon resectie met lengte van 20 cm |
@@ -152,10 +152,10 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | Locatie | Item | mercurius-core-rubriek-67 | Polikliniek MDL | b | Locatie | | M |
 | KlinischeVraag | Item | mercurius-core-rubriek-139 | Afwijkingen aanwezig? | b | Onderzoeksvraag | | M |
 | **Monster** | **Container** | | | b | Monster | | |
-| AardMateriaal | Item | mercurius-core-rubriek-76 | Colon Resectie | b | Aard van materiaal | | M |
-| DatumAfname | Item | mercurius-core-rubriek-77 | 01-02-2026 | b | Datum van afname | | M |
-| DatumOntvangst | Item | mercurius-core-rubriek-80 | 03-02-2026 | b | Datum van ontvangst | | M |
-| Verkrijgingswijze | Item | mercurius-core-rubriek-87 | biopsie | b | Verkrijgingswijze | | M |
+| AardMateriaal | Item | mercurius-core-rubriek-76 | Colon Resectie | b | Materiaal | | M |
+| DatumAfname | Item | mercurius-core-rubriek-77 | 01-02-2026 | b | Afgenomen op | | M |
+| DatumOntvangst | Item | mercurius-core-rubriek-80 | 03-02-2026 | b | Ontvangen door lab op | | M |
+| Verkrijgingswijze | Item | mercurius-core-rubriek-87 | biopsie | b | Manier van verkrijgen | | M |
 | AantalSamples | Item | | 2 | b | Aantal monsters | | M |
 
 | Naam data-item | Type data-item | Id | Voorbeeld | Waar te tonen in PGO <br/> (a) in overzicht en als detailgegeven <br/> (b) als detailgegeven | Weergavetekst in PGO | Opmerkingen | Prioriteit (MoSCoW) |
