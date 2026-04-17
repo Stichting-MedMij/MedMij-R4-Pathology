@@ -53,11 +53,11 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * coding[histology]
     * ^patternCoding = $SCT#252416005
     * ^condition = "path-Request-1"
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * requester 1..1
-* requester only Reference(PractitionerRole or http://medmij.nl/fhir/StructureDefinition/path-Request.Requester)
+* requester only Reference(PractitionerRole or PathRequestRequester)
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
@@ -67,7 +67,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
     * ^definition = "Clinical request information."
     * ^alias = "KlinischeVraag"
 * specimen 1..*
-* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
@@ -94,14 +94,14 @@ Description: "Specimen that will be examined by a laboratory."
     * ^definition = "Type of specimen."
     * ^alias = "AardMateriaal"
 * subject 1..1
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * receivedTime 1..1
   * ^short = "ReceivedDate"
   * ^definition = "Date when specimen is received at the laboratory."
   * ^alias = "DatumOntvangst"
-* parent only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* parent only Reference(Specimen or PathRequestSpecimen)
   * ^comment = "If this Specimen resource corresponds to a sample taken from the primary specimen, the latter is referenced here."
 * collection
   * collectedDateTime

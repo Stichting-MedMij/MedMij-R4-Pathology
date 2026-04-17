@@ -30,7 +30,7 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^condition = "path-Report-1"
   * value 1..1
 * basedOn 1..1
-* basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
+* basedOn only Reference(ServiceRequest or PathRequest)
 * status
   * ^patternCode = #final
 * category 1..*
@@ -57,7 +57,7 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^patternCoding = $SCT#252416005
     * ^condition = "path-Report-2"
 * subject 1..1
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * effectivePeriod 1..1
@@ -76,7 +76,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^comment = "The actual mapping of the Authorizer concept is on `Practitioner.name[nameInformation].text`."
   * ^alias = "Autorisator"
 * specimen 1..*
-* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
@@ -90,10 +90,10 @@ Description: "Pathology report which contains the findings and interpretation of
     macroscopy 0..1 and
     microscopy 1..1 and
     protocolData 0..*
-* result[clinicalInformation] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation)
-* result[macroscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy)
-* result[microscopy] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy)
-* result[protocolData] only Reference(http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem)
+* result[clinicalInformation] only Reference(PathReportClinicalInformation)
+* result[macroscopy] only Reference(PathReportMacroscopy)
+* result[microscopy] only Reference(PathReportMicroscopy)
+* result[protocolData] only Reference(PathReportProtocolDataItem)
   * ^short = "ProtocolData"
   * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
   * ^alias = "Protocoldata"
@@ -124,11 +124,11 @@ Description: "Clinical information section of the report."
 * code
   * ^patternCodeableConcept = $SCT#404684003
 * subject 1..1
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * specimen 1..1
-* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen."
@@ -156,11 +156,11 @@ Description: "Macroscopy-related results."
 * code
   * ^patternCodeableConcept = $SCT#168126000
 * subject 1..1
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * specimen 1..1
-* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen."
@@ -188,11 +188,11 @@ Description: "Microscopy-related results."
 * code
   * ^patternCodeableConcept = $SCT#117259009
 * subject 1..1
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * specimen 1..1
-* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "The primary specimen is referenced here, as the data in this Observation resource relates to both the primary specimen as well as the individual samples taken from that specimen."
@@ -216,7 +216,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^alias = "ProtocolitemNaam"
   * ^patternCodeableConcept.coding.system = $SCT
 * subject 1..1
-* subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
+* subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * value[x] 1..1
@@ -225,7 +225,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^definition = "Result of the protocol item."
   * ^alias = "ProtocolitemResultaat"
 * specimen 1..1
-* specimen only Reference(Specimen or http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen)
+* specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."

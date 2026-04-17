@@ -1,7 +1,7 @@
 // FHIR test instances in FSH format for Pathology test scenario 2
 
 Instance: Pathology-Request-Rommella
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request
+InstanceOf: PathRequest
 Usage: #example
 * status = #completed
 * intent = #order
@@ -19,7 +19,7 @@ Usage: #example
 * specimen[2] = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
 Instance: Pathology-Specimen-Rommella
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+InstanceOf: PathRequestSpecimen
 Usage: #example
 * type
   * text = "Colon Biopt"
@@ -31,7 +31,7 @@ Usage: #example
     * text = "biopsie"
 
 Instance: Pathology-Specimen-Rommella-Sample-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+InstanceOf: PathRequestSpecimen
 Usage: #example
 * type
   * text = "Colon Biopt"
@@ -44,7 +44,7 @@ Usage: #example
     * text = "biopsie"
 
 Instance: Pathology-Specimen-Rommella-Sample-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+InstanceOf: PathRequestSpecimen
 Usage: #example
 * type
   * text = "Colon Biopt"
@@ -57,7 +57,7 @@ Usage: #example
     * text = "biopsie"
 
 Instance: Pathology-Report-Rommella
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report
+InstanceOf: PathReport
 Usage: #example
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
@@ -93,7 +93,7 @@ Usage: #example
 * conclusion = "<div>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</div><div>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</div><div> </div>"
 
 Instance: Pathology-Observation-Rommella-ClinicalInformation
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation
+InstanceOf: PathReportClinicalInformation
 Usage: #example
 * text
   * status = #additional
@@ -104,7 +104,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-Macroscopy
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy
+InstanceOf: PathReportMacroscopy
 Usage: #example
 * text
   * status = #additional
@@ -115,7 +115,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-Microscopy
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy
+InstanceOf: PathReportMicroscopy
 Usage: #example
 * text
   * status = #additional
@@ -126,7 +126,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
@@ -135,7 +135,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
@@ -144,7 +144,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
@@ -153,7 +153,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
@@ -162,7 +162,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#11429006 "consult"
@@ -171,7 +171,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#399687005 "locatie van primaire tumor"
@@ -180,7 +180,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
@@ -189,7 +189,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
@@ -198,7 +198,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
@@ -207,7 +207,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#11429006 "consult"
@@ -216,7 +216,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#399687005 "locatie van primaire tumor"
@@ -225,7 +225,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
@@ -234,7 +234,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
 Instance: Pathology-Patient-Rommella
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
+InstanceOf: PathPatient
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
