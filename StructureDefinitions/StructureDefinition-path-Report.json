@@ -86,7 +86,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://medmij.nl/fhir/StructureDefinition/path-ReportIdentifier"
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier"
             ]
           }
         ]
