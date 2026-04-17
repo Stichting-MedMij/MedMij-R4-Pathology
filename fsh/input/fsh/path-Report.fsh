@@ -10,25 +10,17 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert PublisherAndContact
 * ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
-* . obeys path-Report-1 and path-Report-2
+* . obeys path-Report-1
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
 * identifier 1..*
-  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * identifier contains
     reportIdentifier 1..1
-* identifier[reportIdentifier]
-  * ^short = "ReportIdentifier"
-  * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
-  * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
-  * ^alias = "VerslagIdentificatienummer"
-  * ^condition = "path-Report-1"
-  * system 1..1
-    * ^condition = "path-Report-1"
-  * value 1..1
+* identifier[reportIdentifier] only PathReportIdentifier
 * basedOn 1..1
 * basedOn only Reference(ServiceRequest or http://medmij.nl/fhir/StructureDefinition/path-Request)
 * status
@@ -52,10 +44,10 @@ Description: "Pathology report which contains the findings and interpretation of
       histology 0..1
   * coding[cytology]
     * ^patternCoding = $SCT#1348332002
-    * ^condition = "path-Report-2"
+    * ^condition = "path-Report-1"
   * coding[histology]
     * ^patternCoding = $SCT#252416005
-    * ^condition = "path-Report-2"
+    * ^condition = "path-Report-1"
 * subject 1..1
 * subject only Reference(Patient or http://medmij.nl/fhir/StructureDefinition/path-Patient)
   * ^short = "Patient"
@@ -231,27 +223,52 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
   * ^alias = "Monster"
 
-Invariant: path-Report-1
-Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
-Severity: #error
-Expression: "identifier.system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')"
+Profile: PathReportIdentifier
+Parent: Identifier
+Id: path-ReportIdentifier
+Title: "path ReportIdentifier"
+Description: "Identifier of the pathology report assigned by the laboratory doing the analysis."
+* insert DefaultNarrative
+* ^status = #draft
+* insert PublisherAndContact
+* ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* insert Copyright
+* . obeys path-ReportIdentifier-1
+  * ^short = "ReportIdentifier"
+  * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
+  * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
+  * ^alias = "VerslagIdentificatienummer"
+  * ^condition = "path-ReportIdentifier-1"
+* system 1..1
+  * ^condition = "path-ReportIdentifier-1"
+* value 1..1
 
-Invariant: path-Report-2
+Invariant: path-Report-1
 Description: "Either a code for cytology or histology is present."
 Severity: #error
 Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()"
+
+Invariant: path-ReportIdentifier-1
+Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
+Severity: #error
+Expression: "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')"
 
 Mapping: PathReportMercuriusCore
 Source: PathReport
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* identifier[reportIdentifier] -> "mercurius-core-rubriek-3" "rapnaam"
 * effectivePeriod
   * start -> "mercurius-core-rubriek-80" "datumontvangst"
   * end -> "mercurius-core-rubriek-44" "datumautorisatie"
 * resultsInterpreter -> "mercurius-core-rubriek-41" "autorisator (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
 * result[protocolData] -> "mercurius-core-rubriek-308" "protocoldata"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
+
+Mapping: PathReportIdentifierMercuriusCore
+Source: PathReportIdentifier
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* . -> "mercurius-core-rubriek-3" "rapnaam"
 
 Mapping: PathReportClinicalInformationMercuriusCore
 Source: PathReportClinicalInformation
