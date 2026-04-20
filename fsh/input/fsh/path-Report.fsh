@@ -251,7 +251,7 @@ Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '134
 Invariant: path-Report.ReportIdentifier-1
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
 Severity: #error
-Expression: "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')"
+Expression: "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.') and system.endsWith('.1')"
 
 Mapping: PathReportMercuriusCore
 Source: PathReport
