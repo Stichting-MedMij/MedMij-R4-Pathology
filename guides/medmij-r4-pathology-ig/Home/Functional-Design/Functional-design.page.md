@@ -114,8 +114,8 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | PathologieverslagenRaadplegend | PA-PRR-1.0.0-alpha.1-FHIR | Raadplegen pathologieverslagen bij de zorgaanbieder |
-| XIS | PathologieverslagenBeschikbaarstellend | PA-PRB-1.0.0-alpha.1-FHIR | Beschikbaar stellen pathologieverslagen aan de patiënt |
+| PGO | PathologieverslagenRaadplegend | PA-PRR-1.0.0-alpha.2 | Raadplegen pathologieverslagen bij de zorgaanbieder |
+| XIS | PathologieverslagenBeschikbaarstellend | PA-PRB-1.0.0-alpha.2 | Beschikbaar stellen pathologieverslagen aan de patiënt |
 
 **Tabel 2: Systeemrollen**
 
@@ -124,8 +124,8 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.1-FHIR | PGO | Patiënt |
-| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.1-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.2 | PGO | Patiënt |
+| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 
@@ -138,15 +138,3 @@ Een pathologieverslag wordt functioneel gezien aangeboden als een samenhangend g
 - Bevindingen: relevante observaties/onderdelen van het verslag (bijv. macroscopie/microscopie/protocoldata).
 - Monsters: welke materialen/monsters zijn onderzocht.
 - Patholoog: de patholoog het verslag heeft geautoriseerd.
-
-#### Weergaverichtlijn
-
-##### Scope weergaverichtlijn
-De richtlijn geeft handvatten voor:
-- het gebruik van patiëntvriendelijke termen en toelichting;
-- de inhoud van het overzicht van pathologieverslagen in de PGO.
-
-De richtlijn geeft géén handvatten voor de vormgeving (kleur, vorm, lettertype, etc.) van pathologieverslagen.
-
-##### Inhoud weergaverichtlijn
-De weergaverichtlijn voor pathologieverslagen is [hier](https://medmij.atlassian.net/wiki/spaces/IER/pages/828702721/Weergaverichtlijn+Pathologieverslagen) te vinden.
