@@ -6,7 +6,7 @@ topic: FHIRProfilesIndex
 ## Pathology-specific profiles
 The following FHIR profiles have been introduced for the Pathology standard:
 
-| CIM (concept) | FHIR resource | FHIR profile |
+| CIM (concept) | FHIR resource/data type | FHIR profile |
 | --- | --- | --- |
 | {{pagelink: LogicalModelsIndex, text: Patient, anchor: PathLmPatient}} | Patient | {{pagelink: FHIRProfilesIndex, text: path-Patient, anchor: PathPatient}} |
 | {{pagelink: LogicalModelsIndex, text: Request, anchor: PathLmRequest}} | ServiceRequest | {{pagelink: FHIRProfilesIndex, text: path-Request, anchor: PathRequest}} |
@@ -17,6 +17,7 @@ The following FHIR profiles have been introduced for the Pathology standard:
 | {{pagelink: LogicalModelsIndex, text: Report (Macroscopy), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.Macroscopy, anchor: PathReportMacroscopy}} |
 | {{pagelink: LogicalModelsIndex, text: Report (Microscopy), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.Microscopy, anchor: PathReportMicroscopy}} |
 | {{pagelink: LogicalModelsIndex, text: Report (ProtocolDataItem), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.ProtocolDataItem, anchor: PathReportProtocolDataItem}} |
+| {{pagelink: LogicalModelsIndex, text: Report (ReportIdentifier), anchor: PathLmReport}} | Identifier | {{pagelink: FHIRProfilesIndex, text: path-Report.ReportIdentifier, anchor: PathReportReportIdentifier}} |
 
 **Table 1: Relevant pathology-specific profiles**
 

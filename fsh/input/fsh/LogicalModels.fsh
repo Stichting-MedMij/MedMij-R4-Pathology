@@ -73,12 +73,12 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * RequestType 1..1 CodeableConcept "Request type" "This typing of the examination provides additional context for the request."
 * RequestType from MercuriusRequestType_VS (required)
   * ^alias = "SoortAanvraag"
-  * ^defaultValueCodeableConcept.coding.system = "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType"
+  * ^defaultValueCodeableConcept.coding.system = $MercuriusRequestTypeCodeSystemURL
   * ^defaultValueCodeableConcept.coding.code = #normaal
 * HealthScreeningType 1..1 CodeableConcept "Health screening type" "Type of national trial for this request."
 * HealthScreeningType from MercuriusHealthScreeningType_VS (required)
   * ^alias = "BVOSoort"
-  * ^defaultValueCodeableConcept.coding.system = "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType"
+  * ^defaultValueCodeableConcept.coding.system = $MercuriusHealthScreeningTypeCodeSystemURL
   * ^defaultValueCodeableConcept.coding.code = #0
 * Requester 1..1 BackboneElement "Requester" "Requester of the pathology study."
   * ^alias = "Aanvrager"
