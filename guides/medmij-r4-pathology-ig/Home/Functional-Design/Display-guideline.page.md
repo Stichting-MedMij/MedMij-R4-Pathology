@@ -38,10 +38,10 @@ De acceptatiecriteria voor het weergeven van pathologieverslagen zijn hieronder 
 | Nr | Acceptatiecriteria |
 | --- | --- |
 | 1 | Standaard worden alle beschikbaar gestelde verslagen van de zorgaanbieder(s) weergegeven, gesorteerd op autorisatiedatum van nieuw naar oud. |
-| 2 | Voor het dataveld datum van autorisatie (DatumAutorisatie, mercurius-core-rubriek-44) kan een specifieke periode geselecteerd worden. |
-| 3 | Alle datavelden in het overzichtsscherm zijn sorteerbaar. |
-| 4 | De datavelden in het overzichtsscherm zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
-| 5 | De uitstraling en gebruikerservaring moeten aansluiten op de weergave van bestaande gegevensdiensten. |
+| 2 | Voor de datavelden in het overzichtsscherm is het mogelijk om te filteren op één of meerdere waarden. |
+| 3 | Voor het dataveld datum van autorisatie (DatumAutorisatie, mercurius-core-rubriek-44) kan een specifieke periode geselecteerd worden. |
+| 4 | Alle datavelden in het overzichtsscherm zijn sorteerbaar. |
+| 5 | De datavelden in het overzichtsscherm en de detailschermen zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
 
 **Tabel 1: Acceptatiecriteria**
 
