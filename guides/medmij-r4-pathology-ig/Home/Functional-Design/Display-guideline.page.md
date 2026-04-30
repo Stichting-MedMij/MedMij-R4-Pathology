@@ -7,7 +7,7 @@ topic: Weergaverichtlijn
 ## Inleiding
 Dit is de weergaverichtlijn voor de gegevensdienst Pathologie.
 
-De richtlijn bevat mock-ups die bedoeld zijn ter inspiratie. Persoonlijke gezondheidsomgevingen (PGO's) kunnen deze voorbeelden naar eigen inzicht visueel vormgeven, zolang de gebruiksvriendelijkheid behouden blijft.
+De richtlijn bevat een aantal verplichte functionele requirements. De getoonde mock-ups zijn bedoeld ter inspiratie. Persoonlijke gezondheidsomgevingen (PGO's) kunnen deze voorbeelden naar eigen inzicht visueel vormgeven, zolang de gebruiksvriendelijkheid behouden blijft, en aan de functionele requirements is voldaan.
 
 ## Doel
 Deze richtlijn heeft als doel om duidelijke handvatten te bieden voor een patiëntvriendelijke en begrijpelijke weergave van pathologieverslagen in de PGO. De richtlijn ondersteunt ontwikkelaars en zorgverleners bij het:
@@ -20,20 +20,22 @@ De richtlijn geeft géén handvatten voor de vormgeving (kleur, vorm, lettertype
 De scope van deze richtlijn bestaat uit weergave van pathologieverslagen in de PGO. Gegevens die via andere MedMij-gegevensdiensten verzameld worden in de PGO zijn hierin niet meegenomen.
 
 ## Inhoud richtlijn
-Het inloggen en authenticeren bij de zorgaanbieder is niet opgenomen in deze richtlijn.
+Het inloggen en authenticeren bij de zorgaanbieder is niet opgenomen in deze richtlijn. De gebruiker gaat in de PGO naar het verslagenoverzicht waar de opgehaalde pathologieverslagen getoond worden. De verslagen die in de weergaverichtlijn beschreven staan, sluiten aan op de pathologie-uitwisseling van Palga.
 
-De gebruiker gaat in de PGO naar het verslagenoverzicht waar de opgehaalde pathologieverslagen getoond worden.
-
-De weergaverichtlijn bestaat uit 3 schermen:
+De weergaverichtlijn beschrijft twee schermen:
 - Overzicht van alle pathologieverslagen van alle zorgaanbieders in één overzicht
-- Detailgegevens per onderzoek (algemeen)
-- Detailgegevens per onderzoek (protocol)
+- Detailgegevens per onderzoek
 
-De verslagen die in de weergaverichtlijn beschreven staan, sluiten aan op de pathologie-uitwisseling van Palga. Het overzicht hieronder geeft weer hoe een UX-design getoond kan worden. 
+De mock-ups hieronder van deze schermen geven weer hoe een UX-design getoond kan worden. De richtlijn gaat ervan uit dat de PGO een responsief ontwerp ondersteunt. Dat betekent dat de weergave zich automatisch aanpast aan het schermformaat van de gebruiker. Ongeacht op welk apparaat een gebruiker zijn PGO opent (bijvoorbeeld een smartphone, tablet of groot desktopscherm), blijven de lay‑out, afbeeldingen, knoppen en tekst goed leesbaar en bruikbaar.
 
-De richtlijn gaat ervan uit dat de PGO een responsief ontwerp ondersteunt. Dat betekent dat de weergave zich automatisch aanpast aan het schermformaat van de gebruiker. Ongeacht op welk apparaat een gebruiker zijn PGO opent (bijvoorbeeld een smartphone, tablet of groot desktopscherm), blijven de lay‑out, afbeeldingen, knoppen en tekst goed leesbaar en bruikbaar.
+### Overzichtsscherm pathologieverslagen
+In het overzichtsscherm worden de pathologieverslagen van alle zorgaanbieders getoond.
 
-De acceptatiecriteria voor het weergeven van pathologieverslagen zijn hieronder opgenomen.
+{{render: guides/medmij-r4-pathology-ig/images/Overzicht Pathologie.png}}
+
+**Figuur 1: Voorbeeld overzichtsscherm pathologieverslagen**
+
+De acceptatiecriteria voor het weergeven van pathologieverslagen in het overzichtsscherm zijn hieronder opgenomen.
 
 | Nr | Acceptatiecriteria |
 | --- | --- |
@@ -41,12 +43,36 @@ De acceptatiecriteria voor het weergeven van pathologieverslagen zijn hieronder 
 | 2 | Voor de datavelden in het overzichtsscherm is het mogelijk om te filteren op één of meerdere waarden. |
 | 3 | Voor het dataveld datum van autorisatie (DatumAutorisatie, mercurius-core-rubriek-44) kan een specifieke periode geselecteerd worden. |
 | 4 | Alle datavelden in het overzichtsscherm zijn sorteerbaar. |
-| 5 | De datavelden in het overzichtsscherm en de detailschermen zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
+| 5 | De datavelden in het overzichtsscherm zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
 
-**Tabel 1: Acceptatiecriteria**
+**Tabel 1: Acceptatiecriteria overzichtsscherm**
 
-### Overzicht van alle pathologieverslagen
-Hieronder is een voorbeeld weergegeven van het overzichtsscherm van alle pathologieverslagen die zijn opgehaald bij de zorgaanbieders.
+### Detailscherm pathologieverslagen
+Dit detailscherm krijgt een PGO-gebruiker te zien na het selecteren van een specifieke regel in het overzichtsscherm. De in de mock-up weergegeven gegevens dienen uitsluitend ter demonstratie.
+
+{{render: guides/medmij-r4-pathology-ig/images/Detailscherm Pathologie (algemeen).png}}
+
+**Figuur 2: Mock-up detailscherm pathologieverslagen (algemeen)**
+
+Wanneer het onderzoek is gebaseerd op een bepaald protocol, worden aanvullende detailgegevens getoond die betrekking hebben op dat protocol. Het is van belang dat voor elke term die correspondeert met een SNOMED-code de patiëntvriendelijke term getoond wordt. De PGO is hiervoor gekoppeld met de NTS (Nationale Terminologieserver).
+
+{{render: guides/medmij-r4-pathology-ig/images/Detailscherm Pathologie (protocol).png}}
+
+**Figuur 3: Mock-up detailscherm pathologieverslagen (protocol)**
+
+De acceptatiecriteria voor het weergeven van een pathologieverslag in het detailscherm zijn hieronder opgenomen.
+
+| Nr | Acceptatiecriteria |
+| --- | --- |
+| 1 | Voor protocolgegevens die corresponderen met een SNOMED-code wordt de patiëntvriendelijke term getoond die beschikbaar is in de NTS. |
+| 2 | De datavelden in het detailscherm zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
+
+**Tabel 2: Acceptatiecriteria detailscherm**
+
+### Voorbeeld 
+Hieronder is een voorbeeld weergegeven in tabelvorm.
+
+<u>Overzichtsscherm</u>
 
 **Onderzoeken die voor u zijn aangevraagd**
 
@@ -56,10 +82,9 @@ Hieronder is een voorbeeld weergegeven van het overzichtsscherm van alle patholo
 | LUMC | C25-12345 | 01-01-2025 |
 | Erasmus MC | T24-374299 | 05-03-2024 |
 
-**Tabel 2: Voorbeeld overzichtsscherm**
+**Tabel 3: Voorbeeld overzichtsscherm**
 
-### Detailgegevens per onderzoek (algemeen)
-Dit detailscherm wordt getoond als een specifiek onderzoek in het overzichtsscherm wordt geselecteerd. 
+<u>Detailscherm</u>
 
 | Aanvraag | |
 | --- | --- |
@@ -89,13 +114,9 @@ Dit detailscherm wordt getoond als een specifiek onderzoek in het overzichtssche
 | Microscopie | Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN versie 2017 <br/> <br/> Klinische Gegevens en Macroscopie <br/> Type resectie: hemicolectomie links <br/> Niveau van resectie mesocolon: in het mesocolische vet <br/> Perforatie: niet aanwezig <br/> Klinisch obstructie / ileus: nee <br/> Lokalisatie tumor: colon descendens <br/> Aspect tumor: schotelvormig <br/> Maximale diameter tumor: 3,0 cm <br/> Lengte preparaat: 20 cm <br/> Ingevroren materiaal aanwezig: nee <br/> Tumor aanwezig: ja, 1 tumor <br/> Patient is bekend met: morbus Crohn <br/> Metastase(n): niet gevonden <br/> Eerdere (neo-adjuvante) therapie: geen <br/> Vriescoupe tumor: niet verricht <br/> <br/> Microscopie <br/> Type tumor (WHO): adenocarcinoom <br/> Differentiatiegraad: goed/matig gedifferentieerd (laaggradig) <br/> Diepste tumordoorgroei: submucosa <br/> Angio-invasie: lymfvat invasie <br/> Angio-invasie opmerking: geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen <br/> Tumor budding: laag (Bd1) <br/> Perineurale groei: niet aangetroffen <br/> Lymfocytaire infiltratie: ja <br/> <br/> Snijvlakken <br/> Dichtstbijzijnde darmsnijvlak: distaal vrij op &gt;= 1 cm <br/> Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij op 0,8 cm <br/> <br/> Lymfklieren <br/> Aantal lymfklieren: 15 <br/> Aantal lymfklieren met metastasen: 0 <br/> Aantal tumordeposits: 0 <br/> <br/> Overige <br/> Poliep(en): niet aanwezig <br/> <br/> Moleculaire bepaling <br/> Mutatie analyse: niet uitgevoerd |
 | Conclusie | Hemicolectomie links: type tumor (WHO): goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa. <br/> Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm). <br/> Angio-invasie: lymfvat invasie. <br/> Perineurale invasie: niet aangetroffen. <br/> Aantal lymfklieren: 15 waarvan met metastasen: 0. <br/> <br/> TNM classificatie Colon en Rectum (9e editie UICC): pT1N0. <br/> Patiënt is bekend met: morbus Crohn. |
 
-**Tabel 3/4/5: Voorbeeld detailscherm (algemeen)**
+**Tabel 4/5/6: Voorbeeld detailscherm (algemeen)**
 
-### Detailgegevens per onderzoek (protocol)
-Dit detailscherm wordt (aanvullend) getoond naast/onder het detailscherm met algemene gegevens per onderzoek, wanneer het onderzoek is gebaseerd op een bepaald protocol.
-
-Het is van belang dat voor elke term die correspondeert met een SNOMED-code op verzoek van de gebruiker een patiëntvriendelijke term getoond kan worden. De PGO is hiervoor gekoppeld met de NTS-server.
-
+**Bevindingen**
 **Algemeen**
 
 | Bevinding | Resultaat |
@@ -123,7 +144,7 @@ Het is van belang dat voor elke term die correspondeert met een SNOMED-code op v
 | Lokalisatie | colon descendens |
 | Bevinding | met laaggradige dysplasie |
 
-**Tabel 6/7/8: Voorbeeld detailscherm (protocol)**
+**Tabel 7/8/9: Voorbeeld detailscherm (protocol)**
 
 ## <a name="TabelSpecificaties"></a> Tabel met specificaties
 In de tabel met specificaties staan de gegevens uit de gegevensdienst Pathologie, die relevant zijn voor deze weergaverichtlijn, weergegeven.
