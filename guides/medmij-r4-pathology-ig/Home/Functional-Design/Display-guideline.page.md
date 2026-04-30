@@ -117,6 +117,7 @@ Hieronder is een voorbeeld weergegeven in tabelvorm.
 **Tabel 4/5/6: Voorbeeld detailscherm (algemeen)**
 
 **Bevindingen**
+
 **Algemeen**
 
 | Bevinding | Resultaat |
