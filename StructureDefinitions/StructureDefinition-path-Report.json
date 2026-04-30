@@ -56,13 +56,6 @@
           {
             "key": "path-Report-1",
             "severity": "error",
-            "human": "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number.",
-            "expression": "identifier.system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')",
-            "source": "http://medmij.nl/fhir/StructureDefinition/path-Report"
-          },
-          {
-            "key": "path-Report-2",
-            "severity": "error",
             "human": "Either a code for cytology or histology is present.",
             "expression": "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()",
             "source": "http://medmij.nl/fhir/StructureDefinition/path-Report"
@@ -75,7 +68,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
+              "type": "profile",
               "path": "$this"
             }
           ],
@@ -87,39 +80,16 @@
         "id": "DiagnosticReport.identifier:reportIdentifier",
         "path": "DiagnosticReport.identifier",
         "sliceName": "reportIdentifier",
-        "short": "ReportIdentifier",
-        "definition": "Identifier of the pathology report assigned by the laboratory doing the analysis.",
-        "comment": "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_).",
-        "alias": [
-          "VerslagIdentificatienummer",
-          "Filler ID",
-          "Placer ID"
-        ],
         "min": 1,
         "max": "1",
-        "condition": [
-          "path-Report-1"
-        ],
-        "mapping": [
+        "type": [
           {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-3",
-            "comment": "rapnaam"
+            "code": "Identifier",
+            "profile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier"
+            ]
           }
         ]
-      },
-      {
-        "id": "DiagnosticReport.identifier:reportIdentifier.system",
-        "path": "DiagnosticReport.identifier.system",
-        "min": 1,
-        "condition": [
-          "path-Report-1"
-        ]
-      },
-      {
-        "id": "DiagnosticReport.identifier:reportIdentifier.value",
-        "path": "DiagnosticReport.identifier.value",
-        "min": 1
       },
       {
         "id": "DiagnosticReport.basedOn",
@@ -200,7 +170,7 @@
           "system": "http://snomed.info/sct"
         },
         "condition": [
-          "path-Report-2"
+          "path-Report-1"
         ]
       },
       {
@@ -214,7 +184,7 @@
           "system": "http://snomed.info/sct"
         },
         "condition": [
-          "path-Report-2"
+          "path-Report-1"
         ]
       },
       {

@@ -1,7 +1,7 @@
 // FHIR test instances in FSH format for Pathology test scenario 1
 
 Instance: Pathology-Request-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request
+InstanceOf: PathRequest
 Usage: #example
 * status = #completed
 * intent = #order
@@ -17,7 +17,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Specimen-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+InstanceOf: PathRequestSpecimen
 Usage: #example
 * type
   * text = "Colon Resectie"
@@ -29,7 +29,7 @@ Usage: #example
     * text = "resectie"
 
 Instance: Pathology-Report-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report
+InstanceOf: PathReport
 Usage: #example
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
@@ -56,7 +56,7 @@ Usage: #example
 * conclusion = "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patient is bekend met: morbus Crohn.</div><div> </div>"
 
 Instance: Pathology-Observation-Olivander-ClinicalInformation
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation
+InstanceOf: PathReportClinicalInformation
 Usage: #example
 * text
   * status = #additional
@@ -67,7 +67,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-Macroscopy
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy
+InstanceOf: PathReportMacroscopy
 Usage: #example
 * text
   * status = #additional
@@ -78,7 +78,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-Microscopy
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy
+InstanceOf: PathReportMicroscopy
 Usage: #example
 * text
   * status = #additional
@@ -89,7 +89,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#371489008 "afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie"
@@ -100,7 +100,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#2620001000004108 "Specimen collection procedure"
@@ -109,7 +109,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#371513001 "status van ingroei van tumor rondom zenuw"
@@ -118,7 +118,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#1597451000004100 "Primary tumor site extension"
@@ -127,7 +127,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
@@ -137,7 +137,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Patient-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
+InstanceOf: PathPatient
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
@@ -165,7 +165,7 @@ Usage: #example
   * postalCode = "5972 XX"
 
 Instance: Pathology-PractitionerRole-Plijster
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
+InstanceOf: PathRequestRequester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
