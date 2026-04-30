@@ -188,8 +188,8 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | DatumAutorisatie | Item | mercurius-core-rubriek-44 | 03-02-2026 | a | Datum van autorisatie | | M |
 | KlinischeGegevens | Item | mercurius-core-rubriek-142 | Adenocarcinoom vastgesteld bij BVO | b | Medische gegevens | | M |
 | Macroscopie | Item | mercurius-core-rubriek-184 | Colon resectie met lengte van 20 cm | b | Macroscopie | | M |
-| Microscopie | Item | mercurius-core-rubriek-222 | Zie voorbeeld in Tabel 5. | b | Microscopie | | M |
-| Conclusie | Item | mercurius-core-rubriek-224 | Zie voorbeeld in Tabel 5. | b | Conclusie | | M |
+| Microscopie | Item | mercurius-core-rubriek-222 | Zie voorbeeld in Tabel 6. | b | Microscopie | | M |
+| Conclusie | Item | mercurius-core-rubriek-224 | Zie voorbeeld in Tabel 6. | b | Conclusie | | M |
 | **Protocoldata** | **Container** | mercurius-core-rubriek-308 | | b | Protocolgegevens | | |
 | ProtocolitemNaam | Item | | locatie van primaire tumor (code '399687005' in codesysteem 'SNOMED CT') | b | Bevinding | | M |
 | ProtocolitemResultaat | Item | | colon descendens (code '32622004' in codesysteem 'SNOMED CT') | b | Resultaat | | M |
