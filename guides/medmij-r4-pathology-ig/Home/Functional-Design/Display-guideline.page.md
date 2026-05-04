@@ -39,11 +39,12 @@ De acceptatiecriteria voor het weergeven van pathologieverslagen in het overzich
 
 | Nr | Acceptatiecriteria |
 | --- | --- |
-| 1 | Standaard worden alle beschikbaar gestelde verslagen van de zorgaanbieder(s) weergegeven, gesorteerd op autorisatiedatum van nieuw naar oud. |
-| 2 | Voor de datavelden in het overzichtsscherm is het mogelijk om te filteren op één of meerdere waarden. |
-| 3 | Voor het dataveld datum van autorisatie (DatumAutorisatie, mercurius-core-rubriek-44) kan een specifieke periode geselecteerd worden. |
-| 4 | Alle datavelden in het overzichtsscherm zijn sorteerbaar. |
-| 5 | De datavelden in het overzichtsscherm zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. |
+| 1 | Standaard worden alle beschikbaar gestelde verslagen van de zorgaanbieder(s) weergegeven, gesorteerd op datum van autorisatie (DatumAutorisatie, mercurius-core-rubriek-44) van nieuw naar oud. |
+| 2 | Je kunt zoeken op (delen van) de gegevens of op informatie uit de datavelden in het overzichtsscherm. De datum van autorisatie vormt hierop een uitzondering, omdat hiervoor al een periode kan worden opgegeven. |
+| 3 | Voor de datavelden in het overzichtsscherm is het mogelijk om te filteren op één of meerdere waarden. De datum van autorisatie vormt hierop een uitzondering, omdat hiervoor al een periode kan worden opgegeven. |
+| 4 | Voor het dataveld datum van autorisatie kan een specifieke periode geselecteerd worden. |
+| 5 | In het overzichtsscherm kan minimaal op datum van autorisatie worden gesorteerd, maar bij voorkeur is sorteren op alle datavelden mogelijk. |
+| 6 | De datavelden in het overzichtsscherm zijn begrijpelijk en gebruiksvriendelijk geformuleerd. Zie de {{pagelink: Weergaverichtlijn, text: Tabel met specificaties, anchor: TabelSpecificaties}} voor de aanbevolen termen per opgehaald dataveld. In verband met beperkte schermruimte op mobiele apparaten mogen de labelnamen van de datavelden in het overzichtsscherm worden weggelaten. |
 
 **Tabel 1: Acceptatiecriteria overzichtsscherm**
 
@@ -158,7 +159,7 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | M(ust have) | Nodig voor de basisfunctionaliteit van de toepassing en moet worden geïmplementeerd om het proces succesvol te laten verlopen. |
 | S(hould have) | Belangrijke functionaliteit die niet vereist is, maar die voordelen biedt voor gebruikers en de algehele gebruikservaring. |
 | C(ould have) | Gewenste functionaliteit die waarde toevoegt, maar minder kritisch is en indien nodig kan worden uitgesteld. |
-| W(on't have) | Functionaliteiten die nu buiten scope zijn maar mogelijk in de toekomst worden overwogen. |
+| W(on't have) | Functionaliteiten die nu buiten scope zijn maar mogelijk in de toekomst worden overwogen. PGO’s hebben de vrijheid om deze datavelden desondanks toch te tonen. Het uitgangspunt is echter dat deze velden niet primair worden weergegeven, zodat de gebruiker deze informatie niet direct ziet. De gegevens zijn alleen beschikbaar wanneer de gebruiker hier expliciet naar zoekt of doorklikt, aangezien deze datavelden geen duidelijke meerwaarde hebben voor directe weergave. |
 
 <br/>
 
