@@ -34,7 +34,7 @@
   "rest": [
     {
       "mode": "server",
-      "documentation": "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: MM-1.0-PRB-FHIR).",
+      "documentation": "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.2).",
       "resource": [
         {
           "type": "DiagnosticReport",
