@@ -75,7 +75,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^alias = "Monster"
 * result 1..*
 * result only Reference(Observation or PathReportProtocolDataItem)
-  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "resolve().code"
   * ^slicing.rules = #open
   * ^short = "ProtocolData"

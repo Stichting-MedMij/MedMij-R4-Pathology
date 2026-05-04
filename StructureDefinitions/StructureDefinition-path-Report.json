@@ -323,7 +323,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "resolve().code"
             }
           ],
