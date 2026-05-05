@@ -7,7 +7,7 @@ canonical: http://medmij.nl/fhir/StructureDefinition/path-Patient
 
 <tabs>
     <tab title="Tree view" active="true">
-      {{tree:%canonical, buttons}}
+      {{tree:http://medmij.nl/fhir/StructureDefinition/path-Patient, buttons}}
     </tab>
     <tab title="Mappings">
       {{page:fql-get-mappings}}
