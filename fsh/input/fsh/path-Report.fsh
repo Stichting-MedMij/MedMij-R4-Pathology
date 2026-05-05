@@ -74,21 +74,21 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
   * ^alias = "Monster"
 * result 1..*
-  * ^slicing.discriminator.type = #profile
-  * ^slicing.discriminator.path = "resolve()"
+* result only Reference(Observation or PathReportProtocolDataItem)
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "resolve().code"
   * ^slicing.rules = #open
+  * ^short = "ProtocolData"
+  * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
+  * ^comment = "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible."
+  * ^alias = "Protocoldata"
 * result contains
     clinicalInformation 0..1 and
     macroscopy 0..1 and
-    microscopy 1..1 and
-    protocolData 0..*
+    microscopy 1..1
 * result[clinicalInformation] only Reference(PathReportClinicalInformation)
 * result[macroscopy] only Reference(PathReportMacroscopy)
 * result[microscopy] only Reference(PathReportMicroscopy)
-* result[protocolData] only Reference(PathReportProtocolDataItem)
-  * ^short = "ProtocolData"
-  * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
-  * ^alias = "Protocoldata"
 * conclusion 1..1
   * ^short = "Conclusion"
   * ^definition = "Conclusion of the report."
@@ -261,7 +261,7 @@ Title: "Mercurius Core Dataset 2.0"
   * start -> "mercurius-core-rubriek-80" "datumontvangst"
   * end -> "mercurius-core-rubriek-44" "datumautorisatie"
 * resultsInterpreter -> "mercurius-core-rubriek-41" "autorisator (implicit, actual mapping is on Practitioner.name[nameInformation].text)"
-* result[protocolData] -> "mercurius-core-rubriek-308" "protocoldata"
+* result -> "mercurius-core-rubriek-308" "protocoldata"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
 
 Mapping: PathReportReportIdentifierMercuriusCore
