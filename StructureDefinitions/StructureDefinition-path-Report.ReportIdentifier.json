@@ -56,7 +56,7 @@
             "key": "path-Report.ReportIdentifier-1",
             "severity": "error",
             "human": "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number.",
-            "expression": "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.').endsWith('.1')",
+            "expression": "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.') and system.endsWith('.1')",
             "source": "http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier"
           }
         ],
