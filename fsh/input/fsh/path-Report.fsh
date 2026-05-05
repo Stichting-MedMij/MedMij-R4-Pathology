@@ -80,6 +80,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^slicing.rules = #open
   * ^short = "ProtocolData"
   * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
+  * ^comment = "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible."
   * ^alias = "Protocoldata"
 * result contains
     clinicalInformation 0..1 and
