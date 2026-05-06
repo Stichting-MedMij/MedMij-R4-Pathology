@@ -6,7 +6,7 @@ topic: FHIRProfilesIndex
 ## Pathology-specific profiles
 The following FHIR profiles have been introduced for the Pathology standard:
 
-| CIM (concept) | FHIR resource | FHIR profile |
+| CIM (concept) | FHIR resource/data type | FHIR profile |
 | --- | --- | --- |
 | {{pagelink: LogicalModelsIndex, text: Patient, anchor: PathLmPatient}} | Patient | {{pagelink: FHIRProfilesIndex, text: path-Patient, anchor: PathPatient}} |
 | {{pagelink: LogicalModelsIndex, text: Request, anchor: PathLmRequest}} | ServiceRequest | {{pagelink: FHIRProfilesIndex, text: path-Request, anchor: PathRequest}} |
@@ -17,6 +17,7 @@ The following FHIR profiles have been introduced for the Pathology standard:
 | {{pagelink: LogicalModelsIndex, text: Report (Macroscopy), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.Macroscopy, anchor: PathReportMacroscopy}} |
 | {{pagelink: LogicalModelsIndex, text: Report (Microscopy), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.Microscopy, anchor: PathReportMicroscopy}} |
 | {{pagelink: LogicalModelsIndex, text: Report (ProtocolDataItem), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.ProtocolDataItem, anchor: PathReportProtocolDataItem}} |
+| {{pagelink: LogicalModelsIndex, text: Report (ReportIdentifier), anchor: PathLmReport}} | Identifier | {{pagelink: FHIRProfilesIndex, text: path-Report.ReportIdentifier, anchor: PathReportReportIdentifier}} |
 
 **Table 1: Relevant pathology-specific profiles**
 
@@ -31,6 +32,7 @@ In Figure 1, the profiles listed above are visualized, as well as the relations 
 {{render: guides/medmij-r4-pathology-ig/images/Overview FHIR profiles.png}}
 
 **Figure 1: Overview of FHIR profiles**
+
 ## Other profiles
 FHIR R4 conformance resources developed by Nictiz (based on zib publication 2020) from the [nl-core 0.12.0-beta.4 package](https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.4) are used and referenced where possible. In particular, the zibs and corresponding nl-core profiles collected in the table below are used.
 
@@ -39,7 +41,7 @@ FHIR R4 conformance resources developed by Nictiz (based on zib publication 2020
 | [HealthProfessional](https://zibs.nl/wiki/HealthProfessional-v3.5(2020EN)) | PractitionerRole <br/> Practitioner | [nl-core-HealthProfessional-PractitionerRole](https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole&scope=nictiz.fhir.nl.r4.nl-core@0.12.0-beta.4) <br/> [nl-core-HealthProfessional-Practitioner](https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner&scope=nictiz.fhir.nl.r4.nl-core@0.12.0-beta.4) |
 | [HealthcareProvider](https://zibs.nl/wiki/HealthcareProvider-v3.4(2020EN)) | Location <br/> Organization | [nl-core-HealthcareProvider](https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider&scope=nictiz.fhir.nl.r4.nl-core@0.12.0-beta.4) <br/> [nl-core-HealthcareProvider-Organization](https://simplifier.net/resolve?canonical=http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization&scope=nictiz.fhir.nl.r4.nl-core@0.12.0-beta.4) |
 
-**Table 1: Relevant nl-core profiles**
+**Table 2: Relevant nl-core profiles**
 
 Note the following:
 - Each occurrence of the zib HealthProfessional is normally represented by two FHIR resources: a PractitionerRole resource (instance of nl-core-HealthProfessional-PractitionerRole) and a Practitioner resource (instance of nl-core-HealthProfessional-Practitioner). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance where relevant, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.

@@ -6,7 +6,7 @@ Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "path Retrieve"
 * status = #draft
-* date = "2026-02-26"
+* date = "2026-05-06"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction within Pathology."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -17,7 +17,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #client
-  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction (system role: MM-1.0-PRR-FHIR)."
+  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction (system role: PA-PRR-1.0.0-alpha.2)."
   * resource[+]
     * type = #DiagnosticReport
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Report"
@@ -89,6 +89,13 @@ Usage: #definition
     * interaction
       * code = #read
       * documentation = "If the server includes this (secondary) resource in the Bundle, the client does not need to execute a `read`. However, since a server may choose to not include it in the Bundle, support of the `read` interaction is mandatory for a client."
+  * resource[+]
+    * type = #Location
+    * supportedProfile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
+    * documentation = "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle."
+    * interaction
+      * code = #read
+      * documentation = "If the server includes this (secondary) resource in the Bundle, the client does not need to execute a `read`. However, since a server may choose to not include it in the Bundle, support of the `read` interaction is mandatory for a client."
   * interaction
     * code = #search-system
 
@@ -98,7 +105,7 @@ Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "path Serve"
 * status = #draft
-* date = "2026-02-26"
+* date = "2026-05-06"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a server to fulfill the 'Serve pathology reports' transaction within Pathology."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -109,7 +116,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #server
-  * documentation = "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: MM-1.0-PRB-FHIR)."
+  * documentation = "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.2)."
   * resource[+]
     * type = #DiagnosticReport
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Report"
@@ -176,6 +183,13 @@ Usage: #definition
   * resource[+]
     * type = #Organization
     * supportedProfile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    * documentation = "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle."
+    * interaction
+      * code = #read
+      * documentation = "If the server always includes this resource in the Bundle, support of the `read` interaction is optional."
+  * resource[+]
+    * type = #Location
+    * supportedProfile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
     * documentation = "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle."
     * interaction
       * code = #read

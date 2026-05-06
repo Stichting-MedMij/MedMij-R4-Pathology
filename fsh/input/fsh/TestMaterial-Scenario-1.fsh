@@ -1,7 +1,7 @@
 // FHIR test instances in FSH format for Pathology test scenario 1
 
 Instance: Pathology-Request-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request
+InstanceOf: PathRequest
 Usage: #example
 * status = #completed
 * intent = #order
@@ -17,7 +17,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Specimen-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen
+InstanceOf: PathRequestSpecimen
 Usage: #example
 * type
   * text = "Colon Resectie"
@@ -29,7 +29,7 @@ Usage: #example
     * text = "resectie"
 
 Instance: Pathology-Report-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report
+InstanceOf: PathReport
 Usage: #example
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
@@ -45,29 +45,29 @@ Usage: #example
   * end = "2026-02-03"
 * resultsInterpreter = Reference(Pathology-PractitionerRole-Oosting) "Jan Oosting, LUMC, patholoog"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
+* result[+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-1) "Afstand tot dichtstbijzijnde darmsnijvlak"
+* result[+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-2) "Type resectie"
+* result[+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-3) "Perineurale groei"
+* result[+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-4) "Tumor aanwezig"
+* result[+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-5) "Aantal tumoren"
 * result[clinicalInformation] = Reference(Pathology-Observation-Olivander-ClinicalInformation) "Klinische gegevens"
 * result[macroscopy] = Reference(Pathology-Observation-Olivander-Macroscopy) "Macroscopie"
 * result[microscopy] = Reference(Pathology-Observation-Olivander-Microscopy) "Microscopie"
-* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-1) "Afstand tot dichtstbijzijnde darmsnijvlak"
-* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-2) "Type resectie"
-* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-3) "Perineurale groei"
-* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-4) "Tumor aanwezig"
-* result[protocolData][+] = Reference(Pathology-Observation-Olivander-ProtocolDataItem-5) "Aantal tumoren"
-* conclusion = "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patient is bekend met: morbus Crohn.</div><div> </div>"
+* conclusion = "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patiënt is bekend met: morbus Crohn.</div><div> </div>"
 
 Instance: Pathology-Observation-Olivander-ClinicalInformation
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation
+InstanceOf: PathReportClinicalInformation
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Adnenocarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Adenocarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
 * status = #final
 * code = $SCT#404684003 "klinische bevinding"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-Macroscopy
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Macroscopy
+InstanceOf: PathReportMacroscopy
 Usage: #example
 * text
   * status = #additional
@@ -78,18 +78,18 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-Microscopy
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy
+InstanceOf: PathReportMicroscopy
 Usage: #example
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie links</div><div>Niveau van resectie mesocolon: in het mesocolische vet</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie tumor: colon descendens</div><div>Aspect tumor: schotelvormig</div><div>Maximale diameter tumor: 3,0 cm</div><div>Lengte preparaat: 20 cm</div><div>Ingevroren materiaal aanwezig: nee</div><div>Tumor aanwezig: ja, 1 tumor</div><div>Patient is bekend met: morbus Crohn</div><div>Metastase(n): niet gevonden</div><div>Eerdere (neo-adjuvante) therapie: geen</div><div>Vriescoupe tumor: niet verricht</div><div/><div>Microscopie</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed/matig gedifferentieerd (laaggradig)</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie</div><div>Angio-invasie opmerking: geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: laag (Bd1)</div><div>Perineurale groei: niet aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div/><div>Snijvlakken</div><div>Dichtstbijzijnde darmsnijvlak: distaal vrij op &gt;= 1 cm</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij op 0,8 cm</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 15</div><div>Aantal lymfklieren met metastasen: 0</div><div>Aantal tumordeposits: 0</div><div/><div>Overige</div><div>Poliep(en): niet aanwezig</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerdMicroscopie</div><div/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie links</div><div>Niveau van resectie mesocolon: in het mesocolische vet</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie tumor: colon descendens</div><div>Aspect tumor: schotelvormig</div><div>Maximale diameter tumor: 3,0 cm</div><div>Lengte preparaat: 20 cm</div><div>Ingevroren materiaal aanwezig: nee</div><div>Tumor aanwezig: ja, 1 tumor</div><div>Patient is bekend met: morbus Crohn</div><div>Metastase(n): niet gevonden</div><div>Eerdere (neo-adjuvante) therapie: geen</div><div>Vriescoupe tumor: niet verricht</div><div/><div>Microscopie</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed/matig gedifferentieerd (laaggradig)</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie</div><div>Angio-invasie opmerking: geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: laag (Bd1)</div><div>Perineurale groei: niet aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div/><div>Snijvlakken</div><div>Dichtstbijzijnde darmsnijvlak: distaal vrij op &gt;= 1 cm</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij op 0,8 cm</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 15</div><div>Aantal lymfklieren met metastasen: 0</div><div>Aantal tumordeposits: 0</div><div/><div>Overige</div><div>Poliep(en): niet aanwezig</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerd</div><div/></div>"
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#371489008 "afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie"
@@ -100,7 +100,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#2620001000004108 "Specimen collection procedure"
@@ -109,7 +109,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#371513001 "status van ingroei van tumor rondom zenuw"
@@ -118,16 +118,16 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
-* code = $SCT#1597451000004100 "Presence of direct invasion by primary malignant neoplasm"
+* code = $SCT#1597451000004100 "Primary tumor site extension"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem
+InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
@@ -137,7 +137,7 @@ Usage: #example
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Patient-Olivander
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Patient
+InstanceOf: PathPatient
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
@@ -165,7 +165,7 @@ Usage: #example
   * postalCode = "5972 XX"
 
 Instance: Pathology-PractitionerRole-Plijster
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
+InstanceOf: PathRequestRequester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"

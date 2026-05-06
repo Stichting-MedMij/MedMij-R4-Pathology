@@ -8,7 +8,7 @@
   },
   "name": "path Serve",
   "status": "draft",
-  "date": "2026-02-26",
+  "date": "2026-05-06",
   "publisher": "MedMij",
   "contact": [
     {
@@ -34,7 +34,7 @@
   "rest": [
     {
       "mode": "server",
-      "documentation": "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: MM-1.0-PRB-FHIR).",
+      "documentation": "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.2).",
       "resource": [
         {
           "type": "DiagnosticReport",
@@ -151,6 +151,19 @@
           "type": "Organization",
           "supportedProfile": [
             "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+          ],
+          "documentation": "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle.",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "If the server always includes this resource in the Bundle, support of the `read` interaction is optional."
+            }
+          ]
+        },
+        {
+          "type": "Location",
+          "supportedProfile": [
+            "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
           ],
           "documentation": "This is a secondary resource that needs to be resolvable, either by supporting a `read` interaction or explicitly including it in the Bundle.",
           "interaction": [

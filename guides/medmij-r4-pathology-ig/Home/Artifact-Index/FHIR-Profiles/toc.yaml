@@ -12,6 +12,8 @@
   filename: ReportMicroscopy.page.md
 - name: Report (ProtocolDataItem)
   filename: ReportProtocolDataItem.page.md
+- name: Report (ReportIdentifier)
+  filename: ReportReportIdentifier.page.md
 - name: Request
   filename: Request.page.md
 - name: Request (Requester)

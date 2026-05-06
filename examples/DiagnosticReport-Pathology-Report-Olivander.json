@@ -61,18 +61,6 @@
   ],
   "result": [
     {
-      "reference": "Observation/Pathology-Observation-Olivander-ClinicalInformation",
-      "display": "Klinische gegevens"
-    },
-    {
-      "reference": "Observation/Pathology-Observation-Olivander-Macroscopy",
-      "display": "Macroscopie"
-    },
-    {
-      "reference": "Observation/Pathology-Observation-Olivander-Microscopy",
-      "display": "Microscopie"
-    },
-    {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-1",
       "display": "Afstand tot dichtstbijzijnde darmsnijvlak"
     },
@@ -91,7 +79,19 @@
     {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-5",
       "display": "Aantal tumoren"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ClinicalInformation",
+      "display": "Klinische gegevens"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-Macroscopy",
+      "display": "Macroscopie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-Microscopy",
+      "display": "Microscopie"
     }
   ],
-  "conclusion": "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patient is bekend met: morbus Crohn.</div><div> </div>"
+  "conclusion": "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patiënt is bekend met: morbus Crohn.</div><div> </div>"
 }

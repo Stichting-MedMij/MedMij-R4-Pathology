@@ -4,8 +4,8 @@ topic: FO
 
 # Functioneel ontwerp
 
-## Algemeen 
-Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden gesteld aan de persoon via een Persoonlijke Gezondheidsomgeving (PGO). Hierdoor kan de persoon zijn pathologieverslagen inzien om een beter en vollediger beeld te krijgen van de eigen medische situatie. In dit ontwerp gebruiken we de term 'patiënt' om de persoon aan te duiden, maar hier kan ook 'burger' gelezen worden.
+## Algemeen
+Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden gesteld aan de persoon via de Persoonlijke Gezondheidsomgeving (PGO). Hierdoor kan de persoon zijn pathologieverslagen inzien om een beter en vollediger beeld te krijgen van de eigen medische situatie. In dit ontwerp gebruiken we de term 'patiënt' om de persoon aan te duiden, maar hier kan ook 'burger' gelezen worden.
 
 Dit functioneel ontwerp sluit aan op de pathologie-uitwisseling van [Palga](https://www.palga.nl/).
 
@@ -19,21 +19,21 @@ Een laboratorium wordt in dit ontwerp als eigen entiteit beschouwd. Een laborato
 In beide situaties is het laboratorium (of de zorgaanbieder namens het laboratorium) verantwoordelijk voor het vastleggen en beschikbaar stellen van pathologieverslagen via het bronsysteem. In dit document gebruiken we de term zorgaanbieder als overkoepelende term voor de partij die de pathologieverslagen aan de patiënt beschikbaar stelt. In de PGO is de naam van de zorgaanbieder herkenbaar voor de patiënt, de naam van het laboratorium is dat niet altijd.
 
 ### Doelgroep
-De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Doelgroep) van de functionele onderwerpen binnen MedMij. 
+De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Doelgroep) van de functionele onderwerpen binnen MedMij.
 
 ### Kaders en uitgangspunten
-- De uitwisseling vindt plaats binnen het MedMij-afsprakenstelsel (authenticatie, autorisatie, logging, etc.).
+- De uitwisseling vindt plaats binnen het MedMij Afsprakenstelsel (authenticatie, autorisatie, logging, etc.).
 - De patiënt raadpleegt gegevens via een PGO dat aan MedMij-eisen voldoet.
 - De zorgaanbieder stelt pathologiegegevens beschikbaar via een zorginformatiesysteem (XIS).
 - Alleen definitieve/geautoriseerde pathologieverslagen worden uitgewisseld.
 
-### Richtlijn en proces 
+### Richtlijn en proces
 Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnn MedMij.
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp is:
 - de functionele beschrijving voor het verzamelen van pathologieverslagen door de patiënt via de PGO;
-- de functionele dataset voor de uitwisseling van pathologieverslagen die voortkomen uit pathologieonderzoek;
+- de {{pagelink: FO, text: functionele dataset, anchor: Dataset}} voor de uitwisseling van pathologieverslagen die voortkomen uit pathologieonderzoek;
 - de weergaverichtlijnen voor het tonen van pathologieverslagen in de PGO.
 
 Buiten scope:
@@ -78,9 +78,9 @@ Sanne (45) heeft een afwijking laten onderzoeken in het ziekenhuis. Er is een bi
 
 #### Procesbeschrijving
 ##### Preproces
-- De patiënt beschikt over een PGO dat aan de MedMij-eisen voldoet.  
-- De patiënt heeft toestemming gegeven voor het elektronisch uitwisselen van pathologiegegevens tussen het betreffende XIS en de eigen PGO. 
-- Er is sprake van een dossier voor de patiënt bij een zorgaanbieder.   
+- De patiënt beschikt over een PGO dat aan de MedMij-eisen voldoet.
+- De patiënt heeft toestemming gegeven voor het elektronisch uitwisselen van pathologiegegevens tussen het betreffende XIS en de eigen PGO.
+- Er is sprake van een dossier voor de patiënt bij een zorgaanbieder.
 - Er zijn één of meerdere definitieve pathologieverslagen beschikbaar voor de patiënt.
 
 ##### Proces
@@ -114,22 +114,22 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | PathologieRapportenRaadplegend | PA-PRR-1.0.0-alpha.1-FHIR | Raadplegen pathologieverslagen bij de zorgaanbieder |
-| XIS | PathologieRapportenBeschikbaarstellend | PA-PRB-1.0.0-alpha.1-FHIR | Beschikbaar stellen pathologieverslagen aan de patiënt |
+| PGO | PathologieverslagenRaadplegend | PA-PRR-1.0.0-alpha.2 | Raadplegen pathologieverslagen bij de zorgaanbieder |
+| XIS | PathologieverslagenBeschikbaarstellend | PA-PRB-1.0.0-alpha.2 | Beschikbaar stellen pathologieverslagen aan de patiënt |
 
 **Tabel 2: Systeemrollen**
- 
+
 #### Transacties en transactiegroepen
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de technische specificaties, zie het {{pagelink: TD, text: technisch ontwerp}}.
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.1-FHIR | PGO | Patiënt |
-| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.1-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.2 | PGO | Patiënt |
+| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 
-#### Dataset 
+#### <a name="Dataset"></a> Dataset
 De dataset is uitgewerkt aan de hand van {{pagelink: LogicalModelsIndex, text: Logical Models}}.
 
 Een pathologieverslag wordt functioneel gezien aangeboden als een samenhangend geheel dat bestaat uit:
@@ -137,16 +137,4 @@ Een pathologieverslag wordt functioneel gezien aangeboden als een samenhangend g
 - Aanvraagcontext: de onderliggende aanvraag (waarom is het onderzoek gedaan).
 - Bevindingen: relevante observaties/onderdelen van het verslag (bijv. macroscopie/microscopie/protocoldata).
 - Monsters: welke materialen/monsters zijn onderzocht.
-- Patholoog: de patholoog het verslag heeft geautoriseerd.
-
-#### Weergaverichtlijn
-
-##### Scope weergaverichtlijn 
-De richtlijn geeft handvatten voor:
-- het gebruik van patiëntvriendelijke termen en toelichting;
-- de inhoud van het overzicht van pathologieverslagen in de PGO.
-
-De richtlijn geeft géén handvatten voor de vormgeving (kleur, vorm, lettertype, etc.) van pathologieverslagen. 
-
-##### Inhoud weergaverichtlijn
-De weergaverichtlijn voor pathologieverslagen is [hier](https://medmij.atlassian.net/wiki/spaces/IER/pages/828702721/Weergaverichtlijn+Pathologieverslagen) te vinden.
+- Patholoog: de patholoog die het verslag heeft geautoriseerd.
