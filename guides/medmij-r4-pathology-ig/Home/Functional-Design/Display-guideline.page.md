@@ -7,7 +7,7 @@ topic: Weergaverichtlijn
 ## Inleiding
 Dit is de weergaverichtlijn voor de gegevensdienst Pathologie.
 
-De richtlijn bevat een aantal verplichte functionele requirements. De getoonde mock-ups zijn bedoeld ter inspiratie. Persoonlijke gezondheidsomgevingen (PGO's) kunnen deze voorbeelden naar eigen inzicht visueel vormgeven, zolang de gebruiksvriendelijkheid behouden blijft, en aan de functionele requirements is voldaan.
+De richtlijn bevat een aantal verplichte acceptatiecriteria. De getoonde mock-ups zijn bedoeld ter inspiratie. Persoonlijke gezondheidsomgevingen (PGO's) kunnen deze voorbeelden naar eigen inzicht visueel vormgeven, zolang de gebruiksvriendelijkheid behouden blijft, en aan de acceptatiecriteria is voldaan.
 
 ## Doel
 Deze richtlijn heeft als doel om duidelijke handvatten te bieden voor een patiëntvriendelijke en begrijpelijke weergave van pathologieverslagen in de PGO. De richtlijn ondersteunt ontwikkelaars en zorgverleners bij het:
