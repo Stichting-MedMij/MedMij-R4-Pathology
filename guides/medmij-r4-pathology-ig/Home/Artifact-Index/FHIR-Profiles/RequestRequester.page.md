@@ -1,6 +1,7 @@
 ---
 topic: PathRequestRequester
 canonical: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
+corecanonical: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 ---
 
 # Request (Requester)
@@ -19,6 +20,6 @@ canonical: http://medmij.nl/fhir/StructureDefinition/path-Request.Requester
       {{json:http://medmij.nl/fhir/StructureDefinition/path-Request.Requester}}
     </tab>
     <tab title="Examples">
-      {{page:fql-get-examples}}
+      {{page:fql-get-examples-multiple-meta-profile}}
     </tab>
 </tabs>

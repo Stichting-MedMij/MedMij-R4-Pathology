@@ -1,6 +1,7 @@
 ---
 topic: PathPatient
 canonical: http://medmij.nl/fhir/StructureDefinition/path-Patient
+corecanonical: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 ---
 
 # Patient
@@ -19,6 +20,6 @@ canonical: http://medmij.nl/fhir/StructureDefinition/path-Patient
       {{json:http://medmij.nl/fhir/StructureDefinition/path-Patient}}
     </tab>
     <tab title="Examples">
-      {{page:fql-get-examples}}
+      {{page:fql-get-examples-multiple-meta-profile}}
     </tab>
 </tabs>
