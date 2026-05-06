@@ -37,6 +37,16 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
+    },
+    {
+      "identity": "LOINC",
+      "name": "LOINC",
+      "uri": "http://loinc.org"
     }
   ],
   "kind": "logical",
@@ -53,6 +63,13 @@
         "definition": "The person whose human tissue is analyzed in a pathology study.",
         "alias": [
           "Patiënt"
+        ],
+        "mapping": [
+          {
+            "identity": "SNOMED",
+            "map": "116154003",
+            "comment": "patiënt"
+          }
         ]
       },
       {
@@ -190,6 +207,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-10",
             "comment": "geslacht"
+          },
+          {
+            "identity": "LOINC",
+            "map": "46098-0",
+            "comment": "Geslacht"
           }
         ]
       },
@@ -234,6 +256,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-13",
             "comment": "geboorteeeuw (implicit)"
+          },
+          {
+            "identity": "LOINC",
+            "map": "21112-8",
+            "comment": "Geboortedatum"
           }
         ]
       },

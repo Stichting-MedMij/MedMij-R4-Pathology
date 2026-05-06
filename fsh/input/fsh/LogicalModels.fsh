@@ -170,6 +170,22 @@ Title: "Mercurius Core Dataset 2.0"
   * PostalCode -> "mercurius-core-rubriek-20" "postcodebuitenland"
   * City -> "mercurius-core-rubriek-19" "woonplaats"
 
+Mapping: PathLmPatientSNOMED
+Source: PathLmPatient
+Target: "http://snomed.info/sct"
+Id: SNOMED
+Title: "SNOMED CT"
+* . -> "116154003" "patiënt"
+
+Mapping: PathLmPatientLOINC
+Source: PathLmPatient
+Target: "http://loinc.org"
+Id: LOINC
+Title: "LOINC"
+* Gender -> "46098-0" "Geslacht"
+* BirthInformation
+  * BirthDate -> "21112-8" "Geboortedatum"
+
 Mapping: PathLmRequestMercuriusCore
 Source: PathLmRequest
 Id: mercurius-core-dataset-2-0
