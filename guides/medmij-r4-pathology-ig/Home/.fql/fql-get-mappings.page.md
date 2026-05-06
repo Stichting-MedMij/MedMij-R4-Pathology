@@ -6,9 +6,9 @@ topic: fql-get-mappings
   from
     StructureDefinition
   where
-    url=%canonical
+    url = %canonical
   for
-    snapshot.element 
+    differential.element 
   select
     id, join mapping {identity, map, comment}
   select
