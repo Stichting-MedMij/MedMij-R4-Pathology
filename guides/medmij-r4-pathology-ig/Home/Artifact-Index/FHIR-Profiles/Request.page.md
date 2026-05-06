@@ -18,4 +18,7 @@ canonical: http://medmij.nl/fhir/StructureDefinition/path-Request
     <tab title="Json">
       {{json:http://medmij.nl/fhir/StructureDefinition/path-Request}}
     </tab>
+    <tab title="Examples">
+      {{page:fql-get-examples}}
+    </tab>
 </tabs>
