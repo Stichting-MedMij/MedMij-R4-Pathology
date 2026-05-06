@@ -11,7 +11,7 @@
 | FHIR artifacts        | The system roles mentioned in the CapabilityStatements have been corrected. | [PG-486](https://medmij.atlassian.net/browse/PG-486) |
 | FHIR artifacts        | A data type profile on Identifier has been added for the ReportIdentifier concept, and the constraint on the `.identifier.system` in the path-Report profile has been corrected. | [PG-487](https://medmij.atlassian.net/browse/PG-487) |
 | FHIR artifacts        | In the path-Report profile, the slicing on `.result` has been corrected by removing the `protocolData` slice and changing the discriminator. | [PG-516](https://medmij.atlassian.net/browse/PG-516) |
-| FHIR artifacts        | All mappings have been added in the IG for the individual Logical Models and FHIR profiles. Moreover, (links to) the examples have been added in the IG for the individual FHIR profiles, as well. | [PG-528](https://medmij.atlassian.net/browse/PG-528) |
+| FHIR artifacts        | For each Logical Model and FHIR profile, the mappings have been added in the IG. Moreover, for each FHIR profile, (links to) the corresponding examples have been added in the IG. | [PG-528](https://medmij.atlassian.net/browse/PG-528) |
 | Test material         | The SampleNumber concept has been specified in the test material. | [PG-485](https://medmij.atlassian.net/browse/PG-485) |
 | Test material         | Several displays of SNOMED codes present in the test material have been updated. | [PG-490](https://medmij.atlassian.net/browse/PG-490) |
 
