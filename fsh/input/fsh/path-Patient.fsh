@@ -1,4 +1,4 @@
-// Profile on Patient derived from nl-core-Patient to be used in Pathology
+// Profile on Patient derived from nl-core-Patient used in Pathology
 
 Profile: PathPatient
 Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient

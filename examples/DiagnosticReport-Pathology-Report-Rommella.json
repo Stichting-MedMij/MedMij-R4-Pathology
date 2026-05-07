@@ -69,18 +69,6 @@
   ],
   "result": [
     {
-      "reference": "Observation/Pathology-Observation-Rommella-ClinicalInformation",
-      "display": "Klinische gegevens"
-    },
-    {
-      "reference": "Observation/Pathology-Observation-Rommella-Macroscopy",
-      "display": "Macroscopie"
-    },
-    {
-      "reference": "Observation/Pathology-Observation-Rommella-Microscopy",
-      "display": "Microscopie"
-    },
-    {
       "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1",
       "display": "Eerdere therapie"
     },
@@ -127,6 +115,18 @@
     {
       "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-5",
       "display": "Sample 2, Bevinding"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-ClinicalInformation",
+      "display": "Klinische gegevens"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-Macroscopy",
+      "display": "Macroscopie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Rommella-Microscopy",
+      "display": "Microscopie"
     }
   ],
   "conclusion": "<div>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</div><div>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</div><div> </div>"

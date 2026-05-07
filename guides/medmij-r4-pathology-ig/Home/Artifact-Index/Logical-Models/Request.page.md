@@ -1,5 +1,6 @@
 ---
 topic: PathLmRequest
+canonical: http://medmij.nl/fhir/StructureDefinition/path-lm-Request
 ---
 
 # Request
@@ -7,6 +8,9 @@ topic: PathLmRequest
 <tabs>
     <tab title="Tree view" active="true">
       {{tree:http://medmij.nl/fhir/StructureDefinition/path-lm-Request, buttons}}
+    </tab>
+    <tab title="Mappings">
+      {{page:fql-get-mappings}}
     </tab>
     <tab title="Xml">
       {{xml:http://medmij.nl/fhir/StructureDefinition/path-lm-Request}}
