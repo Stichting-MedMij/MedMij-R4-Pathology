@@ -156,8 +156,6 @@
 
 | ProtocolItemName | ProtocolItemResult | SampleNumber |
 | --- | --- | --- |
-
-
 | Type tumor (Histologic type of primary malignant neoplasm) (code '512001000004108' from code system 'SNOMED CT') | adenocarcinoom (code '1187332001' from code system 'SNOMED CT') | |
 | Max diameter tumor (Greatest length dimension of excised primary malignant neoplasm) (code '200001000004104' from code system 'SNOMED CT') | 1,2 cm | |
 | Perforatie (Perforation of appendix) (code '1255220008' from code system 'SNOMED CT') | niet aanwezig (code '2667000' from code system 'SNOMED CT') | |
