@@ -90,7 +90,7 @@ Usage: #example
 * result[clinicalInformation] = Reference(Pathology-Observation-Rommella-ClinicalInformation) "Klinische gegevens"
 * result[macroscopy] = Reference(Pathology-Observation-Rommella-Macroscopy) "Macroscopie"
 * result[microscopy] = Reference(Pathology-Observation-Rommella-Microscopy) "Microscopie"
-* conclusion = "<div>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</div><div>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</div><div> </div>"
+* conclusion = "<div>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</div><div>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</div>"
 
 Instance: Pathology-Observation-Rommella-ClinicalInformation
 InstanceOf: PathReportClinicalInformation
