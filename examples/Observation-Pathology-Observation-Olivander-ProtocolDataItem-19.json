@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "Pathology-Observation-Olivander-ProtocolDataItem-4",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-19",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
@@ -11,8 +11,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "385421009",
-        "display": "locatie van metastase op afstand"
+        "code": "384606002",
+        "display": "Length of specimen"
       }
     ]
   },
@@ -20,14 +20,11 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "47492008",
-        "system": "http://snomed.info/sct",
-        "display": "niet gezien"
-      }
-    ]
+  "valueQuantity": {
+    "value": 20,
+    "code": "cm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "cm"
   },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Olivander",

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "Pathology-Observation-Olivander-ProtocolDataItem-4",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-29",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
@@ -11,8 +11,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "385421009",
-        "display": "locatie van metastase op afstand"
+        "code": "1286765003",
+        "display": "Histologic type of polyp of colorectum"
       }
     ]
   },
@@ -23,9 +23,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "47492008",
+        "code": "2667000",
         "system": "http://snomed.info/sct",
-        "display": "niet gezien"
+        "display": "niet aanwezig"
       }
     ]
   },

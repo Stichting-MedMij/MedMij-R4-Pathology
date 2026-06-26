@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "Pathology-Observation-Olivander-ProtocolDataItem-4",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-21",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
@@ -11,8 +11,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "385421009",
-        "display": "locatie van metastase op afstand"
+        "code": "450461000146108",
+        "display": "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
       }
     ]
   },
@@ -20,14 +20,11 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "47492008",
-        "system": "http://snomed.info/sct",
-        "display": "niet gezien"
-      }
-    ]
+  "valueQuantity": {
+    "value": 0.8,
+    "code": "cm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "cm"
   },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Olivander",

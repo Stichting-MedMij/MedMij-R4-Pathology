@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "Pathology-Observation-Olivander-ProtocolDataItem-4",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-25",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
@@ -11,8 +11,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "385421009",
-        "display": "locatie van metastase op afstand"
+        "code": "384962004",
+        "display": "Anatomic location directly invaded by primary malignant neoplasm"
       }
     ]
   },
@@ -23,9 +23,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "47492008",
+        "code": "68439008",
         "system": "http://snomed.info/sct",
-        "display": "niet gezien"
+        "display": "submucosa"
       }
     ]
   },

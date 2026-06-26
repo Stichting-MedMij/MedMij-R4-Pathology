@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "Pathology-Observation-Olivander-ProtocolDataItem-4",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-30",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
@@ -11,8 +11,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "385421009",
-        "display": "locatie van metastase op afstand"
+        "code": "444025001",
+        "display": "aantal onderzochte lymfeklieren"
       }
     ]
   },
@@ -20,14 +20,8 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "47492008",
-        "system": "http://snomed.info/sct",
-        "display": "niet gezien"
-      }
-    ]
+  "valueQuantity": {
+    "value": 15
   },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Olivander",
