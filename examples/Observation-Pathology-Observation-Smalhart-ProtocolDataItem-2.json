@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-2",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "733149001",
+        "display": "obstructie-ileus van dunne darm gelijktijdig met en door impactie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "2667000",
+        "system": "http://snomed.info/sct",
+        "display": "niet aanwezig"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

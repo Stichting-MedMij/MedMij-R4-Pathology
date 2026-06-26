@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-36",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1286754008",
+        "display": "Tumor bud score in primary malignant neoplasm of colorectum"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "11896004",
+        "system": "http://snomed.info/sct",
+        "display": "tussenliggend"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

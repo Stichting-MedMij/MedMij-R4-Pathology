@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-44",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "120001000004108",
+        "display": "grootste lengte van tumor in preparaat verkregen door resectie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueQuantity": {
+    "value": 0.7,
+    "code": "cm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "cm"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

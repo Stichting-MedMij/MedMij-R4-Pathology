@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-68",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "521251000146108",
+        "display": "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueQuantity": {
+    "value": 60,
+    "code": "%",
+    "system": "http://unitsofmeasure.org",
+    "unit": "%"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

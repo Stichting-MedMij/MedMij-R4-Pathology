@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-6",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1255078008",
+        "display": "Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueQuantity": {
+    "value": 1,
+    "code": "%",
+    "system": "http://unitsofmeasure.org",
+    "unit": "%"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Smalhart",
+    "display": "Colon Resectie"
+  }
+}
