@@ -1,5 +1,11 @@
 # {{page-title}}
 
+## 1.0.0-alpha.3
+
+| Component             | Description  | Ticket    |
+| --------------------- | ------------ | --------- |
+| Test material         | A third test scenario has been added, and the protocol data of the first test scenario has been extended. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
+
 ## 1.0.0-alpha.2
 
 | Component             | Description  | Ticket    |
