@@ -9,7 +9,7 @@ Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden ge
 
 Dit functioneel ontwerp sluit aan op de pathologie-uitwisseling van [Palga](https://www.palga.nl/).
 
-Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de door Nictiz gepubliceerde [Ontwerpen MedMij](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
+Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in het door Nictiz gepubliceerde [Functioneel ontwerp](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
 
 **Zorgaanbieder en laboratorium** <br/>
 Een laboratorium wordt in dit ontwerp als eigen entiteit beschouwd. Een laboratorium kan:
