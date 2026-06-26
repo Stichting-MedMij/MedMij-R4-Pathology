@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-Microscopy-2",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.Microscopy"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "117259009",
+        "system": "http://snomed.info/sct",
+        "display": "microscopisch onderzoek"
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijnen Colorectaalcarcinoom versie 10-2019 en Neuro-endocriene tumoren versie 1.0 (2013)</div><div/><div>Microscopie</div><div>Type afwijking: (invasieve) tumor</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed / matig</div><div>Max diameter tumor: 1,2 cm</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa</div><div>Angio-invasie: niet aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div>Dichtstbijzijnde snijvlak: niet vrij</div><div>Aanwezigheid van transmurale ontsteking/inflammatie: nee</div><div>Aanwezigheid van necrose van de appendixwand: nee</div><div>Perforatie: nee</div><div/><div>Aanvullend onderzoek lynch syndroom</div><div>Bepaling mismatch repair eiwitten (MMR): niet verricht</div><div>MSI analyse: niet verricht</div><div/><div>Aanvulling microscopie</div><div>Nader bekeken</div><div/></div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-2-Smalhart",
+    "display": "Appendix Resectie"
+  }
+}

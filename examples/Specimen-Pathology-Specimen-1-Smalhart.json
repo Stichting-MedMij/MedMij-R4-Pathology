@@ -1,0 +1,23 @@
+{
+  "resourceType": "Specimen",
+  "id": "Pathology-Specimen-1-Smalhart",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+    ]
+  },
+  "type": {
+    "text": "Colon Resectie"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "receivedTime": "2026-06-13",
+  "collection": {
+    "collectedDateTime": "2026-06-11",
+    "method": {
+      "text": "resectie"
+    }
+  }
+}

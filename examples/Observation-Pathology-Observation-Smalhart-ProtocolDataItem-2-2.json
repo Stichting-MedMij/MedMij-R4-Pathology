@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-2-2",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "200001000004104",
+        "display": "Greatest length dimension of excised primary malignant neoplasm"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueQuantity": {
+    "value": 1.2,
+    "code": "cm",
+    "system": "http://unitsofmeasure.org",
+    "unit": "cm"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-2-Smalhart",
+    "display": "Appendix Resectie"
+  }
+}
