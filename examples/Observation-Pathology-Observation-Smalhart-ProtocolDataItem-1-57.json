@@ -20,9 +20,7 @@
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
-  "valueQuantity": {
-    "value": 23
-  },
+  "valueInteger": 23,
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-1-Smalhart",
     "display": "Colon Resectie"

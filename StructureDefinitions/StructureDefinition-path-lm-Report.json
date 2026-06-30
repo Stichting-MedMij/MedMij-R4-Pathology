@@ -294,6 +294,9 @@
             "code": "string"
           },
           {
+            "code": "integer"
+          },
+          {
             "code": "Quantity"
           },
           {

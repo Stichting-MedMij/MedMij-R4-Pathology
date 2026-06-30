@@ -269,8 +269,7 @@ Usage: #example
 * status = #final
 * code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
-* valueQuantity
-  * value = 0
+* valueInteger = 0
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-18
@@ -279,8 +278,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1286756005 "Number of metastatic discontinuous tumor deposits of primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
-* valueQuantity
-  * value = 0
+* valueInteger = 0
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-19
@@ -336,8 +334,7 @@ Usage: #example
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
-* valueQuantity
-  * value = 1
+* valueInteger = 1
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-25
@@ -392,8 +389,7 @@ Usage: #example
 * status = #final
 * code = $SCT#444025001 "aantal onderzochte lymfeklieren"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
-* valueQuantity
-  * value = 15
+* valueInteger = 15
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-31

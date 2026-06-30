@@ -212,7 +212,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^short = "Patient"
   * ^alias = "Patiënt"
 * value[x] 1..1
-* value[x] only CodeableConcept or string or Quantity or Range or dateTime
+* value[x] only CodeableConcept or string or integer or Quantity or Range or dateTime
   * ^short = "ProtocolItemResult"
   * ^definition = "Result of the protocol item."
   * ^alias = "ProtocolitemResultaat"

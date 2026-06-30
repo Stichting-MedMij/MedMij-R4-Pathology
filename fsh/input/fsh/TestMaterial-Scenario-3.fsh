@@ -370,8 +370,7 @@ Usage: #example
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
-* valueQuantity
-  * value = 2
+* valueInteger = 2
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-25
@@ -664,8 +663,7 @@ Usage: #example
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
-* valueQuantity
-  * value = 2
+* valueInteger = 2
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-57
@@ -674,8 +672,7 @@ Usage: #example
 * status = #final
 * code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
-* valueQuantity
-  * value = 23
+* valueInteger = 23
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-58
@@ -771,8 +768,7 @@ Usage: #example
 * status = #final
 * code = $SCT#405920001 "Mitotic count score per 10 high power fields, 40x objective"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
-* valueQuantity
-  * value = 1
+* valueInteger = 1
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-68

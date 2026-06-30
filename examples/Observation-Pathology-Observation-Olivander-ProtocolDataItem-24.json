@@ -20,9 +20,7 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
-  "valueQuantity": {
-    "value": 1
-  },
+  "valueInteger": 1,
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Olivander",
     "display": "Colon Resectie"

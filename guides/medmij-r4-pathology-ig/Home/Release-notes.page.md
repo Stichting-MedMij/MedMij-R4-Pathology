@@ -4,8 +4,8 @@
 
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
-| Dataset               | The Range data type has been added to the ProtocolItemResult concept in the Report Logical Model. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
-| FHIR artifacts        | The Range data type has been added to `.value[x]` in the path-Report.ProtocolDataItem profile. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
+| Dataset               | The integer and Range data types have been added to the ProtocolItemResult concept in the Report Logical Model. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
+| FHIR artifacts        | The integer and Range data types have been added to `.value[x]` in the path-Report.ProtocolDataItem profile. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
 | Test material         | A third test scenario has been added, and the protocol data of the first test scenario has been extended. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
 
 ## 1.0.0-alpha.2
