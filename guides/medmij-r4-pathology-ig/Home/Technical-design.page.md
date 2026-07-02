@@ -49,7 +49,7 @@ The PHR executes an HTTP search conform the [FHIR specification](https://hl7.org
 GET [base]/DiagnosticReport{?[parameters]}
 ```
 
-Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Note that this use case is strictly limited to the exchange of complete and verified pathology reports. Pathology reports are represented by DiagnosticReport resources where `.category` contains SNOMED code *108257001*. Moreover, a `.status` with value *final* is used to represent reports that are complete and verified. Hence, the PHR SHALL always include the search parameters `category` and `status` with the appropriate values in their request, resulting in:
+Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Note that this use case is strictly limited to the exchange of complete and verified pathology reports. Pathology reports are represented by DiagnosticReport resources where `.category` contains SNOMED CT code *108257001*. Moreover, a `.status` with value *final* is used to represent reports that are complete and verified. Hence, the PHR SHALL always include the search parameters `category` and `status` with the appropriate values in their request, resulting in:
 
 ```
 GET [base]/DiagnosticReport?category=http://snomed.info/sct|108257001&status=final{&[additional parameters]}
