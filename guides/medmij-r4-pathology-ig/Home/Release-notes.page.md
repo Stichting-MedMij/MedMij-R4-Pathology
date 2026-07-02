@@ -8,7 +8,7 @@
 | Functional design     | The newly introduced concept ids in the Logical Models have been added in the display guideline. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 | FHIR artifacts        | Mappings have been added in the FHIR profiles based on the newly introduced concept ids in the Logical Models. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 | FHIR artifacts        | In the path-Request profile, a new ValueSet has been introduced to convey the HealthScreeningType concept, based on SNOMED CT codes as much as possible. Moreover, a ConceptMap has been added to translate the Mercurius terminology to SNOMED CT. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
-| FHIR artifacts        | The ConceptMaps have been indicated to be bidirectional. Moreover, in the ConceptMap for MercuriusSpecialty to SpecialismeAGBCodelijst a mapping for code *specialisme onbekend* has been added. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
+| FHIR artifacts        | The ConceptMaps have been indicated to be bidirectional. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 
 ## 1.0.0-alpha.2
 

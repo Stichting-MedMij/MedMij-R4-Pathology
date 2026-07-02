@@ -292,16 +292,4 @@
       </target>
     </element>
   </group>
-  <group>
-    <source value="http://medmij.nl/fhir/CodeSystem/MercuriusSpecialty" />
-    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor" />
-    <element>
-      <code value="specialisme onbekend" />
-      <target>
-        <code value="UNK" />
-        <display value="unknown" />
-        <equivalence value="equal" />
-      </target>
-    </element>
-  </group>
 </ConceptMap>
