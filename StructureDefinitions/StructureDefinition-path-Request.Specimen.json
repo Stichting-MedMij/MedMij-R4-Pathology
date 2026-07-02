@@ -30,6 +30,10 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "resource",
@@ -47,6 +51,18 @@
         "comment": "This resource is used to convey either the primary specimen or an individual sample taken from that specimen. In the latter case, the `.parent` refers to the Specimen resource corresponding to the primary specimen.",
         "alias": [
           "Monster"
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-8",
+            "comment": "Specimen"
+          },
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-9",
+            "comment": "NumberOfSamples (implicit)"
+          }
         ]
       },
       {

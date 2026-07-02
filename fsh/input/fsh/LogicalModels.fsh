@@ -170,6 +170,16 @@ Title: "Mercurius Core Dataset 2.0"
   * PostalCode -> "mercurius-core-rubriek-20" "postcodebuitenland"
   * City -> "mercurius-core-rubriek-19" "woonplaats"
 
+Mapping: PathLmPatientMedMij-100-alpha3
+Source: PathLmPatient
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-1" "Patient"
+* Name -> "path-dataelement-2" "Name"
+  * FamilyName -> "path-dataelement-3" "FamilyName"
+* BirthInformation -> "path-dataelement-4" "BirthInformation"
+* Address -> "path-dataelement-5" "Address"
+
 Mapping: PathLmPatientSNOMED
 Source: PathLmPatient
 Target: "http://snomed.info/sct"
@@ -204,6 +214,15 @@ Title: "Mercurius Core Dataset 2.0"
   * ReceivedDate -> "mercurius-core-rubriek-80" "datumontvangst"
   * CollectionMethod -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
+Mapping: PathLmRequestMedMij-100-alpha3
+Source: PathLmRequest
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-6" "Request"
+* Requester -> "path-dataelement-7" "Requester"
+* Specimen -> "path-dataelement-8" "Specimen"
+  * NumberOfSamples -> "path-dataelement-9" "NumberOfSamples"
+
 Mapping: PathLmReportMercuriusCore
 Source: PathLmReport
 Id: mercurius-core-dataset-2-0
@@ -216,6 +235,16 @@ Title: "Mercurius Core Dataset 2.0"
 * Microscopy -> "mercurius-core-rubriek-222" "microscopie"
 * Conclusion -> "mercurius-core-rubriek-224" "conclusie"
 * ProtocolData -> "mercurius-core-rubriek-308" "protocoldata"
+
+Mapping: PathLmReportMedMij-100-alpha3
+Source: PathLmReport
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-10" "Report"
+* ProtocolData
+  * ProtocolItemName -> "path-dataelement-11" "ProtocolItemName"
+  * ProtocolItemResult[x] -> "path-dataelement-12" "ProtocolItemResult[x]"
+  * SampleNumber -> "path-dataelement-13" "SampleNumber"
 
 Mapping: PathLmReportSNOMED
 Source: PathLmReport

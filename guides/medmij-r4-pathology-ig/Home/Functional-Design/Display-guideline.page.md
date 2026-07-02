@@ -161,29 +161,33 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | C(ould have) | Gewenste functionaliteit die waarde toevoegt, maar minder kritisch is en indien nodig kan worden uitgesteld. |
 | W(on't have) | Functionaliteiten die nu buiten scope zijn maar mogelijk in de toekomst worden overwogen. PGO’s hebben de vrijheid om deze datavelden desondanks toch te tonen. Het uitgangspunt is echter dat deze velden niet primair worden weergegeven, zodat de gebruiker deze informatie niet direct ziet. De gegevens zijn alleen beschikbaar wanneer de gebruiker hier expliciet naar zoekt of doorklikt, aangezien deze datavelden geen duidelijke meerwaarde hebben voor directe weergave. |
 
+**Tabel 10: MoSCoW-methodiek**
+
 <br/>
 
 | Naam data-item | Type data-item | Id | Voorbeeld | Waar te tonen in PGO <br/> (a) in overzicht en als detailgegeven <br/> (b) als detailgegeven | Weergavetekst in PGO | Opmerkingen | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Aanvraag** | **Rootconcept** | | | a of b | Aanvraag | | |
+| **Aanvraag** | **Rootconcept** | path-dataelement-6 | | a of b | Aanvraag | | |
 | SoortAanvraag | Item | mercurius-core-rubriek-89 | normaal (code 'normaal' in codesysteem 'MercuriusRequestType') | b | Soort aanvraag | | M |
 | BVOSoort | Item | mercurius-core-rubriek-97 | Geen bevolkingsonderzoek (code '0' in codesysteem 'MercuriusHealthScreeningType') | b | Soort bevolkingsonderzoek | | M |
-| **Aanvrager** | **Container** | | | a of b | Aanvrager | | |
+| **Aanvrager** | **Container** | path-dataelement-7 | | a of b | Aanvrager | | |
 | AanvragerNaam | Item | mercurius-core-rubriek-68 | P. Plijster | b | Aanvrager | | M |
 | Specialisme | Item | mercurius-core-rubriek-71 | huisarts (code 'huisarts' in codesysteem 'MercuriusSpecialty') | b | Specialisme | | M |
 | Ziekenhuis | Item | mercurius-core-rubriek-72 | LUMC | a | Zorgorganisatie | | M |
 | Locatie | Item | mercurius-core-rubriek-67 | Polikliniek MDL | b | Locatie | | M |
 | KlinischeVraag | Item | mercurius-core-rubriek-139 | Afwijkingen aanwezig? | b | Onderzoeksvraag | | M |
-| **Monster** | **Container** | | | b | Monster | | |
+| **Monster** | **Container** | path-dataelement-8 | | b | Monster | | |
 | AardMateriaal | Item | mercurius-core-rubriek-76 | Colon Resectie | b | Materiaal | | M |
 | DatumAfname | Item | mercurius-core-rubriek-77 | 01-02-2026 | b | Afgenomen op | | M |
 | DatumOntvangst | Item | mercurius-core-rubriek-80 | 03-02-2026 | b | Ontvangen door lab op | | M |
 | Verkrijgingswijze | Item | mercurius-core-rubriek-87 | biopsie | b | Manier van verkrijgen | | M |
-| AantalSamples | Item | | 2 | b | Aantal monsters | | M |
+| AantalSamples | Item | path-dataelement-9 | 2 | b | Aantal monsters | | M |
+
+**Tabel 11: Tabel met specificaties voor de Aanvraag**
 
 | Naam data-item | Type data-item | Id | Voorbeeld | Waar te tonen in PGO <br/> (a) in overzicht en als detailgegeven <br/> (b) als detailgegeven | Weergavetekst in PGO | Opmerkingen | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Verslag** | **Rootconcept** | | | a of b | Verslag | | |
+| **Verslag** | **Rootconcept** | path-dataelement-10 | | a of b | Verslag | | |
 | VerslagIdentificatienummer | Item | mercurius-core-rubriek-3 | T26-60066 | a | Verslagnummer | | M |
 | Autorisator | Item | mercurius-core-rubriek-41 | Jan Oosting | b | Patholoog | | M |
 | DatumAutorisatie | Item | mercurius-core-rubriek-44 | 03-02-2026 | a | Datum van autorisatie | | M |
@@ -192,6 +196,8 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | Microscopie | Item | mercurius-core-rubriek-222 | Zie voorbeeld in Tabel 6. | b | Microscopie | | M |
 | Conclusie | Item | mercurius-core-rubriek-224 | Zie voorbeeld in Tabel 6. | b | Conclusie | | M |
 | **Protocoldata** | **Container** | mercurius-core-rubriek-308 | | b | Protocolgegevens | | |
-| ProtocolitemNaam | Item | | locatie van primaire tumor (code '399687005' in codesysteem 'SNOMED CT') | b | Bevinding | | M |
-| ProtocolitemResultaat | Item | | colon descendens (code '32622004' in codesysteem 'SNOMED CT') | b | Resultaat | | M |
-| Samplenummer | Item | | 1 | b | Monster | | M |
+| ProtocolitemNaam | Item | path-dataelement-11 | locatie van primaire tumor (code '399687005' in codesysteem 'SNOMED CT') | b | Bevinding | | M |
+| ProtocolitemResultaat | Item | path-dataelement-12 | colon descendens (code '32622004' in codesysteem 'SNOMED CT') | b | Resultaat | | M |
+| Samplenummer | Item | path-dataelement-13 | 1 | b | Monster | | M |
+
+**Tabel 12: Tabel met specificaties voor het Verslag**

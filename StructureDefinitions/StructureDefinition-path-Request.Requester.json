@@ -30,6 +30,10 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "resource",
@@ -47,6 +51,13 @@
         "alias": [
           "Aanvrager",
           "nl-core-HealthProfessional-PractitionerRole"
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-7",
+            "comment": "Requester"
+          }
         ]
       },
       {

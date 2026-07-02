@@ -170,6 +170,15 @@ Title: "Mercurius Core Dataset 2.0"
 * reasonCode
   * text -> "mercurius-core-rubriek-139" "klinischevraag"
 
+Mapping: PathRequestMedMij-100-alpha3
+Source: PathRequest
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-6" "Request"
+* requester -> "path-dataelement-7" "Requester"
+* specimen -> "path-dataelement-8" "Specimen"
+* specimen -> "path-dataelement-9" "NumberOfSamples (implicit)"
+
 Mapping: PathRequestSpecimenMercuriusCore
 Source: PathRequestSpecimen
 Id: mercurius-core-dataset-2-0
@@ -182,6 +191,13 @@ Title: "Mercurius Core Dataset 2.0"
   * method
     * text -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
+Mapping: PathRequestSpecimenMedMij-100-alpha3
+Source: PathRequestSpecimen
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-8" "Specimen"
+* . -> "path-dataelement-9" "NumberOfSamples (implicit)"
+
 Mapping: PathRequestRequesterMercuriusCore
 Source: PathRequestRequester
 Id: mercurius-core-dataset-2-0
@@ -190,3 +206,9 @@ Title: "Mercurius Core Dataset 2.0"
 * organization -> "mercurius-core-rubriek-72" "ziekenhuis (implicit, actual mapping is on Organization.name)"
 * specialty[specialty] -> "mercurius-core-rubriek-71" "specialisme"
 * location -> "mercurius-core-rubriek-67" "locatie (implicit, actual mapping is on Location.name)"
+
+Mapping: PathRequestRequesterMedMij-100-alpha3
+Source: PathRequestRequester
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-7" "Requester"
