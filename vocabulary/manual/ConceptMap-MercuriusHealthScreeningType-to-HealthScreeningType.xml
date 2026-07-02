@@ -1,0 +1,67 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="MercuriusHealthScreeningType-to-HealthScreeningType" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="true" />
+  </extension>
+  <url value="http://medmij.nl/fhir/ConceptMap/HealthScreeningType-to-HealthScreeningType" />
+  <name value="MercuriusHealthScreeningType_to_HealthScreeningType" />
+  <title value="MercuriusHealthScreeningType to HealthScreeningType" />
+  <status value="draft" />
+  <publisher value="MedMij" />
+  <contact>
+    <name value="MedMij" />
+    <telecom>
+      <system value="email" />
+      <value value="info@medmij.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Maps health screening type codes as found in the Request building block for patient use cases in the context of the information standard Pathology (Pathologie) to the HealthScreeningType ValueSet as used in the FHIR profile corresponding to the Request building block. The latter ValueSet contains SNOMED CT codes for the different concepts, where possible." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType" />
+  <targetCanonical value="http://medmij.nl/fhir/ValueSet/HealthScreeningType" />
+  <group>
+    <source value="http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType" />
+    <target value="http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType" />
+    <element>
+      <code value="0" />
+      <target>
+        <code value="0" />
+        <display value="Geen bevolkingsonderzoek" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType" />
+    <target value="http://snomed.info/sct" />
+    <element>
+      <code value="2" />
+      <target>
+        <code value="159081000146103" />
+        <display value="bevolkingsonderzoek borstkanker" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="3" />
+      <target>
+        <code value="159101000146108" />
+        <display value="bevolkingsonderzoek darmkanker" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="4" />
+      <target>
+        <code value="159091000146101" />
+        <display value="bevolkingsonderzoek baarmoederhalskanker" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -33,10 +33,10 @@ Description: "Codes for the type of national trial for the request as defined by
 * ^caseSensitive = false
 * ^content = #complete
 * ^count = 4
-* #0 "Geen BVO" "Geen Bevolkingsonderzoek"
-* #2 "BVO BK" "Bevolkingsonderzoek Borstkanker"
-* #3 "BVO DDK" "Bevolkingsonderzoek (Dikke)darmkanker"
-* #4 "BVO BMHK" "Bevolkingsonderzoek Baarmoederhalskanker"
+* #0 "Geen bevolkingsonderzoek"
+* #2 "Bevolkingsonderzoek borstkanker"
+* #3 "Bevolkingsonderzoek (dikke)darmkanker"
+* #4 "Bevolkingsonderzoek baarmoederhalskanker"
 
 CodeSystem: MercuriusRequestType_CS
 Id: MercuriusRequestType

@@ -167,7 +167,7 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Aanvraag** | **Rootconcept** | | | a of b | Aanvraag | | |
 | SoortAanvraag | Item | mercurius-core-rubriek-89 | normaal (code 'normaal' in codesysteem 'MercuriusRequestType') | b | Soort aanvraag | | M |
-| BVOSoort | Item | mercurius-core-rubriek-97 | Geen BVO (code '0' in codesysteem 'MercuriusHealthScreeningType') | b | Soort bevolkingsonderzoek | | M |
+| BVOSoort | Item | mercurius-core-rubriek-97 | Geen bevolkingsonderzoek (code '0' in codesysteem 'MercuriusHealthScreeningType') | b | Soort bevolkingsonderzoek | | M |
 | **Aanvrager** | **Container** | | | a of b | Aanvrager | | |
 | AanvragerNaam | Item | mercurius-core-rubriek-68 | P. Plijster | b | Aanvrager | | M |
 | Specialisme | Item | mercurius-core-rubriek-71 | huisarts (code 'huisarts' in codesysteem 'MercuriusSpecialty') | b | Specialisme | | M |

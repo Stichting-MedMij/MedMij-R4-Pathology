@@ -7,7 +7,7 @@ Usage: #example
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
 * category[requestType] = $MercuriusRequestTypeCodeSystemURL#normaal "normaal"
-* category[healthScreeningType] = $MercuriusHealthScreeningTypeCodeSystemURL#0 "Geen BVO"
+* category[healthScreeningType] = $MercuriusHealthScreeningTypeCodeSystemURL#0 "Geen bevolkingsonderzoek"
 * code
   * coding[histology] = $SCT#252416005 "Histopathology test"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"

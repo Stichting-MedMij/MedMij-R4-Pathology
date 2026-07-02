@@ -129,7 +129,7 @@
         "sliceName": "healthScreeningType",
         "short": "HealthScreeningType",
         "definition": "Type of national trial for this request.",
-        "comment": "When the HealthScreeningType concept has an empty value, _0_ SHALL be used as default value.",
+        "comment": "When the HealthScreeningType concept has an empty value, code _0_ from the MercuriusHealthScreeningType code system SHALL be used as default value.",
         "alias": [
           "BVOSoort"
         ],
@@ -137,7 +137,16 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType"
+          "valueSet": "http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType",
+          "_valueSet": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
+                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusHealthScreeningType-to-HealthScreeningType"
+              }
+            ]
+          },
+          "description": "Use ConceptMap MercuriusHealthScreeningType-to-HealthScreeningType to translate terminology from the functional model to profile terminology in ValueSet HealthScreeningType."
         },
         "mapping": [
           {

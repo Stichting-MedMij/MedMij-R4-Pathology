@@ -37,7 +37,9 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^short = "HealthScreeningType"
   * ^definition = "Type of national trial for this request."
   * ^alias = "BVOSoort"
-  * ^comment = "When the HealthScreeningType concept has an empty value, _0_ SHALL be used as default value."
+  * ^comment = "When the HealthScreeningType concept has an empty value, code _0_ from the MercuriusHealthScreeningType code system SHALL be used as default value."
+  * ^binding.description = "Use ConceptMap MercuriusHealthScreeningType-to-HealthScreeningType to translate terminology from the functional model to profile terminology in ValueSet HealthScreeningType."
+  * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusHealthScreeningType-to-HealthScreeningType"
 * code 1..1
   * ^comment = "If the requested pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
   * coding 1..*

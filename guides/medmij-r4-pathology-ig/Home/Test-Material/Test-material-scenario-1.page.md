@@ -22,7 +22,7 @@
 | | |
 | --- | --- |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
-| HealthScreeningType | Geen BVO (code '0' from code system 'MercuriusHealthScreeningType') |
+| HealthScreeningType | Geen bevolkingsonderzoek (code '0' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | P. Plijster |
 | Requester.Specialty | gastro-enterologie (code 'gastro-enterologie' from code system 'MercuriusSpecialty') |
 | Requester.Hospital | LUMC |
