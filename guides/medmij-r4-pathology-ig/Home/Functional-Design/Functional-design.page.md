@@ -28,7 +28,7 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 - Alleen definitieve/geautoriseerde pathologieverslagen worden uitgewisseld.
 
 ### Richtlijn en proces
-Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnn MedMij.
+Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnen MedMij.
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp is:
