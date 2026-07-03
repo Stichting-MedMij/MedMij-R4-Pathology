@@ -3,6 +3,8 @@
 Instance: Pathology-Request-1-Smalhart
 InstanceOf: PathRequest
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -19,6 +21,8 @@ Usage: #example
 Instance: Pathology-Specimen-1-Smalhart
 InstanceOf: PathRequestSpecimen
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
   * text = "Colon Resectie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -31,6 +35,8 @@ Usage: #example
 Instance: Pathology-Report-1-Smalhart
 InstanceOf: PathReport
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
   * value = "T26-61237"
@@ -121,6 +127,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ClinicalInformation-1
 InstanceOf: PathReportClinicalInformation
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Zegelringcelcarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
@@ -132,6 +140,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-Macroscopy-1
 InstanceOf: PathReportMacroscopy
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>Colon resectie met lengte van 30 cm</div><div/></div>"
@@ -143,6 +153,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-Microscopy-1
 InstanceOf: PathReportMicroscopy
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN  versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie rechts</div><div>Niveau van resectie mesocolon: op de muscularis propria</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie 1ste tumor: coecum</div><div>Aspect 1ste tumor: schotelvormig</div><div>Maximale diameter 1ste tumor: 0,6 cm</div><div>Lokalisatie 2de tumor: ileum</div><div>Aspect 2de tumor: poliepeus</div><div>Maximale diameter 2de tumor: 0,7 cm</div><div>Lengte preparaat: 30 cm</div><div>Tumor aanwezig: ja, 2 tumoren</div><div>Patient is bekend met: MUTYH geassocieerde polyposis (MAP)</div><div>Metastase(n): lever (bevestigd)</div><div>Eerdere (neo-adjuvante) therapie: chemotherapie en radiotherapie kort</div><div/><div>Microscopie 1ste tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: partiele regressie</div><div>Type 1ste tumor (WHO): zegelringcelcarcinoom</div><div>Zegelringcellen: &lt; 10%</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie en intramurale veneuze invasie</div><div>Angio-invasie opmerking: geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: intermediair (Bd2)</div><div>Perineurale groei: aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div>Betreft dit een recidief: ja</div><div/><div>Snijvlakken 1ste tumor</div><div>Dichtstbijzijnde darmsnijvlak: niet vrij</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij, &gt; 0,1 cm &lt; 0,2 cm</div><div/><div>Aanvullend onderzoek MMR/MSI 1ste tumor</div><div>MLH1 verlies: nee</div><div>PMS2 verlies: nee</div><div>MSH2 verlies: ja</div><div>MSH6 verlies: nee</div><div/><div>Microscopie 2de tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: geen regressie</div><div>Type tumor 2de (WHO): neuroendocriene tumor graad 1</div><div>Ki-67 index NEN: 1%</div><div>Mitosen per 2mm2: 1</div><div>Diepste tumordoorgroei NET (ileum/jejunum): invasie in muscularis propria</div><div>Angio-invasie: niet aangetroffen</div><div>Angio-invasie opmerking: geen lymfvat invasie, geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div/><div>Snijvlakken 2de tumor</div><div>Proximaal darmsnijvlak: vrij op 0,2 cm</div><div>Distaal darmsnijvlak: vrij op 0,2 cm</div><div>Mesenteriaal snijvlak: niet vrij</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 23</div><div>Aantal lymfklieren met metastasen: 17</div><div>Aantal tumordeposits: 1</div><div>Diameter grootste metastase: &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Aantal lymfklieren met metastasen NET (bij tumor ileum/jejunum): 1</div><div>Diameter grootste metastase NET (bij tumor ileum/jejunum): &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Mesenteriale massa aanwezig: ja</div><div>Diameter mesenteriale massa: 2,1 cm</div><div>Histologisch respons op (neo-adjuvante) therapie  in de lymfklieren: ja</div><div/><div>Overige</div><div>Poliep(en): sessiel serrated laesie zonder dysplasie</div><div>Aantal poliepen: 2</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerd</div><div/><div>Immunohistochemie</div><div>2e tumor</div><div>Percentage positieve tumorcellen INSM1: 60%</div><div/></div>"
@@ -154,6 +166,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#2620001000004108 "Specimen collection procedure"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -163,6 +177,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#733149001 "obstructie-ileus van dunne darm gelijktijdig met en door impactie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -172,6 +188,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#385421009 "locatie van metastase op afstand"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -181,6 +199,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#399608002 "Status of distant metastasis"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -190,6 +210,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -199,6 +221,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-6
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1255078008 "Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -209,6 +233,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-7
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#396792003 "Tumor size, largest metastasis, additional dimension"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -222,6 +248,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-8
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#360581000146102 "vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -231,6 +259,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-9
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1222735002 "DNA mismatch repair protein Mlh1"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -240,6 +270,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-10
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -249,6 +281,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-11
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371512006 "status van invasie van tumor in bloedvat"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -258,6 +292,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-12
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1890001000004107 "Status of intramural large vessel vascular invasion by primary malignant neoplasm of colon"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -267,6 +303,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-13
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#360581000146102 "vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -276,6 +314,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-14
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1222739008 "DNA mismatch repair protein Msh6"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -285,6 +325,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-15
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#310731000146105 "bepalen van marker proteïne Ki-67 voor snelle celproliferatie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -294,6 +336,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-16
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -303,6 +347,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-17
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#360581000146102 "vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -312,6 +358,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-18
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1000001000004108 "DNA mismatch repair protein PMS2"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -321,6 +369,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-19
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#360581000146102 "vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -330,6 +380,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-20
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1222736001 "DNA mismatch repair protein Msh2"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -339,6 +391,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-21
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1287135005 "Presence of neoplasm in mesentery"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -348,6 +402,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-22
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#384606002 "Length of specimen"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -358,6 +414,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-23
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1286765003 "Histologic type of polyp of colorectum"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -367,6 +425,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-24
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -376,6 +436,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-25
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#399687005 "plaats van primaire tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -385,6 +447,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-26
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#120001000004108 "grootste lengte van tumor in preparaat verkregen door resectie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -395,6 +459,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-27
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#360581000146102 "vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -404,6 +470,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-28
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371512006 "status van invasie van tumor in bloedvat"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -413,6 +481,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-29
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#117617002 "immunohistochemische verrichting"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -422,6 +492,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-30
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -431,6 +503,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-31
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#27350008 "Mitotic index"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -440,6 +514,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-32
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#450431000146104 "status van intactheid van preparaat verkregen door resectie van mesocolon"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -449,6 +525,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-33
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#275904003 "tumor in anamnese"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -458,6 +536,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-34
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#490401000146101 "histologische graad van neuro-endocrien neoplasma"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -467,6 +547,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-35
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#87737001 "zegelringcelcarcinoom"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -478,6 +560,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-36
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1286754008 "Tumor bud score in primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -487,6 +571,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-37
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1300184003 "Presence of macroscopic perforation of colorectum by primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -496,6 +582,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-38
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#521201000146107 "afstand van tumor tot proximaal snijvlak in biopt"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -506,6 +594,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-39
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1359839002 "Status of surgical radial margin involvement by tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -515,6 +605,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-40
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -524,6 +616,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-41
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#25173007 "terugkerende tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -533,6 +627,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-42
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371513001 "status van ingroei van tumor rondom zenuw"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -542,6 +638,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-43
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#521221000146104 "aanwezigheid van neoplasma op het mesenteriale snijvlak in in preparaat van weefsel verkregen door excisie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -551,6 +649,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-44
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#120001000004108 "grootste lengte van tumor in preparaat verkregen door resectie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -561,6 +661,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-45
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#372439002 "Status of proximal surgical margin tumor involvement"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -570,6 +672,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-46
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#372440000 "Status of distal surgical margin tumor involvement"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -579,6 +683,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-47
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#396927009 "moleculaire diagnostiek"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -588,6 +694,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-48
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#384962004 "Anatomic location directly invaded by primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -597,6 +705,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-49
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -606,6 +716,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-50
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -615,6 +727,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-51
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#399687005 "plaats van primaire tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -624,6 +738,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-52
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371513001 "status van ingroei van tumor rondom zenuw"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -633,6 +749,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-53
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#396395003 "Status of tumor infiltration by lymphocytes"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -642,6 +760,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-54
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#439401001 "diagnose"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -651,6 +771,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-55
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1597451000004100 "Primary tumor site extension"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -660,6 +782,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-56
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -669,6 +793,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-57
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -678,6 +804,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-58
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -687,6 +815,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-59
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#450291000146104 "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -696,6 +826,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-60
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -705,6 +837,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-61
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#423901009 "Identification code"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -714,6 +848,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-62
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#521211000146109 "afstand van tumor tot distaal snijvlak in biopt"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -724,6 +860,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-63
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#450461000146108 "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt "
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -737,6 +875,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-64
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -746,6 +886,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-65
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -755,6 +897,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-66
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#248530000 "diameter van massa"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -765,6 +909,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-67
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#405920001 "Mitotic count score per 10 high power fields, 40x objective"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -774,6 +920,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-68
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#521251000146108 "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -784,6 +932,8 @@ Usage: #example
 Instance: Pathology-Request-2-Smalhart
 InstanceOf: PathRequest
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -800,6 +950,8 @@ Usage: #example
 Instance: Pathology-Specimen-2-Smalhart
 InstanceOf: PathRequestSpecimen
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
   * text = "Appendix Resectie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -811,6 +963,8 @@ Usage: #example
 Instance: Pathology-Report-2-Smalhart
 InstanceOf: PathReport
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.23.1"
   * value = "T24-61237"
@@ -845,6 +999,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ClinicalInformation-2
 InstanceOf: PathReportClinicalInformation
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Aard materiaal</div><div>appendix resectie</div><div>Klinische gegevens</div><div>Niet verder gespecificeerd</div><div/></div>"
@@ -856,6 +1012,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-Macroscopy-2
 InstanceOf: PathReportMacroscopy
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>Appendix resectie van gebruikelijke lengte</div><div/></div>"
@@ -867,6 +1025,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-Microscopy-2
 InstanceOf: PathReportMicroscopy
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div> Gebaseerd op de richtlijnen Colorectaalcarcinoom versie 10-2019 en Neuro-endocriene tumoren versie 1.0 (2013)</div><div/><div>Microscopie</div><div>Type afwijking: (invasieve) tumor</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed / matig</div><div>Max diameter tumor: 1,2 cm</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa</div><div>Angio-invasie: niet aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div>Dichtstbijzijnde snijvlak: niet vrij</div><div>Aanwezigheid van transmurale ontsteking/inflammatie: nee</div><div>Aanwezigheid van necrose van de appendixwand: nee</div><div>Perforatie: nee</div><div/><div>Aanvullend onderzoek lynch syndroom</div><div>Bepaling mismatch repair eiwitten (MMR): niet verricht</div><div>MSI analyse: niet verricht</div><div/><div>Aanvulling microscopie</div><div>Nader bekeken</div><div/></div>"
@@ -878,6 +1038,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -887,6 +1049,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#200001000004104 "Greatest length dimension of excised primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -897,6 +1061,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1255220008 "Perforation of appendix"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -906,6 +1072,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#409774005 "inflammatoire morfologie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -915,6 +1083,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#6574001 "afsterving"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -924,6 +1094,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-6
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371512006 "status van invasie van tumor in bloedvat"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -933,6 +1105,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-7
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -942,6 +1116,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-8
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#384962004 "Anatomic location directly invaded by primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -951,6 +1127,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-9
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#384962004 "Anatomic location directly invaded by primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -960,6 +1138,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-10
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#371513001 "tatus van ingroei van tumor rondom zenuw"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -969,6 +1149,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-11
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -978,6 +1160,8 @@ Usage: #example
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-12
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -989,6 +1173,7 @@ InstanceOf: PathPatient
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * extension[http://hl7.org/fhir/StructureDefinition/patient-birthPlace]
   * valueAddress
     * city = "Dublin"
@@ -1017,6 +1202,7 @@ InstanceOf: PathRequestRequester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * practitioner = Reference(Pathology-Practitioner-Wachtel) "Z. Wachtel"
 * organization = Reference(Pathology-Organization-Holisto) "St. Holisto's Hospitaal"
 * specialty[specialty] = $VektisAGB#0313 "Interne geneeskunde"
@@ -1025,6 +1211,8 @@ Usage: #example
 Instance: Pathology-PractitionerRole-Tholoog
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * practitioner = Reference(Pathology-Practitioner-Tholoog) "P.A. Tholoog"
 * organization = Reference(Pathology-Organization-Holisto) "St. Holisto's Hospitaal"
 * specialty[specialty] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
@@ -1034,6 +1222,7 @@ InstanceOf: PathRequestRequester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * practitioner = Reference(Pathology-Practitioner-Yi) "Katara Yi"
 * organization = Reference(Pathology-Organization-MUMC) "MUMC"
 * specialty[specialty] = $VektisAGB#0318 "Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)"
@@ -1041,6 +1230,8 @@ Usage: #example
 Instance: Pathology-PractitionerRole-Beuker
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * practitioner = Reference(Pathology-Practitioner-Beuker) "Albus Beuker"
 * organization = Reference(Pathology-Organization-MUMC) "MUMC"
 * specialty[specialty] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
@@ -1048,6 +1239,8 @@ Usage: #example
 Instance: Pathology-Practitioner-Wachtel
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name[nameInformation]
   * use = #official
   * text = "Z. Wachtel"
@@ -1055,6 +1248,8 @@ Usage: #example
 Instance: Pathology-Practitioner-Tholoog
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name[nameInformation]
   * use = #official
   * text = "P.A. Tholoog"
@@ -1062,6 +1257,8 @@ Usage: #example
 Instance: Pathology-Practitioner-Yi
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name[nameInformation]
   * use = #official
   * text = "Katara Yi"
@@ -1069,6 +1266,8 @@ Usage: #example
 Instance: Pathology-Practitioner-Beuker
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name[nameInformation]
   * use = #official
   * text = "Albus Beuker"
@@ -1076,15 +1275,21 @@ Usage: #example
 Instance: Pathology-Organization-Holisto
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name = "St. Holisto's Hospitaal"
 
 Instance: Pathology-Organization-MUMC
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name = "MUMC"
 
 Instance: Pathology-Location-Holisto-Polikliniek-Interne-Geneeskunde
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * name = "Polikliniek Interne geneeskunde"
 * managingOrganization = Reference(Pathology-Organization-Holisto) "St. Holisto's Hospitaal"

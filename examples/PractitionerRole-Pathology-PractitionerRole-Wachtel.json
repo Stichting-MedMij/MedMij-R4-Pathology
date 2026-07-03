@@ -5,6 +5,13 @@
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ],
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
     ]
   },
   "practitioner": {
