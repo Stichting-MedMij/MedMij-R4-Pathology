@@ -9,7 +9,7 @@ This technical design provides the technical specification of the Pathology (Dut
 
 This technical design is the technical counterpart of the {{pagelink: FO, text: functional design}}. The FHIR version used for this IG is R4 (4.0.1).
 
-Note that in addition to this design, the (technical) guidelines as specified in the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG) apply.
+Note that in addition to this design, the (technical) guidelines as specified in the [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig?version=1.1.0) and the [MedMij FHIR IG for R4](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG) apply, the latter of which is published by Nictiz.
 
 ## Actors involved
 | Actor | | System | | FHIR CapabilityStatement |
