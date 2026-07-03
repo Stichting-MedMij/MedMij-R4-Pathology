@@ -30,9 +30,9 @@
     {
       "coding": [
         {
-          "code": "3",
-          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
-          "display": "BVO DDK"
+          "code": "159101000146108",
+          "system": "http://snomed.info/sct",
+          "display": "bevolkingsonderzoek darmkanker"
         }
       ]
     }

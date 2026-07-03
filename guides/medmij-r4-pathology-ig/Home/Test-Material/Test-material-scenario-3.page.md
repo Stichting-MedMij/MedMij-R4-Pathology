@@ -24,7 +24,7 @@
 | | |
 | --- | --- |
 | RequestType | spoed (code 'spoed' from code system 'MercuriusRequestType') |
-| HealthScreeningType | BVO DDK (code '3' from code system 'MercuriusHealthScreeningType') |
+| HealthScreeningType | Bevolkingsonderzoek (dikke)darmkanker (code '3' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | Z. Wachtel |
 | Requester.Specialty | inwendige geneeskunde (code 'inwendige geneeskunde' from code system 'MercuriusSpecialty') |
 | Requester.Hospital | St. Holisto's Hospitaal |
