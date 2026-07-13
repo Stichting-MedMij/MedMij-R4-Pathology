@@ -14,6 +14,14 @@
 
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
+| Technical design      | A requirement with respect to the care type has been added. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
+| FHIR artifacts        | A dependency on version 1.1.0 of MedMij R4 Core has been added. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
+| Test material         | The `.meta.tag`s corresponding to the care type have been added to all test instances. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
+
+## 1.0.0-alpha.2
+
+| Component             | Description  | Ticket    |
+| --------------------- | ------------ | --------- |
 | Dataset               | The SampleNumber concept has been added to the ProtocolData in the Report Logical Model. | [PG-485](https://medmij.atlassian.net/browse/PG-485) |
 | Dataset               | SNOMED CT and LOINC mappings have been added to the Patient Logical Model. | [PG-528](https://medmij.atlassian.net/browse/PG-528) |
 | Functional design     | The display guideline (weergaverichtlijn) has been added to the functional design. | [PG-484](https://medmij.atlassian.net/browse/PG-484) |

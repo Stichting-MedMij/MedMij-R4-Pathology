@@ -9,7 +9,7 @@ This technical design provides the technical specification of the Pathology (Dut
 
 This technical design is the technical counterpart of the {{pagelink: FO, text: functional design}}. The FHIR version used for this IG is R4 (4.0.1).
 
-Note that in addition to this design, the (technical) guidelines as specified in the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG) apply.
+Note that in addition to this design, the (technical) guidelines as specified in the [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig?version=1.1.0) and the [MedMij FHIR IG for R4](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG) apply, the latter of which is published by Nictiz.
 
 ## Actors involved
 | Actor | | System | | FHIR CapabilityStatement |
@@ -80,3 +80,5 @@ Note that, even though the above request returns most of the relevant data for t
 
 ##### XIS: response message
 The XIS returns an HTTP Status code appropriate to the processing outcome as well as a Bundle, with `Bundle.type` equal to *searchset*, including the resources matching the search query. The resources included in the Bundle SHALL conform to the profiles listed {{pagelink: FHIRProfilesIndex, text: here}}.
+
+The [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig/Home/Granular-exchange?version=1.1.0#CareType) contains specifications and requirements regarding the care type, which is exchanged via the `.meta.tag` element. In particular, two SHOULD statements are part of these requirements for granular data services. Note, however, that even though Pathology is a non-granular data service, these two requirements are adopted within this data service in an even stricter way, as the care type SHALL always be conveyed in Pathology data. This means that at least one `.meta.tag` indicating the care type SHALL be added to each FHIR resource. Concretely, code *0388* ('Medisch specialisten, pathologische anatomie') from the [COD016-VEKT](https://www.vektis.nl/standaardisatie/codelijsten/COD016-VEKT) table SHALL be added as `.meta.tag`.

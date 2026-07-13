@@ -2,6 +2,6 @@ FSHOnly: true
 fhirVersion: 4.0.1
 canonical: http://medmij.nl/fhir
 dependencies:
-  ihe.iti.mhd: 4.2.2
+  medmij.fhir.nl.r4.core: 1.1.0
   nictiz.fhir.nl.r4.nl-core: 0.12.0-beta.4
   nictiz.fhir.nl.r4.zib2020: 0.12.0-beta.4
