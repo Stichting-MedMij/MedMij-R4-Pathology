@@ -3,6 +3,8 @@
 Instance: Pathology-Request-Rommella
 InstanceOf: PathRequest
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -21,6 +23,8 @@ Usage: #example
 Instance: Pathology-Specimen-Rommella
 InstanceOf: PathRequestSpecimen
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -33,6 +37,8 @@ Usage: #example
 Instance: Pathology-Specimen-Rommella-Sample-1
 InstanceOf: PathRequestSpecimen
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -46,6 +52,8 @@ Usage: #example
 Instance: Pathology-Specimen-Rommella-Sample-2
 InstanceOf: PathRequestSpecimen
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -59,6 +67,8 @@ Usage: #example
 Instance: Pathology-Report-Rommella
 InstanceOf: PathReport
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
   * value = "T26-60065"
@@ -95,6 +105,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ClinicalInformation
 InstanceOf: PathReportClinicalInformation
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Binnengekomen via BVO, geen klachten</div><div>Aard materiaal</div><div>2 colon biopten</div><div/></div>"
@@ -106,6 +118,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-Macroscopy
 InstanceOf: PathReportMacroscopy
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>1, 2 : biopt, ti ingesloten in 1/A en 2/A</div><div/></div>"
@@ -117,6 +131,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-Microscopy
 InstanceOf: PathReportMicroscopy
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</div><div/><div>Aantal inzendingen: I-II</div><div/><div>I Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: flexura lienalis</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasie</div><div/><div>II Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: colon descendens</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasie</div><div/></div>"
@@ -128,6 +144,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -137,6 +155,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -146,6 +166,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -155,6 +177,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -164,6 +188,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#11429006 "consult"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -173,6 +199,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#399687005 "locatie van primaire tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -182,6 +210,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -191,6 +221,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -200,6 +232,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -209,6 +243,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#11429006 "consult"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -218,6 +254,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#399687005 "locatie van primaire tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -227,6 +265,8 @@ Usage: #example
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
+* meta
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -238,6 +278,7 @@ InstanceOf: PathPatient
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
