@@ -33,7 +33,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^definition = "This typing of the examination provides additional context for the request."
   * ^alias = "SoortAanvraag"
   * ^comment = "When the RequestType concept has an empty value, _normaal_ SHALL be used as default value."
-* category[healthScreeningType] from MercuriusHealthScreeningType_VS (required)
+* category[healthScreeningType] from HealthScreeningType_VS (required)
   * ^short = "HealthScreeningType"
   * ^definition = "Type of national trial for this request."
   * ^alias = "BVOSoort"
