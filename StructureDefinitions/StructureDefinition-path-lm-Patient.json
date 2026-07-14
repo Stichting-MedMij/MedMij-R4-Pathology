@@ -39,6 +39,10 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+    },
+    {
       "identity": "SNOMED",
       "name": "SNOMED CT",
       "uri": "http://snomed.info/sct"
@@ -66,6 +70,11 @@
         ],
         "mapping": [
           {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-1",
+            "comment": "Patient"
+          },
+          {
             "identity": "SNOMED",
             "map": "116154003",
             "comment": "patiënt"
@@ -85,6 +94,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-2",
+            "comment": "Name"
           }
         ]
       },
@@ -124,6 +140,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-3",
+            "comment": "FamilyName"
           }
         ]
       },
@@ -229,6 +252,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-4",
+            "comment": "BirthInformation"
+          }
         ]
       },
       {
@@ -324,6 +354,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-5",
+            "comment": "Address"
           }
         ]
       },

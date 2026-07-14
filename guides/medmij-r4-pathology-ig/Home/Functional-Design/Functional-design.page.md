@@ -9,7 +9,7 @@ Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden ge
 
 Dit functioneel ontwerp sluit aan op de pathologie-uitwisseling van [Palga](https://www.palga.nl/).
 
-Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de door Nictiz gepubliceerde [Ontwerpen MedMij](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
+Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig?version=1.1.0) en het door Nictiz gepubliceerde [Functioneel ontwerp](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
 
 **Zorgaanbieder en laboratorium** <br/>
 Een laboratorium wordt in dit ontwerp als eigen entiteit beschouwd. Een laboratorium kan:
@@ -28,7 +28,7 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 - Alleen definitieve/geautoriseerde pathologieverslagen worden uitgewisseld.
 
 ### Richtlijn en proces
-Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnn MedMij.
+Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnen MedMij.
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp is:

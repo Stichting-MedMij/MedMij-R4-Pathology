@@ -264,6 +264,12 @@ Title: "Mercurius Core Dataset 2.0"
 * result -> "mercurius-core-rubriek-308" "protocoldata"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
 
+Mapping: PathReportMedMij-100-alpha3
+Source: PathReport
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-10" "Report"
+
 Mapping: PathReportReportIdentifierMercuriusCore
 Source: PathReportReportIdentifier
 Id: mercurius-core-dataset-2-0
@@ -290,3 +296,11 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-222" "microscopie"
+
+Mapping: PathReportProtocolDataItemMedMij-100-alpha3
+Source: PathReportProtocolDataItem
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* code -> "path-dataelement-11" "ProtocolItemName"
+* value[x] -> "path-dataelement-12" "ProtocolItemResult[x]"
+* specimen -> "path-dataelement-13" "SampleNumber (implicit)"

@@ -63,6 +63,9 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * ^comment = "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a valid FHIR date of the form YYYY-MM-DD."
   * ^alias = "Geboortedatum"
 * address 0..1
+  * ^short = "Address"
+  * ^definition = "Address of the patient."
+  * ^alias = "Adres"
   * line
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName]
       * valueString
@@ -119,3 +122,12 @@ Title: "Mercurius Core Dataset 2.0"
   * city -> "mercurius-core-rubriek-19" "woonplaats"
   * postalCode -> "mercurius-core-rubriek-18" "postcode"
   * postalCode -> "mercurius-core-rubriek-20" "postcodebuitenland"
+
+Mapping: PathPatientMedMij-100-alpha3
+Source: PathPatient
+Id: path-dataset-100-alpha3-2026xxyy
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+* . -> "path-dataelement-1" "Patient"
+* name[nameInformation] -> "path-dataelement-2" "Name"
+  * family -> "path-dataelement-3" "FamilyName"
+* address -> "path-dataelement-5" "Address"

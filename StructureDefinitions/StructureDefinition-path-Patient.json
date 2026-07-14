@@ -30,6 +30,10 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "resource",
@@ -47,6 +51,13 @@
           "Patient",
           "Patient",
           "nl-core-Patient"
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-1",
+            "comment": "Patient"
+          }
         ]
       },
       {
@@ -113,7 +124,14 @@
           "nl-core-NameInformation"
         ],
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-2",
+            "comment": "Name"
+          }
+        ]
       },
       {
         "id": "Patient.name:nameInformation.family",
@@ -123,7 +141,14 @@
         "alias": [
           "Geslachtsnaam"
         ],
-        "min": 1
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-3",
+            "comment": "FamilyName"
+          }
+        ]
       },
       {
         "id": "Patient.name:nameInformation.family.extension",
@@ -264,7 +289,20 @@
       {
         "id": "Patient.address",
         "path": "Patient.address",
-        "max": "1"
+        "short": "Address",
+        "definition": "Address of the patient.",
+        "alias": [
+          "Adres",
+          "nl-core-AddressInformation"
+        ],
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-5",
+            "comment": "Address"
+          }
+        ]
       },
       {
         "id": "Patient.address.line.extension:streetName",

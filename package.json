@@ -11,6 +11,7 @@
     }
   ],
   "dependencies": {
+    "medmij.fhir.nl.r4.core": "1.1.0",
     "nictiz.fhir.nl.r4.nl-core": "0.12.0-beta.4",
     "hl7.fhir.r4.core": "4.0.1"
   },

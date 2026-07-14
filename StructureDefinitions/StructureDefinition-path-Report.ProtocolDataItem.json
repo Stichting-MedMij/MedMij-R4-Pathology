@@ -26,6 +26,12 @@
   "purpose": "This Observation resource represents a single item within the ProtocolData concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -52,7 +58,14 @@
               "system": "http://snomed.info/sct"
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-11",
+            "comment": "ProtocolItemName"
+          }
+        ]
       },
       {
         "id": "Observation.subject",
@@ -100,6 +113,13 @@
           {
             "code": "dateTime"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-12",
+            "comment": "ProtocolItemResult[x]"
+          }
         ]
       },
       {
@@ -119,6 +139,13 @@
               "http://hl7.org/fhir/StructureDefinition/Specimen",
               "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-13",
+            "comment": "SampleNumber (implicit)"
           }
         ]
       }

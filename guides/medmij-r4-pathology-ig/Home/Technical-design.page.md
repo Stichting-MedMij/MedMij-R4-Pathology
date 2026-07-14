@@ -9,7 +9,7 @@ This technical design provides the technical specification of the Pathology (Dut
 
 This technical design is the technical counterpart of the {{pagelink: FO, text: functional design}}. The FHIR version used for this IG is R4 (4.0.1).
 
-Note that in addition to this design, the (technical) guidelines as specified in the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG) apply.
+Note that in addition to this design, the (technical) guidelines as specified in the [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig?version=1.1.0) and the [MedMij FHIR IG for R4](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG) apply, the latter of which is published by Nictiz.
 
 ## Actors involved
 | Actor | | System | | FHIR CapabilityStatement |
@@ -26,7 +26,9 @@ This technical design includes use cases for the exchange of pathology reports b
 This technical design assumes that a PHR is able to make a connection to the right XIS that contains the patient's information. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/). In particular, each transaction is performed in the context of a specific authenticated patient, which has been established using the authentication mechanisms outlined in the MedMij Afsprakenstelsel (also see the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Afsprakenstelsel)), i.e. via an OAuth2 token. Each XIS gateway is required to perform filtering based on the patient associated with the context for the request, so only the records associated with the authenticated patient are returned. For this reason, search parameters for patient identification SHALL NOT be included.
 
 ## <a name="RelatingFHIRToFunctionalCounterpart"></a> Relating FHIR (profiles) to its functional counterpart
-The functional model of Palga is represented by {{pagelink: LogicalModelsIndex, text: Logical Models}}. For each concept in these Logical Models that has a counterpart in the Mercurius dataset, an id is assigned by MedMij based on the section number (Dutch: rubriek) of the corresponding element in that dataset. More specifically, the id assigned by MedMij is of the form 'mercurius-core-rubriek-[Mercurius section number]'. These ids are also added as mappings in the {{pagelink: FHIRProfilesIndex, text: FHIR profiles}} on the corresponding elements, i.e. by specifying `.mapping.map` on each element accordingly. Therefore, these ids form the linking pin between the Logical Models and FHIR profiles. If no such mapping is possible for a certain element in a FHIR profile, guidance is provided to indicate how that element should be handled.
+The functional model of Palga is represented by {{pagelink: LogicalModelsIndex, text: Logical Models}}. For each concept in these Logical Models that has a counterpart in the Mercurius dataset, an id is assigned by MedMij based on the section number (Dutch: rubriek) of the corresponding element in that dataset. More specifically, the id assigned by MedMij for these concepts is of the form 'mercurius-core-rubriek-[Mercurius section number]'. For other concepts that have been added to the Logical Models, the id assigned by MedMij is of the form 'path-dataelement-[sequence number]'.
+
+All these ids are also added as mappings in the {{pagelink: FHIRProfilesIndex, text: FHIR profiles}} on the corresponding elements, i.e. by specifying `.mapping.map` on each element accordingly. Therefore, these ids form the linking pin between the Logical Models and FHIR profiles. If no such mapping is possible for a certain element in a FHIR profile, guidance is provided to indicate how that element should be handled. This is also the case for concepts that are mapped *implicitly* to certain elements in the FHIR profiles, such as NumberOfSamples (path-dataelement-9) and SampleNumber (path-dataelement-13).
 
 ## Use cases
 
@@ -47,7 +49,7 @@ The PHR executes an HTTP search conform the [FHIR specification](https://hl7.org
 GET [base]/DiagnosticReport{?[parameters]}
 ```
 
-Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Note that this use case is strictly limited to the exchange of complete and verified pathology reports. Pathology reports are represented by DiagnosticReport resources where `.category` contains SNOMED code *108257001*. Moreover, a `.status` with value *final* is used to represent reports that are complete and verified. Hence, the PHR SHALL always include the search parameters `category` and `status` with the appropriate values in their request, resulting in:
+Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Note that this use case is strictly limited to the exchange of complete and verified pathology reports. Pathology reports are represented by DiagnosticReport resources where `.category` contains SNOMED CT code *108257001*. Moreover, a `.status` with value *final* is used to represent reports that are complete and verified. Hence, the PHR SHALL always include the search parameters `category` and `status` with the appropriate values in their request, resulting in:
 
 ```
 GET [base]/DiagnosticReport?category=http://snomed.info/sct|108257001&status=final{&[additional parameters]}
@@ -78,3 +80,5 @@ Note that, even though the above request returns most of the relevant data for t
 
 ##### XIS: response message
 The XIS returns an HTTP Status code appropriate to the processing outcome as well as a Bundle, with `Bundle.type` equal to *searchset*, including the resources matching the search query. The resources included in the Bundle SHALL conform to the profiles listed {{pagelink: FHIRProfilesIndex, text: here}}.
+
+The [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig/Home/Granular-exchange?version=1.1.0#CareType) contains specifications and requirements regarding the care type, which is exchanged via the `.meta.tag` element. In particular, two SHOULD statements are part of these requirements for granular data services. Note, however, that even though Pathology is a non-granular data service, these two requirements are adopted within this data service in an even stricter way, as the care type SHALL always be conveyed in Pathology data. This means that at least one `.meta.tag` indicating the care type SHALL be added to each FHIR resource. Concretely, code *0388* ('Medisch specialisten, pathologische anatomie') from the [COD016-VEKT](https://www.vektis.nl/standaardisatie/codelijsten/COD016-VEKT) table SHALL be added as `.meta.tag`.

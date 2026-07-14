@@ -37,6 +37,10 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "logical",
@@ -53,6 +57,13 @@
         "definition": "Request for a pathology study to be performed by a certain laboratory.",
         "alias": [
           "Aanvraag"
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-6",
+            "comment": "Request"
+          }
         ]
       },
       {
@@ -138,6 +149,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-7",
+            "comment": "Requester"
           }
         ]
       },
@@ -274,6 +292,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-8",
+            "comment": "Specimen"
+          }
         ]
       },
       {
@@ -381,6 +406,13 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-9",
+            "comment": "NumberOfSamples"
           }
         ]
       }

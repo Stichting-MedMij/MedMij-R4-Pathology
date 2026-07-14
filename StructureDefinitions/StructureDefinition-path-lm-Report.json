@@ -39,6 +39,10 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+    },
+    {
       "identity": "SNOMED",
       "name": "SNOMED CT",
       "uri": "http://snomed.info/sct"
@@ -58,6 +62,13 @@
         "definition": "Pathology report which contains the findings and interpretation of a pathology study.",
         "alias": [
           "Verslag"
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-10",
+            "comment": "Report"
+          }
         ]
       },
       {
@@ -274,6 +285,13 @@
           {
             "code": "CodeableConcept"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-11",
+            "comment": "ProtocolItemName"
+          }
         ]
       },
       {
@@ -305,6 +323,13 @@
           {
             "code": "dateTime"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-12",
+            "comment": "ProtocolItemResult[x]"
+          }
         ]
       },
       {
@@ -320,6 +345,13 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-13",
+            "comment": "SampleNumber"
           }
         ]
       }

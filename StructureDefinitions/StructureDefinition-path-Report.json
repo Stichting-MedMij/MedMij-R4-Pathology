@@ -30,6 +30,10 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "resource",
@@ -59,6 +63,13 @@
             "human": "Either a code for cytology or histology is present.",
             "expression": "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()",
             "source": "http://medmij.nl/fhir/StructureDefinition/path-Report"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-10",
+            "comment": "Report"
           }
         ]
       },
