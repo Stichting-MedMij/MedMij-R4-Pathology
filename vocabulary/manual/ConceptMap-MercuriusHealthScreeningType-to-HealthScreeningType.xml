@@ -7,7 +7,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
     <valueBoolean value="true" />
   </extension>
-  <url value="http://medmij.nl/fhir/ConceptMap/HealthScreeningType-to-HealthScreeningType" />
+  <url value="http://medmij.nl/fhir/ConceptMap/MercuriusHealthScreeningType-to-HealthScreeningType" />
   <name value="MercuriusHealthScreeningType_to_HealthScreeningType" />
   <title value="MercuriusHealthScreeningType to HealthScreeningType" />
   <status value="draft" />
