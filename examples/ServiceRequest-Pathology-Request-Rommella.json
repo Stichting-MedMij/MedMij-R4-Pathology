@@ -39,7 +39,7 @@
         {
           "code": "0",
           "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
-          "display": "Geen BVO"
+          "display": "Geen bevolkingsonderzoek"
         }
       ]
     }
