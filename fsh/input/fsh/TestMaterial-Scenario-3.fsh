@@ -914,7 +914,8 @@ Usage: #example
 * status = #final
 * code = $SCT#405920001 "Mitotic count score per 10 high power fields, 40x objective"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
-* valueInteger = 1
+* valueQuantity = 1 '/2mm2'
+  * unit = "per 2mm2"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-68

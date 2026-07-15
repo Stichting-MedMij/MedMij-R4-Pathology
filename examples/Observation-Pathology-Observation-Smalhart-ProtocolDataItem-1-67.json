@@ -27,7 +27,12 @@
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
-  "valueInteger": 1,
+  "valueQuantity": {
+    "value": 1,
+    "code": "/2mm2",
+    "system": "http://unitsofmeasure.org",
+    "unit": "per 2mm2"
+  },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-1-Smalhart",
     "display": "Colon Resectie"

@@ -118,7 +118,7 @@
 | Histologisch respons op (neo-adjuvante) therapie in de lymfklieren (Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy) (code '1255588004' from code system 'SNOMED CT') | aanwezig (code '52101004' from code system 'SNOMED CT') | |
 | Respons op eerdere therapie (Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy) (code '1255588004' from code system 'SNOMED CT') | geen respons van neoplasma op antineoplastische neoadjuvante therapie (code '1285417007' from code system 'SNOMED CT') | |
 | diameter van massa (code '248530000' from code system 'SNOMED CT') | 2,1 cm | |
-| Aantal mitosen per 2mm2 (Mitotic count score per 10 high power fields, 40x objective) (code '405920001' from code system 'SNOMED CT') | 1 | |
+| Aantal mitosen per 2mm2 (Mitotic count score per 10 high power fields, 40x objective) (code '405920001' from code system 'SNOMED CT') | 1 /2mm2 | |
 | percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie (code '521251000146108' from code system 'SNOMED CT') | 60 % | |
 
 ## Report 2
