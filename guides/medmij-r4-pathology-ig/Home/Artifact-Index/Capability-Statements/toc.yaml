@@ -1,0 +1,6 @@
+- name: Index
+  filename: Index.page.md
+- name: Pathology Reports (Retrieve)
+  filename: PathologyReportsRetrieve.page.md
+- name: Pathology Reports (Serve)
+  filename: PathologyReportsServe.page.md
