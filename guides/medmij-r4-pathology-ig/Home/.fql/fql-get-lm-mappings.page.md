@@ -1,5 +1,5 @@
 ---
-topic: fql-get-mappings
+topic: fql-get-lm-mappings
 ---
 
 <fql>
@@ -15,6 +15,6 @@ topic: fql-get-mappings
   select
     'Mapping name': identity,
     'Concept id': map,
-    'FHIR element': id,
+    'Logical element': id.replace('path-lm-', ''),
     Comments: comment
 </fql>

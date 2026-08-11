@@ -13,6 +13,7 @@
 | FHIR artifacts        | In the path-Request profile, a new ValueSet has been introduced to convey the HealthScreeningType concept, based on SNOMED CT codes as much as possible. Moreover, a ConceptMap has been added to translate the Mercurius terminology to SNOMED CT. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 | FHIR artifacts        | The ConceptMaps have been indicated to be bidirectional. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 | FHIR artifacts        | A dependency on version 1.1.0 of MedMij R4 Core has been added. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
+| FHIR artifacts        | The CapabilityStatements have been added to the Artifact index. | [PG-558](https://medmij.atlassian.net/browse/PG-558) |
 | Test material         | A third test scenario has been added, and the protocol data of the first test scenario has been extended. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
 | Test material         | The `.meta.tag`s corresponding to the care type have been added to all test instances. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
 
