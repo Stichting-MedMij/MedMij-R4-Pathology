@@ -551,11 +551,11 @@ Usage: #example
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * status = #final
 * code = $SCT#87737001 "zegelringcelcarcinoom"
-* subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
 * valueQuantity = 10 '%'
   * comparator = #<
   * unit = "%"
-* specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
+* specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-36
 InstanceOf: PathReportProtocolDataItem
@@ -939,7 +939,7 @@ Usage: #example
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
 * category[requestType] = $MercuriusRequestTypeCodeSystemURL#normaal "normaal"
-* category[healthScreeningType] = $MercuriusHealthScreeningTypeCodeSystemURL#0 "Geen BVO"
+* category[healthScreeningType] = $MercuriusHealthScreeningTypeCodeSystemURL#0 "Geen bevolkingsonderzoek"
 * code
   * coding[histology] = $SCT#252416005 "Histopathology test"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"

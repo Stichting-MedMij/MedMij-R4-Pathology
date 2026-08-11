@@ -24,8 +24,8 @@
     ]
   },
   "subject": {
-    "reference": "Patient/Pathology-Patient-Olivander",
-    "display": "G. Olivander"
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
   },
   "valueQuantity": {
     "value": 10,
@@ -35,7 +35,7 @@
     "unit": "%"
   },
   "specimen": {
-    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "reference": "Specimen/Pathology-Specimen-1-Smalhart",
     "display": "Colon Resectie"
   }
 }
