@@ -1,0 +1,29 @@
+{
+  "resourceType": "Specimen",
+  "id": "Pathology-Specimen-2-Smalhart",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+    ]
+  },
+  "type": {
+    "text": "Appendix Resectie"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "receivedTime": "2023-11-01",
+  "collection": {
+    "method": {
+      "text": "resectie"
+    }
+  }
+}

@@ -18,8 +18,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "246214002",
-        "display": "aantal tumoren"
+        "code": "450431000146104",
+        "display": "status van intactheid van preparaat verkregen door resectie van mesocolon"
       }
     ]
   },
@@ -27,8 +27,14 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
-  "valueQuantity": {
-    "value": 1
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "1990001000004102",
+        "system": "http://snomed.info/sct",
+        "display": "bijna volledig"
+      }
+    ]
   },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Olivander",

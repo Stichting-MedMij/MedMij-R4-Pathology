@@ -1,0 +1,48 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-1-7",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "396792003",
+        "display": "Tumor size, largest metastasis, additional dimension"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueRange": {
+    "low": {
+      "value": 0.2,
+      "code": "mm",
+      "system": "http://unitsofmeasure.org",
+      "unit": "mm"
+    },
+    "high": {
+      "value": 2,
+      "code": "mm",
+      "system": "http://unitsofmeasure.org",
+      "unit": "mm"
+    }
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-1-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

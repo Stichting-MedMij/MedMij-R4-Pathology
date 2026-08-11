@@ -1,0 +1,43 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-1-12",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1890001000004107",
+        "display": "Status of intramural large vessel vascular invasion by primary malignant neoplasm of colon"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "369733002",
+        "system": "http://snomed.info/sct",
+        "display": "intramurale veneuze tumorinvasie aanwezig"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-1-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

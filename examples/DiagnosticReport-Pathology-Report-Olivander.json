@@ -69,7 +69,7 @@
   "result": [
     {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-1",
-      "display": "Afstand tot dichtstbijzijnde darmsnijvlak"
+      "display": "afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie"
     },
     {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-2",
@@ -77,15 +77,131 @@
     },
     {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-3",
-      "display": "Perineurale groei"
+      "display": "status van ingroei van tumor rondom zenuw"
     },
     {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-4",
-      "display": "Tumor aanwezig"
+      "display": "locatie van metastase op afstand"
     },
     {
       "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-5",
-      "display": "Aantal tumoren"
+      "display": "status van intactheid van preparaat verkregen door resectie van mesocolon"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-6",
+      "display": "maligne tumor in anamnese"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-7",
+      "display": "Differentiatiegraad"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-8",
+      "display": "Type tumor"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-9",
+      "display": "Tumor budding"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-10",
+      "display": "Perforatie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-11",
+      "display": "vriescoupetechniek"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-12",
+      "display": "Aspect tumor"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-13",
+      "display": "status van invasie van tumor in bloedvat"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-14",
+      "display": "preparaat van vriescoupe van lichaamsweefsel"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-15",
+      "display": "moleculaire diagnostiek"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-16",
+      "display": "Lymfocytaire infiltratie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-17",
+      "display": "aantal lymfeklieren aangedaan door maligniteit"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-18",
+      "display": "Aantal tumordeposits"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-19",
+      "display": "Lengte preparaat"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-20",
+      "display": "Dichtstbijzijnde darmsnijvlak"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-21",
+      "display": "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-22",
+      "display": "plaats van primaire tumor"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-23",
+      "display": "Tumor aanwezig"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-24",
+      "display": "aantal tumoren"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-25",
+      "display": "Diepste tumordoorgroei"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-26",
+      "display": "Retroperitoneaal klievingsvlak/radiaire snijvlak"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-27",
+      "display": "diagnose"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-28",
+      "display": "grootste lengte van tumor in preparaat verkregen door resectie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-29",
+      "display": "Poliep(en)"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-30",
+      "display": "aantal onderzochte lymfeklieren"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-31",
+      "display": "Eerdere (neo-adjuvante) therapie"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-32",
+      "display": "Lokalisatie dichtstbijzijnde darmsnijvlak"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-33",
+      "display": "Onderzoek vermelden als"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Olivander-ProtocolDataItem-34",
+      "display": "obstructie-ileus van dunne darm gelijktijdig met en door impactie"
     },
     {
       "reference": "Observation/Pathology-Observation-Olivander-ClinicalInformation",
@@ -100,5 +216,5 @@
       "display": "Microscopie"
     }
   ],
-  "conclusion": "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patiënt is bekend met: morbus Crohn.</div><div> </div>"
+  "conclusion": "<div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patiënt is bekend met: morbus Crohn.</div>"
 }

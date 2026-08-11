@@ -141,7 +141,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^alias = "Protocoldata"
   * ProtocolItemName 1..1 CodeableConcept "Protocol item name" "Name of the protocol item, expressed by a SNOMED code."
     * ^alias = "ProtocolitemNaam"
-  * ProtocolItemResult[x] 1..1 CodeableConcept or string or Quantity or dateTime "Protocol item result" "Result of the protocol item."
+  * ProtocolItemResult[x] 1..1 CodeableConcept or string or integer or Quantity or Range or dateTime "Protocol item result" "Result of the protocol item."
     * ^alias = "ProtocolitemResultaat"
   * SampleNumber 0..1 integer "Sample number" "The number of the sample to which this protocol item corresponds."
     * ^alias = "Samplenummer"

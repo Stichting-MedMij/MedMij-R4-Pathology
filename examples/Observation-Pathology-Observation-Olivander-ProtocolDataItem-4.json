@@ -18,8 +18,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "1597451000004100",
-        "display": "Primary tumor site extension"
+        "code": "385421009",
+        "display": "locatie van metastase op afstand"
       }
     ]
   },
@@ -30,9 +30,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "52101004",
+        "code": "47492008",
         "system": "http://snomed.info/sct",
-        "display": "aanwezig"
+        "display": "niet gezien"
       }
     ]
   },

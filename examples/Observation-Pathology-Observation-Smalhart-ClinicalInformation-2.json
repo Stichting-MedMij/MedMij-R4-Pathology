@@ -1,0 +1,38 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ClinicalInformation-2",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "404684003",
+        "system": "http://snomed.info/sct",
+        "display": "klinische bevinding"
+      }
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Aard materiaal</div><div>appendix resectie</div><div>Klinische gegevens</div><div>Niet verder gespecificeerd</div><div/></div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-2-Smalhart",
+    "display": "Appendix Resectie"
+  }
+}

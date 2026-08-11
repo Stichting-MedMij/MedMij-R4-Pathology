@@ -105,6 +105,12 @@
             "code": "string"
           },
           {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
             "code": "dateTime"
           }
         ],

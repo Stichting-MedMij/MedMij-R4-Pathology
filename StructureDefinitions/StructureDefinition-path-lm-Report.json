@@ -312,7 +312,13 @@
             "code": "string"
           },
           {
+            "code": "integer"
+          },
+          {
             "code": "Quantity"
+          },
+          {
+            "code": "Range"
           },
           {
             "code": "dateTime"

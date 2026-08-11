@@ -1,0 +1,42 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Pathology-PractitionerRole-Wachtel",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ],
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/Pathology-Practitioner-Wachtel",
+    "display": "Z. Wachtel"
+  },
+  "organization": {
+    "reference": "Organization/Pathology-Organization-Holisto",
+    "display": "St. Holisto's Hospitaal"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "0313",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+          "display": "Interne geneeskunde"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/Pathology-Location-Holisto-Polikliniek-Interne-Geneeskunde",
+      "display": "St. Holisto's Hospitaal, Polikliniek Interne geneeskunde"
+    }
+  ]
+}
