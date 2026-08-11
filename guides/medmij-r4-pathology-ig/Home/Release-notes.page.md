@@ -9,6 +9,7 @@
 | FHIR artifacts        | Mappings have been added in the FHIR profiles based on the newly introduced concept ids in the Logical Models. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 | FHIR artifacts        | In the path-Request profile, a new ValueSet has been introduced to convey the HealthScreeningType concept, based on SNOMED CT codes as much as possible. Moreover, a ConceptMap has been added to translate the Mercurius terminology to SNOMED CT. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
 | FHIR artifacts        | The ConceptMaps have been indicated to be bidirectional. | [PG-554](https://medmij.atlassian.net/browse/PG-554) |
+| FHIR artifacts        | The CapabilityStatements have been added to the Artifact index. | [PG-558](https://medmij.atlassian.net/browse/PG-558) |
 
 ## 1.0.0-alpha.2
 

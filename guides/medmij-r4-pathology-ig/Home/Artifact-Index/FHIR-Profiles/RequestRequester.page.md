@@ -6,20 +6,6 @@ corecanonical: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessio
 
 # Request (Requester)
 
-<tabs>
-    <tab title="Tree view" active="true">
-      {{tree:http://medmij.nl/fhir/StructureDefinition/path-Request.Requester, buttons}}
-    </tab>
-    <tab title="Mappings">
-      {{page:fql-get-mappings}}
-    </tab>
-    <tab title="Xml">
-      {{xml:http://medmij.nl/fhir/StructureDefinition/path-Request.Requester}}
-    </tab>
-    <tab title="Json">
-      {{json:http://medmij.nl/fhir/StructureDefinition/path-Request.Requester}}
-    </tab>
-    <tab title="Examples">
-      {{page:fql-get-examples-multiple-meta-profile}}
-    </tab>
-</tabs>
+{{page:fql-get-resource-description}}
+
+{{page:resource-view-tree-multiple-meta-profile}}

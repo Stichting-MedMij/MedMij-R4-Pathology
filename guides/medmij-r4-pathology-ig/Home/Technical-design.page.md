@@ -15,8 +15,8 @@ Note that in addition to this design, the (technical) guidelines as specified in
 | Actor | | System | | FHIR CapabilityStatement |
 | --- | --- | --- | --- | --- | --- |
 | **Name** | **Description** | **Name** | **Description** | **Name** | **Description** |
-| Patient | The user of a personal healthcare environment | PHR | Personal health record | [CapabilityStatement Retrieve pathology reports](https://simplifier.net/resolve?canonical=http://medmij.nl/fhir/CapabilityStatement/path-Retrieve&scope=medmij.fhir.nl.r4.pathology@1.0.0-alpha.2) | FHIR client requirements |
-| Healthcare provider | The user of a XIS | XIS | Healthcare information system | [CapabilityStatement Serve pathology reports](https://simplifier.net/resolve?canonical=http://medmij.nl/fhir/CapabilityStatement/path-Serve&scope=medmij.fhir.nl.r4.pathology@1.0.0-alpha.2) | FHIR server requirements |
+| Patient | The user of a personal healthcare environment | PHR | Personal health record | {{pagelink: CapabilityStatementsIndex, text: CapabilityStatement Retrieve pathology reports, anchor: PathologyReportsRetrieve}} | FHIR client requirements |
+| Healthcare provider | The user of a XIS | XIS | Healthcare information system | {{pagelink: CapabilityStatementsIndex, text: CapabilityStatement Serve pathology reports, anchor: PathologyReportsServe}} | FHIR server requirements |
 
 **Table 1: Actors**
 
