@@ -94,7 +94,7 @@ Sanne (45) heeft een afwijking laten onderzoeken in het ziekenhuis. Er is een bi
 - De patiënt kan de gegevens terugvinden, herlezen en gebruiken ter voorbereiding op vervolgzorg.
 
 #### Bedrijfsrollen
-Deze usecase onderscheidt twee bedrijfsrollen, namelijk de *Patiënt* en de *Zorgaanbieder*, zoals te zien in onderstaande tabel.
+Deze usecase onderscheidt twee bedrijfsrollen, namelijk de _Patiënt_ en de _Zorgaanbieder_, zoals te zien in onderstaande tabel.
 
 | Bedrijfsrol (actor) | Beschrijving |
 | --- | --- |

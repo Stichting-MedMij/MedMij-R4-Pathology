@@ -34,7 +34,7 @@ Usage: #definition
     * searchParam[1]
       * name = "status"
       * type = #token
-      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value *final* needs to be supported."
+      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value _final_ needs to be supported."
   * resource[+]
     * type = #ServiceRequest
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Request"
@@ -132,7 +132,7 @@ Usage: #definition
     * searchParam[1]
       * name = "status"
       * type = #token
-      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value *final* needs to be supported."
+      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value _final_ needs to be supported."
   * resource[+]
     * type = #ServiceRequest
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Request"
