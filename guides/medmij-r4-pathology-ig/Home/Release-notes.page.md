@@ -16,6 +16,7 @@
 | FHIR artifacts        | The CapabilityStatements have been added to the Artifact index. | [PG-558](https://medmij.atlassian.net/browse/PG-558) |
 | Test material         | A third test scenario has been added, and the protocol data of the first test scenario has been extended. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
 | Test material         | The `.meta.tag`s corresponding to the care type have been added to all test instances. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
+| Test material         | Narratives have been added to all test instances. | [PG-525](https://medmij.atlassian.net/browse/PG-525) |
 
 ## 1.0.0-alpha.2
 
