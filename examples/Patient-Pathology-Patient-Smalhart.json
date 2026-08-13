@@ -87,6 +87,10 @@
       "postalCode": "1122 XY"
     }
   ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: G. Smalhart<br/>Geslacht: man<br/>Geboortedatum: 26-01-1964<br/>Geboorteplaats: Dublin, Ierland<br/>Adres: Kwijtweg 123, 1122 XY, Londen</div>"
+  },
   "gender": "male",
   "birthDate": "1964-01-26"
 }

@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry<br/>Waarde: 1 %<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"

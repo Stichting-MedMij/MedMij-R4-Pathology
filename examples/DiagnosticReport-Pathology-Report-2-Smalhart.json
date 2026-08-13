@@ -34,6 +34,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T24-61237<br/>Patiënt: G. Smalhart<br/>Autorisatiedatum: 09-04-2024<br/>Patholoog: Albus Beuker, MUMC<br/>Monster: Appendix Resectie<br/>Conclusie:<div>Appendectomie: goed / matig gedifferentieerd adenocarcinoom.</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa; dichtstbijzijnde snijvlak niet vrij.</div><div>Angio-invasie: niet aangetroffen; Perineurale groei: niet aangetroffen.</div><div>TNM classificatie Appendix (8e editie UICC): pTis.</div><div><br/>DIT IS EEN GEWIJZIGDE CONCLUSIE (09-04-2024).</div><div>II.</div><div>Graad 3.</div><div><br/>Conclusie 1916</div></div>"
+  },
   "identifier": [
     {
       "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.23.1",

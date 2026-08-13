@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Presence of neoplasm in mesentery<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"

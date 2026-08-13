@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: vriescoupetechniek<br/>Waarde: niet verricht<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"

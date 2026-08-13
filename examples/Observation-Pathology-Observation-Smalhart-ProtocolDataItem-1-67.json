@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Mitotic count score per 10 high power fields, 40x objective<br/>Waarde: 1 per 2mm2<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"

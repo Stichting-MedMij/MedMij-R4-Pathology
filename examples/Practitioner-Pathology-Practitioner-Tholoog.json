@@ -18,5 +18,9 @@
       "use": "official",
       "text": "P.A. Tholoog"
     }
-  ]
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: P.A. Tholoog</div>"
+  }
 }

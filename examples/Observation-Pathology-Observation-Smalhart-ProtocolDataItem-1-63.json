@@ -19,9 +19,13 @@
       {
         "system": "http://snomed.info/sct",
         "code": "450461000146108",
-        "display": "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt "
+        "display": "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
       }
     ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt<br/>Waarde: 0.1 cm - 0.2 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",

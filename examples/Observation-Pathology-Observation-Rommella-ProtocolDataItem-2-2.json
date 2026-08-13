@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: aantal slijmvliesbiopten<br/>Waarde: 1 slijmvliesbiopt<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",
     "display": "L. Rommella"

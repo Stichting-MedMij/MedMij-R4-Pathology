@@ -13,6 +13,10 @@
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Appendix Resectie<br/>Patiënt: G. Smalhart<br/>Ontvangstdatum: 01-11-2023<br/>Verkrijgingswijze: resectie</div>"
+  },
   "type": {
     "text": "Appendix Resectie"
   },

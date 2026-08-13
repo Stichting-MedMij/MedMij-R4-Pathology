@@ -14,6 +14,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: Z. Wachtel<br/>Organisatie: St. Holisto's Hospitaal<br/>Specialisme: Interne geneeskunde<br/>Locatie: St. Holisto's Hospitaal, Polikliniek Interne geneeskunde</div>"
+  },
   "practitioner": {
     "reference": "Practitioner/Pathology-Practitioner-Wachtel",
     "display": "Z. Wachtel"

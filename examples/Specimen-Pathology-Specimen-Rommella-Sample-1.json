@@ -13,6 +13,10 @@
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Colon Biopt (sample 1)<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
+  },
   "type": {
     "text": "Colon Biopt"
   },

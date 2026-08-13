@@ -13,6 +13,10 @@
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Colon Resectie<br/>Patiënt: G. Smalhart<br/>Afnamedatum: 11-06-2026<br/>Ontvangstdatum: 13-06-2026<br/>Verkrijgingswijze: resectie</div>"
+  },
   "type": {
     "text": "Colon Resectie"
   },

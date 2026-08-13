@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Anatomic location directly invaded by primary malignant neoplasm<br/>Waarde: submucosa<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"

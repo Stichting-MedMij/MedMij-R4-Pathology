@@ -87,6 +87,10 @@
       "postalCode": "5972 XX"
     }
   ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: G. Olivander<br/>Geslacht: man<br/>Geboortedatum: 25-09-1921<br/>Geboorteplaats: Londen, Groot-Brittanië<br/>Adres: Diagonaalstraat 687, 5972 XX, Londen</div>"
+  },
   "gender": "male",
   "birthDate": "1921-09-25"
 }

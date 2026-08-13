@@ -5,6 +5,9 @@ InstanceOf: PathRequest
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Olivander<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Resectie<br/>Klinische vraag: <div>Vraagstelling</div><div>Classificatie</div><div/></div>"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -23,6 +26,9 @@ InstanceOf: PathRequestSpecimen
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Resectie<br/>Patiënt: G. Olivander<br/>Afnamedatum: 01-02-2026<br/>Ontvangstdatum: 03-02-2026<br/>Verkrijgingswijze: resectie</div>"
 * type
   * text = "Colon Resectie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -37,6 +43,9 @@ InstanceOf: PathReport
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T26-60066<br/>Patiënt: G. Olivander<br/>Autorisatiedatum: 03-02-2026<br/>Patholoog: Jan Oosting, LUMC<br/>Monster: Colon Resectie<br/>Conclusie: <div>Hemicolectomie links: type tumor (WHO):goed/matig gedifferentieerd (laaggradig) adenocarcinoom; maximale diameter tumor 3,0 cm; lokalisatie: colon descendens; diepste tumor doorgroei: submucosa.</div><div>Dichtstbijzijnde darmsnijvlak vrij (afstand &gt;= 1 cm); retroperitoneaal klievingsvlak/radiaire snijvlak vrij (afstand 0,8 cm).</div><div>Angio-invasie: lymfvat invasie.</div><div>Perineurale invasie: niet aangetroffen.</div><div>Aantal lymfklieren: 15 waarvan met metastasen: 0.</div><div/><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): pT1N0.</div><div>Patiënt is bekend met: morbus Crohn.</div></div>"
 * identifier[reportIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
   * value = "T26-60066"
@@ -134,6 +143,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie<br/>Waarde: &ge; 1 cm<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#371489008 "afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -147,6 +159,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Specimen collection procedure<br/>Waarde: hemicolectomie links<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#2620001000004108 "Specimen collection procedure"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -158,6 +173,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van ingroei van tumor rondom zenuw<br/>Waarde: niet aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#371513001 "status van ingroei van tumor rondom zenuw"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -169,6 +187,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: locatie van metastase op afstand<br/>Waarde: niet gezien<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#385421009 "locatie van metastase op afstand"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -180,6 +201,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van intactheid van preparaat verkregen door resectie van mesocolon<br/>Waarde: bijna volledig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#450431000146104 "status van intactheid van preparaat verkregen door resectie van mesocolon"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -191,6 +215,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: maligne tumor in anamnese<br/>Waarde: aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#266987004 "maligne tumor in anamnese"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -202,6 +229,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -213,6 +243,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: adenocarcinoom<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -224,6 +257,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Tumor bud score in primary malignant neoplasm of colorectum<br/>Waarde: laag<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1286754008 "Tumor bud score in primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -235,6 +271,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of macroscopic perforation of colorectum by primary malignant neoplasm of colorectum<br/>Waarde: niet gezien<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1300184003 "Presence of macroscopic perforation of colorectum by primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -246,6 +285,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: vriescoupetechniek<br/>Waarde: niet verricht<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#817011007 "vriescoupetechniek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -257,6 +299,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: afwijkende schotelvorm<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -268,6 +313,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van invasie van tumor in bloedvat<br/>Waarde: ingroei van tumor in lymfevat<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#371512006 "status van invasie van tumor in bloedvat"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -279,6 +327,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: preparaat van vriescoupe van lichaamsweefsel<br/>Waarde: niet aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#16214131000119104 "preparaat van vriescoupe van lichaamsweefsel"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -290,6 +341,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: moleculaire diagnostiek<br/>Waarde: niet verricht<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#396927009 "moleculaire diagnostiek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -301,6 +355,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of tumor infiltration by lymphocytes<br/>Waarde: aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#396395003 "Status of tumor infiltration by lymphocytes"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -312,6 +369,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 0<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -323,6 +383,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Number of metastatic discontinuous tumor deposits of primary malignant neoplasm of colorectum<br/>Waarde: 0<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1286756005 "Number of metastatic discontinuous tumor deposits of primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -334,6 +397,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Length of specimen<br/>Waarde: 20 cm<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#384606002 "Length of specimen"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -346,6 +412,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Margin closest to tumor<br/>Waarde: niet gezien<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -357,6 +426,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt<br/>Waarde: 0.8 cm<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#450461000146108 "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -369,6 +441,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: plaats van primaire tumor<br/>Waarde: colon descendens<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#399687005 "plaats van primaire tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -380,6 +455,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Primary tumor site extension<br/>Waarde: aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1597451000004100 "Primary tumor site extension"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -391,6 +469,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal tumoren<br/>Waarde: 1<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -402,6 +483,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Anatomic location directly invaded by primary malignant neoplasm<br/>Waarde: submucosa<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#384962004 "Anatomic location directly invaded by primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -413,6 +497,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of surgical radial margin involvement by tumor<br/>Waarde: niet gezien<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1359839002 "Status of surgical radial margin involvement by tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -424,6 +511,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: diagnose<br/>Waarde: ziekte van Crohn<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#439401001 "diagnose"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -435,6 +525,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: grootste lengte van tumor in preparaat verkregen door resectie<br/>Waarde: 3.0 cm<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1597451000004100 "grootste lengte van tumor in preparaat verkregen door resectie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -447,6 +540,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of polyp of colorectum<br/>Waarde: niet aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1286765003 "Histologic type of polyp of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -458,6 +554,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal onderzochte lymfeklieren<br/>Waarde: 15<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#444025001 "aantal onderzochte lymfeklieren"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -469,6 +568,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Neoadjuvant antineoplastic therapy procedure prior to surgery<br/>Waarde: geen<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -480,6 +582,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Margin closest to tumor<br/>Waarde: ver van<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -491,6 +596,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Identification code<br/>Waarde: 1e tumor<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#423901009 "Identification code"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -502,6 +610,9 @@ InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: obstructie-ileus van dunne darm gelijktijdig met en door impactie<br/>Waarde: niet aanwezig<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
 * code = $SCT#733149001 "obstructie-ileus van dunne darm gelijktijdig met en door impactie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
@@ -514,6 +625,9 @@ Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: G. Olivander<br/>Geslacht: man<br/>Geboortedatum: 25-09-1921<br/>Geboorteplaats: Londen, Groot-Brittanië<br/>Adres: Diagonaalstraat 687, 5972 XX, Londen</div>"
 * extension[http://hl7.org/fhir/StructureDefinition/patient-birthPlace]
   * valueAddress
     * city = "Londen"
@@ -543,6 +657,9 @@ Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: P. Plijster<br/>Organisatie: LUMC<br/>Specialisme: Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)<br/>Locatie: LUMC, Polikliniek MDL</div>"
 * practitioner = Reference(Pathology-Practitioner-Plijster) "P. Plijster"
 * organization = Reference(Pathology-Organization-LUMC) "LUMC"
 * specialty[specialty] = $VektisAGB#0318 "Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)"
@@ -553,6 +670,9 @@ InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: Jan Oosting<br/>Organisatie: LUMC<br/>Specialisme: Medisch specialisten, pathologische anatomie</div>"
 * practitioner = Reference(Pathology-Practitioner-Oosting) "Jan Oosting"
 * organization = Reference(Pathology-Organization-LUMC) "LUMC"
 * specialty[specialty] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
@@ -562,6 +682,9 @@ InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: P. Plijster</div>"
 * name[nameInformation]
   * use = #official
   * text = "P. Plijster"
@@ -571,6 +694,9 @@ InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: Jan Oosting</div>"
 * name[nameInformation]
   * use = #official
   * text = "Jan Oosting"
@@ -580,6 +706,9 @@ InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Organisatie: LUMC</div>"
 * name = "LUMC"
 
 Instance: Pathology-Location-LUMC-Polikliniek-MDL
@@ -587,5 +716,8 @@ InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider
 Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Locatie: LUMC, Polikliniek MDL</div>"
 * name = "Polikliniek MDL"
 * managingOrganization = Reference(Pathology-Organization-LUMC) "LUMC"

@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",
     "display": "L. Rommella"
