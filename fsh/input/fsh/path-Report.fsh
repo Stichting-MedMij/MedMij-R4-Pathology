@@ -34,7 +34,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * category[pathology]
   * ^patternCodeableConcept = $SCT#108257001
 * code 1..1
-  * ^comment = "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+  * ^comment = "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED CT code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED CT code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
   * coding 1..*
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -80,7 +80,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^slicing.rules = #open
   * ^short = "ProtocolData"
   * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
-  * ^comment = "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible."
+  * ^comment = "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED CT code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible."
   * ^alias = "Protocoldata"
 * result contains
     clinicalInformation 0..1 and
@@ -204,7 +204,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^patternCode = #final
 * code
   * ^short = "ProtocolItemName"
-  * ^definition = "Name of the protocol item, expressed by a SNOMED code."
+  * ^definition = "Name of the protocol item, expressed by a SNOMED CT code."
   * ^alias = "ProtocolitemNaam"
   * ^patternCodeableConcept.coding.system = $SCT
 * subject 1..1

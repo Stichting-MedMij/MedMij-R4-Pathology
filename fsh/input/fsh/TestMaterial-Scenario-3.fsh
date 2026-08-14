@@ -30,6 +30,7 @@ Usage: #example
 * collection
   * collectedDateTime = "2026-06-11"
   * method
+    * coding = $SCT#65801008 "excisie"
     * text = "resectie"
 
 Instance: Pathology-Report-1-Smalhart
@@ -954,11 +955,13 @@ Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
-  * text = "Appendix Resectie"
+  * coding = $SCT#66754008 "blindedarm"
+  * text = "appendix"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
 * receivedTime = "2023-11-01"
 * collection
   * method
+    * coding = $SCT#65801008 "excisie"
     * text = "resectie"
 
 Instance: Pathology-Report-2-Smalhart

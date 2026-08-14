@@ -14,7 +14,14 @@
     ]
   },
   "type": {
-    "text": "Appendix Resectie"
+    "coding": [
+      {
+        "code": "66754008",
+        "system": "http://snomed.info/sct",
+        "display": "blindedarm"
+      }
+    ],
+    "text": "appendix"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
@@ -23,6 +30,13 @@
   "receivedTime": "2023-11-01",
   "collection": {
     "method": {
+      "coding": [
+        {
+          "code": "65801008",
+          "system": "http://snomed.info/sct",
+          "display": "excisie"
+        }
+      ],
       "text": "resectie"
     }
   }

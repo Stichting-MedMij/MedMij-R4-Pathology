@@ -68,13 +68,9 @@
       {
         "id": "Specimen.type",
         "path": "Specimen.type",
-        "min": 1
-      },
-      {
-        "id": "Specimen.type.text",
-        "path": "Specimen.type.text",
         "short": "SpecimenMaterial",
         "definition": "Type of specimen.",
+        "comment": "The (string) value of the SpecimenMaterial concept present in the source system SHALL be translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible. In any case, the original value SHALL be conveyed via `.text`.",
         "alias": [
           "AardMateriaal"
         ],
@@ -86,6 +82,16 @@
             "comment": "aardmateriaal"
           }
         ]
+      },
+      {
+        "id": "Specimen.type.coding.system",
+        "path": "Specimen.type.coding.system",
+        "patternUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Specimen.type.text",
+        "path": "Specimen.type.text",
+        "min": 1
       },
       {
         "id": "Specimen.subject",
@@ -175,10 +181,11 @@
         ]
       },
       {
-        "id": "Specimen.collection.method.text",
-        "path": "Specimen.collection.method.text",
+        "id": "Specimen.collection.method",
+        "path": "Specimen.collection.method",
         "short": "CollectionMethod",
         "definition": "The way the specimen is collected (biopsy, resection, etc.).",
+        "comment": "The (string) value of the CollectionMethod concept present in the source system SHALL be translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible. In any case, the original value SHALL be conveyed via `.text`.",
         "alias": [
           "Verkrijgingswijze"
         ],
@@ -189,6 +196,16 @@
             "comment": "verkrijgingswijze"
           }
         ]
+      },
+      {
+        "id": "Specimen.collection.method.coding.system",
+        "path": "Specimen.collection.method.coding.system",
+        "patternUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Specimen.collection.method.text",
+        "path": "Specimen.collection.method.text",
+        "min": 1
       }
     ]
   }
