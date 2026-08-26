@@ -48,7 +48,7 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "short": "ProtocolItemName",
-        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "definition": "Name of the protocol item, expressed by a SNOMED CT code.",
         "alias": [
           "ProtocolitemNaam"
         ],

@@ -41,7 +41,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^binding.description = "Use ConceptMap MercuriusHealthScreeningType-to-HealthScreeningType to translate terminology from the functional model to profile terminology in ValueSet HealthScreeningType."
   * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusHealthScreeningType-to-HealthScreeningType"
 * code 1..1
-  * ^comment = "If the requested pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+  * ^comment = "If the requested pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED CT code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED CT code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
   * coding 1..*
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -91,10 +91,14 @@ Description: "Specimen that will be examined by a laboratory."
   * ^comment = "This resource is used to convey either the primary specimen or an individual sample taken from that specimen. In the latter case, the `.parent` refers to the Specimen resource corresponding to the primary specimen."
   * ^alias = "Monster"
 * type 1..1
+  * ^short = "SpecimenMaterial"
+  * ^definition = "Type of specimen."
+  * ^comment = "The (string) value of the SpecimenMaterial concept present in the source system SHALL be translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible. In any case, the original value SHALL be conveyed via `.text`."
+  * ^alias = "AardMateriaal"
+  * coding
+    * system
+      * ^patternUri = $SCT
   * text 1..1
-    * ^short = "SpecimenMaterial"
-    * ^definition = "Type of specimen."
-    * ^alias = "AardMateriaal"
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
@@ -111,10 +115,14 @@ Description: "Specimen that will be examined by a laboratory."
     * ^definition = "Date when specimen is taken from patient."
     * ^alias = "DatumAfname"
   * method
-    * text
-      * ^short = "CollectionMethod"
-      * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
-      * ^alias = "Verkrijgingswijze"
+    * ^short = "CollectionMethod"
+    * ^definition = "The way the specimen is collected (biopsy, resection, etc.)."
+    * ^comment = "The (string) value of the CollectionMethod concept present in the source system SHALL be translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible. In any case, the original value SHALL be conveyed via `.text`."
+    * ^alias = "Verkrijgingswijze"
+    * coding
+      * system
+        * ^patternUri = $SCT
+    * text 1..1
 
 Profile: PathRequestRequester
 Parent: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
@@ -183,13 +191,11 @@ Mapping: PathRequestSpecimenMercuriusCore
 Source: PathRequestSpecimen
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* type
-  * text -> "mercurius-core-rubriek-76" "aardmateriaal"
+* type -> "mercurius-core-rubriek-76" "aardmateriaal"
 * receivedTime -> "mercurius-core-rubriek-80" "datumontvangst"
 * collection
   * collectedDateTime -> "mercurius-core-rubriek-77" "datumafname"
-  * method
-    * text -> "mercurius-core-rubriek-87" "verkrijgingswijze"
+  * method -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
 Mapping: PathRequestSpecimenMedMij-100-alpha3
 Source: PathRequestSpecimen

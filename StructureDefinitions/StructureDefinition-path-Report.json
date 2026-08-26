@@ -154,7 +154,7 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
-        "comment": "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+        "comment": "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED CT code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED CT code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
       },
       {
         "id": "DiagnosticReport.code.coding",
@@ -342,7 +342,7 @@
         },
         "short": "ProtocolData",
         "definition": "Data from National Palga Protocols, created in the Palga Protocol Module.",
-        "comment": "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible.",
+        "comment": "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED CT code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible.",
         "alias": [
           "Protocoldata",
           "Atomic Value",

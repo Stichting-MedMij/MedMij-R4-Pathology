@@ -24,12 +24,14 @@ Usage: #example
 * meta
   * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * type
-  * text = "Colon Resectie"
+  * coding = $SCT#71854001 "dikke darm"
+  * text = "colon"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * receivedTime = "2026-02-03"
 * collection
   * collectedDateTime = "2026-02-01"
   * method
+    * coding = $SCT#65801008 "excisie"
     * text = "resectie"
 
 Instance: Pathology-Report-Olivander

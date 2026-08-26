@@ -306,6 +306,7 @@
         "path": "path-lm-Request.Specimen.SpecimenMaterial",
         "short": "Specimen material",
         "definition": "Type of specimen.",
+        "comment": "The (string) value present in the source system is translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible.",
         "alias": [
           "AardMateriaal"
         ],
@@ -313,7 +314,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "CodeableConcept"
           }
         ],
         "mapping": [
@@ -375,6 +376,7 @@
         "path": "path-lm-Request.Specimen.CollectionMethod",
         "short": "Collection method",
         "definition": "The way the specimen is collected (biopsy, resection, etc.).",
+        "comment": "The (string) value present in the source system is translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible.",
         "alias": [
           "Verkrijgingswijze"
         ],
@@ -382,7 +384,7 @@
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "CodeableConcept"
           }
         ],
         "mapping": [

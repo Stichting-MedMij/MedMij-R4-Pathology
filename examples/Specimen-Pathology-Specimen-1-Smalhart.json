@@ -24,6 +24,13 @@
   "collection": {
     "collectedDateTime": "2026-06-11",
     "method": {
+      "coding": [
+        {
+          "code": "65801008",
+          "system": "http://snomed.info/sct",
+          "display": "excisie"
+        }
+      ],
       "text": "resectie"
     }
   }

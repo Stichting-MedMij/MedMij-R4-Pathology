@@ -180,7 +180,7 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | AardMateriaal | Item | mercurius-core-rubriek-76 | Colon Resectie | b | Materiaal | | M |
 | DatumAfname | Item | mercurius-core-rubriek-77 | 01-02-2026 | b | Afgenomen op | | M |
 | DatumOntvangst | Item | mercurius-core-rubriek-80 | 03-02-2026 | b | Ontvangen door lab op | | M |
-| Verkrijgingswijze | Item | mercurius-core-rubriek-87 | biopsie | b | Manier van verkrijgen | | M |
+| Verkrijgingswijze | Item | mercurius-core-rubriek-87 | biopsie (code '86273004' in codesysteem 'SNOMED CT') | b | Manier van verkrijgen | | M |
 | AantalSamples | Item | path-dataelement-9 | 2 | b | Aantal monsters | | M |
 
 **Tabel 11: Tabel met specificaties voor de Aanvraag**
