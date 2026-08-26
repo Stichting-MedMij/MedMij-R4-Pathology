@@ -53,6 +53,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Smalhart<br/>Aanvrager: Katara Yi, MUMC<br/>Monster: Appendix Resectie<br/>Klinische vraag: Zijn er afwijkingen te constateren bij afgenomen weefsel?</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"

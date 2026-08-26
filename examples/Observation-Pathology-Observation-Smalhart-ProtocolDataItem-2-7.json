@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Margin closest to tumor<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"

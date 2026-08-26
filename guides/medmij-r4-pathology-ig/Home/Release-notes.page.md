@@ -19,6 +19,7 @@
 | Test material         | A third test scenario has been added, and the protocol data of the first test scenario has been extended. | [PG-535](https://medmij.atlassian.net/browse/PG-535) |
 | Test material         | In some test scenarios, the values of the SpecimenMaterial and CollectionMethod concepts have been changed to reflect the case in which translation to a SNOMED CT code is possible. | [PG-526](https://medmij.atlassian.net/browse/PG-526) |
 | Test material         | The `.meta.tag`s corresponding to the care type have been added to all test instances. | [PG-530](https://medmij.atlassian.net/browse/PG-530) |
+| Test material         | Narratives have been added to all test instances. | [PG-525](https://medmij.atlassian.net/browse/PG-525) |
 
 ## 1.0.0-alpha.2
 

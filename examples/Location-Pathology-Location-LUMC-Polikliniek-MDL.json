@@ -13,6 +13,10 @@
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Locatie: LUMC, Polikliniek MDL</div>"
+  },
   "name": "Polikliniek MDL",
   "managingOrganization": {
     "reference": "Organization/Pathology-Organization-LUMC",

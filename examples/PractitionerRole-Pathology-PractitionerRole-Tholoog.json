@@ -13,6 +13,10 @@
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: P.A. Tholoog<br/>Organisatie: St. Holisto's Hospitaal<br/>Specialisme: Medisch specialisten, pathologische anatomie</div>"
+  },
   "practitioner": {
     "reference": "Practitioner/Pathology-Practitioner-Tholoog",
     "display": "P.A. Tholoog"

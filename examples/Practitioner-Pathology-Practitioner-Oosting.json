@@ -18,5 +18,9 @@
       "use": "official",
       "text": "Jan Oosting"
     }
-  ]
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: Jan Oosting</div>"
+  }
 }

@@ -55,6 +55,10 @@
       }
     }
   ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: L. Rommella<br/>Geslacht: vrouw<br/>Geboortedatum: 05-04-1956<br/></div>"
+  },
   "gender": "female",
   "birthDate": "1956-04-05"
 }

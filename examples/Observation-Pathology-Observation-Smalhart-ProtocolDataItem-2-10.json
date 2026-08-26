@@ -19,9 +19,13 @@
       {
         "system": "http://snomed.info/sct",
         "code": "371513001",
-        "display": "tatus van ingroei van tumor rondom zenuw"
+        "display": "status van ingroei van tumor rondom zenuw"
       }
     ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: status van ingroei van tumor rondom zenuw<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",

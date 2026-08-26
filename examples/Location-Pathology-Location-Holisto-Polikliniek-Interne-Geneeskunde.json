@@ -13,6 +13,10 @@
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Locatie: St. Holisto's Hospitaal, Polikliniek Interne geneeskunde</div>"
+  },
   "name": "Polikliniek Interne geneeskunde",
   "managingOrganization": {
     "reference": "Organization/Pathology-Organization-Holisto",

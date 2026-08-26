@@ -13,5 +13,9 @@
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Organisatie: MUMC</div>"
+  },
   "name": "MUMC"
 }

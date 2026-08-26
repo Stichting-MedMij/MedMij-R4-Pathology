@@ -53,6 +53,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Olivander<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Resectie<br/>Klinische vraag:<div>Vraagstelling</div><div>Classificatie</div><div/></div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"

@@ -23,6 +23,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Number of metastatic discontinuous tumor deposits of primary malignant neoplasm of colorectum<br/>Waarde: 0<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
