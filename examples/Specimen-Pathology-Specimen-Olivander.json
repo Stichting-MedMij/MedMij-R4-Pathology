@@ -18,7 +18,14 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Colon Resectie<br/>Patiënt: G. Olivander<br/>Afnamedatum: 01-02-2026<br/>Ontvangstdatum: 03-02-2026<br/>Verkrijgingswijze: resectie</div>"
   },
   "type": {
-    "text": "Colon Resectie"
+    "coding": [
+      {
+        "code": "71854001",
+        "system": "http://snomed.info/sct",
+        "display": "dikke darm"
+      }
+    ],
+    "text": "colon"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",
@@ -28,6 +35,13 @@
   "collection": {
     "collectedDateTime": "2026-02-01",
     "method": {
+      "coding": [
+        {
+          "code": "65801008",
+          "system": "http://snomed.info/sct",
+          "display": "excisie"
+        }
+      ],
       "text": "resectie"
     }
   }

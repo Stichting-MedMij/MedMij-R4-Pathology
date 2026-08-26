@@ -38,6 +38,7 @@ Usage: #example
 * collection
   * collectedDateTime = "2026-01-25"
   * method
+    * coding = $SCT#86273004 "biopsie"
     * text = "biopsie"
 
 Instance: Pathology-Specimen-Rommella-Sample-1
@@ -56,6 +57,7 @@ Usage: #example
 * collection
   * collectedDateTime = "2026-01-25"
   * method
+    * coding = $SCT#86273004 "biopsie"
     * text = "biopsie"
 
 Instance: Pathology-Specimen-Rommella-Sample-2
@@ -74,6 +76,7 @@ Usage: #example
 * collection
   * collectedDateTime = "2026-01-25"
   * method
+    * coding = $SCT#86273004 "biopsie"
     * text = "biopsie"
 
 Instance: Pathology-Report-Rommella

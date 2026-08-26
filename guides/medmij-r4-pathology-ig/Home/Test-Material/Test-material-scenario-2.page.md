@@ -31,7 +31,7 @@
 | Specimen.SpecimenMaterial | Colon Biopt |
 | Specimen.CollectionDate | 25-01-2026 |
 | Specimen.ReceivedDate | 26-01-2026 |
-| Specimen.CollectionMethod | biopsie |
+| Specimen.CollectionMethod | biopsie (code '86273004' from code system 'SNOMED CT') |
 | Specimen.NumberOfSamples | 2 |
 
 ## Report data

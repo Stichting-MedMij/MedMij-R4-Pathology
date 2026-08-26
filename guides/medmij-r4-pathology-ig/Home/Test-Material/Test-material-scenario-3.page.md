@@ -33,7 +33,7 @@
 | Specimen.SpecimenMaterial | Colon Resectie |
 | Specimen.CollectionDate | 11-06-2026 |
 | Specimen.ReceivedDate | 13-06-2026 |
-| Specimen.CollectionMethod | resectie |
+| Specimen.CollectionMethod | resectie (code '65801008' from code system 'SNOMED CT') |
 | Specimen.NumberOfSamples | 1 |
 
 ### Report data
@@ -134,10 +134,10 @@
 | Requester.Hospital | MUMC |
 | Requester.Location | |
 | ClinicalQuestion | Zijn er afwijkingen te constateren bij afgenomen weefsel? |
-| Specimen.SpecimenMaterial | Appendix Resectie |
+| Specimen.SpecimenMaterial | appendix (code '66754008' from code system 'SNOMED CT') |
 | Specimen.CollectionDate | |
 | Specimen.ReceivedDate | 01-11-2023 |
-| Specimen.CollectionMethod | resectie |
+| Specimen.CollectionMethod | resectie (code '65801008' from code system 'SNOMED CT') |
 | Specimen.NumberOfSamples | 1 |
 
 ### Report data

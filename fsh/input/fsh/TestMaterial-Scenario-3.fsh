@@ -36,6 +36,7 @@ Usage: #example
 * collection
   * collectedDateTime = "2026-06-11"
   * method
+    * coding = $SCT#65801008 "excisie"
     * text = "resectie"
 
 Instance: Pathology-Report-1-Smalhart
@@ -1173,11 +1174,13 @@ Usage: #example
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Appendix Resectie<br/>Patiënt: G. Smalhart<br/>Ontvangstdatum: 01-11-2023<br/>Verkrijgingswijze: resectie</div>"
 * type
-  * text = "Appendix Resectie"
+  * coding = $SCT#66754008 "blindedarm"
+  * text = "appendix"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
 * receivedTime = "2023-11-01"
 * collection
   * method
+    * coding = $SCT#65801008 "excisie"
     * text = "resectie"
 
 Instance: Pathology-Report-2-Smalhart

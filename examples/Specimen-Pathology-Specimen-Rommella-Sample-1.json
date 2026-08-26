@@ -34,6 +34,13 @@
   "collection": {
     "collectedDateTime": "2026-01-25",
     "method": {
+      "coding": [
+        {
+          "code": "86273004",
+          "system": "http://snomed.info/sct",
+          "display": "biopsie"
+        }
+      ],
       "text": "biopsie"
     }
   }

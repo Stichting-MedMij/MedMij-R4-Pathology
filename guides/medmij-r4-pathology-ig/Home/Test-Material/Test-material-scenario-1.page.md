@@ -28,10 +28,10 @@
 | Requester.Hospital | LUMC |
 | Requester.Location | Polikliniek MDL |
 | ClinicalQuestion | Vraagstelling <br/> Classificatie |
-| Specimen.SpecimenMaterial | Colon Resectie |
+| Specimen.SpecimenMaterial | colon (code '71854001' from code system 'SNOMED CT') |
 | Specimen.CollectionDate | 01-02-2026 |
 | Specimen.ReceivedDate | 03-02-2026 |
-| Specimen.CollectionMethod | resectie |
+| Specimen.CollectionMethod | resectie (code '65801008' from code system 'SNOMED CT') |
 | Specimen.NumberOfSamples | 1 |
 
 ## Report data

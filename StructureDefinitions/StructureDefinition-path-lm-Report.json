@@ -275,7 +275,7 @@
         "id": "path-lm-Report.ProtocolData.ProtocolItemName",
         "path": "path-lm-Report.ProtocolData.ProtocolItemName",
         "short": "Protocol item name",
-        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "definition": "Name of the protocol item, expressed by a SNOMED CT code.",
         "alias": [
           "ProtocolitemNaam"
         ],
