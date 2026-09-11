@@ -10,10 +10,10 @@ topic: fql-get-lm-mappings
   for
     differential.element
   select
-    id, join mapping {name, map, comment}
-  order by name
+    id, join mapping {identity, map, comment}
+  order by identity
   select
-    'Mapping name': name,
+    'Mapping name': identity,
     'Concept id': map,
     'Logical element': id.replace('path-lm-', ''),
     Comments: comment
