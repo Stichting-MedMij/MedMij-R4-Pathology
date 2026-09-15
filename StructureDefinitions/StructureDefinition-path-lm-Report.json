@@ -90,6 +90,18 @@
         ]
       },
       {
+        "id": "path-lm-Report.Patient",
+        "path": "path-lm-Report.Patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-lm-Patient"
+            ]
+          }
+        ]
+      },
+      {
         "id": "path-lm-Report.HealthcareProvider",
         "path": "path-lm-Report.HealthcareProvider",
         "max": "0"

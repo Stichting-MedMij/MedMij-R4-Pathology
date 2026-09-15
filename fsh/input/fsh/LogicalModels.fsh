@@ -1,7 +1,7 @@
 // All LogicalModels used in Pathology
 
 Logical: PathLmPatient
-Parent: http://hl7.org/fhir/StructureDefinition/Element
+Parent: http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Patient
 Id: path-lm-Patient
 Title: "Patient"
 Description: "The person whose human tissue is analyzed in a pathology study."
@@ -14,45 +14,45 @@ Description: "The person whose human tissue is analyzed in a pathology study."
 * ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie)."
 * insert Copyright
 * ^abstract = false
-* .
-  * ^alias = "Patiënt"
-* Name 1..1 BackboneElement "Name" "Name of the patient."
-  * ^alias = "Naam"
-  * Initials 1..1 string "Initials" "Initials of the patient in capitals, divided by dots."
+* NameInformation 1..1
+  * FirstNames 0..0
+  * Initials 1..1
+    * ^definition = "Initials of the patient in capitals, divided by dots."
     * ^alias = "Voorletters"
-  * FamilyName 1..1 BackboneElement "Family name" "Family name of the patient."
-    * ^alias = "Geslachtsnaam"
-    * Prefix 0..1 string "Prefix" "Prefix to the last name of the patient."
-      * ^alias = "Voorvoegsels"
-    * LastName 1..1 string "Last name" "Last name of the patient."
-      * ^alias = "Achternaam"
-* Gender 1..1 code "Gender" "Gender of the patient."
-* Gender from MercuriusGender_VS (required)
-  * ^alias = "Geslacht"
-* BirthInformation 1..1 BackboneElement "Birth information" "Information on the birth of the patient."
-  * ^alias = "GeboorteInformatie"
-  * BirthDate 1..1 date "Birth date" "Birth date."
-    * ^alias = "Geboortedatum"
-  * BirthPlace 0..1 string "Birth place" "Place of birth."
-    * ^alias = "Geboorteplaats"
-    * ^comment = "The place of birth is part of the CIS personalia as delivered by the CIS-GBA."
-  * BirthCountry 0..1 string "Birth country" "Country of birth."
-    * ^alias = "Geboorteland"
-* Address 0..1 BackboneElement "Address" "Address of the patient."
-  * ^alias = "Adres"
-  * Street 0..1 string "Street" "Street name of the address."
-    * ^alias = "Straat"
-  * HouseNumber 0..1 string "House number" "House number of the address."
-    * ^alias = "Huisnummer"
-  * PostalCode 0..1 string "Postal code" "Postal code, either Dutch or foreign."
-    * ^alias = "Postcode"
+  * GivenName 0..0
+  * NameUsage 0..0
+  * LastNamePartner 0..0
+  * Titles 0..0
+* AddressInformation 0..1
+  * HouseNumberLetter 0..0
+  * HouseNumberAddition 0..0
+  * HouseNumberIndication 0..0
+  * Postcode
     * ^comment = """
     Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.
     
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.
     """
-  * City 0..1 string "City" "Place name."
-    * ^alias = "Woonplaats"
+  * Municipality 0..0
+  * Country 0..0
+  * AdditionalInformation 0..0
+  * AddressType 0..0
+* ContactInformation 0..0
+* PatientIdentificationNumber 0..0
+* DateOfBirth 1..1
+  * ^comment = "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD."
+* Gender 1..1
+  * ^comment = "In Mercurius, codes from the MercuriusGender code system are used to convey the gender of the patient."
+  * ^binding.description = "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the Mercurius model to zib terminology in ValueSet AdministrativeGender."
+  * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
+* MultipleBirthIndicator 0..0
+* DeathIndicator 0..0
+* DateOfDeath 0..0
+* BirthPlace 0..1 string "Birth place" "Place of birth."
+  * ^alias = "Geboorteplaats"
+  * ^comment = "The place of birth is part of the CIS personalia as delivered by the CIS-GBA."
+* BirthCountry 0..1 string "Birth country" "Country of birth."
+  * ^alias = "Geboorteland"
 
 Logical: PathLmRequest
 Parent: http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base
@@ -70,6 +70,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * ^abstract = false
 * .
   * ^alias = "Aanvraag"
+* Patient only Reference(PathLmPatient)
 * HealthcareProvider 0..0
 * Effective[x] 0..0
 * CareType 1..1 
@@ -133,6 +134,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^alias = "VerslagIdentificatienummer"
   * ^comment = "This concept is often referred to as ReportIdentifier.\n\nThis identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
+* Patient only Reference(PathLmPatient)
 * HealthcareProvider 0..0
 * Effective[x] 1..1
 * EffectiveDateTime 1..1
@@ -166,51 +168,24 @@ Mapping: PathLmPatientMercuriusCore
 Source: PathLmPatient
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* Name
+* NameInformation
   * Initials -> "mercurius-core-rubriek-9" "voorletters"
-  * FamilyName
+  * LastName
     * Prefix -> "mercurius-core-rubriek-6" "vvnaamman"
     * Prefix -> "mercurius-core-rubriek-8" "vvnaamvrouw"
     * LastName -> "mercurius-core-rubriek-5" "naamman"
     * LastName -> "mercurius-core-rubriek-7" "naamvrouw"
-* Gender -> "mercurius-core-rubriek-10" "geslacht"
-* BirthInformation
-  * BirthDate -> "mercurius-core-rubriek-11" "geboortedatum"
-  * BirthDate -> "mercurius-core-rubriek-13" "geboorteeeuw (implicit)"
-  * BirthPlace -> "mercurius-core-rubriek-14" "geboorteplaats"
-  * BirthCountry -> "mercurius-core-rubriek-15" "geboorteland"
-* Address
+* AddressInformation
   * Street -> "mercurius-core-rubriek-16" "straat"
   * HouseNumber -> "mercurius-core-rubriek-17" "huisnummer"
-  * PostalCode -> "mercurius-core-rubriek-18" "postcode"
-  * PostalCode -> "mercurius-core-rubriek-20" "postcodebuitenland"
-  * City -> "mercurius-core-rubriek-19" "woonplaats"
-
-Mapping: PathLmPatientMedMij-100-alpha3
-Source: PathLmPatient
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
-* . -> "path-dataelement-1" "Patient"
-* Name -> "path-dataelement-2" "Name"
-  * FamilyName -> "path-dataelement-3" "FamilyName"
-* BirthInformation -> "path-dataelement-4" "BirthInformation"
-* Address -> "path-dataelement-5" "Address"
-
-Mapping: PathLmPatientSNOMED
-Source: PathLmPatient
-Target: "http://snomed.info/sct"
-Id: SNOMED
-Title: "SNOMED CT"
-* . -> "116154003" "patiënt"
-
-Mapping: PathLmPatientLOINC
-Source: PathLmPatient
-Target: "http://loinc.org"
-Id: LOINC
-Title: "LOINC"
-* Gender -> "46098-0" "Geslacht"
-* BirthInformation
-  * BirthDate -> "21112-8" "Geboortedatum"
+  * Postcode -> "mercurius-core-rubriek-18" "postcode"
+  * Postcode -> "mercurius-core-rubriek-20" "postcodebuitenland"
+  * PlaceOfResidence -> "mercurius-core-rubriek-19" "woonplaats"
+* DateOfBirth -> "mercurius-core-rubriek-11" "geboortedatum"
+* DateOfBirth -> "mercurius-core-rubriek-13" "geboorteeeuw (implicit)"
+* Gender -> "mercurius-core-rubriek-10" "geslacht"
+* BirthPlace -> "mercurius-core-rubriek-14" "geboorteplaats"
+* BirthCountry -> "mercurius-core-rubriek-15" "geboorteland"
 
 Mapping: PathLmRequestMercuriusCore
 Source: PathLmRequest
