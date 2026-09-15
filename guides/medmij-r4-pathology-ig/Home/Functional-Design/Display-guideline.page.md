@@ -189,8 +189,8 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Verslag** | **Rootconcept** | path-dataelement-10 | | a of b | Verslag | | |
 | VerslagIdentificatienummer | Item | mercurius-core-rubriek-3 | T26-60066 | a | Verslagnummer | | M |
-| Autorisator | Item | mercurius-core-rubriek-41 | Jan Oosting | b | Patholoog | | M |
 | DatumAutorisatie | Item | mercurius-core-rubriek-44 | 03-02-2026 | a | Datum van autorisatie | | M |
+| Autorisator | Item | mercurius-core-rubriek-41 | Jan Oosting | b | Patholoog | | M |
 | KlinischeGegevens | Item | mercurius-core-rubriek-142 | Adenocarcinoom vastgesteld bij BVO | b | Medische gegevens | | M |
 | Macroscopie | Item | mercurius-core-rubriek-184 | Colon resectie met lengte van 20 cm | b | Macroscopie | | M |
 | Microscopie | Item | mercurius-core-rubriek-222 | Zie voorbeeld in Tabel 6. | b | Microscopie | | M |

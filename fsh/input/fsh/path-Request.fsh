@@ -14,6 +14,22 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^short = "Request"
   * ^definition = "Request for a pathology study to be performed by a certain laboratory."
   * ^alias = "Aanvraag"
+* meta
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains 
+      careType 1..1
+  * tag[careType]
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^patternCoding = $VektisAGB#0388
+* identifier
+  * ^short = "IdentificationNumber"
+  * ^definition = "Globally unique number that identifies the instantiation of the CIM. The number is composed of an identification of the issuer organization and a unique number assigned by this organization."
+  * ^alias = "Identificatienummer"
 * status
   * ^patternCode = #completed
 * intent
@@ -57,6 +73,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
     * ^condition = "path-Request-1"
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
 * requester 1..1
 * requester only Reference(PractitionerRole or PathRequestRequester)
@@ -90,6 +107,18 @@ Description: "Specimen that will be examined by a laboratory."
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "This resource is used to convey either the primary specimen or an individual sample taken from that specimen. In the latter case, the `.parent` refers to the Specimen resource corresponding to the primary specimen."
   * ^alias = "Monster"
+* meta
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains 
+      careType 1..1
+  * tag[careType]
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^patternCoding = $VektisAGB#0388
 * type 1..1
   * ^short = "SpecimenMaterial"
   * ^definition = "Type of specimen."
@@ -102,6 +131,7 @@ Description: "Specimen that will be examined by a laboratory."
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
 * receivedTime 1..1
   * ^short = "ReceivedDate"
@@ -138,6 +168,18 @@ Description: "Requester of the pathology study."
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
+* meta
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains 
+      careType 1..1
+  * tag[careType]
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^patternCoding = $VektisAGB#0388
 * practitioner 1..1
 * practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)
   * ^short = "RequesterName"
@@ -178,6 +220,15 @@ Title: "Mercurius Core Dataset 2.0"
 * reasonCode
   * text -> "mercurius-core-rubriek-139" "klinischevraag"
 
+Mapping: PathRequestMedMijCore-120
+Source: PathRequest
+Id: medmij-core-dataset-120-2026xxyy
+Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* identifier -> "medmij-core-dataelement-115" "IdentificationNumber"
+* subject -> "medmij-core-dataelement-116" "Patient"
+
 Mapping: PathRequestMedMij-100-alpha3
 Source: PathRequest
 Id: path-dataset-100-alpha3-2026xxyy
@@ -197,6 +248,14 @@ Title: "Mercurius Core Dataset 2.0"
   * collectedDateTime -> "mercurius-core-rubriek-77" "datumafname"
   * method -> "mercurius-core-rubriek-87" "verkrijgingswijze"
 
+Mapping: PathRequestSpecimenMedMijCore-120
+Source: PathRequestSpecimen
+Id: medmij-core-dataset-120-2026xxyy
+Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
+
 Mapping: PathRequestSpecimenMedMij-100-alpha3
 Source: PathRequestSpecimen
 Id: path-dataset-100-alpha3-2026xxyy
@@ -212,6 +271,13 @@ Title: "Mercurius Core Dataset 2.0"
 * organization -> "mercurius-core-rubriek-72" "ziekenhuis (implicit, actual mapping is on Organization.name)"
 * specialty[specialty] -> "mercurius-core-rubriek-71" "specialisme"
 * location -> "mercurius-core-rubriek-67" "locatie (implicit, actual mapping is on Location.name)"
+
+Mapping: PathRequestRequesterMedMijCore-120
+Source: PathRequestRequester
+Id: medmij-core-dataset-120-2026xxyy
+Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 
 Mapping: PathRequestRequesterMedMij-100-alpha3
 Source: PathRequestRequester

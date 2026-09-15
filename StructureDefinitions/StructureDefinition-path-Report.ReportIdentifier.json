@@ -30,6 +30,10 @@
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "medmij-core-dataset-120-2026xxyy",
+      "name": "Dataset MedMij R4 Core 1.2.0 2026xxyy"
     }
   ],
   "kind": "complex-type",
@@ -46,6 +50,7 @@
         "definition": "Identifier of the pathology report assigned by the laboratory doing the analysis.",
         "comment": "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_).",
         "alias": [
+          "Identificatienummer",
           "VerslagIdentificatienummer"
         ],
         "condition": [
@@ -65,6 +70,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-3",
             "comment": "rapnaam"
+          },
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-115",
+            "comment": "IdentificationNumber"
           }
         ]
       },

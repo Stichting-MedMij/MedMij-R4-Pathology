@@ -55,7 +55,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     * ^alias = "Woonplaats"
 
 Logical: PathLmRequest
-Parent: http://hl7.org/fhir/StructureDefinition/Element
+Parent: http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base
 Id: path-lm-Request
 Title: "Request"
 Description: "Request for a pathology study to be performed by a certain laboratory."
@@ -70,6 +70,10 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * ^abstract = false
 * .
   * ^alias = "Aanvraag"
+* HealthcareProvider 0..0
+* Effective[x] 0..0
+* CareType 1..1 
+  * ^patternCodeableConcept = $VektisAGB#0388
 * RequestType 1..1 CodeableConcept "Request type" "This typing of the examination provides additional context for the request."
 * RequestType from MercuriusRequestType_VS (required)
   * ^alias = "SoortAanvraag"
@@ -109,7 +113,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
     * ^alias = "AantalSamples"
 
 Logical: PathLmReport
-Parent: http://hl7.org/fhir/StructureDefinition/Element
+Parent: http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base
 Id: path-lm-Report
 Title: "Report"
 Description: "Pathology report which contains the findings and interpretation of a pathology study."
@@ -124,13 +128,23 @@ Description: "Pathology report which contains the findings and interpretation of
 * ^abstract = false
 * .
   * ^alias = "Verslag"
-* ReportIdentifier 1..1 Identifier "Report identifier" "Identifier of the pathology report assigned by the laboratory doing the analysis."
+* IdentificationNumber 1..1
+  * ^short = "Report identifier"
+  * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^alias = "VerslagIdentificatienummer"
-  * ^comment = "This identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
+  * ^comment = "This concept is often referred to as ReportIdentifier.\n\nThis identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
+* HealthcareProvider 0..0
+* Effective[x] 1..1
+* EffectiveDateTime 1..1
+  * ^short = "Authorization date"
+  * ^definition = "Date of authorization."
+  * ^alias = "DatumAutorisatie"
+  * ^comment = "This concept is often referred to as AuthorizationDate.\n\nEven though this element has data type dateTime, in practice only dates (without time) will be conveyed."
+* EffectivePeriod 0..0
+* CareType 1..1 
+  * ^patternCodeableConcept = $VektisAGB#0388
 * Authorizer 1..1 string "Authorizer" "Name of the pathologist who has authorized the report."
   * ^alias = "Autorisator"
-* AuthorizationDate 1..1 date "Authorization date" "Date of authorization."
-  * ^alias = "DatumAutorisatie"
 * ClinicalInformation 0..1 string "Clinical information" "Clinical information section of the report."
   * ^alias = "KlinischeGegevens"
 * Macroscopy 0..1 string "Macroscopy" "Macroscopy-related results."
@@ -229,9 +243,9 @@ Mapping: PathLmReportMercuriusCore
 Source: PathLmReport
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
-* ReportIdentifier -> "mercurius-core-rubriek-3" "rapnaam"
+* IdentificationNumber -> "mercurius-core-rubriek-3" "rapnaam"
+* EffectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 * Authorizer -> "mercurius-core-rubriek-41" "autorisator"
-* AuthorizationDate -> "mercurius-core-rubriek-44" "datumautorisatie"
 * ClinicalInformation -> "mercurius-core-rubriek-142" "klinischegegevens"
 * Macroscopy -> "mercurius-core-rubriek-184" "macroscopie"
 * Microscopy -> "mercurius-core-rubriek-222" "microscopie"

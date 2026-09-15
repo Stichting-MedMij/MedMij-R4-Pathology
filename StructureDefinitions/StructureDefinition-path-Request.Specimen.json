@@ -32,6 +32,10 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
+      "identity": "medmij-core-dataset-120-2026xxyy",
+      "name": "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+    },
+    {
       "identity": "path-dataset-100-alpha3-2026xxyy",
       "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
@@ -62,6 +66,43 @@
             "identity": "path-dataset-100-alpha3-2026xxyy",
             "map": "path-dataelement-9",
             "comment": "NumberOfSamples (implicit)"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.meta.tag",
+        "path": "Specimen.meta.tag",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Specimen.meta.tag:careType",
+        "path": "Specimen.meta.tag",
+        "sliceName": "careType",
+        "short": "CareType",
+        "definition": "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data.",
+        "alias": [
+          "Zorgtype"
+        ],
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "0388",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+        },
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-123",
+            "comment": "CareType"
           }
         ]
       },
@@ -97,6 +138,7 @@
         "id": "Specimen.subject",
         "path": "Specimen.subject",
         "short": "Patient",
+        "definition": "The patient as subject of the information.",
         "alias": [
           "Patiënt"
         ],
@@ -108,6 +150,13 @@
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://medmij.nl/fhir/StructureDefinition/path-Patient"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-116",
+            "comment": "Patient"
           }
         ]
       },

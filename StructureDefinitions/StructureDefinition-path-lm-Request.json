@@ -46,7 +46,7 @@
   "kind": "logical",
   "abstract": false,
   "type": "http://medmij.nl/fhir/StructureDefinition/path-lm-Request",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "baseDefinition": "http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -65,6 +65,52 @@
             "comment": "Request"
           }
         ]
+      },
+      {
+        "id": "path-lm-Request.HealthcareProvider",
+        "path": "path-lm-Request.HealthcareProvider",
+        "max": "0"
+      },
+      {
+        "id": "path-lm-Request.Effective[x]",
+        "path": "path-lm-Request.Effective[x]",
+        "max": "0"
+      },
+      {
+        "id": "path-lm-Request.Effective[x]:EffectiveDateTime",
+        "path": "path-lm-Request.Effective[x]",
+        "sliceName": "EffectiveDateTime",
+        "max": "0",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Effective[x]:EffectivePeriod",
+        "path": "path-lm-Request.Effective[x]",
+        "sliceName": "EffectivePeriod",
+        "max": "0",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.CareType",
+        "path": "path-lm-Request.CareType",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "0388",
+              "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+            }
+          ]
+        }
       },
       {
         "id": "path-lm-Request.RequestType",
