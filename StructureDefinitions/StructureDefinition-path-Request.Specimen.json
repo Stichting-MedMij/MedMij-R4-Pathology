@@ -92,6 +92,15 @@
         "id": "Specimen.meta.tag:careType",
         "path": "Specimen.meta.tag",
         "sliceName": "careType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "short": "CareType",
         "definition": "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data.",
         "alias": [

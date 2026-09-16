@@ -25,6 +25,10 @@ Description: "Request for a pathology study to be performed by a certain laborat
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
@@ -121,6 +125,10 @@ Description: "Specimen that will be examined by a laboratory."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
@@ -185,6 +193,10 @@ Description: "Requester of the pathology study."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]

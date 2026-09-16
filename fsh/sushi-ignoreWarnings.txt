@@ -1,0 +1,2 @@
+At least one slice of path-lm-Request.Effective[x] has a max greater than the overall element max. The max of the following slice(s) has been reduced to match the max of path-lm-Request.Effective[x]: EffectiveDateTime,EffectivePeriod
+/An element with a slice name should not define its own slicing. Instead, append additional discriminators to the original slicing on the base element.*/
