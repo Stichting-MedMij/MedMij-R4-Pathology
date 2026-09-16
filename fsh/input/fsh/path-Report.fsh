@@ -39,7 +39,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^slicing.rules = #open
 * identifier contains
     reportIdentifier 1..1
-* identifier[reportIdentifier] only PathReportReportIdentifier
+* identifier[reportIdentifier] only PathReportIdentifier
 * basedOn 1..1
 * basedOn only Reference(ServiceRequest or PathRequest)
 * status
@@ -78,7 +78,7 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^definition = "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
   * end 1..1
-    * ^short = "AuthorizationDate"
+    * ^short = "EffectiveDateTime / AuthorizationDate"
     * ^definition = "Date of authorization."
     * ^alias[0] = "Tijdsindicatie"
     * ^alias[1] = "DatumTijd"
@@ -161,6 +161,12 @@ Description: "Clinical information section of the report."
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -213,6 +219,12 @@ Description: "Macroscopy-related results."
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -265,6 +277,12 @@ Description: "Microscopy-related results."
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -313,6 +331,12 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * value[x] 1..1
 * value[x] only CodeableConcept or string or integer or Quantity or Range or dateTime
   * ^short = "ProtocolItemResult"
@@ -325,25 +349,25 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
   * ^alias = "Monster"
 
-Profile: PathReportReportIdentifier
+Profile: PathReportIdentifier
 Parent: Identifier
-Id: path-Report.ReportIdentifier
-Title: "path Report.ReportIdentifier"
+Id: path-ReportIdentifier
+Title: "path ReportIdentifier"
 Description: "Identifier of the pathology report assigned by the laboratory doing the analysis."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
-* . obeys path-Report.ReportIdentifier-1
-  * ^short = "ReportIdentifier"
+* . obeys path-ReportIdentifier-1
+  * ^short = "IdentificationNumber / ReportIdentifier"
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
   * ^alias[0] = "Identificatienummer"
   * ^alias[1] = "VerslagIdentificatienummer"
-  * ^condition = "path-Report.ReportIdentifier-1"
+  * ^condition = "path-ReportIdentifier-1"
 * system 1..1
-  * ^condition = "path-Report.ReportIdentifier-1"
+  * ^condition = "path-ReportIdentifier-1"
 * value 1..1
 
 Invariant: path-Report-1
@@ -351,7 +375,7 @@ Description: "Either a code for cytology or histology is present."
 Severity: #error
 Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()"
 
-Invariant: path-Report.ReportIdentifier-1
+Invariant: path-ReportIdentifier-1
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
 Severity: #error
 Expression: "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.') and system.endsWith('.1')"
@@ -383,14 +407,14 @@ Id: path-dataset-100-alpha3-2026xxyy
 Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * . -> "path-dataelement-10" "Report"
 
-Mapping: PathReportReportIdentifierMercuriusCore
-Source: PathReportReportIdentifier
+Mapping: PathReportIdentifierMercuriusCore
+Source: PathReportIdentifier
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * . -> "mercurius-core-rubriek-3" "rapnaam"
 
-Mapping: PathReportReportIdentifierMedMijCore-120
-Source: PathReportReportIdentifier
+Mapping: PathReportIdentifierMedMijCore-120
+Source: PathReportIdentifier
 Id: medmij-core-dataset-120-2026xxyy
 Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
 * . -> "medmij-core-dataelement-115" "IdentificationNumber"
@@ -401,6 +425,7 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-142" "klinischegegevens"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 
 Mapping: PathReportClinicalInformationMedMijCore-120
 Source: PathReportClinicalInformation
@@ -416,6 +441,7 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-184" "macroscopie"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 
 Mapping: PathReportMacroscopyMedMijCore-120
 Source: PathReportMacroscopy
@@ -431,9 +457,24 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-222" "microscopie"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 
 Mapping: PathReportMicroscopyMedMijCore-120
 Source: PathReportMicroscopy
+Id: medmij-core-dataset-120-2026xxyy
+Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
+
+Mapping: PathReportProtocolDataItemMercuriusCore
+Source: PathReportProtocolDataItem
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
+
+Mapping: PathReportProtocolDataItemMedMijCore-120
+Source: PathReportProtocolDataItem
 Id: medmij-core-dataset-120-2026xxyy
 Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
 * meta
@@ -447,11 +488,3 @@ Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * code -> "path-dataelement-11" "ProtocolItemName"
 * value[x] -> "path-dataelement-12" "ProtocolItemResult[x]"
 * specimen -> "path-dataelement-13" "SampleNumber (implicit)"
-
-Mapping: PathReportProtocolDataItemMedMijCore-120
-Source: PathReportProtocolDataItem
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
-* meta
-  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
-* subject -> "medmij-core-dataelement-116" "Patient"

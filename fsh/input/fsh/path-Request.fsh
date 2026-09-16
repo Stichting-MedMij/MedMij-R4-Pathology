@@ -34,9 +34,16 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * identifier 1..*
-  * ^short = "IdentificationNumber"
-  * ^definition = "Globally unique number that identifies the instantiation of the CIM. The number is composed of an identification of the issuer organization and a unique number assigned by this organization."
-  * ^alias = "Identificatienummer"
+  * ^slicing.discriminator.type = #profile
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* identifier contains
+    requestIdentifier 1..1
+* identifier[requestIdentifier] only PathReportIdentifier
+  * ^short = "IdentificationNumber / RequestIdentifier"
+  * ^definition = "Identifier of the request for a pathology study."
+  * ^alias[0] = "Identificatienummer"
+  * ^alias[1] = "AanvraagIdentificatienummer"
 * status
   * ^patternCode = #completed
 * intent
@@ -247,7 +254,6 @@ Id: medmij-core-dataset-120-2026xxyy
 Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
-* identifier -> "medmij-core-dataelement-115" "IdentificationNumber"
 * subject -> "medmij-core-dataelement-116" "Patient"
 
 Mapping: PathRequestMedMij-100-alpha3

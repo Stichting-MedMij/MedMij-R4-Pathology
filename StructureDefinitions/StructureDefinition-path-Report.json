@@ -163,7 +163,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier"
+              "http://medmij.nl/fhir/StructureDefinition/path-ReportIdentifier"
             ]
           }
         ]
@@ -337,7 +337,7 @@
       {
         "id": "DiagnosticReport.effective[x]:effectivePeriod.end",
         "path": "DiagnosticReport.effective[x].end",
-        "short": "AuthorizationDate",
+        "short": "EffectiveDateTime / AuthorizationDate",
         "definition": "Date of authorization.",
         "alias": [
           "Tijdsindicatie",

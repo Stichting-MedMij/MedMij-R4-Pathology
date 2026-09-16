@@ -8,7 +8,7 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: L. Rommella<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Biopt (2 samples)<br/>Klinische vraag: <div>Vraagstelling</div><div>Afwijkingen?</div><div/></div>"
-* identifier
+* identifier[requestIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
   * value = "T26-60065"
 * status = #completed
@@ -134,6 +134,7 @@ Usage: #example
 * status = #final
 * code = $SCT#404684003 "klinische bevinding"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-Macroscopy
@@ -147,6 +148,7 @@ Usage: #example
 * status = #final
 * code = $SCT#168126000 "Sample macroscopy"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-Microscopy
@@ -160,6 +162,7 @@ Usage: #example
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
 Instance: Pathology-Observation-Rommella-ProtocolDataItem-1
@@ -173,6 +176,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1255831008 "chemotherapie met gerichte medicatie tegen maligne tumor"
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
@@ -187,6 +191,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1255588004 "Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1285141002 "gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling"
 * specimen = Reference(Pathology-Specimen-Rommella) "Colon Biopt"
 
@@ -201,6 +206,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1156654007 "benigne tubulair adenoom"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
@@ -215,6 +221,7 @@ Usage: #example
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueString = "1 slijmvliesbiopt"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
@@ -229,6 +236,7 @@ Usage: #example
 * status = #final
 * code = $SCT#11429006 "consult"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#262008008 "Not performed"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
@@ -243,6 +251,7 @@ Usage: #example
 * status = #final
 * code = $SCT#399687005 "locatie van primaire tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#72592005 "flexura lienalis"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
@@ -257,6 +266,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1155708003 "Low histologic grade"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-1) "Colon Biopt, Sample 1"
 
@@ -271,6 +281,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396984004 "histologisch kenmerk van tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1156654007 "benigne tubulair adenoom"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
@@ -285,6 +296,7 @@ Usage: #example
 * status = #final
 * code = $SCT#310991000146109 "aantal slijmvliesbiopten"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueString = "1 slijmvliesbiopt"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
@@ -299,6 +311,7 @@ Usage: #example
 * status = #final
 * code = $SCT#11429006 "consult"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#262008008 "Not performed"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
@@ -313,6 +326,7 @@ Usage: #example
 * status = #final
 * code = $SCT#399687005 "locatie van primaire tumor"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#32622004 "colon descendens"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 
@@ -327,6 +341,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1155708003 "Low histologic grade"
 * specimen = Reference(Pathology-Specimen-Rommella-Sample-2) "Colon Biopt, Sample 2"
 

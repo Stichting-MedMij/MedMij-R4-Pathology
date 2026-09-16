@@ -70,6 +70,11 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * ^abstract = false
 * .
   * ^alias = "Aanvraag"
+* IdentificationNumber 1..1
+  * ^short = "Request identifier"
+  * ^definition = "Identifier of the request for a pathology study."
+  * ^alias = "AanvraagIdentificatienummer"
+  * ^comment = "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other. In particular, the RequestIdentifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
 * Patient only Reference(PathLmPatient)
 * HealthcareProvider 0..0
 * Effective[x] 0..0
@@ -191,6 +196,7 @@ Mapping: PathLmRequestMercuriusCore
 Source: PathLmRequest
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
+* IdentificationNumber -> "mercurius-core-rubriek-3" "rapnaam"
 * RequestType -> "mercurius-core-rubriek-89" "soortaanvraag"
 * HealthScreeningType -> "mercurius-core-rubriek-97" "bvosoort"
 * Requester
@@ -213,6 +219,35 @@ Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * Requester -> "path-dataelement-7" "Requester"
 * Specimen -> "path-dataelement-8" "Specimen"
   * NumberOfSamples -> "path-dataelement-9" "NumberOfSamples"
+
+Mapping: PathLmRequestEHDSImagingReport
+Source: PathLmRequest
+Target: "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSImagingReport.html"
+Id: ehds-imagingreport-v1.0.0
+Title: "EHDS ImagingReport v1.0.0"
+* . -> "EHDSImagingReport" "EHDSImagingReport"
+* . -> "EHDSImagingReport.body.orderInformation" "orderInformation"
+* IdentificationNumber -> "EHDSImagingReport.body.orderInformation.orderId" "orderId"
+* Patient -> "EHDSImagingReport.header.subject" "subject"
+* CareType -> "EHDSImagingReport.header.serviceSpecialty" "serviceSpecialty"
+* Requester -> "EHDSImagingReport.body.orderInformation.orderPlacer" "orderPlacer"
+  * RequesterName -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.name)"
+  * Specialty -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.specialty)"
+  * Hospital -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.organisation)"
+  * Hospital -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSOrganisation" "orderPlacerEHDSOrganisation (implicit, actual mapping is on orderPlacerEHDSOrganisation.name)"
+* ClinicalQuestion -> "EHDSImagingReport.body.orderInformation.clinicalQuestion" "clinicalQuestion"
+* Specimen -> "EHDSImagingReport.body.specimen" "specimen"
+
+Mapping: PathLmRequestEHDSSpecimen
+Source: PathLmRequest
+Target: "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSSpecimen.html"
+Id: ehds-specimen-v1.0.0
+Title: "EHDS Specimen v1.0.0"
+* Specimen -> "EHDSSpecimen" "EHDSSpecimen"
+  * SpecimenMaterial -> "EHDSSpecimen.type" "type"
+  * CollectionDate -> "EHDSSpecimen.collection.collectedDateTime" "collectedDateTime"
+  * ReceivedDate -> "EHDSSpecimen.receivedDate" "receivedDate"
+  * CollectionMethod -> "EHDSSpecimen.collection.method" "method"
 
 Mapping: PathLmReportMercuriusCore
 Source: PathLmReport
@@ -245,3 +280,20 @@ Title: "SNOMED CT"
 * ClinicalInformation -> "404684003" "klinische bevinding"
 * Macroscopy -> "168126000" "Sample macroscopy"
 * Microscopy -> "117259009" "microscopisch onderzoek"
+
+Mapping: PathLmReportEHDSImagingReport
+Source: PathLmReport
+Target: "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSImagingReport.html"
+Id: ehds-imagingreport-v1.0.0
+Title: "EHDS ImagingReport v1.0.0"
+* . -> "EHDSImagingReport" "EHDSImagingReport"
+* IdentificationNumber -> "EHDSImagingReport.header.identifier" "identifier"
+* Patient -> "EHDSImagingReport.header.subject" "subject"
+* EffectiveDateTime -> "EHDSImagingReport.header.date" "date"
+* CareType -> "EHDSImagingReport.header.serviceSpecialty" "serviceSpecialty"
+* Authorizer -> "EHDSImagingReport.header.authorEHDSHealthProfessional" "authorEHDSHealthProfessional (implicit, actual mapping is on authorEHDSHealthProfessional.name)"
+* ClinicalInformation -> "EHDSImagingReport.body.examinationReport.resultsEHDSObservation" "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
+* Macroscopy -> "EHDSImagingReport.body.examinationReport.resultsEHDSObservation" "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
+* Microscopy -> "EHDSImagingReport.body.examinationReport.resultsEHDSObservation" "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
+* Conclusion -> "EHDSImagingReport.body.examinationReport.conclusion.impression" "impression"
+* ProtocolData -> "EHDSImagingReport.body.examinationReport.resultsEHDSObservation" "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.value)"

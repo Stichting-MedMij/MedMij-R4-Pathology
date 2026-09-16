@@ -140,17 +140,35 @@
       {
         "id": "ServiceRequest.identifier",
         "path": "ServiceRequest.identifier",
-        "short": "IdentificationNumber",
-        "definition": "Globally unique number that identifies the instantiation of the CIM. The number is composed of an identification of the issuer organization and a unique number assigned by this organization.",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.identifier:requestIdentifier",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "requestIdentifier",
+        "short": "IdentificationNumber / RequestIdentifier",
+        "definition": "Identifier of the request for a pathology study.",
         "alias": [
-          "Identificatienummer"
+          "Identificatienummer",
+          "AanvraagIdentificatienummer"
         ],
         "min": 1,
-        "mapping": [
+        "max": "1",
+        "type": [
           {
-            "identity": "medmij-core-dataset-120-2026xxyy",
-            "map": "medmij-core-dataelement-115",
-            "comment": "IdentificationNumber"
+            "code": "Identifier",
+            "profile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-ReportIdentifier"
+            ]
           }
         ]
       },
