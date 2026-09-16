@@ -25,6 +25,10 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
