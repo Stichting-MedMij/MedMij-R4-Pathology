@@ -265,11 +265,11 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
-                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
+                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-GeslachtCodelijst"
               }
             ]
           },
-          "description": "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the Mercurius model to zib terminology in ValueSet AdministrativeGender."
+          "description": "Use ConceptMap MercuriusGender-to-GeslachtCodelijst to translate terminology from the Mercurius model to zib terminology in ValueSet GeslachtCodelijst."
         },
         "mapping": [
           {

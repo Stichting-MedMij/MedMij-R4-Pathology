@@ -43,8 +43,8 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * ^comment = "If the birth date retrieved from Mercurius (i.e. _geboortedatum_, mercurius-core-rubriek-11) has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD."
 * Gender 1..1
   * ^comment = "In Mercurius, codes from the MercuriusGender code system are used to convey the gender of the patient."
-  * ^binding.description = "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the Mercurius model to zib terminology in ValueSet AdministrativeGender."
-  * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
+  * ^binding.description = "Use ConceptMap MercuriusGender-to-GeslachtCodelijst to translate terminology from the Mercurius model to zib terminology in ValueSet GeslachtCodelijst."
+  * ^binding.valueSet.extension[http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap].valueCanonical = "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-GeslachtCodelijst"
 * MultipleBirthIndicator 0..0
 * DeathIndicator 0..0
 * DateOfDeath 0..0
