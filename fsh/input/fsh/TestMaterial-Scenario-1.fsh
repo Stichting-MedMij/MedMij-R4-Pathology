@@ -8,6 +8,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Olivander<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Resectie<br/>Klinische vraag: <div>Vraagstelling</div><div>Classificatie</div><div/></div>"
+* identifier
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60066"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"

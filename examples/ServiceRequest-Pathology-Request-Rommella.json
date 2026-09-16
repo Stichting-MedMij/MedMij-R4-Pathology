@@ -57,6 +57,12 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: L. Rommella<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Biopt (2 samples)<br/>Klinische vraag:<div>Vraagstelling</div><div>Afwijkingen?</div><div/></div>"
   },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1",
+      "value": "T26-60065"
+    }
+  ],
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",
     "display": "L. Rommella"

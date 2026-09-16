@@ -23,6 +23,7 @@
 
 | | |
 | --- | --- |
+| IdentificationNumber | T26-61237 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1') |
 | RequestType | spoed (code 'spoed' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Bevolkingsonderzoek (dikke)darmkanker (code '3' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | Z. Wachtel |
@@ -41,8 +42,8 @@
 | | |
 | --- | --- |
 | ReportIdentifier | T26-61237 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1') |
-| Authorizer | P.A. Tholoog |
 | AuthorizationDate | 14-06-2026 |
+| Authorizer | P.A. Tholoog |
 | ClinicalInformation | Klinische gegevens <br/> Zegelringcelcarcinoom bij BVO <br/> <br/> Aard materiaal <br/> Hemicolectomie |
 | Macroscopy | Macroscopie <br/> Colon resectie met lengte van 30 cm |
 | Microscopy | Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN  versie 2017 <br/> <br/> Klinische Gegevens en Macroscopie <br/> Type resectie: hemicolectomie rechts <br/> Niveau van resectie mesocolon: op de muscularis propria <br/> Perforatie: niet aanwezig <br/> Klinisch obstructie / ileus: nee <br/> Lokalisatie 1ste tumor: coecum <br/> Aspect 1ste tumor: schotelvormig <br/> Maximale diameter 1ste tumor: 0,6 cm <br/> Lokalisatie 2de tumor: ileum <br/> Aspect 2de tumor: poliepeus <br/> Maximale diameter 2de tumor: 0,7 cm <br/> Lengte preparaat: 30 cm <br/> Tumor aanwezig: ja, 2 tumoren <br/> Patient is bekend met: MUTYH geassocieerde polyposis (MAP) <br/> Metastase(n): lever (bevestigd) <br/> Eerdere (neo-adjuvante) therapie: chemotherapie en radiotherapie kort <br/> <br/> Microscopie 1ste tumor <br/> Respons op eerdere (neo-adjuvante) therapie: partiele regressie <br/> Type 1ste tumor (WHO): zegelringcelcarcinoom <br/> Zegelringcellen: &lt; 10% <br/> Diepste tumordoorgroei: submucosa <br/> Angio-invasie: lymfvat invasie en intramurale veneuze invasie <br/> Angio-invasie opmerking: geen extramurale veneuze invasie aangetroffen <br/> Tumor budding: intermediair (Bd2) <br/> Perineurale groei: aangetroffen <br/> Lymfocytaire infiltratie: ja <br/> Betreft dit een recidief: ja <br/> <br/> Snijvlakken 1ste tumor <br/> Dichtstbijzijnde darmsnijvlak: niet vrij <br/> Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij, &gt; 0,1 cm &lt; 0,2 cm <br/> <br/> Aanvullend onderzoek MMR/MSI 1ste tumor <br/> MLH1 verlies: nee <br/> PMS2 verlies: nee <br/> MSH2 verlies: ja <br/> MSH6 verlies: nee <br/> <br/> Microscopie 2de tumor <br/> Respons op eerdere (neo-adjuvante) therapie: geen regressie <br/> Type tumor 2de (WHO): neuroendocriene tumor graad 1 <br/> Ki-67 index NEN: 1% <br/> Mitosen per 2mm2: 1 <br/> Diepste tumordoorgroei NET (ileum/jejunum): invasie in muscularis propria <br/> Angio-invasie: niet aangetroffen <br/> Angio-invasie opmerking: geen lymfvat invasie, geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen <br/> Perineurale groei: niet aangetroffen <br/> <br/> Snijvlakken 2de tumor <br/> Proximaal darmsnijvlak: vrij op 0,2 cm <br/> Distaal darmsnijvlak: vrij op 0,2 cm <br/> Mesenteriaal snijvlak: niet vrij <br/> <br/> Lymfklieren <br/> Aantal lymfklieren: 23 <br/> Aantal lymfklieren met metastasen: 17 <br/> Aantal tumordeposits: 1 <br/> Diameter grootste metastase: &gt; 0,2 mm - &lt;= 2,0 mm <br/> Aantal lymfklieren met metastasen NET (bij tumor ileum/jejunum): 1 <br/> Diameter grootste metastase NET (bij tumor ileum/jejunum): &gt; 0,2 mm - &lt;= 2,0 mm <br/> Mesenteriale massa aanwezig: ja <br/> Diameter mesenteriale massa: 2,1 cm <br/> Histologisch respons op (neo-adjuvante) therapie  in de lymfklieren: ja <br/> <br/> Overige <br/> Poliep(en): sessiel serrated laesie zonder dysplasie <br/> Aantal poliepen: 2 <br/> <br/> Moleculaire bepaling <br/> Mutatie analyse: niet uitgevoerd <br/> <br/> Immunohistochemie <br/> 2e tumor <br/> Percentage positieve tumorcellen INSM1: 60% |
@@ -127,6 +128,7 @@
 
 | | |
 | --- | --- |
+| IdentificationNumber | T24-01916 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | RequestType | |
 | HealthScreeningType | |
 | Requester.RequesterName | Katara Yi |
@@ -145,8 +147,8 @@
 | | |
 | --- | --- |
 | ReportIdentifier | T24-01916 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
-| Authorizer | Albus Beudeker |
 | AuthorizationDate | 09-04-2024 |
+| Authorizer | Albus Beudeker |
 | ClinicalInformation | Aard materiaal <br/> appendix resectie <br/> <br/> Klinische gegevens <br/> Niet verder gespecificeerd |
 | Macroscopy | Macroscopie <br/> Appendix resectie van gebruikelijke lengte |
 | Microscopy | Gebaseerd op de richtlijnen Colorectaalcarcinoom versie 10-2019 en Neuro-endocriene tumoren versie 1.0 (2013) <br/> <br/> Microscopie <br/> Type afwijking: (invasieve) tumor <br/> Type tumor (WHO): adenocarcinoom <br/> Differentiatiegraad: goed / matig <br/> Max diameter tumor: 1,2 cm <br/> Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa <br/> Angio-invasie: niet aangetroffen <br/> Perineurale groei: niet aangetroffen <br/> Dichtstbijzijnde snijvlak: niet vrij <br/> Aanwezigheid van transmurale ontsteking/inflammatie: nee <br/> Aanwezigheid van necrose van de appendixwand: nee <br/> Perforatie: nee <br/> <br/> Aanvullend onderzoek lynch syndroom <br/> Bepaling mismatch repair eiwitten (MMR): niet verricht <br/> MSI analyse: niet verricht <br/> <br/> Aanvulling microscopie <br/> Nader bekeken |

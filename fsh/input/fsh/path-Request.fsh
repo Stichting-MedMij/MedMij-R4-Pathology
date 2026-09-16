@@ -29,7 +29,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
       pathology 1..1
   * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
-* identifier
+* identifier 1..*
   * ^short = "IdentificationNumber"
   * ^definition = "Globally unique number that identifies the instantiation of the CIM. The number is composed of an identification of the issuer organization and a unique number assigned by this organization."
   * ^alias = "Identificatienummer"

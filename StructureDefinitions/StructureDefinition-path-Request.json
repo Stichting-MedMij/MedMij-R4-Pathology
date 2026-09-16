@@ -136,6 +136,7 @@
         "alias": [
           "Identificatienummer"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "medmij-core-dataset-120-2026xxyy",

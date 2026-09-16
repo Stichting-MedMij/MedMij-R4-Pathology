@@ -8,6 +8,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: spoed<br/>Bevolkingsonderzoek: darmkanker<br/>Patiënt: G. Smalhart<br/>Aanvrager: Z. Wachtel, St. Holisto's Hospitaal<br/>Monster: Colon Resectie<br/>Klinische vraag: <div>Vraagstelling</div><div>Classificatie</div><div/></div>"
+* identifier
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
+  * value = "T26-61237"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -1152,6 +1155,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Smalhart<br/>Aanvrager: Katara Yi, MUMC<br/>Monster: Appendix Resectie<br/>Klinische vraag: Zijn er afwijkingen te constateren bij afgenomen weefsel?</div>"
+* identifier
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
+  * value = "T26-61237"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
