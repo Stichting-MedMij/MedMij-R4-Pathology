@@ -8,23 +8,26 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This ServiceRequest resource represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This ServiceRequest resource represents the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * . obeys path-Request-1
   * ^short = "Request"
   * ^definition = "Request for a pathology study to be performed by a certain laboratory."
   * ^alias = "Aanvraag"
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * identifier
   * ^short = "IdentificationNumber"
@@ -100,24 +103,27 @@ Description: "Specimen that will be examined by a laboratory."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Specimen resource represents the specimen-related concepts from the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * .
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
   * ^comment = "This resource is used to convey either the primary specimen or an individual sample taken from that specimen. In the latter case, the `.parent` refers to the Specimen resource corresponding to the primary specimen."
   * ^alias = "Monster"
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * type 1..1
   * ^short = "SpecimenMaterial"
@@ -162,23 +168,26 @@ Description: "Requester of the pathology study."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This PractitionerRole resource represents the requester-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This PractitionerRole resource represents the requester-related concepts from the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * .
   * ^short = "Requester"
   * ^definition = "Requester of the pathology study."
   * ^alias = "Aanvrager"
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * practitioner 1..1
 * practitioner only Reference(Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)

@@ -8,7 +8,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Patient resource represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Patient resource represents the Patient Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * .
   * ^short = "Patient"
@@ -38,11 +38,11 @@ Description: "The person whose human tissue is analyzed in a pathology study."
         * ^patternCode = #IN
 * gender 1..1
 * birthDate 1..1
-  * ^comment = "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a valid FHIR date of the form YYYY-MM-DD."
+  * ^comment = "If the birth date retrieved from Mercurius (i.e. _geboortedatum_, mercurius-core-rubriek-11) has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD."
 * address 0..1
   * postalCode
     * ^comment = """
-    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.
+    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.
     
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.
 

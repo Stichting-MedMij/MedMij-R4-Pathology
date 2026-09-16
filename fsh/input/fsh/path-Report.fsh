@@ -8,23 +8,26 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This DiagnosticReport resource represents the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * . obeys path-Report-1
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * identifier 1..*
   * ^slicing.discriminator.type = #profile
@@ -117,19 +120,22 @@ Description: "Clinical information section of the report."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents the ClinicalInformation concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents the ClinicalInformation Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
@@ -162,19 +168,22 @@ Description: "Macroscopy-related results."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents the Macroscopy concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents the Macroscopy Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
@@ -207,19 +216,22 @@ Description: "Microscopy-related results."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents the Microscopy concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents the Microscopy Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
@@ -252,19 +264,22 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents a single item within the ProtocolData concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents a single item within the ProtocolData concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
-* meta
+* meta 1..1
   * tag
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
-  * tag contains 
-      careType 1..1
-  * tag[careType]
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
     * ^patternCoding = $VektisAGB#0388
 * status
   * ^patternCode = #final
@@ -298,7 +313,7 @@ Description: "Identifier of the pathology report assigned by the laboratory doin
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * . obeys path-Report.ReportIdentifier-1
   * ^short = "ReportIdentifier"

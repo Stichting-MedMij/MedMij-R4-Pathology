@@ -36,7 +36,7 @@
     }
   ],
   "description": "The person whose human tissue is analyzed in a pathology study.",
-  "purpose": "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This LogicalModel represents the Patient Clinical Information Model (CIM) for patient use cases in the context of Pathology. It is based on the Patient CIM defined within MedMij Core.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -180,7 +180,7 @@
       {
         "id": "path-lm-Patient.AddressInformation.Postcode",
         "path": "path-lm-Patient.AddressInformation.Postcode",
-        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.",
+        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.",
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -238,7 +238,7 @@
       {
         "id": "path-lm-Patient.DateOfBirth",
         "path": "path-lm-Patient.DateOfBirth",
-        "comment": "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD.",
+        "comment": "If the birth date retrieved from Mercurius (i.e. _geboortedatum_, mercurius-core-rubriek-11) has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD.",
         "min": 1,
         "mapping": [
           {

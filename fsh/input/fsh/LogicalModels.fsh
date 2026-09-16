@@ -11,7 +11,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
 * ^identifier.value = $PathLmPatientOID
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This LogicalModel represents the Patient Clinical Information Model (CIM) for patient use cases in the context of Pathology. It is based on the Patient CIM defined within MedMij Core."
 * insert Copyright
 * ^abstract = false
 * NameInformation 1..1
@@ -29,7 +29,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * HouseNumberIndication 0..0
   * Postcode
     * ^comment = """
-    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.
+    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.
     
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.
     """
@@ -40,7 +40,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
 * ContactInformation 0..0
 * PatientIdentificationNumber 0..0
 * DateOfBirth 1..1
-  * ^comment = "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD."
+  * ^comment = "If the birth date retrieved from Mercurius (i.e. _geboortedatum_, mercurius-core-rubriek-11) has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD."
 * Gender 1..1
   * ^comment = "In Mercurius, codes from the MercuriusGender code system are used to convey the gender of the patient."
   * ^binding.description = "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the Mercurius model to zib terminology in ValueSet AdministrativeGender."
@@ -65,7 +65,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * ^identifier.value = $PathLmRequestOID
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This LogicalModel represents the Request building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This LogicalModel represents the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * ^abstract = false
 * .
@@ -73,8 +73,8 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * Patient only Reference(PathLmPatient)
 * HealthcareProvider 0..0
 * Effective[x] 0..0
-* CareType 1..1 
-  * ^patternCodeableConcept = $VektisAGB#0388
+* CareType 1..*
+  * ^comment = "At least code _0388_ ('Medisch specialisten, pathologische anatomie') SHALL be conveyed as care type."
 * RequestType 1..1 CodeableConcept "Request type" "This typing of the examination provides additional context for the request."
 * RequestType from MercuriusRequestType_VS (required)
   * ^alias = "SoortAanvraag"
@@ -124,7 +124,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * ^identifier.value = $PathLmReportOID
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This LogicalModel represents the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * ^abstract = false
 * .
@@ -143,8 +143,8 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^alias = "DatumAutorisatie"
   * ^comment = "This concept is often referred to as AuthorizationDate.\n\nEven though this element has data type dateTime, in practice only dates (without time) will be conveyed."
 * EffectivePeriod 0..0
-* CareType 1..1 
-  * ^patternCodeableConcept = $VektisAGB#0388
+* CareType 1..*
+  * ^comment = "At least code _0388_ ('Medisch specialisten, pathologische anatomie') SHALL be conveyed as care type."
 * Authorizer 1..1 string "Authorizer" "Name of the pathologist who has authorized the report."
   * ^alias = "Autorisator"
 * ClinicalInformation 0..1 string "Clinical information" "Clinical information section of the report."

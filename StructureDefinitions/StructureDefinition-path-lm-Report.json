@@ -30,7 +30,7 @@
     }
   ],
   "description": "Pathology report which contains the findings and interpretation of a pathology study.",
-  "purpose": "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This LogicalModel represents the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -149,16 +149,8 @@
       {
         "id": "path-lm-Report.CareType",
         "path": "path-lm-Report.CareType",
-        "min": 1,
-        "max": "1",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "0388",
-              "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
-            }
-          ]
-        }
+        "comment": "At least code _0388_ ('Medisch specialisten, pathologische anatomie') SHALL be conveyed as care type.",
+        "min": 1
       },
       {
         "id": "path-lm-Report.Authorizer",

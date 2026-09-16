@@ -20,7 +20,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Maps health screening type codes as found in the Request building block for patient use cases in the context of the information standard Pathology (Pathologie) to the HealthScreeningType ValueSet as used in the FHIR profile corresponding to the Request building block. The latter ValueSet contains SNOMED CT codes for the different concepts, where possible." />
+  <description value="Maps health screening type codes used in Mercurius and the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology to the HealthScreeningType ValueSet as used in the FHIR profile corresponding to the Request CIM. The latter ValueSet contains SNOMED CT codes for the different concepts, where possible." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <sourceCanonical value="http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType" />
   <targetCanonical value="http://medmij.nl/fhir/ValueSet/HealthScreeningType" />

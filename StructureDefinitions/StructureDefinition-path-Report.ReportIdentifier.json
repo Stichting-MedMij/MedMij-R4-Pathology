@@ -23,7 +23,7 @@
     }
   ],
   "description": "Identifier of the pathology report assigned by the laboratory doing the analysis.",
-  "purpose": "This Identifier data type represents the ReportIdentifier concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This Identifier data type represents the ReportIdentifier concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [

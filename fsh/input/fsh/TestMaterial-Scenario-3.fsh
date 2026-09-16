@@ -4,7 +4,7 @@ Instance: Pathology-Request-1-Smalhart
 InstanceOf: PathRequest
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: spoed<br/>Bevolkingsonderzoek: darmkanker<br/>Patiënt: G. Smalhart<br/>Aanvrager: Z. Wachtel, St. Holisto's Hospitaal<br/>Monster: Colon Resectie<br/>Klinische vraag: <div>Vraagstelling</div><div>Classificatie</div><div/></div>"
@@ -25,7 +25,7 @@ Instance: Pathology-Specimen-1-Smalhart
 InstanceOf: PathRequestSpecimen
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Resectie<br/>Patiënt: G. Smalhart<br/>Afnamedatum: 11-06-2026<br/>Ontvangstdatum: 13-06-2026<br/>Verkrijgingswijze: resectie</div>"
@@ -43,7 +43,7 @@ Instance: Pathology-Report-1-Smalhart
 InstanceOf: PathReport
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T26-61237<br/>Patiënt: G. Smalhart<br/>Autorisatiedatum: 14-06-2026<br/>Patholoog: P.A. Tholoog, St. Holisto's Hospitaal<br/>Monster: Colon Resectie<br/>Conclusie: <div>Hemicolectomie rechts, 2 tumoren.</div><div>type 1ste tumor (WHO): zegelringcelcarcinoom; maximale diameter tumor 0,6 cm; lokalisatie: coecum; diepste tumor doorgroei:  submucosa; eerdere neo-adjuvante therapie: chemotherapie en radiotherapie kort, respons op eerdere neo-adjuvante therapie: partiele regressie (pT1).</div><div>Dichtstbijzijnde darmsnijvlak  niet vrij; retroperitoneaal klievingsvlak&#x2F;radiaire snijvlak  vrij (afstand &gt; 0,1 cm &lt; 0,2 cm).</div><div>Angio-invasie: lymfvat invasie en intramurale veneuze invasie.</div><div>Perineurale invasie: aangetroffen.</div><div/><div>type 2de tumor (WHO): neuroendocriene tumor graad 1; maximale diameter tumor 0,7 cm; lokalisatie: ileum; diepste tumordoorgroei (NET) (ileum&#x2F;jejunum):  invasie in muscularis propria; eerdere neo-adjuvante therapie: chemotherapie en radiotherapie kort, respons op eerdere neo-adjuvante therapie: geen regressie (pT2).</div><div>Proximaal darmsnijvlak  vrij (afstand 0,2 cm); distaal darmsnijvlak  vrij (afstand 0,2 cm); Mesenteriaal snijvlak:  niet vrij.</div><div>Angio-invasie: geen lymfvat invasie of extramurale veneuze invasie aangetroffen.</div><div>Perineurale invasie: niet aangetroffen.</div><div/><div>Aantal lymfklieren: 23 waarvan met metastasen: 18. Aantal tumordeposits: 1.</div><div/><div>Histologisch bevestigde metastase(n) in lever.</div><div/><div>TNM classificatie Colon en Rectum (9e editie UICC): rypT1N2b(mi)M1a.</div><div/><div>TNM classificatie Dunne darm GD-NET (9e editie UICC): ypT2N2(mi)M1a.</div><div>Patient is bekend met: MUTYH geassocieerde polyposis (MAP).</div><div/><div>MMR-status: MMR-deficiënt (dMMR), zie specificatie in het protocollair verslag. Advies m.b.t. erfelijkheid: de leeftijd en MMR-deficiëntie is een reden voor nader onderzoek naar aanleg voor Lynch syndroom en daarmee verwijzing naar een klinisch geneticus te overwegen.</div></div>"
@@ -138,7 +138,7 @@ Instance: Pathology-Observation-Smalhart-ClinicalInformation-1
 InstanceOf: PathReportClinicalInformation
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Zegelringcelcarcinoom bij BVO</div><div>Aard materiaal</div><div>Hemicolectomie</div><div/></div>"
@@ -151,7 +151,7 @@ Instance: Pathology-Observation-Smalhart-Macroscopy-1
 InstanceOf: PathReportMacroscopy
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>Colon resectie met lengte van 30 cm</div><div/></div>"
@@ -164,7 +164,7 @@ Instance: Pathology-Observation-Smalhart-Microscopy-1
 InstanceOf: PathReportMicroscopy
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN  versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie rechts</div><div>Niveau van resectie mesocolon: op de muscularis propria</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie 1ste tumor: coecum</div><div>Aspect 1ste tumor: schotelvormig</div><div>Maximale diameter 1ste tumor: 0,6 cm</div><div>Lokalisatie 2de tumor: ileum</div><div>Aspect 2de tumor: poliepeus</div><div>Maximale diameter 2de tumor: 0,7 cm</div><div>Lengte preparaat: 30 cm</div><div>Tumor aanwezig: ja, 2 tumoren</div><div>Patient is bekend met: MUTYH geassocieerde polyposis (MAP)</div><div>Metastase(n): lever (bevestigd)</div><div>Eerdere (neo-adjuvante) therapie: chemotherapie en radiotherapie kort</div><div/><div>Microscopie 1ste tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: partiele regressie</div><div>Type 1ste tumor (WHO): zegelringcelcarcinoom</div><div>Zegelringcellen: &lt; 10%</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie en intramurale veneuze invasie</div><div>Angio-invasie opmerking: geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: intermediair (Bd2)</div><div>Perineurale groei: aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div>Betreft dit een recidief: ja</div><div/><div>Snijvlakken 1ste tumor</div><div>Dichtstbijzijnde darmsnijvlak: niet vrij</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij, &gt; 0,1 cm &lt; 0,2 cm</div><div/><div>Aanvullend onderzoek MMR/MSI 1ste tumor</div><div>MLH1 verlies: nee</div><div>PMS2 verlies: nee</div><div>MSH2 verlies: ja</div><div>MSH6 verlies: nee</div><div/><div>Microscopie 2de tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: geen regressie</div><div>Type tumor 2de (WHO): neuroendocriene tumor graad 1</div><div>Ki-67 index NEN: 1%</div><div>Mitosen per 2mm2: 1</div><div>Diepste tumordoorgroei NET (ileum/jejunum): invasie in muscularis propria</div><div>Angio-invasie: niet aangetroffen</div><div>Angio-invasie opmerking: geen lymfvat invasie, geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div/><div>Snijvlakken 2de tumor</div><div>Proximaal darmsnijvlak: vrij op 0,2 cm</div><div>Distaal darmsnijvlak: vrij op 0,2 cm</div><div>Mesenteriaal snijvlak: niet vrij</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 23</div><div>Aantal lymfklieren met metastasen: 17</div><div>Aantal tumordeposits: 1</div><div>Diameter grootste metastase: &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Aantal lymfklieren met metastasen NET (bij tumor ileum/jejunum): 1</div><div>Diameter grootste metastase NET (bij tumor ileum/jejunum): &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Mesenteriale massa aanwezig: ja</div><div>Diameter mesenteriale massa: 2,1 cm</div><div>Histologisch respons op (neo-adjuvante) therapie  in de lymfklieren: ja</div><div/><div>Overige</div><div>Poliep(en): sessiel serrated laesie zonder dysplasie</div><div>Aantal poliepen: 2</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerd</div><div/><div>Immunohistochemie</div><div>2e tumor</div><div>Percentage positieve tumorcellen INSM1: 60%</div><div/></div>"
@@ -177,7 +177,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Specimen collection procedure<br/>Waarde: hemicolectomie rechts<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -191,7 +191,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: obstructie-ileus van dunne darm gelijktijdig met en door impactie<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -205,7 +205,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: locatie van metastase op afstand<br/>Waarde: lever<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -219,7 +219,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of distant metastasis<br/>Waarde: Confirmed by<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -233,7 +233,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: zegelringcelcarcinoom<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -247,7 +247,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-6
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry<br/>Waarde: 1 %<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -262,7 +262,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-7
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Tumor size, largest metastasis, additional dimension<br/>Waarde: 0.2 mm - 2.0 mm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -280,7 +280,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-8
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -294,7 +294,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-9
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: DNA mismatch repair protein Mlh1<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -308,7 +308,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-10
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: afwijkende schotelvorm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -322,7 +322,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-11
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van invasie van tumor in bloedvat<br/>Waarde: ingroei van tumor in lymfevat<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -336,7 +336,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-12
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of intramural large vessel vascular invasion by primary malignant neoplasm of colon<br/>Waarde: intramurale veneuze tumorinvasie aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -350,7 +350,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-13
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -364,7 +364,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-14
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: DNA mismatch repair protein Msh6<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -378,7 +378,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-15
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: bepalen van marker proteïne Ki-67 voor snelle celproliferatie<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -392,7 +392,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-16
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: neuro-endocrien neoplasma<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -406,7 +406,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-17
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -420,7 +420,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-18
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: DNA mismatch repair protein PMS2<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -434,7 +434,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-19
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -448,7 +448,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-20
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: DNA mismatch repair protein Msh2<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -462,7 +462,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-21
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of neoplasm in mesentery<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -476,7 +476,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-22
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Length of specimen<br/>Waarde: 30 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -491,7 +491,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-23
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of polyp of colorectum<br/>Waarde: sessiel gekarteld adenoom<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -505,7 +505,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-24
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal slijmvliesbiopten<br/>Waarde: 2<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -519,7 +519,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-25
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: plaats van primaire tumor<br/>Waarde: ileum<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -533,7 +533,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-26
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: grootste lengte van tumor in preparaat verkregen door resectie<br/>Waarde: 0.6 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -548,7 +548,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-27
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: vaststellen DNA mismatch repair eiwit in kwaadaardige tumor met immunohistochemie<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -562,7 +562,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-28
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van invasie van tumor in bloedvat<br/>Waarde: niet gezien<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -576,7 +576,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-29
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: immunohistochemische verrichting<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -590,7 +590,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-30
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -604,7 +604,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-31
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Mitotic index<br/>Waarde: uitgevoerd<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -618,7 +618,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-32
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van intactheid van preparaat verkregen door resectie van mesocolon<br/>Waarde: onvolledig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -632,7 +632,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-33
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: tumor in anamnese<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -646,7 +646,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-34
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: histologische graad van neuro-endocrien neoplasma<br/>Waarde: Grade 1<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -660,7 +660,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-35
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: zegelringcelcarcinoom<br/>Waarde: &lt;10 %<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -676,7 +676,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-36
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Tumor bud score in primary malignant neoplasm of colorectum<br/>Waarde: tussenliggend<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -690,7 +690,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-37
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of macroscopic perforation of colorectum by primary malignant neoplasm of colorectum<br/>Waarde: niet gezien<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -704,7 +704,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-38
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: afstand van tumor tot proximaal snijvlak in biopt<br/>Waarde: 0.2 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -719,7 +719,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-39
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of surgical radial margin involvement by tumor<br/>Waarde: niet gezien<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -733,7 +733,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-40
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Margin closest to tumor<br/>Waarde: proximaal<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -747,7 +747,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-41
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: terugkerende tumor<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -761,7 +761,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-42
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van ingroei van tumor rondom zenuw<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -775,7 +775,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-43
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aanwezigheid van neoplasma op het mesenteriale snijvlak in in preparaat van weefsel verkregen door excisie<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -789,7 +789,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-44
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: grootste lengte van tumor in preparaat verkregen door resectie<br/>Waarde: 0.7 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -804,7 +804,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-45
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of proximal surgical margin tumor involvement<br/>Waarde: niet gezien<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -818,7 +818,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-46
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of distal surgical margin tumor involvement<br/>Waarde: niet gezien<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -832,7 +832,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-47
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: moleculaire diagnostiek<br/>Waarde: niet verricht<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -846,7 +846,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-48
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Anatomic location directly invaded by primary malignant neoplasm<br/>Waarde: submucosa<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -860,7 +860,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-49
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Neoadjuvant antineoplastic therapy procedure prior to surgery<br/>Waarde: chemotherapie met gerichte medicatie tegen maligne tumor<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -874,7 +874,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-50
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Neoadjuvant antineoplastic therapy procedure prior to surgery<br/>Waarde: kortdurende radiotherapie<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -888,7 +888,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-51
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: plaats van primaire tumor<br/>Waarde: blindedarm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -902,7 +902,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-52
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van ingroei van tumor rondom zenuw<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -916,7 +916,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-53
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Status of tumor infiltration by lymphocytes<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -930,7 +930,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-54
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: diagnose<br/>Waarde: MYH-polyposis<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -944,7 +944,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-55
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Primary tumor site extension<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -958,7 +958,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-56
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal tumoren<br/>Waarde: 2<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -972,7 +972,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-57
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 23<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -986,7 +986,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-58
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Margin closest to tumor<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1000,7 +1000,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-59
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor<br/>Waarde: muscularis propria<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1014,7 +1014,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-60
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: gesteelde poliep<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1028,7 +1028,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-61
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Identification code<br/>Waarde: 1e tumor<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1042,7 +1042,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-62
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: afstand van tumor tot distaal snijvlak in biopt<br/>Waarde: 0.2 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1057,7 +1057,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-63
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt<br/>Waarde: 0.1 cm - 0.2 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1075,7 +1075,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-64
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1089,7 +1089,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-65
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: geen respons van neoplasma op antineoplastische neoadjuvante therapie<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1103,7 +1103,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-66
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: diameter van massa<br/>Waarde: 2.1 cm<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1118,7 +1118,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-67
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Mitotic count score per 10 high power fields, 40x objective<br/>Waarde: 1 per 2mm2<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1133,7 +1133,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-68
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie<br/>Waarde: 60 %<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
@@ -1148,7 +1148,7 @@ Instance: Pathology-Request-2-Smalhart
 InstanceOf: PathRequest
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Smalhart<br/>Aanvrager: Katara Yi, MUMC<br/>Monster: Appendix Resectie<br/>Klinische vraag: Zijn er afwijkingen te constateren bij afgenomen weefsel?</div>"
@@ -1169,7 +1169,7 @@ Instance: Pathology-Specimen-2-Smalhart
 InstanceOf: PathRequestSpecimen
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Appendix Resectie<br/>Patiënt: G. Smalhart<br/>Ontvangstdatum: 01-11-2023<br/>Verkrijgingswijze: resectie</div>"
@@ -1187,7 +1187,7 @@ Instance: Pathology-Report-2-Smalhart
 InstanceOf: PathReport
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T24-61237<br/>Patiënt: G. Smalhart<br/>Autorisatiedatum: 09-04-2024<br/>Patholoog: Albus Beuker, MUMC<br/>Monster: Appendix Resectie<br/>Conclusie: <div>Appendectomie: goed / matig gedifferentieerd adenocarcinoom.</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa; dichtstbijzijnde snijvlak niet vrij.</div><div>Angio-invasie: niet aangetroffen; Perineurale groei: niet aangetroffen.</div><div>TNM classificatie Appendix (8e editie UICC): pTis.</div><div><br/> DIT IS EEN GEWIJZIGDE CONCLUSIE (09-04-2024).</div><div>II.</div><div>Graad 3.</div><div><br/> Conclusie 1916</div></div>"
@@ -1226,7 +1226,7 @@ Instance: Pathology-Observation-Smalhart-ClinicalInformation-2
 InstanceOf: PathReportClinicalInformation
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Aard materiaal</div><div>appendix resectie</div><div>Klinische gegevens</div><div>Niet verder gespecificeerd</div><div/></div>"
@@ -1239,7 +1239,7 @@ Instance: Pathology-Observation-Smalhart-Macroscopy-2
 InstanceOf: PathReportMacroscopy
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>Appendix resectie van gebruikelijke lengte</div><div/></div>"
@@ -1252,7 +1252,7 @@ Instance: Pathology-Observation-Smalhart-Microscopy-2
 InstanceOf: PathReportMicroscopy
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div> Gebaseerd op de richtlijnen Colorectaalcarcinoom versie 10-2019 en Neuro-endocriene tumoren versie 1.0 (2013)</div><div/><div>Microscopie</div><div>Type afwijking: (invasieve) tumor</div><div>Type tumor (WHO): adenocarcinoom</div><div>Differentiatiegraad: goed / matig</div><div>Max diameter tumor: 1,2 cm</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa</div><div>Angio-invasie: niet aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div>Dichtstbijzijnde snijvlak: niet vrij</div><div>Aanwezigheid van transmurale ontsteking/inflammatie: nee</div><div>Aanwezigheid van necrose van de appendixwand: nee</div><div>Perforatie: nee</div><div/><div>Aanvullend onderzoek lynch syndroom</div><div>Bepaling mismatch repair eiwitten (MMR): niet verricht</div><div>MSI analyse: niet verricht</div><div/><div>Aanvulling microscopie</div><div>Nader bekeken</div><div/></div>"
@@ -1265,7 +1265,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: adenocarcinoom<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1279,7 +1279,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Greatest length dimension of excised primary malignant neoplasm<br/>Waarde: 1.2 cm<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1294,7 +1294,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Perforation of appendix<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1308,7 +1308,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: inflammatoire morfologie<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1322,7 +1322,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: afsterving<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1336,7 +1336,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-6
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van invasie van tumor in bloedvat<br/>Waarde: niet gezien<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1350,7 +1350,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-7
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Margin closest to tumor<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1364,7 +1364,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-8
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Anatomic location directly invaded by primary malignant neoplasm<br/>Waarde: muscularis propria<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1378,7 +1378,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-9
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Anatomic location directly invaded by primary malignant neoplasm<br/>Waarde: slijmvlies<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1392,7 +1392,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-10
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: status van ingroei van tumor rondom zenuw<br/>Waarde: niet aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1406,7 +1406,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-11
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1420,7 +1420,7 @@ Instance: Pathology-Observation-Smalhart-ProtocolDataItem-2-12
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: histologisch kenmerk van tumor<br/>Waarde: tumor<br/>Patiënt: G. Smalhart<br/>Monster: Appendix Resectie</div>"
@@ -1467,7 +1467,7 @@ InstanceOf: PathRequestRequester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: Z. Wachtel<br/>Organisatie: St. Holisto's Hospitaal<br/>Specialisme: Interne geneeskunde<br/>Locatie: St. Holisto's Hospitaal, Polikliniek Interne geneeskunde</div>"
@@ -1493,7 +1493,7 @@ InstanceOf: PathRequestRequester
 Usage: #example
 * meta
   * profile[1] = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
-  * tag[careType] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: Katara Yi<br/>Organisatie: MUMC<br/>Specialisme: Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)</div>"

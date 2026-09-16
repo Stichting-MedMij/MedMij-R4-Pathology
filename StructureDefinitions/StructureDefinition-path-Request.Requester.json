@@ -23,7 +23,7 @@
     }
   ],
   "description": "Requester of the pathology study.",
-  "purpose": "This PractitionerRole resource represents the requester-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This PractitionerRole resource represents the requester-related concepts from the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -65,6 +65,11 @@
         ]
       },
       {
+        "id": "PractitionerRole.meta",
+        "path": "PractitionerRole.meta",
+        "min": 1
+      },
+      {
         "id": "PractitionerRole.meta.tag",
         "path": "PractitionerRole.meta.tag",
         "slicing": {
@@ -88,10 +93,10 @@
           "Zorgtype"
         ],
         "min": 1,
-        "max": "1",
-        "patternCoding": {
-          "code": "0388",
-          "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+        "max": "*",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000"
         },
         "mapping": [
           {
@@ -100,6 +105,17 @@
             "comment": "CareType"
           }
         ]
+      },
+      {
+        "id": "PractitionerRole.meta.tag:careType/pathology",
+        "path": "PractitionerRole.meta.tag",
+        "sliceName": "careType/pathology",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "0388",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+        }
       },
       {
         "id": "PractitionerRole.practitioner",
