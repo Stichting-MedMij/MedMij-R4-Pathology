@@ -1,9 +1,9 @@
 ---
-topic: CodeSystemMercuriusGender
-canonical: http://medmij.nl/fhir/CodeSystem/MercuriusGender
+topic: ValueSetMercuriusSpecialty
+canonical: http://medmij.nl/fhir/ValueSet/MercuriusSpecialty
 ---
 
-# Mercurius Gender (CodeSystem)
+# Mercurius Specialty (ValueSet)
 
 {{page:fql-get-resource-description}}
 

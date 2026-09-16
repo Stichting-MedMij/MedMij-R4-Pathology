@@ -1,9 +1,9 @@
 ---
-topic: CodeSystemMercuriusHealthScreeningType
-canonical: http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType
+topic: ValueSetMercuriusHealthScreeningType
+canonical: http://medmij.nl/fhir/ValueSet/MercuriusHealthScreeningType
 ---
 
-# Mercurius Health Screening Type (CodeSystem)
+# Mercurius Health Screening Type (ValueSet)
 
 {{page:fql-get-resource-description}}
 

@@ -1,9 +1,9 @@
 ---
-topic: CodeSystemMercuriusRequestType
-canonical: http://medmij.nl/fhir/CodeSystem/MercuriusRequestType
+topic: ValueSetMercuriusRequestType
+canonical: http://medmij.nl/fhir/ValueSet/MercuriusRequestType
 ---
 
-# Mercurius Request Type (CodeSystem)
+# Mercurius Request Type (ValueSet)
 
 {{page:fql-get-resource-description}}
 

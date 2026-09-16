@@ -1,9 +1,9 @@
 ---
-topic: CodeSystemMercuriusGender
-canonical: http://medmij.nl/fhir/CodeSystem/MercuriusGender
+topic: CodeSystemMercuriusSpecialty
+canonical: http://medmij.nl/fhir/CodeSystem/MercuriusSpecialty
 ---
 
-# Mercurius Gender (CodeSystem)
+# Mercurius Specialty (CodeSystem)
 
 {{page:fql-get-resource-description}}
 
