@@ -633,26 +633,32 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: G. Olivander<br/>Geslacht: man<br/>Geboortedatum: 25-09-1921<br/>Geboorteplaats: Londen, Groot-Brittanië<br/>Adres: Diagonaalstraat 687, 5972 XX, Londen</div>"
-* extension[http://hl7.org/fhir/StructureDefinition/patient-birthPlace]
+* extension[birthPlace]
   * valueAddress
     * city = "Londen"
     * country = "Groot-Brittanië"
 * identifier
   * system = $BSN
-  * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
+  * value
+    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason]
+      * valueCode = #masked
 * name[nameInformation]
   * use = #official
   * text = "G. Olivander"
   * family = "Olivander"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Olivander"
+    * extension[lastName]
+      * valueString = "Olivander"
   * given = "G."
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
+    * extension[givenOrInitial]
+      * valueCode = #IN
 * gender = #male
 * birthDate = "1921-09-25"
 * address
   * line = "Diagonaalstraat 687"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Diagonaalstraat"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "687"
+    * extension[streetName]
+      * valueString = "Diagonaalstraat"
+    * extension[houseNumber]
+      * valueString = "687"
   * city = "Londen"
   * postalCode = "5972 XX"
 

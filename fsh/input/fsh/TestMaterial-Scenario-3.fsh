@@ -1445,26 +1445,32 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: G. Smalhart<br/>Geslacht: man<br/>Geboortedatum: 26-01-1964<br/>Geboorteplaats: Dublin, Ierland<br/>Adres: Kwijtweg 123, 1122 XY, Londen</div>"
-* extension[http://hl7.org/fhir/StructureDefinition/patient-birthPlace]
+* extension[birthPlace]
   * valueAddress
     * city = "Dublin"
     * country = "Ierland"
 * identifier
   * system = $BSN
-  * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
+  * value
+    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason]
+      * valueCode = #masked
 * name[nameInformation]
   * use = #official
   * text = "G. Smalhart"
   * family = "Smalhart"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Smalhart"
+    * extension[lastName]
+      * valueString = "Smalhart"
   * given = "G."
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
+    * extension[givenOrInitial]
+      * valueCode = #IN
 * gender = #male
 * birthDate = "1964-01-26"
 * address
   * line = "Kwijtweg 123"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Kwijtweg"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "123"
+    * extension[streetName]
+      * valueString = "Kwijtweg"
+    * extension[houseNumber]
+      * valueString = "123"
   * city = "Londen"
   * postalCode = "1122 XY"
 

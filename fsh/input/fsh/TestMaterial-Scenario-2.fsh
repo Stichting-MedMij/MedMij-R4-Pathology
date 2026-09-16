@@ -341,13 +341,17 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: L. Rommella<br/>Geslacht: vrouw<br/>Geboortedatum: 05-04-1956<br/></div>"
 * identifier
   * system = $BSN
-  * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
+  * value
+    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason]
+      * valueCode = #masked
 * name[nameInformation]
   * use = #official
   * text = "L. Rommella"
   * family = "Rommella"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Rommella"
+    * extension[lastName]
+      * valueString = "Rommella"
   * given = "L."
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
+    * extension[givenOrInitial]
+      * valueCode = #IN
 * gender = #female
 * birthDate = "1956-04-05"
