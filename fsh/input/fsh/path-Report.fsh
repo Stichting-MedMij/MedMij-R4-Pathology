@@ -25,7 +25,7 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
-    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -139,7 +139,7 @@ Description: "Clinical information section of the report."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
-    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -193,7 +193,7 @@ Description: "Macroscopy-related results."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
-    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -247,7 +247,7 @@ Description: "Microscopy-related results."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
-    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -301,7 +301,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
-    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
