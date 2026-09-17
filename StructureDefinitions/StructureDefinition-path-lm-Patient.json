@@ -94,6 +94,11 @@
         "max": "0"
       },
       {
+        "id": "path-lm-Patient.NameInformation.LastName",
+        "path": "path-lm-Patient.NameInformation.LastName",
+        "min": 1
+      },
+      {
         "id": "path-lm-Patient.NameInformation.LastName.Prefix",
         "path": "path-lm-Patient.NameInformation.LastName.Prefix",
         "mapping": [

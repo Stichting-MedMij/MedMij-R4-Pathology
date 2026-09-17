@@ -21,6 +21,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     * ^alias = "Voorletters"
   * GivenName 0..0
   * NameUsage 0..0
+  * LastName 1..1
   * LastNamePartner 0..0
   * Titles 0..0
 * AddressInformation 0..1
