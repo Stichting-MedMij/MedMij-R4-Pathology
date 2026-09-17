@@ -25,6 +25,7 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -32,6 +33,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
     * ^patternCoding = $VektisAGB#0388
 * identifier 1..*
   * ^slicing.discriminator.type = #profile
@@ -137,6 +139,7 @@ Description: "Clinical information section of the report."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -144,6 +147,7 @@ Description: "Clinical information section of the report."
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
     * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
@@ -189,6 +193,7 @@ Description: "Macroscopy-related results."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -196,6 +201,7 @@ Description: "Macroscopy-related results."
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
     * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
@@ -241,6 +247,7 @@ Description: "Microscopy-related results."
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -248,6 +255,7 @@ Description: "Microscopy-related results."
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
     * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
@@ -293,6 +301,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
     * ^short = "CareType"
     * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
     * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.tag`, which might not be immediately clear based on the rendering."
   * tag[careType]
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -300,6 +309,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * tag[careType] contains
       pathology 1..1
   * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
     * ^patternCoding = $VektisAGB#0388
 * status
   * ^patternCode = #final

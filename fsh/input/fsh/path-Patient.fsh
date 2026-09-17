@@ -46,7 +46,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     
     Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.
 
-    If the Postcode concept (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, this element SHALL be omitted.
+    If the postal code retrieved from Mercurius (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, this element SHALL be omitted.
     """
 
 Mapping: PathPatientMercuriusCore
