@@ -1,0 +1,383 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "medmij-core-lm-Base",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.3.6.5"
+    }
+  ],
+  "name": "MedMijCoreLmBase",
+  "title": "Base",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "All CIMs implicitly contain a number of basic concepts, such as an identification number or a reference to the patient the data belongs to. These are usually not included in the information models of the individual CIMs, but are supposed to be present. These are concepts that are of a more technical nature, sometimes have little or no clinical relevance, but are necessary for the sake of clarity and readability of the information. These basic concepts are collected in this Base model.\n\nWhenever similar concepts are in fact of clinical significance in the context of a certain CIM, they will be explicitly added in the information model of that CIM. An example of this is the inclusion of a healthcare provider reference to convey the relevant location in a CIM like Encounter or Procedure (next to the HealthcareProvider concept (medmij-core-dataelement-117) already present in this Base model), since the location where an encounter took place or where a procedure was carried out might be of clinical significance. Moreover, identification numbers with clinical significance such as AGB or UZI, might be added explicitly in certain CIMs (next to the IdentificationNumber concept (medmij-core-dataelement-115) already present in this Base model).",
+  "purpose": "This LogicalModel represents the base model for patient use cases in the context of MedMij. It takes inspiration from the Dutch zibs ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) [BasicElements v1.0 (2017)](https://zibs.nl/wiki/BasicElements-v1.0(2017EN)) and [RegistrationData v1.1.2 (2024)](https://www.zibs.nl/wiki/RegistrationData-v1.1.2(2024EN)), as well as the [EHDS DataSet model](https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSDataSet.html), and is adjusted such that it is suitable for implementation purposes in the context of MedMij. Note that there is no zib in publication 2020 equivalent to the zib BasicElements from publication 2017 or the zib RegistrationData from publication 2024, hence a custom base model has been introduced.",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "zib-basicelements-v1.0-2017EN",
+      "name": "zib BasicElements-v1.0(2017EN)",
+      "uri": "https://zibs.nl/wiki/BasicElements-v1.0(2017EN)"
+    },
+    {
+      "identity": "zib-registrationdata-v1.1.2-2024EN",
+      "name": "zib RegistrationData-v1.1.2(2024EN)",
+      "uri": "https://www.zibs.nl/wiki/RegistrationData-v1.1.2(2024EN)"
+    },
+    {
+      "identity": "ehds-dataset-v1.0.0",
+      "name": "EHDS DataSet v1.0.0",
+      "uri": "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSDataSet.html"
+    },
+    {
+      "identity": "medmij-core-dataset-120-2026xxyy",
+      "name": "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "medmij-core-lm-Base",
+        "path": "medmij-core-lm-Base",
+        "short": "Base",
+        "definition": "All CIMs implicitly contain a number of basic concepts, such as an identification number or a reference to the patient the data belongs to. These are usually not included in the information models of the individual CIMs, but are supposed to be present. These are concepts that are of a more technical nature, sometimes have little or no clinical relevance, but are necessary for the sake of clarity and readability of the information. These basic concepts are collected in this Base model.\n\nWhenever similar concepts are in fact of clinical significance in the context of a certain CIM, they will be explicitly added in the information model of that CIM. An example of this is the inclusion of a healthcare provider reference to convey the relevant location in a CIM like Encounter or Procedure (next to the HealthcareProvider concept (medmij-core-dataelement-117) already present in this Base model), since the location where an encounter took place or where a procedure was carried out might be of clinical significance. Moreover, identification numbers with clinical significance such as AGB or UZI, might be added explicitly in certain CIMs (next to the IdentificationNumber concept (medmij-core-dataelement-115) already present in this Base model).",
+        "alias": [
+          "Basis"
+        ],
+        "mapping": [
+          {
+            "identity": "zib-basicelements-v1.0-2017EN",
+            "map": "NL-CM:0.0.1",
+            "comment": "HCIMRoot"
+          },
+          {
+            "identity": "zib-registrationdata-v1.1.2-2024EN",
+            "map": "NL-CM:22.1.1",
+            "comment": "RegistrationData"
+          },
+          {
+            "identity": "ehds-dataset-v1.0.0",
+            "map": "EHDSDataSet",
+            "comment": "EHDSDataSet"
+          },
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-114",
+            "comment": "Base"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.IdentificationNumber",
+        "path": "medmij-core-lm-Base.IdentificationNumber",
+        "short": "Identification number",
+        "definition": "Globally unique number that identifies the instantiation of the CIM. The number is composed of an identification of the issuer organization and a unique number assigned by this organization.",
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "zib-basicelements-v1.0-2017EN",
+            "map": "NL-CM:0.0.6",
+            "comment": "IdentificationNumber"
+          },
+          {
+            "identity": "zib-registrationdata-v1.1.2-2024EN",
+            "map": "NL-CM:22.1.12",
+            "comment": "IdentificationNumber"
+          },
+          {
+            "identity": "ehds-dataset-v1.0.0",
+            "map": "EHDSDataSet.header.identifier",
+            "comment": "identifier"
+          },
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-115",
+            "comment": "IdentificationNumber"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "396278008",
+            "comment": "identificatienummer"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.Patient",
+        "path": "medmij-core-lm-Base.Patient",
+        "short": "Patient",
+        "definition": "The patient as subject of the information.",
+        "alias": [
+          "Patiënt"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Patient"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "zib-basicelements-v1.0-2017EN",
+            "map": "NL-CM:0.0.12",
+            "comment": "Patient"
+          },
+          {
+            "identity": "ehds-dataset-v1.0.0",
+            "map": "EHDSDataSet.header.subject",
+            "comment": "subject"
+          },
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-116",
+            "comment": "Patient"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "131195008",
+            "comment": "onderwerp van informatie"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.HealthcareProvider",
+        "path": "medmij-core-lm-Base.HealthcareProvider",
+        "short": "Healthcare provider",
+        "definition": "The healthcare provider where the information is recorded and/or that is responsible for the information.",
+        "alias": [
+          "Zorgaanbieder",
+          "Zorgorganisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-HealthcareProvider"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "zib-basicelements-v1.0-2017EN",
+            "map": "NL-CM:0.0.9",
+            "comment": "HealthProfessionalAsAuthor (implicit, actual mapping is on HealthProfessionalAsAuthor::HealthProfessional.HealthcareProvider (NL-CM:17.1.6))"
+          },
+          {
+            "identity": "zib-registrationdata-v1.1.2-2024EN",
+            "map": "NL-CM:22.1.2",
+            "comment": "Author (implicit, actual mapping is on Author::HealthProfessional.HealthcareProvider (NL-CM:17.1.6))"
+          },
+          {
+            "identity": "ehds-dataset-v1.0.0",
+            "map": "EHDSDataSet.header.authorEHDSOrganisation",
+            "comment": "authorEHDSOrganisation"
+          },
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-117",
+            "comment": "HealthcareProvider"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.Effective[x]",
+        "path": "medmij-core-lm-Base.Effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Effective",
+        "definition": "The time or period the event to which the information relates took place. This is the medically relevant time or period.",
+        "alias": [
+          "Tijdsindicatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-118",
+            "comment": "Effective"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.Effective[x]:EffectiveDateTime",
+        "path": "medmij-core-lm-Base.Effective[x]",
+        "sliceName": "EffectiveDateTime",
+        "short": "Effective date time",
+        "definition": "The time the event to which the information relates took place. This is the medically relevant time.",
+        "alias": [
+          "DatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "zib-basicelements-v1.0-2017EN",
+            "map": "NL-CM:0.0.14",
+            "comment": "DateTime"
+          },
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-119",
+            "comment": "EffectiveDateTime"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "439771001",
+            "comment": "datum van gebeurtenis"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.Effective[x]:EffectivePeriod",
+        "path": "medmij-core-lm-Base.Effective[x]",
+        "sliceName": "EffectivePeriod",
+        "short": "Effective period",
+        "definition": "The period the event to which the information relates took place. This is the medically relevant period.",
+        "alias": [
+          "Periode"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-120",
+            "comment": "EffectivePeriod"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.Effective[x]:EffectivePeriod.start",
+        "path": "medmij-core-lm-Base.Effective[x].start",
+        "short": "Start date time",
+        "definition": "The start date (and if possible start time) of the event to which the information relates. This is the medically relevant start date time.",
+        "comment": "The EffectivePeriod.start is often referred to as StartDateTime.",
+        "alias": [
+          "StartDatumTijd"
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-121",
+            "comment": "StartDateTime"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.Effective[x]:EffectivePeriod.end",
+        "path": "medmij-core-lm-Base.Effective[x].end",
+        "short": "End date time",
+        "definition": "The end date (and if possible end time) of the event to which the information relates. This is the medically relevant end date time. If the event still continues, the end date is not populated.",
+        "comment": "The EffectivePeriod.end is often referred to as EndDateTime.",
+        "alias": [
+          "EindDatumTijd"
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-122",
+            "comment": "EndDateTime"
+          }
+        ]
+      },
+      {
+        "id": "medmij-core-lm-Base.CareType",
+        "path": "medmij-core-lm-Base.CareType",
+        "short": "Care type",
+        "definition": "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data.",
+        "alias": [
+          "Zorgtype"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-123",
+            "comment": "CareType"
+          }
+        ]
+      }
+    ]
+  }
+}

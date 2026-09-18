@@ -1,5 +1,5 @@
 <ConceptMap xmlns="http://hl7.org/fhir">
-  <id value="MercuriusGender-to-AdministrativeGender" />
+  <id value="MercuriusGender-to-GeslachtCodelijst" />
   <text>
     <status value="empty" />
     <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
@@ -7,9 +7,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
     <valueBoolean value="true" />
   </extension>
-  <url value="http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender" />
-  <name value="MercuriusGender_to_AdministrativeGender" />
-  <title value="MercuriusGender to AdministrativeGender" />
+  <url value="http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-GeslachtCodelijst" />
+  <name value="MercuriusGender_to_GeslachtCodelijst" />
+  <title value="MercuriusGender to GeslachtCodelijst" />
   <status value="draft" />
   <publisher value="MedMij" />
   <contact>
@@ -20,17 +20,17 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Maps gender codes as found in the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie) to &lt;http://hl7.org/fhir/ValueSet/administrative-gender&gt; as found in `Patient.gender` in FHIR R4." />
+  <description value="Maps gender codes used in Mercurius to the GeslachtCodelijst as found in the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Patient v3.2 (2020)](https://zibs.nl/wiki/Patient-v3.2(2020EN))." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <sourceCanonical value="http://medmij.nl/fhir/ValueSet/MercuriusGender" />
-  <targetCanonical value="http://hl7.org/fhir/ValueSet/administrative-gender" />
+  <targetCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000" />
   <group>
     <source value="http://medmij.nl/fhir/CodeSystem/MercuriusGender" />
-    <target value="http://hl7.org/fhir/administrative-gender" />
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender" />
     <element>
       <code value="m" />
       <target>
-        <code value="male" />
+        <code value="M" />
         <display value="Male" />
         <equivalence value="equal" />
       </target>
@@ -38,7 +38,7 @@
     <element>
       <code value="v" />
       <target>
-        <code value="female" />
+        <code value="F" />
         <display value="Female" />
         <equivalence value="equal" />
       </target>

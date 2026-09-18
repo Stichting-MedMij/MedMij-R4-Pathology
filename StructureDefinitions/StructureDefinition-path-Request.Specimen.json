@@ -23,13 +23,17 @@
     }
   ],
   "description": "Specimen that will be examined by a laboratory.",
-  "purpose": "This Specimen resource represents the specimen-related concepts from the Request building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This Specimen resource represents the specimen-related concepts from the Request Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "medmij-core-dataset-120-2026xxyy",
+      "name": "Dataset MedMij R4 Core 1.2.0 2026xxyy"
     },
     {
       "identity": "path-dataset-100-alpha3-2026xxyy",
@@ -66,6 +70,70 @@
         ]
       },
       {
+        "id": "Specimen.meta",
+        "path": "Specimen.meta",
+        "min": 1
+      },
+      {
+        "id": "Specimen.meta.tag",
+        "path": "Specimen.meta.tag",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Specimen.meta.tag:careType",
+        "path": "Specimen.meta.tag",
+        "sliceName": "careType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "CareType",
+        "definition": "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data.",
+        "comment": "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering.",
+        "alias": [
+          "Zorgtype"
+        ],
+        "min": 1,
+        "max": "*",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-123",
+            "comment": "CareType"
+          }
+        ]
+      },
+      {
+        "id": "Specimen.meta.tag:careType/pathology",
+        "path": "Specimen.meta.tag",
+        "sliceName": "careType/pathology",
+        "comment": "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering.",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "0388",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+        }
+      },
+      {
         "id": "Specimen.type",
         "path": "Specimen.type",
         "short": "SpecimenMaterial",
@@ -97,6 +165,7 @@
         "id": "Specimen.subject",
         "path": "Specimen.subject",
         "short": "Patient",
+        "definition": "The patient as subject of the information.",
         "alias": [
           "Patiënt"
         ],
@@ -108,6 +177,13 @@
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://medmij.nl/fhir/StructureDefinition/path-Patient"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-2026xxyy",
+            "map": "medmij-core-dataelement-116",
+            "comment": "Patient"
           }
         ]
       },
