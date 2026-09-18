@@ -32,6 +32,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Resectie<br/>Patiënt: G. Smalhart<br/>Afnamedatum: 11-06-2026<br/>Ontvangstdatum: 13-06-2026<br/>Verkrijgingswijze: resectie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
+  * value = "T26-61237-0"
 * type
   * text = "Colon Resectie"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -1250,6 +1253,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Appendix Resectie<br/>Patiënt: G. Smalhart<br/>Ontvangstdatum: 01-11-2023<br/>Verkrijgingswijze: resectie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
+  * value = "T26-61237-0"
 * type
   * coding = $SCT#66754008 "blindedarm"
   * text = "appendix"

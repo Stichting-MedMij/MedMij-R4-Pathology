@@ -34,6 +34,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Biopt<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60065-0"
 * type
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -52,6 +55,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Biopt (sample 1)<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60065-1"
 * type
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -71,6 +77,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Biopt (sample 2)<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60065-2"
 * type
   * text = "Colon Biopt"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"

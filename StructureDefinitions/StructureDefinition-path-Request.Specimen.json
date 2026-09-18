@@ -64,8 +64,8 @@
           },
           {
             "identity": "path-dataset-100-alpha3-2026xxyy",
-            "map": "path-dataelement-9",
-            "comment": "NumberOfSamples (implicit)"
+            "map": "path-dataelement-15",
+            "comment": "Sample"
           }
         ]
       },
@@ -132,6 +132,55 @@
           "code": "0388",
           "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
         }
+      },
+      {
+        "id": "Specimen.identifier",
+        "path": "Specimen.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Specimen.identifier:specimenIdentifier",
+        "path": "Specimen.identifier",
+        "sliceName": "specimenIdentifier",
+        "short": "IdentificationNumber / SpecimenIdentifier / SampleIdentifier",
+        "definition": "Identifier of the specimen.",
+        "comment": "This element is used to convey the identifier of either the primary specimen or an individual sample taken from that specimen, based on which specimen this resource represents.\n  * In the former case, as the specimen is always directly linked to a request in Mercurius, this identifier's `.value` equals the RequestIdentifier `.value`, appended with _-0_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0.\n  * In the latter case, this identifier's `.value` equals the RequestIdentifier `.value`, appended with _-[SampleNumber]_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-[SampleNumber]_ or _[TCSB]YY-nnnnnn-[SampleNumber]_ (based on the laboratory the report originates from), e.g. T26-012345-1.\nIn both cases, the `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_).",
+        "alias": [
+          "Identificatienummer",
+          "MonsterIdentificatienummer",
+          "SampleIdentificatienummer"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-14",
+            "comment": "SpecimenIdentifier"
+          },
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-16",
+            "comment": "SampleNumber (implicit)"
+          }
+        ]
       },
       {
         "id": "Specimen.type",

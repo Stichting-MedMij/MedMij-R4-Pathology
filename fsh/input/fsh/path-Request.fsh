@@ -41,11 +41,12 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^slicing.rules = #open
 * identifier contains
     requestIdentifier 1..1
-* identifier[requestIdentifier] only PathReportIdentifier
+* identifier[requestIdentifier] only PathReportReportIdentifier
   * ^short = "IdentificationNumber / RequestIdentifier"
   * ^definition = "Identifier of the request for a pathology study."
   * ^alias[0] = "Identificatienummer"
   * ^alias[1] = "AanvraagIdentificatienummer"
+  * ^comment = "Even though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
 * status
   * ^patternCode = #completed
 * intent
@@ -105,7 +106,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains one reference for the primary specimen and one for each individual sample."
   * ^alias = "Monster"
 
 Profile: PathRequestSpecimen
@@ -144,6 +145,24 @@ Description: "Specimen that will be examined by a laboratory."
   * tag[careType][pathology]
     * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
     * ^patternCoding = $VektisAGB#0388
+* identifier 1..*
+  * ^slicing.discriminator.type = #profile
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* identifier contains
+    specimenIdentifier 1..1
+* identifier[specimenIdentifier] only PathReportReportIdentifier
+  * ^short = "IdentificationNumber / SpecimenIdentifier / SampleIdentifier"
+  * ^definition = "Identifier of the specimen."
+  * ^alias[0] = "Identificatienummer"
+  * ^alias[1] = "MonsterIdentificatienummer"
+  * ^alias[2] = "SampleIdentificatienummer"
+  * ^comment = """
+  This element is used to convey the identifier of either the primary specimen or an individual sample taken from that specimen, based on which specimen this resource represents.
+    * In the former case, as the specimen is always directly linked to a request in Mercurius, this identifier's `.value` equals the RequestIdentifier `.value`, appended with _-0_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0.
+    * In the latter case, this identifier's `.value` equals the RequestIdentifier `.value`, appended with _-[SampleNumber]_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-[SampleNumber]_ or _[TCSB]YY-nnnnnn-[SampleNumber]_ (based on the laboratory the report originates from), e.g. T26-012345-1.
+  In both cases, the `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_).
+  """
 * type 1..1
   * ^short = "SpecimenMaterial"
   * ^definition = "Type of specimen."
@@ -269,7 +288,7 @@ Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * . -> "path-dataelement-6" "Request"
 * requester -> "path-dataelement-7" "Requester"
 * specimen -> "path-dataelement-8" "Specimen"
-* specimen -> "path-dataelement-9" "NumberOfSamples (implicit)"
+* specimen -> "path-dataelement-15" "Sample"
 
 Mapping: PathRequestSpecimenMercuriusCore
 Source: PathRequestSpecimen
@@ -294,7 +313,9 @@ Source: PathRequestSpecimen
 Id: path-dataset-100-alpha3-2026xxyy
 Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * . -> "path-dataelement-8" "Specimen"
-* . -> "path-dataelement-9" "NumberOfSamples (implicit)"
+* . -> "path-dataelement-15" "Sample"
+* identifier[specimenIdentifier] -> "path-dataelement-14" "SpecimenIdentifier"
+* identifier[specimenIdentifier] -> "path-dataelement-16" "SampleNumber (implicit)"
 
 Mapping: PathRequestRequesterMercuriusCore
 Source: PathRequestRequester

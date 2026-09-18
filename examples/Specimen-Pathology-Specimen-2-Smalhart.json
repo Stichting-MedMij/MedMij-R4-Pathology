@@ -17,6 +17,12 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Appendix Resectie<br/>Patiënt: G. Smalhart<br/>Ontvangstdatum: 01-11-2023<br/>Verkrijgingswijze: resectie</div>"
   },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1",
+      "value": "T26-61237-0"
+    }
+  ],
   "type": {
     "coding": [
       {

@@ -77,7 +77,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^short = "Request identifier"
   * ^definition = "Identifier of the request for a pathology study."
   * ^alias = "AanvraagIdentificatienummer"
-  * ^comment = "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other. In particular, the RequestIdentifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
+  * ^comment = "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, the RequestIdentifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
 * Patient only Reference(PathLmPatient)
 * HealthcareProvider 0..0
 * Effective[x] 0..0
@@ -108,6 +108,9 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^alias = "KlinischeVraag"
 * Specimen 1..1 BackboneElement "Specimen" "Specimen that will be examined by a laboratory."
   * ^alias = "Monster"
+  * SpecimenIdentifier 1..1 Identifier "Specimen identifier" "Identifier of the specimen."
+    * ^alias = "MonsterIdentificatienummer"
+    * ^comment = "As the specimen is always directly linked to a request in Mercurius, the SpecimenIdentifier value equals the RequestIdentifier value, appended with _-0_. This appendage ensures the identifier of the primary specimen to be easily distinguished from each sample identifier (as the latter equals the RequestIdentifier, appended with _-[SampleNumber]_). In particular, the SpecimenIdentifier attains a value of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0."
   * SpecimenMaterial 1..1 CodeableConcept "Specimen material" "Type of specimen."
     * ^alias = "AardMateriaal"
     * ^comment = "The (string) value present in the source system is translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible."
@@ -118,8 +121,12 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * CollectionMethod 0..1 CodeableConcept "Collection method" "The way the specimen is collected (biopsy, resection, etc.)."
     * ^alias = "Verkrijgingswijze"
     * ^comment = "The (string) value present in the source system is translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible."
-  * NumberOfSamples 1..1 integer "Number of samples" "The number of samples taken from the primary specimen, each sent to the laboratory in a different container."
-    * ^alias = "AantalSamples"
+  * Sample 0..* BackboneElement "Sample" "Sample taken from the primary specimen. Each sample is sent to the laboratory in a different container."
+    * ^alias = "Sample"
+    * ^comment = "If only a single sample is taken and examined by the laboratory, this element SHOULD not be populated, as the primary specimen and sample coincide in that case (and in particular, no sample number is assigned within Mercurius)."
+    * SampleNumber 1..1 integer "Sample number" "Number of the sample."
+      * ^alias = "Samplenummer"
+      * ^comment = "If a Roman numeral is assigned to a sample in Mercurius, it SHALL be converted to an integer."
 
 Logical: PathLmReport
 Parent: http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base
@@ -221,7 +228,9 @@ Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * . -> "path-dataelement-6" "Request"
 * Requester -> "path-dataelement-7" "Requester"
 * Specimen -> "path-dataelement-8" "Specimen"
-  * NumberOfSamples -> "path-dataelement-9" "NumberOfSamples"
+  * SpecimenIdentifier -> "path-dataelement-14" "SpecimenIdentifier"
+  * Sample -> "path-dataelement-15" "Sample"
+    * SampleNumber -> "path-dataelement-16" "SampleNumber"
 
 Mapping: PathLmRequestEHDSImagingReport
 Source: PathLmRequest

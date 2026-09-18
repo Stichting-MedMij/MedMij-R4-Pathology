@@ -41,7 +41,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^slicing.rules = #open
 * identifier contains
     reportIdentifier 1..1
-* identifier[reportIdentifier] only PathReportIdentifier
+* identifier[reportIdentifier] only PathReportReportIdentifier
 * basedOn 1..1
 * basedOn only Reference(ServiceRequest or PathRequest)
 * status
@@ -95,7 +95,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains one reference for the primary specimen and one for each individual sample."
   * ^alias = "Monster"
 * result 1..*
 * result only Reference(Observation or PathReportProtocolDataItem)
@@ -359,25 +359,25 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
   * ^alias = "Monster"
 
-Profile: PathReportIdentifier
+Profile: PathReportReportIdentifier
 Parent: Identifier
-Id: path-ReportIdentifier
-Title: "path ReportIdentifier"
+Id: path-Report.ReportIdentifier
+Title: "path Report.ReportIdentifier"
 Description: "Identifier of the pathology report assigned by the laboratory doing the analysis."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
 * ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
-* . obeys path-ReportIdentifier-1
+* . obeys path-Report.ReportIdentifier-1
   * ^short = "IdentificationNumber / ReportIdentifier"
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
   * ^alias[0] = "Identificatienummer"
   * ^alias[1] = "VerslagIdentificatienummer"
-  * ^condition = "path-ReportIdentifier-1"
+  * ^condition = "path-Report.ReportIdentifier-1"
 * system 1..1
-  * ^condition = "path-ReportIdentifier-1"
+  * ^condition = "path-Report.ReportIdentifier-1"
 * value 1..1
 
 Invariant: path-Report-1
@@ -385,7 +385,7 @@ Description: "Either a code for cytology or histology is present."
 Severity: #error
 Expression: "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()"
 
-Invariant: path-ReportIdentifier-1
+Invariant: path-Report.ReportIdentifier-1
 Description: "The identifier system of a report is of the form 'urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1' where N is the lab number."
 Severity: #error
 Expression: "system.startsWith('urn:oid:2.16.840.1.113883.2.4.3.23.3.') and system.endsWith('.1')"
@@ -418,13 +418,13 @@ Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * . -> "path-dataelement-10" "Report"
 
 Mapping: PathReportIdentifierMercuriusCore
-Source: PathReportIdentifier
+Source: PathReportReportIdentifier
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * . -> "mercurius-core-rubriek-3" "rapnaam"
 
 Mapping: PathReportIdentifierMedMijCore-120
-Source: PathReportIdentifier
+Source: PathReportReportIdentifier
 Id: medmij-core-dataset-120-2026xxyy
 Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
 * . -> "medmij-core-dataelement-115" "IdentificationNumber"

@@ -21,7 +21,7 @@
 
 | | |
 | --- | --- |
-| IdentificationNumber | T26-60066 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
+| RequestIdentifier | T26-60066 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen bevolkingsonderzoek (code '0' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | P. Plijster |
@@ -29,11 +29,12 @@
 | Requester.Hospital | LUMC |
 | Requester.Location | Polikliniek MDL |
 | ClinicalQuestion | Vraagstelling <br/> Classificatie |
+| Specimen.SpecimenIdentifier | T26-60066-0 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | Specimen.SpecimenMaterial | colon (code '71854001' from code system 'SNOMED CT') |
 | Specimen.CollectionDate | 01-02-2026 |
 | Specimen.ReceivedDate | 03-02-2026 |
 | Specimen.CollectionMethod | resectie (code '65801008' from code system 'SNOMED CT') |
-| Specimen.NumberOfSamples | 1 |
+| Specimen.Sample | |
 
 ## Report data
 

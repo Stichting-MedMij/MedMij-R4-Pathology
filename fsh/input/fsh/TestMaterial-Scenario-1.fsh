@@ -32,6 +32,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Resectie<br/>Patiënt: G. Olivander<br/>Afnamedatum: 01-02-2026<br/>Ontvangstdatum: 03-02-2026<br/>Verkrijgingswijze: resectie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60066-0"
 * type
   * coding = $SCT#71854001 "dikke darm"
   * text = "colon"
