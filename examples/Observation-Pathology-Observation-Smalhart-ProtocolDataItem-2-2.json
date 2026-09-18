@@ -31,6 +31,7 @@
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
+  "effectiveDateTime": "2024-04-09",
   "valueQuantity": {
     "value": 1.2,
     "code": "cm",

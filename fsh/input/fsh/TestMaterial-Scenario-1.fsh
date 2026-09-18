@@ -8,7 +8,7 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Olivander<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Resectie<br/>Klinische vraag: <div>Vraagstelling</div><div>Classificatie</div><div/></div>"
-* identifier
+* identifier[requestIdentifier]
   * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
   * value = "T26-60066"
 * status = #completed
@@ -32,6 +32,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Resectie<br/>Patiënt: G. Olivander<br/>Afnamedatum: 01-02-2026<br/>Ontvangstdatum: 03-02-2026<br/>Verkrijgingswijze: resectie</div>"
+* identifier[specimenIdentifier]
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60066-0"
 * type
   * coding = $SCT#71854001 "dikke darm"
   * text = "colon"
@@ -115,6 +118,7 @@ Usage: #example
 * status = #final
 * code = $SCT#404684003 "klinische bevinding"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-Macroscopy
@@ -128,6 +132,7 @@ Usage: #example
 * status = #final
 * code = $SCT#168126000 "Sample macroscopy"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-Microscopy
@@ -141,6 +146,7 @@ Usage: #example
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
 Instance: Pathology-Observation-Olivander-ProtocolDataItem-1
@@ -154,6 +160,7 @@ Usage: #example
 * status = #final
 * code = $SCT#371489008 "afstand van neoplasma tot dichtstbijzijnde snijvlak in preparaat van weefsel verkregen door excisie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueQuantity = 1 'cm'
   * comparator = #>=
   * unit = "cm"
@@ -170,6 +177,7 @@ Usage: #example
 * status = #final
 * code = $SCT#2620001000004108 "Specimen collection procedure"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#82619000 "hemicolectomie links"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -184,6 +192,7 @@ Usage: #example
 * status = #final
 * code = $SCT#371513001 "status van ingroei van tumor rondom zenuw"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#2667000 "niet aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -198,6 +207,7 @@ Usage: #example
 * status = #final
 * code = $SCT#385421009 "locatie van metastase op afstand"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#47492008 "niet gezien"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -212,6 +222,7 @@ Usage: #example
 * status = #final
 * code = $SCT#450431000146104 "status van intactheid van preparaat verkregen door resectie van mesocolon"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1990001000004102 "bijna volledig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -226,6 +237,7 @@ Usage: #example
 * status = #final
 * code = $SCT#266987004 "maligne tumor in anamnese"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -240,6 +252,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1155708003 "Low histologic grade"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -254,6 +267,7 @@ Usage: #example
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1187332001 "adenocarcinoom"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -268,6 +282,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1286754008 "Tumor bud score in primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#62482003 "laag"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -282,6 +297,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1300184003 "Presence of macroscopic perforation of colorectum by primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#47492008 "niet gezien"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -296,6 +312,7 @@ Usage: #example
 * status = #final
 * code = $SCT#817011007 "vriescoupetechniek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#385660001 "niet verricht"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -310,6 +327,7 @@ Usage: #example
 * status = #final
 * code = $SCT#512001000004108 "Histologic type of primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#571451000146108 "afwijkende schotelvorm"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -324,6 +342,7 @@ Usage: #example
 * status = #final
 * code = $SCT#371512006 "status van invasie van tumor in bloedvat"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#395717001 "ingroei van tumor in lymfevat"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -338,6 +357,7 @@ Usage: #example
 * status = #final
 * code = $SCT#16214131000119104 "preparaat van vriescoupe van lichaamsweefsel"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#2667000 "niet aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -352,6 +372,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396927009 "moleculaire diagnostiek"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#385660001 "niet verricht"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -366,6 +387,7 @@ Usage: #example
 * status = #final
 * code = $SCT#396395003 "Status of tumor infiltration by lymphocytes"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -380,6 +402,7 @@ Usage: #example
 * status = #final
 * code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueInteger = 0
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -394,6 +417,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1286756005 "Number of metastatic discontinuous tumor deposits of primary malignant neoplasm of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueInteger = 0
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -408,6 +432,7 @@ Usage: #example
 * status = #final
 * code = $SCT#384606002 "Length of specimen"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueQuantity = 20 'cm'
   * unit = "cm"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
@@ -423,6 +448,7 @@ Usage: #example
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#47492008 "niet gezien"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -437,6 +463,7 @@ Usage: #example
 * status = #final
 * code = $SCT#450461000146108 "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueQuantity = 0.8 'cm'
   * unit = "cm"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
@@ -452,6 +479,7 @@ Usage: #example
 * status = #final
 * code = $SCT#399687005 "plaats van primaire tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#32622004 "colon descendens"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -466,6 +494,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1597451000004100 "Primary tumor site extension"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -480,6 +509,7 @@ Usage: #example
 * status = #final
 * code = $SCT#246214002 "aantal tumoren"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueInteger = 1
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -494,6 +524,7 @@ Usage: #example
 * status = #final
 * code = $SCT#384962004 "Anatomic location directly invaded by primary malignant neoplasm"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#68439008 "submucosa"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -508,6 +539,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1359839002 "Status of surgical radial margin involvement by tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#47492008 "niet gezien"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -522,6 +554,7 @@ Usage: #example
 * status = #final
 * code = $SCT#439401001 "diagnose"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#34000006 "ziekte van Crohn"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -536,6 +569,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1597451000004100 "grootste lengte van tumor in preparaat verkregen door resectie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueQuantity = 3.0 'cm'
   * unit = "cm"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
@@ -551,6 +585,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1286765003 "Histologic type of polyp of colorectum"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#2667000 "niet aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -565,6 +600,7 @@ Usage: #example
 * status = #final
 * code = $SCT#444025001 "aantal onderzochte lymfeklieren"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueInteger = 15
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -579,6 +615,7 @@ Usage: #example
 * status = #final
 * code = $SCT#1279827005 "Neoadjuvant antineoplastic therapy procedure prior to surgery"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#260413007 "geen"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -593,6 +630,7 @@ Usage: #example
 * status = #final
 * code = $SCT#371491000 "Margin closest to tumor"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#46053002 "ver van"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -607,6 +645,7 @@ Usage: #example
 * status = #final
 * code = $SCT#423901009 "Identification code"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueString = "1e tumor"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 
@@ -621,6 +660,7 @@ Usage: #example
 * status = #final
 * code = $SCT#733149001 "obstructie-ileus van dunne darm gelijktijdig met en door impactie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
+* effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#2667000 "niet aanwezig"
 * specimen = Reference(Pathology-Specimen-Olivander) "Colon Resectie"
 

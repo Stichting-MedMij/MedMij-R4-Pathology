@@ -23,7 +23,7 @@
 
 | | |
 | --- | --- |
-| IdentificationNumber | T26-61237 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1') |
+| RequestIdentifier | T26-61237 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1') |
 | RequestType | spoed (code 'spoed' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Bevolkingsonderzoek (dikke)darmkanker (code '3' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | Z. Wachtel |
@@ -31,11 +31,12 @@
 | Requester.Hospital | St. Holisto's Hospitaal |
 | Requester.Location | Polikliniek MDL |
 | ClinicalQuestion | Vraagstelling <br/> Classificatie |
+| Specimen.SpecimenIdentifier | T26-61237-0 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1') |
 | Specimen.SpecimenMaterial | Colon Resectie |
 | Specimen.CollectionDate | 11-06-2026 |
 | Specimen.ReceivedDate | 13-06-2026 |
 | Specimen.CollectionMethod | resectie (code '65801008' from code system 'SNOMED CT') |
-| Specimen.NumberOfSamples | 1 |
+| Specimen.Sample | |
 
 ### Report data
 
@@ -128,7 +129,7 @@
 
 | | |
 | --- | --- |
-| IdentificationNumber | T24-01916 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
+| RequestIdentifier | T24-01916 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | RequestType | |
 | HealthScreeningType | |
 | Requester.RequesterName | Katara Yi |
@@ -136,11 +137,12 @@
 | Requester.Hospital | MUMC |
 | Requester.Location | |
 | ClinicalQuestion | Zijn er afwijkingen te constateren bij afgenomen weefsel? |
+| Specimen.SpecimenIdentifier | T24-01916-0 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | Specimen.SpecimenMaterial | appendix (code '66754008' from code system 'SNOMED CT') |
 | Specimen.CollectionDate | |
 | Specimen.ReceivedDate | 01-11-2023 |
 | Specimen.CollectionMethod | resectie (code '65801008' from code system 'SNOMED CT') |
-| Specimen.NumberOfSamples | 1 |
+| Specimen.Sample | |
 
 ### Report data
 
