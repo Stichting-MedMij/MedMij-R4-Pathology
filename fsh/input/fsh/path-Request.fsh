@@ -161,7 +161,7 @@ Description: "Specimen that will be examined by a laboratory."
   This element is used to convey the identifier of either the primary specimen or an individual sample taken from that specimen, based on which specimen this resource represents.
   
     * In the former case, as the specimen is always directly linked to a request in Mercurius, this identifier's value equals the RequestIdentifier value, appended with _-0_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0.
-    * In the latter case, this identifier's value equals the RequestIdentifier `.value`, appended with _-[SampleNumber]_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-[SampleNumber]_ or _[TCSB]YY-nnnnnn-[SampleNumber]_ (based on the laboratory the report originates from), e.g. T26-012345-1.
+    * In the latter case, this identifier's value equals the RequestIdentifier value, appended with _-[SampleNumber]_. In particular, this identifier attains a `.value` of the form _[TCSB]YY-nnnnn-[SampleNumber]_ or _[TCSB]YY-nnnnnn-[SampleNumber]_ (based on the laboratory the report originates from), e.g. T26-012345-1.
   
   In both cases, the `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_).
   """
