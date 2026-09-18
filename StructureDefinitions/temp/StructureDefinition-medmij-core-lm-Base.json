@@ -322,6 +322,7 @@
         "path": "medmij-core-lm-Base.Effective[x].start",
         "short": "Start date time",
         "definition": "The start date (and if possible start time) of the event to which the information relates. This is the medically relevant start date time.",
+        "comment": "The EffectivePeriod.start is often referred to as StartDateTime.",
         "alias": [
           "StartDatumTijd"
         ],
@@ -329,7 +330,7 @@
           {
             "identity": "medmij-core-dataset-120-2026xxyy",
             "map": "medmij-core-dataelement-121",
-            "comment": "EffectivePeriod (StartDateTime)"
+            "comment": "StartDateTime"
           }
         ]
       },
@@ -338,6 +339,7 @@
         "path": "medmij-core-lm-Base.Effective[x].end",
         "short": "End date time",
         "definition": "The end date (and if possible end time) of the event to which the information relates. This is the medically relevant end date time. If the event still continues, the end date is not populated.",
+        "comment": "The EffectivePeriod.end is often referred to as EndDateTime.",
         "alias": [
           "EindDatumTijd"
         ],
@@ -345,7 +347,7 @@
           {
             "identity": "medmij-core-dataset-120-2026xxyy",
             "map": "medmij-core-dataelement-122",
-            "comment": "EffectivePeriod (EndDateTime)"
+            "comment": "EndDateTime"
           }
         ]
       },

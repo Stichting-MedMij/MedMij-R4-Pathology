@@ -21,6 +21,7 @@ Description: "The person whose human tissue is analyzed in a pathology study."
     * ^alias = "Voorletters"
   * GivenName 0..0
   * NameUsage 0..0
+  * LastName 1..1
   * LastNamePartner 0..0
   * Titles 0..0
 * AddressInformation 0..1
@@ -29,9 +30,11 @@ Description: "The person whose human tissue is analyzed in a pathology study."
   * HouseNumberIndication 0..0
   * Postcode
     * ^comment = """
-    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used.
+    Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.
     
-    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used.
+    Foreign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.
+
+    If the postal code retrieved from Mercurius (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, this element SHALL be omitted.
     """
   * Municipality 0..0
   * Country 0..0

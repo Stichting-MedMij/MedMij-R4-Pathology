@@ -273,7 +273,7 @@
       {
         "id": "Patient.address.postalCode",
         "path": "Patient.address.postalCode",
-        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.\n\nIf the Postcode concept (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, this element SHALL be omitted.",
+        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.\n\nIf the postal code retrieved from Mercurius (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, this element SHALL be omitted.",
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
