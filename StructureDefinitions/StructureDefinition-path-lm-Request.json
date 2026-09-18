@@ -91,7 +91,7 @@
         "path": "path-lm-Request.IdentificationNumber",
         "short": "Request identifier",
         "definition": "Identifier of the request for a pathology study.",
-        "comment": "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, the RequestIdentifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
+        "comment": "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, this identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
         "alias": [
           "AanvraagIdentificatienummer"
         ],
@@ -355,7 +355,7 @@
           {
             "identity": "ehds-imagingreport-v1.0.0",
             "map": "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional",
-            "comment": "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.organisation)"
+            "comment": "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.organisation.name)"
           },
           {
             "identity": "ehds-imagingreport-v1.0.0",
@@ -453,7 +453,7 @@
         "path": "path-lm-Request.Specimen.SpecimenIdentifier",
         "short": "Specimen identifier",
         "definition": "Identifier of the specimen.",
-        "comment": "As the specimen is always directly linked to a request in Mercurius, the SpecimenIdentifier value equals the RequestIdentifier value, appended with _-0_. This appendage ensures the identifier of the primary specimen to be easily distinguished from each sample identifier (as the latter equals the RequestIdentifier, appended with _-[SampleNumber]_). In particular, the SpecimenIdentifier attains a value of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0.",
+        "comment": "As the specimen is always directly linked to a request in Mercurius, the SpecimenIdentifier value equals the RequestIdentifier value, appended with _-0_. This appendage ensures that the identifier of the primary specimen is easily distinguishable from each sample identifier (as the latter equals the RequestIdentifier, appended with _-[SampleNumber]_). In particular, this identifier attains a value of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0.",
         "alias": [
           "MonsterIdentificatienummer"
         ],

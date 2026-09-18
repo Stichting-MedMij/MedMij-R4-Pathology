@@ -95,7 +95,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains one reference for the primary specimen and one for each individual sample."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case."
   * ^alias = "Monster"
 * result 1..*
 * result only Reference(Observation or PathReportProtocolDataItem)
@@ -356,7 +356,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
+  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept: if SampleNumber (path-dataelement-13) is populated, the data in this Observation relates to the sample with the same SampleNumber (path-dataelement-16); otherwise, it relates to the primary specimen."
   * ^alias = "Monster"
 
 Profile: PathReportReportIdentifier
@@ -417,13 +417,13 @@ Id: path-dataset-100-alpha3-2026xxyy
 Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * . -> "path-dataelement-10" "Report"
 
-Mapping: PathReportIdentifierMercuriusCore
+Mapping: PathReportReportIdentifierMercuriusCore
 Source: PathReportReportIdentifier
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * . -> "mercurius-core-rubriek-3" "rapnaam"
 
-Mapping: PathReportIdentifierMedMijCore-120
+Mapping: PathReportReportIdentifierMedMijCore-120
 Source: PathReportReportIdentifier
 Id: medmij-core-dataset-120-2026xxyy
 Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"

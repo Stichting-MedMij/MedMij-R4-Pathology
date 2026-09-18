@@ -77,7 +77,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^short = "Request identifier"
   * ^definition = "Identifier of the request for a pathology study."
   * ^alias = "AanvraagIdentificatienummer"
-  * ^comment = "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, the RequestIdentifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
+  * ^comment = "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, this identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345."
 * Patient only Reference(PathLmPatient)
 * HealthcareProvider 0..0
 * Effective[x] 0..0
@@ -110,7 +110,7 @@ Description: "Request for a pathology study to be performed by a certain laborat
   * ^alias = "Monster"
   * SpecimenIdentifier 1..1 Identifier "Specimen identifier" "Identifier of the specimen."
     * ^alias = "MonsterIdentificatienummer"
-    * ^comment = "As the specimen is always directly linked to a request in Mercurius, the SpecimenIdentifier value equals the RequestIdentifier value, appended with _-0_. This appendage ensures the identifier of the primary specimen to be easily distinguished from each sample identifier (as the latter equals the RequestIdentifier, appended with _-[SampleNumber]_). In particular, the SpecimenIdentifier attains a value of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0."
+    * ^comment = "As the specimen is always directly linked to a request in Mercurius, the SpecimenIdentifier value equals the RequestIdentifier value, appended with _-0_. This appendage ensures that the identifier of the primary specimen is easily distinguishable from each sample identifier (as the latter equals the RequestIdentifier, appended with _-[SampleNumber]_). In particular, this identifier attains a value of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0."
   * SpecimenMaterial 1..1 CodeableConcept "Specimen material" "Type of specimen."
     * ^alias = "AardMateriaal"
     * ^comment = "The (string) value present in the source system is translated to a SNOMED CT code using the [Palga On-line Thesaurus](https://www.palga.nl/voor-pathologen/palga-on-line-thesaurus), if possible."
@@ -245,7 +245,7 @@ Title: "EHDS ImagingReport v1.0.0"
 * Requester -> "EHDSImagingReport.body.orderInformation.orderPlacer" "orderPlacer"
   * RequesterName -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.name)"
   * Specialty -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.specialty)"
-  * Hospital -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.organisation)"
+  * Hospital -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional" "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.organisation.name)"
   * Hospital -> "EHDSImagingReport.body.orderInformation.orderPlacerEHDSOrganisation" "orderPlacerEHDSOrganisation (implicit, actual mapping is on orderPlacerEHDSOrganisation.name)"
 * ClinicalQuestion -> "EHDSImagingReport.body.orderInformation.clinicalQuestion" "clinicalQuestion"
 * Specimen -> "EHDSImagingReport.body.specimen" "specimen"
