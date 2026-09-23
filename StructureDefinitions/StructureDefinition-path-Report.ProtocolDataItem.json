@@ -28,12 +28,16 @@
   "fhirVersion": "4.0.1",
   "mapping": [
     {
-      "identity": "path-dataset-100-alpha3-2026xxyy",
-      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0"
     },
     {
       "identity": "medmij-core-dataset-120-2026xxyy",
       "name": "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-2026xxyy",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "resource",
@@ -162,6 +166,47 @@
         ]
       },
       {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "short": "EffectiveDateTime / AuthorizationDate",
+        "definition": "Date of authorization.",
+        "alias": [
+          "Tijdsindicatie",
+          "DatumTijd",
+          "DatumAutorisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-44",
+            "comment": "datumautorisatie"
+          }
+        ]
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "ProtocolItemResult",
@@ -203,7 +248,7 @@
         "path": "Observation.specimen",
         "short": "Specimen",
         "definition": "Specimen that will be examined by a laboratory.",
-        "comment": "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept.",
+        "comment": "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept: if SampleNumber (path-dataelement-13) is populated, the data in this Observation relates to the sample with the same SampleNumber (path-dataelement-16); otherwise, it relates to the primary specimen.",
         "alias": [
           "Monster"
         ],

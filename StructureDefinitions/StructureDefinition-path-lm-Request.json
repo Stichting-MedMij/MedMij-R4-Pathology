@@ -41,6 +41,16 @@
     {
       "identity": "path-dataset-100-alpha3-2026xxyy",
       "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+    },
+    {
+      "identity": "ehds-imagingreport-v1.0.0",
+      "name": "EHDS ImagingReport v1.0.0",
+      "uri": "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSImagingReport.html"
+    },
+    {
+      "identity": "ehds-specimen-v1.0.0",
+      "name": "EHDS Specimen v1.0.0",
+      "uri": "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSSpecimen.html"
     }
   ],
   "kind": "logical",
@@ -63,6 +73,39 @@
             "identity": "path-dataset-100-alpha3-2026xxyy",
             "map": "path-dataelement-6",
             "comment": "Request"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport",
+            "comment": "EHDSImagingReport"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation",
+            "comment": "orderInformation"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.IdentificationNumber",
+        "path": "path-lm-Request.IdentificationNumber",
+        "short": "Request identifier",
+        "definition": "Identifier of the request for a pathology study.",
+        "comment": "This concept is often referred to as RequestIdentifier.\n\nEven though the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) is assigned by the laboratory doing the analysis (and thus not by the requester), the RequestIdentifier is populated with its value as well, as the request and report are always directly linked to each other in Mercurius. In particular, this identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
+        "alias": [
+          "AanvraagIdentificatienummer"
+        ],
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-3",
+            "comment": "rapnaam"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.orderId",
+            "comment": "orderId"
           }
         ]
       },
@@ -75,6 +118,13 @@
             "targetProfile": [
               "http://medmij.nl/fhir/StructureDefinition/path-lm-Patient"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.subject",
+            "comment": "subject"
           }
         ]
       },
@@ -114,7 +164,14 @@
         "id": "path-lm-Request.CareType",
         "path": "path-lm-Request.CareType",
         "comment": "At least code _0388_ ('Medisch specialisten, pathologische anatomie') SHALL be conveyed as care type.",
-        "min": 1
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.serviceSpecialty",
+            "comment": "serviceSpecialty"
+          }
+        ]
       },
       {
         "id": "path-lm-Request.RequestType",
@@ -206,6 +263,11 @@
             "identity": "path-dataset-100-alpha3-2026xxyy",
             "map": "path-dataelement-7",
             "comment": "Requester"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.orderPlacer",
+            "comment": "orderPlacer"
           }
         ]
       },
@@ -229,6 +291,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-68",
             "comment": "aanvrager"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional",
+            "comment": "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.name)"
           }
         ]
       },
@@ -256,6 +323,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-71",
             "comment": "specialisme"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional",
+            "comment": "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.specialty)"
           }
         ]
       },
@@ -279,6 +351,16 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-72",
             "comment": "ziekenhuis"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.orderPlacerEHDSHealthProfessional",
+            "comment": "orderPlacerEHDSHealthProfessional (implicit, actual mapping is on orderPlacerEHDSHealthProfessional.professionalRole.organisation.name)"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.orderPlacerEHDSOrganisation",
+            "comment": "orderPlacerEHDSOrganisation (implicit, actual mapping is on orderPlacerEHDSOrganisation.name)"
           }
         ]
       },
@@ -325,6 +407,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-139",
             "comment": "klinischevraag"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.orderInformation.clinicalQuestion",
+            "comment": "clinicalQuestion"
           }
         ]
       },
@@ -348,6 +435,40 @@
             "identity": "path-dataset-100-alpha3-2026xxyy",
             "map": "path-dataelement-8",
             "comment": "Specimen"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.specimen",
+            "comment": "specimen"
+          },
+          {
+            "identity": "ehds-specimen-v1.0.0",
+            "map": "EHDSSpecimen",
+            "comment": "EHDSSpecimen"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.SpecimenIdentifier",
+        "path": "path-lm-Request.Specimen.SpecimenIdentifier",
+        "short": "Specimen identifier",
+        "definition": "Identifier of the specimen.",
+        "comment": "As the specimen is always directly linked to a request in Mercurius, the SpecimenIdentifier value equals the RequestIdentifier value, appended with _-0_. This appendage ensures that the identifier of the primary specimen is easily distinguishable from each sample identifier (as the latter equals the RequestIdentifier, appended with _-[SampleNumber]_). In particular, this identifier attains a value of the form _[TCSB]YY-nnnnn-0_ or _[TCSB]YY-nnnnnn-0_ (based on the laboratory the report originates from), e.g. T26-012345-0.",
+        "alias": [
+          "MonsterIdentificatienummer"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-14",
+            "comment": "SpecimenIdentifier"
           }
         ]
       },
@@ -372,6 +493,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-76",
             "comment": "aardmateriaal"
+          },
+          {
+            "identity": "ehds-specimen-v1.0.0",
+            "map": "EHDSSpecimen.type",
+            "comment": "type"
           }
         ]
       },
@@ -395,6 +521,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-77",
             "comment": "datumafname"
+          },
+          {
+            "identity": "ehds-specimen-v1.0.0",
+            "map": "EHDSSpecimen.collection.collectedDateTime",
+            "comment": "collectedDateTime"
           }
         ]
       },
@@ -418,6 +549,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-80",
             "comment": "datumontvangst"
+          },
+          {
+            "identity": "ehds-specimen-v1.0.0",
+            "map": "EHDSSpecimen.receivedDate",
+            "comment": "receivedDate"
           }
         ]
       },
@@ -442,16 +578,46 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-87",
             "comment": "verkrijgingswijze"
+          },
+          {
+            "identity": "ehds-specimen-v1.0.0",
+            "map": "EHDSSpecimen.collection.method",
+            "comment": "method"
           }
         ]
       },
       {
-        "id": "path-lm-Request.Specimen.NumberOfSamples",
-        "path": "path-lm-Request.Specimen.NumberOfSamples",
-        "short": "Number of samples",
-        "definition": "The number of samples taken from the primary specimen, each sent to the laboratory in a different container.",
+        "id": "path-lm-Request.Specimen.Sample",
+        "path": "path-lm-Request.Specimen.Sample",
+        "short": "Sample",
+        "definition": "Sample taken from the primary specimen. Each sample is sent to the laboratory in a different container.",
+        "comment": "If only a single sample is taken and examined by the laboratory, this element SHOULD not be populated, as the primary specimen and sample coincide in that case (and in particular, no sample number is assigned within Mercurius).",
         "alias": [
-          "AantalSamples"
+          "Sample"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "map": "path-dataelement-15",
+            "comment": "Sample"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Request.Specimen.Sample.SampleNumber",
+        "path": "path-lm-Request.Specimen.Sample.SampleNumber",
+        "short": "Sample number",
+        "definition": "Number of the sample.",
+        "comment": "If a Roman numeral is assigned to a sample in Mercurius, it SHALL be converted to an integer.",
+        "alias": [
+          "Samplenummer"
         ],
         "min": 1,
         "max": "1",
@@ -463,8 +629,8 @@
         "mapping": [
           {
             "identity": "path-dataset-100-alpha3-2026xxyy",
-            "map": "path-dataelement-9",
-            "comment": "NumberOfSamples"
+            "map": "path-dataelement-16",
+            "comment": "SampleNumber"
           }
         ]
       }

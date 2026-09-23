@@ -41,6 +41,11 @@
     {
       "identity": "path-dataset-100-alpha3-2026xxyy",
       "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+    },
+    {
+      "identity": "ehds-imagingreport-v1.0.0",
+      "name": "EHDS ImagingReport v1.0.0",
+      "uri": "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSImagingReport.html"
     }
   ],
   "kind": "logical",
@@ -63,6 +68,11 @@
             "identity": "path-dataset-100-alpha3-2026xxyy",
             "map": "path-dataelement-10",
             "comment": "Report"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport",
+            "comment": "EHDSImagingReport"
           }
         ]
       },
@@ -81,6 +91,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-3",
             "comment": "rapnaam"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.identifier",
+            "comment": "identifier"
           }
         ]
       },
@@ -93,6 +108,13 @@
             "targetProfile": [
               "http://medmij.nl/fhir/StructureDefinition/path-lm-Patient"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.subject",
+            "comment": "subject"
           }
         ]
       },
@@ -127,6 +149,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-44",
             "comment": "datumautorisatie"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.date",
+            "comment": "date"
           }
         ]
       },
@@ -145,7 +172,14 @@
         "id": "path-lm-Report.CareType",
         "path": "path-lm-Report.CareType",
         "comment": "At least code _0388_ ('Medisch specialisten, pathologische anatomie') SHALL be conveyed as care type.",
-        "min": 1
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.serviceSpecialty",
+            "comment": "serviceSpecialty"
+          }
+        ]
       },
       {
         "id": "path-lm-Report.Authorizer",
@@ -167,6 +201,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-41",
             "comment": "autorisator"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.authorEHDSHealthProfessional",
+            "comment": "authorEHDSHealthProfessional (implicit, actual mapping is on authorEHDSHealthProfessional.name)"
           }
         ]
       },
@@ -195,6 +234,11 @@
             "identity": "SNOMED",
             "map": "404684003",
             "comment": "klinische bevinding"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
           }
         ]
       },
@@ -223,6 +267,11 @@
             "identity": "SNOMED",
             "map": "168126000",
             "comment": "Sample macroscopy"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
           }
         ]
       },
@@ -251,6 +300,11 @@
             "identity": "SNOMED",
             "map": "117259009",
             "comment": "microscopisch onderzoek"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
           }
         ]
       },
@@ -274,6 +328,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-224",
             "comment": "conclusie"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.conclusion.impression",
+            "comment": "impression"
           }
         ]
       },
@@ -297,6 +356,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-308",
             "comment": "protocoldata"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.value)"
           }
         ]
       },

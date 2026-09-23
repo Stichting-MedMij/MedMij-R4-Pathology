@@ -181,7 +181,7 @@ De prioriteit van de te tonen datavelden wordt vastgesteld volgens de MoSCoW-met
 | DatumAfname | Item | mercurius-core-rubriek-77 | 01-02-2026 | b | Afgenomen op | | M |
 | DatumOntvangst | Item | mercurius-core-rubriek-80 | 03-02-2026 | b | Ontvangen door lab op | | M |
 | Verkrijgingswijze | Item | mercurius-core-rubriek-87 | biopsie (code '86273004' in codesysteem 'SNOMED CT') | b | Manier van verkrijgen | | M |
-| AantalSamples | Item | path-dataelement-9 | 2 | b | Aantal monsters | | M |
+| Sample | Item | path-dataelement-15 | 2 | b | Aantal monsters | Het is voldoende om het aantal samples weer te geven; dit aantal kan worden afgeleid uit het aantal keer dat dit concept is gevuld. | M |
 
 **Tabel 11: Tabel met specificaties voor de Aanvraag**
 

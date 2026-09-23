@@ -31,6 +31,7 @@
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"
   },
+  "effectiveDateTime": "2026-02-03",
   "valueInteger": 15,
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Olivander",

@@ -31,6 +31,7 @@
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
+  "effectiveDateTime": "2026-06-14",
   "valueQuantity": {
     "value": 10,
     "code": "%",

@@ -80,7 +80,7 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^definition = "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
   * end 1..1
-    * ^short = "AuthorizationDate"
+    * ^short = "EffectiveDateTime / AuthorizationDate"
     * ^definition = "Date of authorization."
     * ^alias[0] = "Tijdsindicatie"
     * ^alias[1] = "DatumTijd"
@@ -95,7 +95,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case."
   * ^alias = "Monster"
 * result 1..*
 * result only Reference(Observation or PathReportProtocolDataItem)
@@ -165,6 +165,12 @@ Description: "Clinical information section of the report."
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -219,6 +225,12 @@ Description: "Macroscopy-related results."
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -273,6 +285,12 @@ Description: "Microscopy-related results."
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -323,6 +341,12 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
   * ^short = "Patient"
   * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * value[x] 1..1
 * value[x] only CodeableConcept or string or integer or Quantity or Range or dateTime
   * ^short = "ProtocolItemResult"
@@ -332,7 +356,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
+  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept: if SampleNumber (path-dataelement-13) is populated, the data in this Observation relates to the sample with the same SampleNumber (path-dataelement-16); otherwise, it relates to the primary specimen."
   * ^alias = "Monster"
 
 Profile: PathReportReportIdentifier
@@ -346,7 +370,7 @@ Description: "Identifier of the pathology report assigned by the laboratory doin
 * ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * . obeys path-Report.ReportIdentifier-1
-  * ^short = "ReportIdentifier"
+  * ^short = "IdentificationNumber / ReportIdentifier"
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
   * ^alias[0] = "Identificatienummer"
@@ -411,6 +435,7 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-142" "klinischegegevens"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 
 Mapping: PathReportClinicalInformationMedMijCore-120
 Source: PathReportClinicalInformation
@@ -426,6 +451,7 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-184" "macroscopie"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 
 Mapping: PathReportMacroscopyMedMijCore-120
 Source: PathReportMacroscopy
@@ -441,9 +467,24 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-222" "microscopie"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
 
 Mapping: PathReportMicroscopyMedMijCore-120
 Source: PathReportMicroscopy
+Id: medmij-core-dataset-120-2026xxyy
+Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
+
+Mapping: PathReportProtocolDataItemMercuriusCore
+Source: PathReportProtocolDataItem
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
+
+Mapping: PathReportProtocolDataItemMedMijCore-120
+Source: PathReportProtocolDataItem
 Id: medmij-core-dataset-120-2026xxyy
 Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
 * meta
@@ -457,11 +498,3 @@ Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
 * code -> "path-dataelement-11" "ProtocolItemName"
 * value[x] -> "path-dataelement-12" "ProtocolItemResult[x]"
 * specimen -> "path-dataelement-13" "SampleNumber (implicit)"
-
-Mapping: PathReportProtocolDataItemMedMijCore-120
-Source: PathReportProtocolDataItem
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
-* meta
-  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
-* subject -> "medmij-core-dataelement-116" "Patient"
