@@ -43,11 +43,6 @@
       "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     },
     {
-      "identity": "SNOMED",
-      "name": "SNOMED CT",
-      "uri": "http://snomed.info/sct"
-    },
-    {
       "identity": "ehds-imagingreport-v1.0.0",
       "name": "EHDS ImagingReport v1.0.0",
       "uri": "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSImagingReport.html"
