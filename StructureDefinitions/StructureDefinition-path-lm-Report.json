@@ -41,11 +41,6 @@
     {
       "identity": "path-dataset-100-alpha3-2026xxyy",
       "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
-    },
-    {
-      "identity": "SNOMED",
-      "name": "SNOMED CT",
-      "uri": "http://snomed.info/sct"
     }
   ],
   "kind": "logical",
