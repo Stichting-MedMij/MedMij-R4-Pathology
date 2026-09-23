@@ -23,9 +23,23 @@
     }
   ],
   "description": "Data item from National Palga Protocols, created in the Palga Protocol Module.",
-  "purpose": "This Observation resource represents a single item within the ProtocolData concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This Observation resource represents a single item within the ProtocolData concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "mercurius-core-dataset-2-0",
+      "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "medmij-core-dataset-120-20260923",
+      "name": "Dataset MedMij R4 Core 1.2.0 20260923"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-20260923",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -33,6 +47,70 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation.meta",
+        "path": "Observation.meta",
+        "min": 1
+      },
+      {
+        "id": "Observation.meta.tag",
+        "path": "Observation.meta.tag",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.meta.tag:careType",
+        "path": "Observation.meta.tag",
+        "sliceName": "careType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "CareType",
+        "definition": "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data.",
+        "comment": "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering.",
+        "alias": [
+          "Zorgtype"
+        ],
+        "min": 1,
+        "max": "*",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-20260923",
+            "map": "medmij-core-dataelement-123",
+            "comment": "CareType"
+          }
+        ]
+      },
+      {
+        "id": "Observation.meta.tag:careType/pathology",
+        "path": "Observation.meta.tag",
+        "sliceName": "careType/pathology",
+        "comment": "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering.",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "0388",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+        }
+      },
       {
         "id": "Observation.status",
         "path": "Observation.status",
@@ -42,7 +120,7 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "short": "ProtocolItemName",
-        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "definition": "Name of the protocol item, expressed by a SNOMED CT code.",
         "alias": [
           "ProtocolitemNaam"
         ],
@@ -52,12 +130,20 @@
               "system": "http://snomed.info/sct"
             }
           ]
-        }
+        },
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-11",
+            "comment": "ProtocolItemName"
+          }
+        ]
       },
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "short": "Patient",
+        "definition": "The patient as subject of the information.",
         "alias": [
           "Patiënt"
         ],
@@ -69,6 +155,54 @@
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://medmij.nl/fhir/StructureDefinition/path-Patient"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-20260923",
+            "map": "medmij-core-dataelement-116",
+            "comment": "Patient"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "short": "EffectiveDateTime / AuthorizationDate",
+        "definition": "Date of authorization.",
+        "alias": [
+          "Tijdsindicatie",
+          "DatumTijd",
+          "DatumAutorisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-44",
+            "comment": "datumautorisatie"
           }
         ]
       },
@@ -92,7 +226,20 @@
             "code": "string"
           },
           {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-12",
+            "comment": "ProtocolItemResult[x]"
           }
         ]
       },
@@ -101,7 +248,7 @@
         "path": "Observation.specimen",
         "short": "Specimen",
         "definition": "Specimen that will be examined by a laboratory.",
-        "comment": "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept.",
+        "comment": "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept: if SampleNumber (path-dataelement-13) is populated, the data in this Observation relates to the sample with the same SampleNumber (path-dataelement-16); otherwise, it relates to the primary specimen.",
         "alias": [
           "Monster"
         ],
@@ -113,6 +260,13 @@
               "http://hl7.org/fhir/StructureDefinition/Specimen",
               "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-13",
+            "comment": "SampleNumber (implicit)"
           }
         ]
       }

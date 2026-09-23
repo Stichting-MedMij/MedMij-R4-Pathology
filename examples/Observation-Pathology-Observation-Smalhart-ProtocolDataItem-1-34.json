@@ -1,0 +1,48 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-1-34",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "490401000146101",
+        "display": "histologische graad van neuro-endocrien neoplasma"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: histologische graad van neuro-endocrien neoplasma<br/>Waarde: Grade 1<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "effectiveDateTime": "2026-06-14",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "258351006",
+        "system": "http://snomed.info/sct",
+        "display": "Grade 1"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-1-Smalhart",
+    "display": "Colon Resectie"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "resourceType": "Specimen",
+  "id": "Pathology-Specimen-1-Smalhart",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Colon Resectie<br/>Patiënt: G. Smalhart<br/>Afnamedatum: 11-06-2026<br/>Ontvangstdatum: 13-06-2026<br/>Verkrijgingswijze: resectie</div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1",
+      "value": "T26-61237-0"
+    }
+  ],
+  "type": {
+    "text": "Colon Resectie"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "receivedTime": "2026-06-13",
+  "collection": {
+    "collectedDateTime": "2026-06-11",
+    "method": {
+      "coding": [
+        {
+          "code": "65801008",
+          "system": "http://snomed.info/sct",
+          "display": "excisie"
+        }
+      ],
+      "text": "resectie"
+    }
+  }
+}

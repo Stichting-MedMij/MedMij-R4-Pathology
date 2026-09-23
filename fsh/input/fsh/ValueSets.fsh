@@ -28,6 +28,23 @@ Description: "ValueSet for the type of national trial for the request as defined
 * insert PublisherAndContact
 * include codes from system MercuriusHealthScreeningType_CS
 
+ValueSet: HealthScreeningType_VS
+Id: HealthScreeningType
+Title: "HealthScreeningType ValueSet."
+Description: "ValueSet for the type of national trial for the request."
+* insert DefaultNarrative
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $HealthScreeningTypeValueSetOID
+* ^name = "HealthScreeningType"
+* ^status = #draft
+* ^experimental = false
+* insert PublisherAndContact
+* MercuriusHealthScreeningType_CS#0 "Geen bevolkingsonderzoek"
+* $SCT#159081000146103 "bevolkingsonderzoek borstkanker"
+* $SCT#159101000146108 "bevolkingsonderzoek darmkanker"
+* $SCT#159091000146101 "bevolkingsonderzoek baarmoederhalskanker"
+
 ValueSet: MercuriusRequestType_VS
 Id: MercuriusRequestType
 Title: "MercuriusRequestType ValueSet."

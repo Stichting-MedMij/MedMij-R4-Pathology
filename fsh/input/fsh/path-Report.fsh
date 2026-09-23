@@ -8,12 +8,33 @@ Description: "Pathology report which contains the findings and interpretation of
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This DiagnosticReport resource represents the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * . obeys path-Report-1
   * ^short = "Report"
   * ^definition = "Pathology report which contains the findings and interpretation of a pathology study."
   * ^alias = "Verslag"
+* meta 1..1
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
+    * ^patternCoding = $VektisAGB#0388
 * identifier 1..*
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "$this"
@@ -34,7 +55,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * category[pathology]
   * ^patternCodeableConcept = $SCT#108257001
 * code 1..1
-  * ^comment = "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+  * ^comment = "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED CT code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED CT code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
   * coding 1..*
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "$this"
@@ -51,6 +72,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
 * effectivePeriod 1..1
   * start 1..1
@@ -58,9 +80,11 @@ Description: "Pathology report which contains the findings and interpretation of
     * ^definition = "Date when specimen is received at the laboratory."
     * ^alias = "DatumOntvangst"
   * end 1..1
-    * ^short = "AuthorizationDate"
+    * ^short = "EffectiveDateTime / AuthorizationDate"
     * ^definition = "Date of authorization."
-    * ^alias = "DatumAutorisatie"
+    * ^alias[0] = "Tijdsindicatie"
+    * ^alias[1] = "DatumTijd"
+    * ^alias[2] = "DatumAutorisatie"
 * resultsInterpreter 1..1
 * resultsInterpreter only Reference(Practitioner or PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   * ^short = "Authorizer"
@@ -71,7 +95,7 @@ Description: "Pathology report which contains the findings and interpretation of
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample."
+  * ^comment = "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case."
   * ^alias = "Monster"
 * result 1..*
 * result only Reference(Observation or PathReportProtocolDataItem)
@@ -80,7 +104,7 @@ Description: "Pathology report which contains the findings and interpretation of
   * ^slicing.rules = #open
   * ^short = "ProtocolData"
   * ^definition = "Data from National Palga Protocols, created in the Palga Protocol Module."
-  * ^comment = "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible."
+  * ^comment = "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED CT code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible."
   * ^alias = "Protocoldata"
 * result contains
     clinicalInformation 0..1 and
@@ -102,8 +126,29 @@ Description: "Clinical information section of the report."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents the ClinicalInformation concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents the ClinicalInformation Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
+* meta 1..1
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
+    * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
     * ^patternCode = #additional
@@ -118,7 +163,14 @@ Description: "Clinical information section of the report."
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -134,8 +186,29 @@ Description: "Macroscopy-related results."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents the Macroscopy concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents the Macroscopy Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
+* meta 1..1
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
+    * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
     * ^patternCode = #additional
@@ -150,7 +223,14 @@ Description: "Macroscopy-related results."
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -166,8 +246,29 @@ Description: "Microscopy-related results."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents the Microscopy concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents the Microscopy Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
+* meta 1..1
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
+    * ^patternCoding = $VektisAGB#0388
 * text 1..1
   * status
     * ^patternCode = #additional
@@ -182,7 +283,14 @@ Description: "Microscopy-related results."
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * specimen 1..1
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
@@ -198,21 +306,49 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Observation resource represents a single item within the ProtocolData concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Observation resource represents a single item within the ProtocolData concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
+* meta 1..1
+  * tag
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag contains
+      careType 1..*
+  * tag[careType] from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000 (required)
+    * ^short = "CareType"
+    * ^definition = "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data."
+    * ^alias = "Zorgtype"
+    * ^comment = "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering."
+  * tag[careType]
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * tag[careType] contains
+      pathology 1..1
+  * tag[careType][pathology]
+    * ^comment = "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering."
+    * ^patternCoding = $VektisAGB#0388
 * status
   * ^patternCode = #final
 * code
   * ^short = "ProtocolItemName"
-  * ^definition = "Name of the protocol item, expressed by a SNOMED code."
+  * ^definition = "Name of the protocol item, expressed by a SNOMED CT code."
   * ^alias = "ProtocolitemNaam"
   * ^patternCodeableConcept.coding.system = $SCT
 * subject 1..1
 * subject only Reference(Patient or PathPatient)
   * ^short = "Patient"
+  * ^definition = "The patient as subject of the information."
   * ^alias = "Patiënt"
+* effectiveDateTime 1..1
+  * ^short = "EffectiveDateTime / AuthorizationDate"
+  * ^definition = "Date of authorization."
+  * ^alias[0] = "Tijdsindicatie"
+  * ^alias[1] = "DatumTijd"
+  * ^alias[2] = "DatumAutorisatie"
 * value[x] 1..1
-* value[x] only CodeableConcept or string or Quantity or dateTime
+* value[x] only CodeableConcept or string or integer or Quantity or Range or dateTime
   * ^short = "ProtocolItemResult"
   * ^definition = "Result of the protocol item."
   * ^alias = "ProtocolitemResultaat"
@@ -220,7 +356,7 @@ Description: "Data item from National Palga Protocols, created in the Palga Prot
 * specimen only Reference(Specimen or PathRequestSpecimen)
   * ^short = "Specimen"
   * ^definition = "Specimen that will be examined by a laboratory."
-  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept."
+  * ^comment = "Either the primary specimen or an individual sample taken from that specimen is referenced here, based on which the data in this Observation relates to. This can be derived from the SampleNumber concept: if SampleNumber (path-dataelement-13) is populated, the data in this Observation relates to the sample with the same SampleNumber (path-dataelement-16); otherwise, it relates to the primary specimen."
   * ^alias = "Monster"
 
 Profile: PathReportReportIdentifier
@@ -231,13 +367,14 @@ Description: "Identifier of the pathology report assigned by the laboratory doin
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report building block for patient use cases in the context of the information standard Pathology (Pathologie)."
+* ^purpose = "This Identifier data type represents the ReportIdentifier concept from the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology."
 * insert Copyright
 * . obeys path-Report.ReportIdentifier-1
-  * ^short = "ReportIdentifier"
+  * ^short = "IdentificationNumber / ReportIdentifier"
   * ^definition = "Identifier of the pathology report assigned by the laboratory doing the analysis."
   * ^comment = "This identifier attains a `.value` of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345. The `.system` SHALL be of the form _urn:oid:2.16.840.1.113883.2.4.3.23.3.N.1_ where _N_ is the lab number (i.e. _labid_)."
-  * ^alias = "VerslagIdentificatienummer"
+  * ^alias[0] = "Identificatienummer"
+  * ^alias[1] = "VerslagIdentificatienummer"
   * ^condition = "path-Report.ReportIdentifier-1"
 * system 1..1
   * ^condition = "path-Report.ReportIdentifier-1"
@@ -264,11 +401,33 @@ Title: "Mercurius Core Dataset 2.0"
 * result -> "mercurius-core-rubriek-308" "protocoldata"
 * conclusion -> "mercurius-core-rubriek-224" "conclusie"
 
+Mapping: PathReportMedMijCore-120
+Source: PathReport
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
+* effectivePeriod
+  * end -> "medmij-core-dataelement-119" "EffectiveDateTime"
+
+Mapping: PathReportMedMij-100-alpha3
+Source: PathReport
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
+* . -> "path-dataelement-10" "Report"
+
 Mapping: PathReportReportIdentifierMercuriusCore
 Source: PathReportReportIdentifier
 Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * . -> "mercurius-core-rubriek-3" "rapnaam"
+
+Mapping: PathReportReportIdentifierMedMijCore-120
+Source: PathReportReportIdentifier
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
+* . -> "medmij-core-dataelement-115" "IdentificationNumber"
 
 Mapping: PathReportClinicalInformationMercuriusCore
 Source: PathReportClinicalInformation
@@ -276,6 +435,15 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-142" "klinischegegevens"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
+
+Mapping: PathReportClinicalInformationMedMijCore-120
+Source: PathReportClinicalInformation
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
 
 Mapping: PathReportMacroscopyMercuriusCore
 Source: PathReportMacroscopy
@@ -283,6 +451,15 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-184" "macroscopie"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
+
+Mapping: PathReportMacroscopyMedMijCore-120
+Source: PathReportMacroscopy
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
 
 Mapping: PathReportMicroscopyMercuriusCore
 Source: PathReportMicroscopy
@@ -290,3 +467,34 @@ Id: mercurius-core-dataset-2-0
 Title: "Mercurius Core Dataset 2.0"
 * text
   * div -> "mercurius-core-rubriek-222" "microscopie"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
+
+Mapping: PathReportMicroscopyMedMijCore-120
+Source: PathReportMicroscopy
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
+
+Mapping: PathReportProtocolDataItemMercuriusCore
+Source: PathReportProtocolDataItem
+Id: mercurius-core-dataset-2-0
+Title: "Mercurius Core Dataset 2.0"
+* effectiveDateTime -> "mercurius-core-rubriek-44" "datumautorisatie"
+
+Mapping: PathReportProtocolDataItemMedMijCore-120
+Source: PathReportProtocolDataItem
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
+* meta
+  * tag[careType] -> "medmij-core-dataelement-123" "CareType"
+* subject -> "medmij-core-dataelement-116" "Patient"
+
+Mapping: PathReportProtocolDataItemMedMij-100-alpha3
+Source: PathReportProtocolDataItem
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
+* code -> "path-dataelement-11" "ProtocolItemName"
+* value[x] -> "path-dataelement-12" "ProtocolItemResult[x]"
+* specimen -> "path-dataelement-13" "SampleNumber (implicit)"

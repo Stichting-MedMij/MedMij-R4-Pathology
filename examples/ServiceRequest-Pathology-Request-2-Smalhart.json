@@ -1,0 +1,85 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "Pathology-Request-2-Smalhart",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Request"
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "108257001",
+          "system": "http://snomed.info/sct",
+          "display": "pathologisch-anatomische verrichting"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "normaal",
+          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusRequestType",
+          "display": "normaal"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "0",
+          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
+          "display": "Geen bevolkingsonderzoek"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "252416005",
+        "system": "http://snomed.info/sct",
+        "display": "Histopathology test"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Smalhart<br/>Aanvrager: Katara Yi, MUMC<br/>Monster: Appendix Resectie<br/>Klinische vraag: Zijn er afwijkingen te constateren bij afgenomen weefsel?</div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1",
+      "value": "T26-61237"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Smalhart",
+    "display": "G. Smalhart"
+  },
+  "requester": {
+    "reference": "PractitionerRole/Pathology-PractitionerRole-Yi",
+    "display": "Katara Yi, MUMC"
+  },
+  "reasonCode": [
+    {
+      "text": "Zijn er afwijkingen te constateren bij afgenomen weefsel?"
+    }
+  ],
+  "specimen": [
+    {
+      "reference": "Specimen/Pathology-Specimen-2-Smalhart",
+      "display": "Appendix Resectie"
+    }
+  ]
+}

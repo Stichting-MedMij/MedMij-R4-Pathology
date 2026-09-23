@@ -1,6 +1,6 @@
-title: MedMij R4 Pathology IG 1.0.0-alpha.2
+title: MedMij R4 Pathology IG 1.0.0-alpha.3
 description: 'FHIR IG for MedMij Pathology (Dutch: Pathologie).'
-version: 1.0.0-alpha.2
+version: 1.0.0-alpha.3
 style-root: project
 style-name: MedMij
 numbered-headings: true

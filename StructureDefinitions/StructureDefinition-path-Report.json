@@ -23,13 +23,21 @@
     }
   ],
   "description": "Pathology report which contains the findings and interpretation of a pathology study.",
-  "purpose": "This DiagnosticReport resource represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This DiagnosticReport resource represents the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
+    },
+    {
+      "identity": "medmij-core-dataset-120-20260923",
+      "name": "Dataset MedMij R4 Core 1.2.0 20260923"
+    },
+    {
+      "identity": "path-dataset-100-alpha3-20260923",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
     }
   ],
   "kind": "resource",
@@ -60,7 +68,78 @@
             "expression": "code.coding.where(system = 'http://snomed.info/sct' and code = '1348332002').exists() xor code.coding.where(system = 'http://snomed.info/sct' and code = '252416005').exists()",
             "source": "http://medmij.nl/fhir/StructureDefinition/path-Report"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-10",
+            "comment": "Report"
+          }
         ]
+      },
+      {
+        "id": "DiagnosticReport.meta",
+        "path": "DiagnosticReport.meta",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.meta.tag",
+        "path": "DiagnosticReport.meta.tag",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.meta.tag:careType",
+        "path": "DiagnosticReport.meta.tag",
+        "sliceName": "careType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "CareType",
+        "definition": "The type of the healthcare provider responsible for the delivered care, or more specifically, the specialty of the department and/or health professional that delivered care. It enables patients and systems to interpret the origin and context of medical data.",
+        "comment": "Note that the `careType` slice is a slice on `.meta.tag`, which might not be immediately clear based on the rendering.",
+        "alias": [
+          "Zorgtype"
+        ],
+        "min": 1,
+        "max": "*",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.4--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-20260923",
+            "map": "medmij-core-dataelement-123",
+            "comment": "CareType"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.meta.tag:careType/pathology",
+        "path": "DiagnosticReport.meta.tag",
+        "sliceName": "careType/pathology",
+        "comment": "Note that the `pathology` slice is a reslice of the `careType` slice, which might not be immediately clear based on the rendering.",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "0388",
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7"
+        }
       },
       {
         "id": "DiagnosticReport.identifier",
@@ -143,7 +222,7 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
-        "comment": "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
+        "comment": "If the pathology study is of type cytology (which means that the ReportIdentifier (i.e. _rapnaam_, mercurius-core-rubriek-3) starts with either _B_ or _C_, corresponding to cervical cytology and other cytology, respectively), SNOMED CT code _1348332002_ SHALL be used as `.code`. Likewise, if the study is of type histology (in which case the ReportIdentifier starts with _T_), SNOMED CT code _252416005_ SHALL be used instead. Studies for which the ReportIdentifier starts with _S_ (i.e. autopsies) are out of scope."
       },
       {
         "id": "DiagnosticReport.code.coding",
@@ -191,6 +270,7 @@
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "short": "Patient",
+        "definition": "The patient as subject of the information.",
         "alias": [
           "Patiënt"
         ],
@@ -202,6 +282,13 @@
               "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://medmij.nl/fhir/StructureDefinition/path-Patient"
             ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "medmij-core-dataset-120-20260923",
+            "map": "medmij-core-dataelement-116",
+            "comment": "Patient"
           }
         ]
       },
@@ -252,9 +339,11 @@
       {
         "id": "DiagnosticReport.effective[x]:effectivePeriod.end",
         "path": "DiagnosticReport.effective[x].end",
-        "short": "AuthorizationDate",
+        "short": "EffectiveDateTime / AuthorizationDate",
         "definition": "Date of authorization.",
         "alias": [
+          "Tijdsindicatie",
+          "DatumTijd",
           "DatumAutorisatie"
         ],
         "min": 1,
@@ -263,6 +352,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-44",
             "comment": "datumautorisatie"
+          },
+          {
+            "identity": "medmij-core-dataset-120-20260923",
+            "map": "medmij-core-dataelement-119",
+            "comment": "EffectiveDateTime"
           }
         ]
       },
@@ -302,7 +396,7 @@
         "path": "DiagnosticReport.specimen",
         "short": "Specimen",
         "definition": "Specimen that will be examined by a laboratory.",
-        "comment": "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken (i.e. the NumberOfSamples concept is equal to _1_), precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case. If multiple samples have been taken from the primary specimen, the `.specimen` element contains _NumberOfSamples + 1_ references, one for the primary specimen and one for each sample.",
+        "comment": "Both the primary specimen as well as the individual samples taken from that specimen are referenced here. If only a single sample is taken, precisely one Specimen is referenced here, as the primary specimen and sample coincide in that case.",
         "alias": [
           "Monster"
         ],
@@ -331,7 +425,7 @@
         },
         "short": "ProtocolData",
         "definition": "Data from National Palga Protocols, created in the Palga Protocol Module.",
-        "comment": "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible.",
+        "comment": "Note that the protocol data has not been defined as a separate slice in this profile, as possibly any SNOMED CT code could be present in the `.code` element of an Observation corresponding to a protocol data item, which makes proper discrimination unfeasible.",
         "alias": [
           "Protocoldata",
           "Atomic Value",

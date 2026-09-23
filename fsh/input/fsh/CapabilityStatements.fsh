@@ -6,7 +6,7 @@ Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "path Retrieve"
 * status = #draft
-* date = "2026-05-06"
+* date = "2026-09-23"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction within Pathology."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -17,7 +17,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #client
-  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction (system role: PA-PRR-1.0.0-alpha.2)."
+  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve pathology reports' transaction (system role: PA-PRR-1.0.0-alpha.3)."
   * resource[+]
     * type = #DiagnosticReport
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Report"
@@ -34,7 +34,7 @@ Usage: #definition
     * searchParam[1]
       * name = "status"
       * type = #token
-      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value *final* needs to be supported."
+      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value _final_ needs to be supported."
   * resource[+]
     * type = #ServiceRequest
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Request"
@@ -105,7 +105,7 @@ Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "path Serve"
 * status = #draft
-* date = "2026-05-06"
+* date = "2026-09-23"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a server to fulfill the 'Serve pathology reports' transaction within Pathology."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -116,7 +116,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #server
-  * documentation = "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.2)."
+  * documentation = "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.3)."
   * resource[+]
     * type = #DiagnosticReport
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Report"
@@ -132,7 +132,7 @@ Usage: #definition
     * searchParam[1]
       * name = "status"
       * type = #token
-      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value *final* needs to be supported."
+      * documentation = "Only complete and verified reports are to be exchanged, hence only searching on the value _final_ needs to be supported."
   * resource[+]
     * type = #ServiceRequest
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/path-Request"

@@ -2,6 +2,13 @@
   "resourceType": "Observation",
   "id": "Pathology-Observation-Rommella-ProtocolDataItem-1-5",
   "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
     ]
@@ -16,10 +23,15 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
+  },
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",
     "display": "L. Rommella"
   },
+  "effectiveDateTime": "2026-02-03",
   "valueCodeableConcept": {
     "coding": [
       {

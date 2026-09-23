@@ -2,6 +2,13 @@
   "resourceType": "ServiceRequest",
   "id": "Pathology-Request-Olivander",
   "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Request"
     ]
@@ -32,7 +39,7 @@
         {
           "code": "0",
           "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
-          "display": "Geen BVO"
+          "display": "Geen bevolkingsonderzoek"
         }
       ]
     }
@@ -46,6 +53,16 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Olivander<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Resectie<br/>Klinische vraag:<div>Vraagstelling</div><div>Classificatie</div><div/></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1",
+      "value": "T26-60066"
+    }
+  ],
   "subject": {
     "reference": "Patient/Pathology-Patient-Olivander",
     "display": "G. Olivander"

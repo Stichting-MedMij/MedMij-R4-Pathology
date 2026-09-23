@@ -9,7 +9,7 @@ Dit functioneel ontwerp beschrijft hoe pathologieverslagen beschikbaar worden ge
 
 Dit functioneel ontwerp sluit aan op de pathologie-uitwisseling van [Palga](https://www.palga.nl/).
 
-Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de door Nictiz gepubliceerde [Ontwerpen MedMij](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
+Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig?version=1.2.0) en het door Nictiz gepubliceerde [Functioneel ontwerp](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
 
 **Zorgaanbieder en laboratorium** <br/>
 Een laboratorium wordt in dit ontwerp als eigen entiteit beschouwd. Een laboratorium kan:
@@ -28,7 +28,7 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 - Alleen definitieve/geautoriseerde pathologieverslagen worden uitgewisseld.
 
 ### Richtlijn en proces
-Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnn MedMij.
+Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnen MedMij.
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp is:
@@ -94,7 +94,7 @@ Sanne (45) heeft een afwijking laten onderzoeken in het ziekenhuis. Er is een bi
 - De patiënt kan de gegevens terugvinden, herlezen en gebruiken ter voorbereiding op vervolgzorg.
 
 #### Bedrijfsrollen
-Deze usecase onderscheidt twee bedrijfsrollen, namelijk de *Patiënt* en de *Zorgaanbieder*, zoals te zien in onderstaande tabel.
+Deze usecase onderscheidt twee bedrijfsrollen, namelijk de _Patiënt_ en de _Zorgaanbieder_, zoals te zien in onderstaande tabel.
 
 | Bedrijfsrol (actor) | Beschrijving |
 | --- | --- |
@@ -114,8 +114,8 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | PathologieverslagenRaadplegend | PA-PRR-1.0.0-alpha.2 | Raadplegen pathologieverslagen bij de zorgaanbieder |
-| XIS | PathologieverslagenBeschikbaarstellend | PA-PRB-1.0.0-alpha.2 | Beschikbaar stellen pathologieverslagen aan de patiënt |
+| PGO | PathologieverslagenRaadplegend | PA-PRR-1.0.0-alpha.3 | Raadplegen pathologieverslagen bij de zorgaanbieder |
+| XIS | PathologieverslagenBeschikbaarstellend | PA-PRB-1.0.0-alpha.3 | Beschikbaar stellen pathologieverslagen aan de patiënt |
 
 **Tabel 2: Systeemrollen**
 
@@ -124,8 +124,8 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.2 | PGO | Patiënt |
-| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.2 | XIS | Zorgaanbieder |
+| Verzamelen Pathologieverslagen (PULL) | Raadplegen pathologieverslagen | PA-PRR-1.0.0-alpha.3 | PGO | Patiënt |
+| Verzamelen Pathologieverslagen (PULL) | Beschikbaar stellen pathologieverslagen | PA-PRB-1.0.0-alpha.3 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 

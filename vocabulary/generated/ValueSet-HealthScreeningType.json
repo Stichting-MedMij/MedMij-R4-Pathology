@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HealthScreeningType",
+  "id": "HealthScreeningType",
+  "title": "HealthScreeningType ValueSet.",
+  "description": "ValueSet for the type of national trial for the request.",
+  "url": "http://medmij.nl/fhir/ValueSet/HealthScreeningType",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.4.5.5"
+    }
+  ],
+  "experimental": false,
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
+        "concept": [
+          {
+            "code": "0",
+            "display": "Geen bevolkingsonderzoek"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "159081000146103",
+            "display": "bevolkingsonderzoek borstkanker"
+          },
+          {
+            "code": "159101000146108",
+            "display": "bevolkingsonderzoek darmkanker"
+          },
+          {
+            "code": "159091000146101",
+            "display": "bevolkingsonderzoek baarmoederhalskanker"
+          }
+        ]
+      }
+    ]
+  }
+}

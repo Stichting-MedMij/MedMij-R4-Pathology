@@ -2,10 +2,27 @@
   "resourceType": "Specimen",
   "id": "Pathology-Specimen-Rommella-Sample-2",
   "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Specimen"
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Monster: Colon Biopt (sample 2)<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1",
+      "value": "T26-60065-2"
+    }
+  ],
   "type": {
     "text": "Colon Biopt"
   },
@@ -23,6 +40,13 @@
   "collection": {
     "collectedDateTime": "2026-01-25",
     "method": {
+      "coding": [
+        {
+          "code": "86273004",
+          "system": "http://snomed.info/sct",
+          "display": "biopsie"
+        }
+      ],
       "text": "biopsie"
     }
   }

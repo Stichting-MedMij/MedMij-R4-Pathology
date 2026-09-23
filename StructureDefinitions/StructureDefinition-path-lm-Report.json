@@ -30,7 +30,7 @@
     }
   ],
   "description": "Pathology report which contains the findings and interpretation of a pathology study.",
-  "purpose": "This LogicalModel represents the Report building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This LogicalModel represents the Report Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -39,15 +39,19 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
-      "identity": "SNOMED",
-      "name": "SNOMED CT",
-      "uri": "http://snomed.info/sct"
+      "identity": "path-dataset-100-alpha3-20260923",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
+    },
+    {
+      "identity": "ehds-imagingreport-v1.0.0",
+      "name": "EHDS ImagingReport v1.0.0",
+      "uri": "https://www.xt-ehr.eu/fhir/models/1.0.0/en/StructureDefinition-EHDSImagingReport.html"
     }
   ],
   "kind": "logical",
   "abstract": false,
   "type": "http://medmij.nl/fhir/StructureDefinition/path-lm-Report",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "baseDefinition": "http://medmij.nl/fhir/StructureDefinition/medmij-core-lm-Base",
   "derivation": "specialization",
   "differential": {
     "element": [
@@ -58,29 +62,122 @@
         "definition": "Pathology report which contains the findings and interpretation of a pathology study.",
         "alias": [
           "Verslag"
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-10",
+            "comment": "Report"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport",
+            "comment": "EHDSImagingReport"
+          }
         ]
       },
       {
-        "id": "path-lm-Report.ReportIdentifier",
-        "path": "path-lm-Report.ReportIdentifier",
+        "id": "path-lm-Report.IdentificationNumber",
+        "path": "path-lm-Report.IdentificationNumber",
         "short": "Report identifier",
         "definition": "Identifier of the pathology report assigned by the laboratory doing the analysis.",
-        "comment": "This identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
+        "comment": "This concept is often referred to as ReportIdentifier.\n\nThis identifier attains a value of the form _[TCSB]YY-nnnnn_ or _[TCSB]YY-nnnnnn_ (based on the laboratory the report originates from), e.g. T26-012345.",
         "alias": [
           "VerslagIdentificatienummer"
         ],
-        "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-3",
             "comment": "rapnaam"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.identifier",
+            "comment": "identifier"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Patient",
+        "path": "path-lm-Report.Patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/path-lm-Patient"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.subject",
+            "comment": "subject"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.HealthcareProvider",
+        "path": "path-lm-Report.HealthcareProvider",
+        "max": "0"
+      },
+      {
+        "id": "path-lm-Report.Effective[x]",
+        "path": "path-lm-Report.Effective[x]",
+        "min": 1
+      },
+      {
+        "id": "path-lm-Report.Effective[x]:EffectiveDateTime",
+        "path": "path-lm-Report.Effective[x]",
+        "sliceName": "EffectiveDateTime",
+        "short": "Authorization date",
+        "definition": "Date of authorization.",
+        "comment": "This concept is often referred to as AuthorizationDate.\n\nEven though this element has data type dateTime, in practice only dates (without time) will be conveyed.",
+        "alias": [
+          "DatumAutorisatie"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "mercurius-core-dataset-2-0",
+            "map": "mercurius-core-rubriek-44",
+            "comment": "datumautorisatie"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.date",
+            "comment": "date"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.Effective[x]:EffectivePeriod",
+        "path": "path-lm-Report.Effective[x]",
+        "sliceName": "EffectivePeriod",
+        "max": "0",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "path-lm-Report.CareType",
+        "path": "path-lm-Report.CareType",
+        "comment": "At least code _0388_ ('Medisch specialisten, pathologische anatomie') SHALL be conveyed as care type.",
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.serviceSpecialty",
+            "comment": "serviceSpecialty"
           }
         ]
       },
@@ -104,29 +201,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-41",
             "comment": "autorisator"
-          }
-        ]
-      },
-      {
-        "id": "path-lm-Report.AuthorizationDate",
-        "path": "path-lm-Report.AuthorizationDate",
-        "short": "Authorization date",
-        "definition": "Date of authorization.",
-        "alias": [
-          "DatumAutorisatie"
-        ],
-        "min": 1,
-        "max": "1",
-        "type": [
+          },
           {
-            "code": "date"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "mercurius-core-dataset-2-0",
-            "map": "mercurius-core-rubriek-44",
-            "comment": "datumautorisatie"
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.header.authorEHDSHealthProfessional",
+            "comment": "authorEHDSHealthProfessional (implicit, actual mapping is on authorEHDSHealthProfessional.name)"
           }
         ]
       },
@@ -155,6 +234,11 @@
             "identity": "SNOMED",
             "map": "404684003",
             "comment": "klinische bevinding"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
           }
         ]
       },
@@ -183,6 +267,11 @@
             "identity": "SNOMED",
             "map": "168126000",
             "comment": "Sample macroscopy"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
           }
         ]
       },
@@ -211,6 +300,11 @@
             "identity": "SNOMED",
             "map": "117259009",
             "comment": "microscopisch onderzoek"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.valueString)"
           }
         ]
       },
@@ -234,6 +328,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-224",
             "comment": "conclusie"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.conclusion.impression",
+            "comment": "impression"
           }
         ]
       },
@@ -257,6 +356,11 @@
             "identity": "mercurius-core-dataset-2-0",
             "map": "mercurius-core-rubriek-308",
             "comment": "protocoldata"
+          },
+          {
+            "identity": "ehds-imagingreport-v1.0.0",
+            "map": "EHDSImagingReport.body.examinationReport.resultsEHDSObservation",
+            "comment": "resultsEHDSObservation (implicit, actual mapping is on resultsEHDSObservation.result.value)"
           }
         ]
       },
@@ -264,7 +368,7 @@
         "id": "path-lm-Report.ProtocolData.ProtocolItemName",
         "path": "path-lm-Report.ProtocolData.ProtocolItemName",
         "short": "Protocol item name",
-        "definition": "Name of the protocol item, expressed by a SNOMED code.",
+        "definition": "Name of the protocol item, expressed by a SNOMED CT code.",
         "alias": [
           "ProtocolitemNaam"
         ],
@@ -273,6 +377,13 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-11",
+            "comment": "ProtocolItemName"
           }
         ]
       },
@@ -294,10 +405,23 @@
             "code": "string"
           },
           {
+            "code": "integer"
+          },
+          {
             "code": "Quantity"
           },
           {
+            "code": "Range"
+          },
+          {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-12",
+            "comment": "ProtocolItemResult[x]"
           }
         ]
       },
@@ -314,6 +438,13 @@
         "type": [
           {
             "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "path-dataset-100-alpha3-20260923",
+            "map": "path-dataelement-13",
+            "comment": "SampleNumber"
           }
         ]
       }

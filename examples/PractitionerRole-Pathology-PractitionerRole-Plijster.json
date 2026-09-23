@@ -2,10 +2,21 @@
   "resourceType": "PractitionerRole",
   "id": "Pathology-PractitionerRole-Plijster",
   "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Request.Requester",
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
     ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: P. Plijster<br/>Organisatie: LUMC<br/>Specialisme: Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)<br/>Locatie: LUMC, Polikliniek MDL</div>"
   },
   "practitioner": {
     "reference": "Practitioner/Pathology-Practitioner-Plijster",

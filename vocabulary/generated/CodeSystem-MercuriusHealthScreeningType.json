@@ -10,23 +10,19 @@
   "concept": [
     {
       "code": "0",
-      "display": "Geen BVO",
-      "definition": "Geen Bevolkingsonderzoek"
+      "display": "Geen bevolkingsonderzoek"
     },
     {
       "code": "2",
-      "display": "BVO BK",
-      "definition": "Bevolkingsonderzoek Borstkanker"
+      "display": "Bevolkingsonderzoek borstkanker"
     },
     {
       "code": "3",
-      "display": "BVO DDK",
-      "definition": "Bevolkingsonderzoek (Dikke)darmkanker"
+      "display": "Bevolkingsonderzoek (dikke)darmkanker"
     },
     {
       "code": "4",
-      "display": "BVO BMHK",
-      "definition": "Bevolkingsonderzoek Baarmoederhalskanker"
+      "display": "Bevolkingsonderzoek baarmoederhalskanker"
     }
   ],
   "text": {

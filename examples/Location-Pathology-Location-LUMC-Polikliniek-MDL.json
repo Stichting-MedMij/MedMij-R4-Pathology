@@ -2,9 +2,20 @@
   "resourceType": "Location",
   "id": "Pathology-Location-LUMC-Polikliniek-MDL",
   "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
     "profile": [
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
     ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Locatie: LUMC, Polikliniek MDL</div>"
   },
   "name": "Polikliniek MDL",
   "managingOrganization": {

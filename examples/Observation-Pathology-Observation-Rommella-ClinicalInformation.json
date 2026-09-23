@@ -2,6 +2,13 @@
   "resourceType": "Observation",
   "id": "Pathology-Observation-Rommella-ClinicalInformation",
   "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Report.ClinicalInformation"
     ]
@@ -24,6 +31,7 @@
     "reference": "Patient/Pathology-Patient-Rommella",
     "display": "L. Rommella"
   },
+  "effectiveDateTime": "2026-02-03",
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-Rommella",
     "display": "Colon Biopt"

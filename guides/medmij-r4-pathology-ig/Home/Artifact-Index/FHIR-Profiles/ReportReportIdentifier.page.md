@@ -5,17 +5,6 @@ canonical: http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifie
 
 # Report (ReportIdentifier)
 
-<tabs>
-    <tab title="Tree view" active="true">
-      {{tree:http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier, buttons}}
-    </tab>
-    <tab title="Mappings">
-      {{page:fql-get-mappings}}
-    </tab>
-    <tab title="Xml">
-      {{xml:http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier}}
-    </tab>
-    <tab title="Json">
-      {{json:http://medmij.nl/fhir/StructureDefinition/path-Report.ReportIdentifier}}
-    </tab>
-</tabs>
+{{page:fql-get-resource-description}}
+
+{{page:resource-view-tree-no-examples}}

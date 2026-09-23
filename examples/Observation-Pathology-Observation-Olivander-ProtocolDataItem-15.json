@@ -1,0 +1,48 @@
+{
+  "resourceType": "Observation",
+  "id": "Pathology-Observation-Olivander-ProtocolDataItem-15",
+  "meta": {
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
+    ],
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/path-Report.ProtocolDataItem"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "396927009",
+        "display": "moleculaire diagnostiek"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: moleculaire diagnostiek<br/>Waarde: niet verricht<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
+  },
+  "subject": {
+    "reference": "Patient/Pathology-Patient-Olivander",
+    "display": "G. Olivander"
+  },
+  "effectiveDateTime": "2026-02-03",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "385660001",
+        "system": "http://snomed.info/sct",
+        "display": "niet verricht"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/Pathology-Specimen-Olivander",
+    "display": "Colon Resectie"
+  }
+}

@@ -1,6 +1,7 @@
 // All Aliases used in Pathology
 
 Alias: $BSN = http://fhir.nl/fhir/NamingSystem/bsn
+Alias: $HealthScreeningTypeValueSetOID = urn:oid:2.16.528.1.1023.4.5.5
 Alias: $MercuriusGenderCodeSystemOID = urn:oid:2.16.528.1.1023.2.5.1
 Alias: $MercuriusGenderValueSetOID = urn:oid:2.16.528.1.1023.4.5.1
 Alias: $MercuriusHealthScreeningTypeCodeSystemOID = urn:oid:2.16.528.1.1023.2.5.2

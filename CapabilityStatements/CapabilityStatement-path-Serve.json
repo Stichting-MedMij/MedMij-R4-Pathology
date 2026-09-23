@@ -8,7 +8,7 @@
   },
   "name": "path Serve",
   "status": "draft",
-  "date": "2026-05-06",
+  "date": "2026-09-23",
   "publisher": "MedMij",
   "contact": [
     {
@@ -34,7 +34,7 @@
   "rest": [
     {
       "mode": "server",
-      "documentation": "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.2).",
+      "documentation": "Minimal requirements for a server to fulfill the 'Serve pathology reports' transaction (system role: PA-PRB-1.0.0-alpha.3).",
       "resource": [
         {
           "type": "DiagnosticReport",
@@ -60,7 +60,7 @@
             {
               "name": "status",
               "type": "token",
-              "documentation": "Only complete and verified reports are to be exchanged, hence only searching on the value *final* needs to be supported."
+              "documentation": "Only complete and verified reports are to be exchanged, hence only searching on the value _final_ needs to be supported."
             }
           ]
         },

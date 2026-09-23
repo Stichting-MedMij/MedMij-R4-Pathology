@@ -5,6 +5,13 @@
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/path-Patient",
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+    ],
+    "tag": [
+      {
+        "code": "0388",
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+        "display": "Medisch specialisten, pathologische anatomie"
+      }
     ]
   },
   "name": [
@@ -48,6 +55,10 @@
       }
     }
   ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: L. Rommella<br/>Geslacht: vrouw<br/>Geboortedatum: 05-04-1956<br/></div>"
+  },
   "gender": "female",
   "birthDate": "1956-04-05"
 }

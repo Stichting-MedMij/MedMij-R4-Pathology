@@ -8,6 +8,6 @@ topic: fql-get-examples-multiple-meta-profile
   where 
     meta.profile = (%canonical | %corecanonical)
   select
-    Id: id,
+    Name: id.split('-').skip(2).join(' '),
     Link: link(%context)
 </fql>
