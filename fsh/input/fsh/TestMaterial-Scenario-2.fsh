@@ -4,10 +4,13 @@ Instance: Pathology-Request-Rommella
 InstanceOf: PathRequest
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: L. Rommella<br/>Aanvrager: P. Plijster, LUMC<br/>Monster: Colon Biopt (2 samples)<br/>Klinische vraag: <div>Vraagstelling</div><div>Afwijkingen?</div><div/></div>"
+* identifier
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T26-60065"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -27,7 +30,7 @@ Instance: Pathology-Specimen-Rommella
 InstanceOf: PathRequestSpecimen
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Biopt<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
@@ -45,7 +48,7 @@ Instance: Pathology-Specimen-Rommella-Sample-1
 InstanceOf: PathRequestSpecimen
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Biopt (sample 1)<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
@@ -64,7 +67,7 @@ Instance: Pathology-Specimen-Rommella-Sample-2
 InstanceOf: PathRequestSpecimen
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Colon Biopt (sample 2)<br/>Patiënt: L. Rommella<br/>Afnamedatum: 25-01-2026<br/>Ontvangstdatum: 26-01-2026<br/>Verkrijgingswijze: biopsie</div>"
@@ -83,7 +86,7 @@ Instance: Pathology-Report-Rommella
 InstanceOf: PathReport
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T26-60065<br/>Patiënt: L. Rommella<br/>Autorisatiedatum: 03-02-2026<br/>Patholoog: Jan Oosting, LUMC<br/>Monster: Colon Biopt<br/>Conclusie: <div>I:  Slijmvliesbiopt flexura lienalis: tubulair adenoom met laaggradige dysplasie.</div><div>II:  Slijmvliesbiopt colon descendens: tubulair adenoom met laaggradige dysplasie.</div></div>"
@@ -124,7 +127,7 @@ Instance: Pathology-Observation-Rommella-ClinicalInformation
 InstanceOf: PathReportClinicalInformation
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Klinische gegevens</div><div>Binnengekomen via BVO, geen klachten</div><div>Aard materiaal</div><div>2 colon biopten</div><div/></div>"
@@ -137,7 +140,7 @@ Instance: Pathology-Observation-Rommella-Macroscopy
 InstanceOf: PathReportMacroscopy
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Macroscopie</div><div>1, 2 : biopt, ti ingesloten in 1/A en 2/A</div><div/></div>"
@@ -150,7 +153,7 @@ Instance: Pathology-Observation-Rommella-Microscopy
 InstanceOf: PathReportMicroscopy
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
   * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022)</div><div/><div>Aantal inzendingen: I-II</div><div/><div>I Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: flexura lienalis</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasie</div><div/><div>II Type biopt / resectie: 1 slijmvliesbiopt</div><div>Lokalisatie: colon descendens</div><div>Primaire afwijking: tubulair adenoom</div><div>Bevinding: met laaggradige dysplasie</div><div/></div>"
@@ -163,7 +166,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Neoadjuvant antineoplastic therapy procedure prior to surgery<br/>Waarde: chemotherapie met gerichte medicatie tegen maligne tumor<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt</div>"
@@ -177,7 +180,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: gedeeltelijke tumorrespons op antineoplastische neoadjuvante behandeling<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt</div>"
@@ -191,7 +194,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: histologisch kenmerk van tumor<br/>Waarde: benigne tubulair adenoom<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
@@ -205,7 +208,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal slijmvliesbiopten<br/>Waarde: 1 slijmvliesbiopt<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
@@ -219,7 +222,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: consult<br/>Waarde: Not performed<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
@@ -233,7 +236,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: locatie van primaire tumor<br/>Waarde: flexura lienalis<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
@@ -247,7 +250,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-1-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
@@ -261,7 +264,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-1
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: histologisch kenmerk van tumor<br/>Waarde: benigne tubulair adenoom<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
@@ -275,7 +278,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-2
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal slijmvliesbiopten<br/>Waarde: 1 slijmvliesbiopt<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
@@ -289,7 +292,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-3
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: consult<br/>Waarde: Not performed<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
@@ -303,7 +306,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-4
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: locatie van primaire tumor<br/>Waarde: colon descendens<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
@@ -317,7 +320,7 @@ Instance: Pathology-Observation-Rommella-ProtocolDataItem-2-5
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
-  * tag = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
@@ -338,13 +341,17 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: L. Rommella<br/>Geslacht: vrouw<br/>Geboortedatum: 05-04-1956<br/></div>"
 * identifier
   * system = $BSN
-  * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked
+  * value
+    * extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason]
+      * valueCode = #masked
 * name[nameInformation]
   * use = #official
   * text = "L. Rommella"
   * family = "Rommella"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Rommella"
+    * extension[lastName]
+      * valueString = "Rommella"
   * given = "L."
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
+    * extension[givenOrInitial]
+      * valueCode = #IN
 * gender = #female
 * birthDate = "1956-04-05"

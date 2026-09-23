@@ -21,6 +21,7 @@
 
 | | |
 | --- | --- |
+| IdentificationNumber | T26-60065 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
 | HealthScreeningType | Geen bevolkingsonderzoek (code '0' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | P. Plijster |
@@ -39,8 +40,8 @@
 | | |
 | --- | --- |
 | ReportIdentifier | T26-60065 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
-| Authorizer | Jan Oosting |
 | AuthorizationDate | 03-02-2026 |
+| Authorizer | Jan Oosting |
 | ClinicalInformation | Klinische gegevens <br/> Binnengekomen via BVO, geen klachten <br/> <br/> Aard materiaal <br/> 2 colon biopten |
 | Macroscopy | Macroscopie <br/> 1, 2 : biopt, ti ingesloten in 1/A en 2/A |
 | Microscopy | Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019 en protocol BVO darmkanker RIVM 10.2 (2022) <br/> <br/> Aantal inzendingen: I-II <br/> <br/> I Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: flexura lienalis <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie <br/> <br/> II Type biopt / resectie: 1 slijmvliesbiopt <br/> Lokalisatie: colon descendens <br/> Primaire afwijking: tubulair adenoom <br/> Bevinding: met laaggradige dysplasie |

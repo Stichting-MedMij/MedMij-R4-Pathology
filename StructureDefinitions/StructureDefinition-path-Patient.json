@@ -23,17 +23,13 @@
     }
   ],
   "description": "The person whose human tissue is analyzed in a pathology study.",
-  "purpose": "This Patient resource represents the Patient building block for patient use cases in the context of the information standard Pathology (Pathologie).",
+  "purpose": "This Patient resource represents the Patient Clinical Information Model (CIM) for patient use cases in the context of Pathology.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
       "identity": "mercurius-core-dataset-2-0",
       "name": "Mercurius Core Dataset 2.0"
-    },
-    {
-      "identity": "path-dataset-100-alpha3-2026xxyy",
-      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
     }
   ],
   "kind": "resource",
@@ -51,13 +47,6 @@
           "Patient",
           "Patient",
           "nl-core-Patient"
-        ],
-        "mapping": [
-          {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
-            "map": "path-dataelement-1",
-            "comment": "Patient"
-          }
         ]
       },
       {
@@ -117,38 +106,13 @@
         "id": "Patient.name:nameInformation",
         "path": "Patient.name",
         "sliceName": "nameInformation",
-        "short": "Name",
-        "definition": "Name of the patient.",
-        "alias": [
-          "Naam",
-          "nl-core-NameInformation"
-        ],
         "min": 1,
-        "max": "1",
-        "mapping": [
-          {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
-            "map": "path-dataelement-2",
-            "comment": "Name"
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Patient.name:nameInformation.family",
         "path": "Patient.name.family",
-        "short": "FamilyName",
-        "definition": "Family name of the patient.",
-        "alias": [
-          "Geslachtsnaam"
-        ],
-        "min": 1,
-        "mapping": [
-          {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
-            "map": "path-dataelement-3",
-            "comment": "FamilyName"
-          }
-        ]
+        "min": 1
       },
       {
         "id": "Patient.name:nameInformation.family.extension",
@@ -163,7 +127,6 @@
       {
         "id": "Patient.name:nameInformation.family.extension:prefix.value[x]",
         "path": "Patient.name.family.extension.value[x]",
-        "definition": "Prefix to the last name of the patient.",
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -186,7 +149,6 @@
       {
         "id": "Patient.name:nameInformation.family.extension:lastName.value[x]",
         "path": "Patient.name.family.extension.value[x]",
-        "definition": "Last name of the patient.",
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -233,31 +195,7 @@
       {
         "id": "Patient.gender",
         "path": "Patient.gender",
-        "definition": "Gender of the patient.",
         "min": 1,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AdministrativeGender"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-              "valueBoolean": true
-            }
-          ],
-          "strength": "required",
-          "description": "Use ConceptMap MercuriusGender-to-AdministrativeGender to translate terminology from the functional model to profile terminology in ValueSet AdministrativeGender.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1",
-          "_valueSet": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap",
-                "valueCanonical": "http://medmij.nl/fhir/ConceptMap/MercuriusGender-to-AdministrativeGender"
-              }
-            ]
-          }
-        },
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -269,9 +207,7 @@
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "short": "BirthDate",
-        "definition": "Birth date.",
-        "comment": "If the birth date (i.e. _geboortedatum_, mercurius-core-rubriek-11) retrieved from Mercurius has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a valid FHIR date of the form YYYY-MM-DD.",
+        "comment": "If the birth date retrieved from Mercurius (i.e. _geboortedatum_, mercurius-core-rubriek-11) has the form YY-MM-DD, the birth century (i.e. _geboorteeeuw_, mercurius-core-rubriek-13) SHALL be used to convert this date to a date of the form YYYY-MM-DD.",
         "min": 1,
         "mapping": [
           {
@@ -289,20 +225,7 @@
       {
         "id": "Patient.address",
         "path": "Patient.address",
-        "short": "Address",
-        "definition": "Address of the patient.",
-        "alias": [
-          "Adres",
-          "nl-core-AddressInformation"
-        ],
-        "max": "1",
-        "mapping": [
-          {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
-            "map": "path-dataelement-5",
-            "comment": "Address"
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Patient.address.line.extension:streetName",
@@ -339,12 +262,6 @@
       {
         "id": "Patient.address.city",
         "path": "Patient.address.city",
-        "short": "City",
-        "definition": "Place name.",
-        "alias": [
-          "Woonplaats",
-          "Woonplaats"
-        ],
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
@@ -356,13 +273,7 @@
       {
         "id": "Patient.address.postalCode",
         "path": "Patient.address.postalCode",
-        "short": "PostalCode",
-        "definition": "Postal code, either Dutch or foreign.",
-        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (nnnn AA). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.\n\nIf the PostalCode concept (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, the `.address.postalCode` element SHALL be omitted.",
-        "alias": [
-          "Postcode",
-          "Postcode"
-        ],
+        "comment": "Dutch postal codes contain 4 numerical characters, a space and 2 letters in uppercase (_nnnn AA_). Codes attain values between 1000 and 9999. If the postal code is unknown, the dummy _0000 XX_ is used in Mercurius.\n\nForeign postal codes are expressed in free text. If the postal code is unknown, the dummy _0009 XX_ is used in Mercurius.\n\nIf the postal code retrieved from Mercurius (i.e. either _postcode_, mercurius-core-rubriek-18, or _postcodebuitenland_, mercurius-core-rubriek-20) attains one of the dummy values indicated above, this element SHALL be omitted.",
         "mapping": [
           {
             "identity": "mercurius-core-dataset-2-0",
