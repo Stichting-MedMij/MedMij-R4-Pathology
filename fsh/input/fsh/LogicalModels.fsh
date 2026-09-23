@@ -223,8 +223,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathLmRequestMedMij-100-alpha3
 Source: PathLmRequest
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * . -> "path-dataelement-6" "Request"
 * Requester -> "path-dataelement-7" "Requester"
 * Specimen -> "path-dataelement-8" "Specimen"
@@ -276,8 +276,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathLmReportMedMij-100-alpha3
 Source: PathLmReport
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * . -> "path-dataelement-10" "Report"
 * ProtocolData
   * ProtocolItemName -> "path-dataelement-11" "ProtocolItemName"

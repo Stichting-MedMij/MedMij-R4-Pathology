@@ -277,16 +277,16 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathRequestMedMijCore-120
 Source: PathRequest
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
 
 Mapping: PathRequestMedMij-100-alpha3
 Source: PathRequest
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * . -> "path-dataelement-6" "Request"
 * requester -> "path-dataelement-7" "Requester"
 * specimen -> "path-dataelement-8" "Specimen"
@@ -304,16 +304,16 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathRequestSpecimenMedMijCore-120
 Source: PathRequestSpecimen
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
 
 Mapping: PathRequestSpecimenMedMij-100-alpha3
 Source: PathRequestSpecimen
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * . -> "path-dataelement-8" "Specimen"
 * . -> "path-dataelement-15" "Sample"
 * identifier[specimenIdentifier] -> "path-dataelement-14" "SpecimenIdentifier"
@@ -330,13 +330,13 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathRequestRequesterMedMijCore-120
 Source: PathRequestRequester
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 
 Mapping: PathRequestRequesterMedMij-100-alpha3
 Source: PathRequestRequester
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * . -> "path-dataelement-7" "Requester"

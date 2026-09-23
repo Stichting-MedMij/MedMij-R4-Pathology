@@ -39,8 +39,8 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
-      "identity": "path-dataset-100-alpha3-2026xxyy",
-      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+      "identity": "path-dataset-100-alpha3-20260923",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
     },
     {
       "identity": "ehds-imagingreport-v1.0.0",
@@ -70,7 +70,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-6",
             "comment": "Request"
           },
@@ -260,7 +260,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-7",
             "comment": "Requester"
           },
@@ -432,7 +432,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-8",
             "comment": "Specimen"
           },
@@ -466,7 +466,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-14",
             "comment": "SpecimenIdentifier"
           }
@@ -604,7 +604,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-15",
             "comment": "Sample"
           }
@@ -628,7 +628,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-16",
             "comment": "SampleNumber"
           }

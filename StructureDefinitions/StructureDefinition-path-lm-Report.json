@@ -39,8 +39,8 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
-      "identity": "path-dataset-100-alpha3-2026xxyy",
-      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+      "identity": "path-dataset-100-alpha3-20260923",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
     },
     {
       "identity": "ehds-imagingreport-v1.0.0",
@@ -65,7 +65,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-10",
             "comment": "Report"
           },
@@ -381,7 +381,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-11",
             "comment": "ProtocolItemName"
           }
@@ -419,7 +419,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-12",
             "comment": "ProtocolItemResult[x]"
           }
@@ -442,7 +442,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-13",
             "comment": "SampleNumber"
           }

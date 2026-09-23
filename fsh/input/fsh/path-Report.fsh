@@ -403,8 +403,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportMedMijCore-120
 Source: PathReport
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
@@ -413,8 +413,8 @@ Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
 
 Mapping: PathReportMedMij-100-alpha3
 Source: PathReport
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * . -> "path-dataelement-10" "Report"
 
 Mapping: PathReportReportIdentifierMercuriusCore
@@ -425,8 +425,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportReportIdentifierMedMijCore-120
 Source: PathReportReportIdentifier
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * . -> "medmij-core-dataelement-115" "IdentificationNumber"
 
 Mapping: PathReportClinicalInformationMercuriusCore
@@ -439,8 +439,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportClinicalInformationMedMijCore-120
 Source: PathReportClinicalInformation
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
@@ -455,8 +455,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportMacroscopyMedMijCore-120
 Source: PathReportMacroscopy
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
@@ -471,8 +471,8 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportMicroscopyMedMijCore-120
 Source: PathReportMicroscopy
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
@@ -485,16 +485,16 @@ Title: "Mercurius Core Dataset 2.0"
 
 Mapping: PathReportProtocolDataItemMedMijCore-120
 Source: PathReportProtocolDataItem
-Id: medmij-core-dataset-120-2026xxyy
-Title: "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+Id: medmij-core-dataset-120-20260923
+Title: "Dataset MedMij R4 Core 1.2.0 20260923"
 * meta
   * tag[careType] -> "medmij-core-dataelement-123" "CareType"
 * subject -> "medmij-core-dataelement-116" "Patient"
 
 Mapping: PathReportProtocolDataItemMedMij-100-alpha3
 Source: PathReportProtocolDataItem
-Id: path-dataset-100-alpha3-2026xxyy
-Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+Id: path-dataset-100-alpha3-20260923
+Title: "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
 * code -> "path-dataelement-11" "ProtocolItemName"
 * value[x] -> "path-dataelement-12" "ProtocolItemResult[x]"
 * specimen -> "path-dataelement-13" "SampleNumber (implicit)"

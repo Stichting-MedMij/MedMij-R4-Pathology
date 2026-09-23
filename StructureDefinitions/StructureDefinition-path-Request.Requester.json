@@ -32,12 +32,12 @@
       "name": "Mercurius Core Dataset 2.0"
     },
     {
-      "identity": "medmij-core-dataset-120-2026xxyy",
-      "name": "Dataset MedMij R4 Core 1.2.0 2026xxyy"
+      "identity": "medmij-core-dataset-120-20260923",
+      "name": "Dataset MedMij R4 Core 1.2.0 20260923"
     },
     {
-      "identity": "path-dataset-100-alpha3-2026xxyy",
-      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 2026xxyy"
+      "identity": "path-dataset-100-alpha3-20260923",
+      "name": "Dataset Pathologie MedMij 1.0.0-alpha.3 20260923"
     }
   ],
   "kind": "resource",
@@ -58,7 +58,7 @@
         ],
         "mapping": [
           {
-            "identity": "path-dataset-100-alpha3-2026xxyy",
+            "identity": "path-dataset-100-alpha3-20260923",
             "map": "path-dataelement-7",
             "comment": "Requester"
           }
@@ -110,7 +110,7 @@
         },
         "mapping": [
           {
-            "identity": "medmij-core-dataset-120-2026xxyy",
+            "identity": "medmij-core-dataset-120-20260923",
             "map": "medmij-core-dataelement-123",
             "comment": "CareType"
           }
