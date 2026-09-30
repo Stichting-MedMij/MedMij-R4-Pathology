@@ -25,7 +25,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: geen respons van neoplasma op antineoplastische neoadjuvante therapie<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Presence of regression of primary malignant neoplasm after neoadjuvant antineoplastic therapy<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
@@ -35,9 +35,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "1285417007",
+        "code": "52101004",
         "system": "http://snomed.info/sct",
-        "display": "geen respons van neoplasma op antineoplastische neoadjuvante therapie"
+        "display": "aanwezig"
       }
     ]
   },

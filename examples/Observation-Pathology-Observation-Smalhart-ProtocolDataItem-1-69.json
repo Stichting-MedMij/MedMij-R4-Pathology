@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-1-58",
+  "id": "Pathology-Observation-Smalhart-ProtocolDataItem-1-69",
   "meta": {
     "tag": [
       {
@@ -18,21 +18,26 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "443527007",
-        "display": "aantal lymfeklieren aangedaan door maligniteit"
+        "code": "521251000146108",
+        "display": "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 18<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie<br/>Waarde: 60 %<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
   "effectiveDateTime": "2026-06-14",
-  "valueInteger": 18,
+  "valueQuantity": {
+    "value": 60,
+    "code": "%",
+    "system": "http://unitsofmeasure.org",
+    "unit": "%"
+  },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-1-Smalhart",
     "display": "Colon Resectie"

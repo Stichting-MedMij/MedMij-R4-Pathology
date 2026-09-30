@@ -18,21 +18,29 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "423901009",
-        "display": "Identification code"
+        "code": "512001000004108",
+        "display": "Histologic type of primary malignant neoplasm"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Identification code<br/>Waarde: 1e tumor<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: gesteelde poliep<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
   "effectiveDateTime": "2026-06-14",
-  "valueString": "1e tumor",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "103680002",
+        "system": "http://snomed.info/sct",
+        "display": "gesteelde poliep"
+      }
+    ]
+  },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-1-Smalhart",
     "display": "Colon Resectie"

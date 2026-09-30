@@ -18,14 +18,14 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "443527007",
-        "display": "aantal lymfeklieren aangedaan door maligniteit"
+        "code": "444025001",
+        "display": "aantal onderzochte lymfeklieren"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 23<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: aantal onderzochte lymfeklieren<br/>Waarde: 23<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",

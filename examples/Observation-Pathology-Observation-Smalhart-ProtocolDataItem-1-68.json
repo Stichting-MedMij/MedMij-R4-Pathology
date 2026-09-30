@@ -18,14 +18,14 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "521251000146108",
-        "display": "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
+        "code": "405920001",
+        "display": "Mitotic count score per 10 high power fields, 40x objective"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie<br/>Waarde: 60 %<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Mitotic count score per 10 high power fields, 40x objective<br/>Waarde: 1 per 2mm2<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
@@ -33,10 +33,10 @@
   },
   "effectiveDateTime": "2026-06-14",
   "valueQuantity": {
-    "value": 60,
-    "code": "%",
+    "value": 1,
+    "code": "/2mm2",
     "system": "http://unitsofmeasure.org",
-    "unit": "%"
+    "unit": "per 2mm2"
   },
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-1-Smalhart",
