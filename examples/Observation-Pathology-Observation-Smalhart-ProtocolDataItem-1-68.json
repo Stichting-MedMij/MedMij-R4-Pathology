@@ -34,7 +34,7 @@
   "effectiveDateTime": "2026-06-14",
   "valueQuantity": {
     "value": 1,
-    "code": "/2mm2",
+    "code": "/(2.mm2)",
     "system": "http://unitsofmeasure.org",
     "unit": "per 2mm2"
   },
