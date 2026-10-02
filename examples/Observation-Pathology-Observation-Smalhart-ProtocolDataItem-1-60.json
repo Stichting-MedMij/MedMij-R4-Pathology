@@ -18,14 +18,14 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "512001000004108",
-        "display": "Histologic type of primary malignant neoplasm"
+        "code": "450291000146104",
+        "display": "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Histologic type of primary malignant neoplasm<br/>Waarde: gesteelde poliep<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor<br/>Waarde: muscularis propria<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
@@ -35,9 +35,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "103680002",
+        "code": "86915006",
         "system": "http://snomed.info/sct",
-        "display": "gesteelde poliep"
+        "display": "muscularis propria"
       }
     ]
   },

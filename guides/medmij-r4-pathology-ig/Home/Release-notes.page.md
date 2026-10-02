@@ -5,6 +5,7 @@
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
 | FHIR artifacts        | The nl-core dependency has been updated to 0.12.1-beta.1. | [PG-561](https://medmij.atlassian.net/browse/PG-561) |
+| Test material         | Several errors in the test material have been corrected. | [PG-564](https://medmij.atlassian.net/browse/PG-564) |
 
 ## 1.0.0-alpha.3
 

@@ -18,14 +18,14 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "1850001000004102",
-        "display": "Histologic grade of primary malignant neoplasm"
+        "code": "1286790001",
+        "display": "histologische type van niet-eenduidig benigne afwijkend weefsel"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: histologische type van niet-eenduidig benigne afwijkend weefsel<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Rommella",

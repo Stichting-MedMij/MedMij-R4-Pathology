@@ -297,50 +297,54 @@
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-57",
-      "display": "aantal lymfeklieren aangedaan door maligniteit"
+      "display": "aantal onderzochte lymfeklieren"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-58",
-      "display": "Dichtstbijzijnde darmsnijvlak"
+      "display": "aantal lymfeklieren aangedaan door maligniteit"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-59",
-      "display": "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
+      "display": "Dichtstbijzijnde darmsnijvlak"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-60",
-      "display": "Aspect tumor"
+      "display": "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-61",
-      "display": "Onderzoek vermelden als"
+      "display": "Aspect tumor"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-62",
-      "display": "afstand van tumor tot distaal snijvlak in biopt"
+      "display": "Onderzoek vermelden als"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-63",
-      "display": "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
+      "display": "afstand van tumor tot distaal snijvlak in biopt"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-64",
-      "display": "Histologisch respons op (neo-adjuvante) therapie in de lymfklieren"
+      "display": "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-65",
-      "display": "Respons op eerdere therapie"
+      "display": "Histologisch respons op (neo-adjuvante) therapie in de lymfklieren"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-66",
-      "display": "diameter van massa"
+      "display": "Respons op eerdere therapie"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-67",
-      "display": "Aantal mitosen per 2mm2"
+      "display": "diameter van massa"
     },
     {
       "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-68",
+      "display": "Aantal mitosen per 2mm2"
+    },
+    {
+      "reference": "Observation/Pathology-Observation-Smalhart-ProtocolDataItem-1-69",
       "display": "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
     },
     {

@@ -15,7 +15,7 @@ Usage: #example
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
 * category[requestType] = $MercuriusRequestTypeCodeSystemURL#normaal "normaal"
-* category[healthScreeningType] = $MercuriusHealthScreeningTypeCodeSystemURL#0 "Geen bevolkingsonderzoek"
+* category[healthScreeningType] = $SCT#159101000146108 "bevolkingsonderzoek darmkanker"
 * code
   * coding[histology] = $SCT#252416005 "Histopathology test"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
@@ -121,12 +121,12 @@ Usage: #example
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-2) "Sample 1, aantal slijmvliesbiopten"
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-3) "Sample 1, consult"
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-4) "Sample 1, locatie van primaire tumor"
-* result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-5) "Sample 1, Bevinding"
+* result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-1-5) "Sample 1, histologische type van niet-eenduidig benigne afwijkend weefsel"
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-1) "Sample 2, histologisch kenmerk van tumor"
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-2) "Sample 2, aantal slijmvliesbiopten"
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-3) "Sample 2, consult"
 * result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-4) "Sample 2, locatie van primaire tumor"
-* result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-5) "Sample 2, Bevinding"
+* result[+] = Reference(Pathology-Observation-Rommella-ProtocolDataItem-2-5) "Sample 2, histologische type van niet-eenduidig benigne afwijkend weefsel"
 * result[clinicalInformation] = Reference(Pathology-Observation-Rommella-ClinicalInformation) "Klinische gegevens"
 * result[macroscopy] = Reference(Pathology-Observation-Rommella-Macroscopy) "Macroscopie"
 * result[microscopy] = Reference(Pathology-Observation-Rommella-Microscopy) "Microscopie"
@@ -271,9 +271,9 @@ Usage: #example
   * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: histologische type van niet-eenduidig benigne afwijkend weefsel<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 1)</div>"
 * status = #final
-* code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
+* code = $SCT#1286790001 "histologische type van niet-eenduidig benigne afwijkend weefsel"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
 * effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1155708003 "Low histologic grade"
@@ -346,9 +346,9 @@ Usage: #example
   * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: Histologic grade of primary malignant neoplasm<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: histologische type van niet-eenduidig benigne afwijkend weefsel<br/>Waarde: Low histologic grade<br/>Patiënt: L. Rommella<br/>Monster: Colon Biopt (sample 2)</div>"
 * status = #final
-* code = $SCT#1850001000004102 "Histologic grade of primary malignant neoplasm"
+* code = $SCT#1286790001 "histologische type van niet-eenduidig benigne afwijkend weefsel"
 * subject = Reference(Pathology-Patient-Rommella) "L. Rommella"
 * effectiveDateTime = "2026-02-03"
 * valueCodeableConcept = $SCT#1155708003 "Low histologic grade"

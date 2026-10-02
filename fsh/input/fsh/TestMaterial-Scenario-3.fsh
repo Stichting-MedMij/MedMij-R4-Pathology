@@ -123,18 +123,19 @@ Usage: #example
 * result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-54) "diagnose"
 * result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-55) "Tumor aanwezig"
 * result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-56) "aantal tumoren"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-57) "aantal lymfeklieren aangedaan door maligniteit"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-58) "Dichtstbijzijnde darmsnijvlak"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-59) "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-60) "Aspect tumor"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-61) "Onderzoek vermelden als"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-62) "afstand van tumor tot distaal snijvlak in biopt"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-63) "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-64) "Histologisch respons op (neo-adjuvante) therapie in de lymfklieren"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-65) "Respons op eerdere therapie"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-66) "diameter van massa"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-67) "Aantal mitosen per 2mm2"
-* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-68) "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-57) "aantal onderzochte lymfeklieren"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-58) "aantal lymfeklieren aangedaan door maligniteit"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-59) "Dichtstbijzijnde darmsnijvlak"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-60) "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-61) "Aspect tumor"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-62) "Onderzoek vermelden als"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-63) "afstand van tumor tot distaal snijvlak in biopt"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-64) "afstand van neoplasma tot dichtstbijzijnde radiaal snijvlak in biopt"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-65) "Histologisch respons op (neo-adjuvante) therapie in de lymfklieren"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-66) "Respons op eerdere therapie"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-67) "diameter van massa"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-68) "Aantal mitosen per 2mm2"
+* result[+] = Reference(Pathology-Observation-Smalhart-ProtocolDataItem-1-69) "percentage celkernen positief voor INSM1 in primair maligne neoplasma volgens immunohistochemie"
 * result[clinicalInformation] = Reference(Pathology-Observation-Smalhart-ClinicalInformation-1) "Klinische gegevens"
 * result[macroscopy] = Reference(Pathology-Observation-Smalhart-Macroscopy-1) "Macroscopie"
 * result[microscopy] = Reference(Pathology-Observation-Smalhart-Microscopy-1) "Microscopie"
@@ -175,7 +176,7 @@ Usage: #example
   * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #additional
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN  versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie rechts</div><div>Niveau van resectie mesocolon: op de muscularis propria</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie 1ste tumor: coecum</div><div>Aspect 1ste tumor: schotelvormig</div><div>Maximale diameter 1ste tumor: 0,6 cm</div><div>Lokalisatie 2de tumor: ileum</div><div>Aspect 2de tumor: poliepeus</div><div>Maximale diameter 2de tumor: 0,7 cm</div><div>Lengte preparaat: 30 cm</div><div>Tumor aanwezig: ja, 2 tumoren</div><div>Patient is bekend met: MUTYH geassocieerde polyposis (MAP)</div><div>Metastase(n): lever (bevestigd)</div><div>Eerdere (neo-adjuvante) therapie: chemotherapie en radiotherapie kort</div><div/><div>Microscopie 1ste tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: partiele regressie</div><div>Type 1ste tumor (WHO): zegelringcelcarcinoom</div><div>Zegelringcellen: &lt; 10%</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie en intramurale veneuze invasie</div><div>Angio-invasie opmerking: geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: intermediair (Bd2)</div><div>Perineurale groei: aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div>Betreft dit een recidief: ja</div><div/><div>Snijvlakken 1ste tumor</div><div>Dichtstbijzijnde darmsnijvlak: niet vrij</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij, &gt; 0,1 cm &lt; 0,2 cm</div><div/><div>Aanvullend onderzoek MMR/MSI 1ste tumor</div><div>MLH1 verlies: nee</div><div>PMS2 verlies: nee</div><div>MSH2 verlies: ja</div><div>MSH6 verlies: nee</div><div/><div>Microscopie 2de tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: geen regressie</div><div>Type tumor 2de (WHO): neuroendocriene tumor graad 1</div><div>Ki-67 index NEN: 1%</div><div>Mitosen per 2mm2: 1</div><div>Diepste tumordoorgroei NET (ileum/jejunum): invasie in muscularis propria</div><div>Angio-invasie: niet aangetroffen</div><div>Angio-invasie opmerking: geen lymfvat invasie, geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div/><div>Snijvlakken 2de tumor</div><div>Proximaal darmsnijvlak: vrij op 0,2 cm</div><div>Distaal darmsnijvlak: vrij op 0,2 cm</div><div>Mesenteriaal snijvlak: niet vrij</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 23</div><div>Aantal lymfklieren met metastasen: 17</div><div>Aantal tumordeposits: 1</div><div>Diameter grootste metastase: &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Aantal lymfklieren met metastasen NET (bij tumor ileum/jejunum): 1</div><div>Diameter grootste metastase NET (bij tumor ileum/jejunum): &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Mesenteriale massa aanwezig: ja</div><div>Diameter mesenteriale massa: 2,1 cm</div><div>Histologisch respons op (neo-adjuvante) therapie  in de lymfklieren: ja</div><div/><div>Overige</div><div>Poliep(en): sessiel serrated laesie zonder dysplasie</div><div>Aantal poliepen: 2</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerd</div><div/><div>Immunohistochemie</div><div>2e tumor</div><div>Percentage positieve tumorcellen INSM1: 60%</div><div/></div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gebaseerd op de richtlijn Colorectaalcarcinoom versie 10-2019, Neuro-endocriene tumoren versie 1.0 (2013) en ENETS consensus richtlijn NEN  versie 2017</div><div/><div>Klinische Gegevens en Macroscopie</div><div>Type resectie: hemicolectomie rechts</div><div>Niveau van resectie mesocolon: op de muscularis propria</div><div>Perforatie: niet aanwezig</div><div>Klinisch obstructie / ileus: nee</div><div>Lokalisatie 1ste tumor: coecum</div><div>Aspect 1ste tumor: schotelvormig</div><div>Maximale diameter 1ste tumor: 0,6 cm</div><div>Lokalisatie 2de tumor: ileum</div><div>Aspect 2de tumor: poliepeus</div><div>Maximale diameter 2de tumor: 0,7 cm</div><div>Lengte preparaat: 30 cm</div><div>Tumor aanwezig: ja, 2 tumoren</div><div>Patient is bekend met: MUTYH geassocieerde polyposis (MAP)</div><div>Metastase(n): lever (bevestigd)</div><div>Eerdere (neo-adjuvante) therapie: chemotherapie en radiotherapie kort</div><div/><div>Microscopie 1ste tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: partiele regressie</div><div>Type 1ste tumor (WHO): zegelringcelcarcinoom</div><div>Zegelringcellen: &lt; 10%</div><div>Diepste tumordoorgroei: submucosa</div><div>Angio-invasie: lymfvat invasie en intramurale veneuze invasie</div><div>Angio-invasie opmerking: geen extramurale veneuze invasie aangetroffen</div><div>Tumor budding: intermediair (Bd2)</div><div>Perineurale groei: aangetroffen</div><div>Lymfocytaire infiltratie: ja</div><div>Betreft dit een recidief: ja</div><div/><div>Snijvlakken 1ste tumor</div><div>Dichtstbijzijnde darmsnijvlak: niet vrij</div><div>Retroperitoneaal klievingsvlak/radiaire snijvlak: vrij, &gt; 0,1 cm &lt; 0,2 cm</div><div/><div>Aanvullend onderzoek MMR/MSI 1ste tumor</div><div>MLH1 verlies: nee</div><div>PMS2 verlies: nee</div><div>MSH2 verlies: ja</div><div>MSH6 verlies: nee</div><div/><div>Microscopie 2de tumor</div><div>Respons op eerdere (neo-adjuvante) therapie: geen regressie</div><div>Type tumor 2de (WHO): neuroendocriene tumor graad 1</div><div>Ki-67 index NEN: 1%</div><div>Mitosen per 2mm2: 1</div><div>Diepste tumordoorgroei NET (ileum/jejunum): invasie in muscularis propria</div><div>Angio-invasie: niet aangetroffen</div><div>Angio-invasie opmerking: geen lymfvat invasie, geen intramurale veneuze invasie en geen extramurale veneuze invasie aangetroffen</div><div>Perineurale groei: niet aangetroffen</div><div/><div>Snijvlakken 2de tumor</div><div>Proximaal darmsnijvlak: vrij op 0,2 cm</div><div>Distaal darmsnijvlak: vrij op 0,2 cm</div><div>Mesenteriaal snijvlak: niet vrij</div><div/><div>Lymfklieren</div><div>Aantal lymfklieren: 23</div><div>Aantal lymfklieren met metastasen: 18</div><div>Aantal tumordeposits: 1</div><div>Diameter grootste metastase: &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Aantal lymfklieren met metastasen NET (bij tumor ileum/jejunum): 1</div><div>Diameter grootste metastase NET (bij tumor ileum/jejunum): &gt; 0,2 mm - &lt;= 2,0 mm</div><div>Mesenteriale massa aanwezig: ja</div><div>Diameter mesenteriale massa: 2,1 cm</div><div>Histologisch respons op (neo-adjuvante) therapie  in de lymfklieren: ja</div><div/><div>Overige</div><div>Poliep(en): sessiel serrated laesie zonder dysplasie</div><div>Aantal poliepen: 2</div><div/><div>Moleculaire bepaling</div><div>Mutatie analyse: niet uitgevoerd</div><div/><div>Immunohistochemie</div><div>2e tumor</div><div>Percentage positieve tumorcellen INSM1: 60%</div><div/></div>"
 * status = #final
 * code = $SCT#117259009 "microscopisch onderzoek"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
@@ -1040,15 +1041,30 @@ Usage: #example
   * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 23<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal onderzochte lymfeklieren<br/>Waarde: 23<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
 * status = #final
-* code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
+* code = $SCT#444025001 "aantal onderzochte lymfeklieren"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
 * effectiveDateTime = "2026-06-14"
 * valueInteger = 23
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
 Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-58
+InstanceOf: PathReportProtocolDataItem
+Usage: #example
+* meta
+  * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 18<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+* status = #final
+* code = $SCT#443527007 "aantal lymfeklieren aangedaan door maligniteit"
+* subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
+* effectiveDateTime = "2026-06-14"
+* valueInteger = 18
+* specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
+
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-59
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1063,7 +1079,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-59
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-60
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1078,7 +1094,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#86915006 "muscularis propria"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-60
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-61
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1093,7 +1109,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#103680002 "gesteelde poliep"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-61
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-62
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1108,7 +1124,7 @@ Usage: #example
 * valueString = "1e tumor"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-62
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-63
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1124,7 +1140,7 @@ Usage: #example
   * unit = "cm"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-63
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-64
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1143,7 +1159,7 @@ Usage: #example
     * unit = "cm"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-64
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-65
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1158,7 +1174,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#52101004 "aanwezig"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-65
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-66
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1173,7 +1189,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#1285417007 "geen respons van neoplasma op antineoplastische neoadjuvante therapie"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-66
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-67
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1189,7 +1205,7 @@ Usage: #example
   * unit = "cm"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-67
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-68
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1201,11 +1217,11 @@ Usage: #example
 * code = $SCT#405920001 "Mitotic count score per 10 high power fields, 40x objective"
 * subject = Reference(Pathology-Patient-Smalhart) "G. Smalhart"
 * effectiveDateTime = "2026-06-14"
-* valueQuantity = 1 '/2mm2'
+* valueQuantity = 1 '/(2.mm2)'
   * unit = "per 2mm2"
 * specimen = Reference(Pathology-Specimen-1-Smalhart) "Colon Resectie"
 
-Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-68
+Instance: Pathology-Observation-Smalhart-ProtocolDataItem-1-69
 InstanceOf: PathReportProtocolDataItem
 Usage: #example
 * meta
@@ -1230,8 +1246,8 @@ Usage: #example
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Aanvraag: pathologisch-anatomische verrichting<br/>Soort aanvraag: normaal<br/>Bevolkingsonderzoek: geen<br/>Patiënt: G. Smalhart<br/>Aanvrager: Katara Yi, MUMC<br/>Monster: Appendix Resectie<br/>Klinische vraag: Zijn er afwijkingen te constateren bij afgenomen weefsel?</div>"
 * identifier[requestIdentifier]
-  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
-  * value = "T26-61237"
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T24-01916"
 * status = #completed
 * intent = #order
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"
@@ -1254,8 +1270,8 @@ Usage: #example
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Monster: Appendix Resectie<br/>Patiënt: G. Smalhart<br/>Ontvangstdatum: 01-11-2023<br/>Verkrijgingswijze: resectie</div>"
 * identifier[specimenIdentifier]
-  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.934.1"
-  * value = "T26-61237-0"
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T24-01916-0"
 * type
   * coding = $SCT#66754008 "blindedarm"
   * text = "appendix"
@@ -1273,10 +1289,10 @@ Usage: #example
   * tag[careType][pathology] = $VektisAGB#0388 "Medisch specialisten, pathologische anatomie"
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T24-61237<br/>Patiënt: G. Smalhart<br/>Autorisatiedatum: 09-04-2024<br/>Patholoog: Albus Beuker, MUMC<br/>Monster: Appendix Resectie<br/>Conclusie: <div>Appendectomie: goed / matig gedifferentieerd adenocarcinoom.</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa; dichtstbijzijnde snijvlak niet vrij.</div><div>Angio-invasie: niet aangetroffen; Perineurale groei: niet aangetroffen.</div><div>TNM classificatie Appendix (8e editie UICC): pTis.</div><div><br/> DIT IS EEN GEWIJZIGDE CONCLUSIE (09-04-2024).</div><div>II.</div><div>Graad 3.</div><div><br/> Conclusie 1916</div></div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Verslag: pathologisch-anatomische verrichting<br/>Identificatienummer: T24-01916<br/>Patiënt: G. Smalhart<br/>Autorisatiedatum: 09-04-2024<br/>Patholoog: Albus Beuker, MUMC<br/>Monster: Appendix Resectie<br/>Conclusie: <div>Appendectomie: goed / matig gedifferentieerd adenocarcinoom.</div><div>Diepste tumordoorgroei: invasie beperkt tot lamina propria / mucosa; dichtstbijzijnde snijvlak niet vrij.</div><div>Angio-invasie: niet aangetroffen; Perineurale groei: niet aangetroffen.</div><div>TNM classificatie Appendix (8e editie UICC): pTis.</div><div><br/> DIT IS EEN GEWIJZIGDE CONCLUSIE (09-04-2024).</div><div>II.</div><div>Graad 3.</div><div><br/> Conclusie 1916</div></div>"
 * identifier[reportIdentifier]
-  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.23.1"
-  * value = "T24-61237"
+  * system = "urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1"
+  * value = "T24-01916"
 * basedOn = Reference(Pathology-Request-2-Smalhart) "Request for Histopathology test"
 * status = #final
 * category[pathology] = $SCT#108257001 "pathologisch-anatomische verrichting"

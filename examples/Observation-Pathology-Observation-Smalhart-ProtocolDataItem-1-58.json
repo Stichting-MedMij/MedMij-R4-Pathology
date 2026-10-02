@@ -18,29 +18,21 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "371491000",
-        "display": "Margin closest to tumor"
+        "code": "443527007",
+        "display": "aantal lymfeklieren aangedaan door maligniteit"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Margin closest to tumor<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: aantal lymfeklieren aangedaan door maligniteit<br/>Waarde: 18<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
     "display": "G. Smalhart"
   },
   "effectiveDateTime": "2026-06-14",
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "52101004",
-        "system": "http://snomed.info/sct",
-        "display": "aanwezig"
-      }
-    ]
-  },
+  "valueInteger": 18,
   "specimen": {
     "reference": "Specimen/Pathology-Specimen-1-Smalhart",
     "display": "Colon Resectie"

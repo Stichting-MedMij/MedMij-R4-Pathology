@@ -567,7 +567,7 @@ Usage: #example
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Observatie: grootste lengte van tumor in preparaat verkregen door resectie<br/>Waarde: 3.0 cm<br/>Patiënt: G. Olivander<br/>Monster: Colon Resectie</div>"
 * status = #final
-* code = $SCT#1597451000004100 "grootste lengte van tumor in preparaat verkregen door resectie"
+* code = $SCT#120001000004108 "grootste lengte van tumor in preparaat verkregen door resectie"
 * subject = Reference(Pathology-Patient-Olivander) "G. Olivander"
 * effectiveDateTime = "2026-02-03"
 * valueQuantity = 3.0 'cm'

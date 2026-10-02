@@ -23,7 +23,7 @@
 | --- | --- |
 | RequestIdentifier | T26-60065 (in identifier system 'urn:oid:2.16.840.1.113883.2.4.3.23.3.3.1') |
 | RequestType | normaal (code 'normaal' from code system 'MercuriusRequestType') |
-| HealthScreeningType | Geen bevolkingsonderzoek (code '0' from code system 'MercuriusHealthScreeningType') |
+| HealthScreeningType | Bevolkingsonderzoek (dikke)darmkanker (code '3' from code system 'MercuriusHealthScreeningType') |
 | Requester.RequesterName | P. Plijster |
 | Requester.Specialty | gastro-enterologie (code 'gastro-enterologie' from code system 'MercuriusSpecialty') |
 | Requester.Hospital | LUMC |
@@ -66,7 +66,7 @@
 | aantal slijmvliesbiopten (code '310991000146109' from code system 'SNOMED CT') | 1 slijmvliesbiopt | 1 |
 | consult (code '11429006' from code system 'SNOMED CT') | geen (Not performed) (code '262008008' from code system 'SNOMED CT') | 1 |
 | locatie van primaire tumor (code '399687005' from code system 'SNOMED CT') | flexura lienalis (code '72592005' from code system 'SNOMED CT') | 1 |
-| Bevinding (Histologic grade of primary malignant neoplasm) (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') | 1 |
+| histologische type van niet-eenduidig benigne afwijkend weefsel (code '1286790001' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') | 1 |
 
 ### Protocol data (sample 2)
 
@@ -76,4 +76,4 @@
 | aantal slijmvliesbiopten (code '310991000146109' from code system 'SNOMED CT') | 1 slijmvliesbiopt | 2 |
 | consult (code '11429006' from code system 'SNOMED CT') | geen (Not performed) (code '262008008' from code system 'SNOMED CT') | 2 |
 | locatie van primaire tumor (code '399687005' from code system 'SNOMED CT') | colon descendens (code '32622004' from code system 'SNOMED CT') | 2 |
-| Bevinding (Histologic grade of primary malignant neoplasm) (code '1850001000004102' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') | 2 |
+| histologische type van niet-eenduidig benigne afwijkend weefsel (code '1286790001' from code system 'SNOMED CT') | met laaggradige dysplasie (Low histologic grade) (code '1155708003' from code system 'SNOMED CT') | 2 |

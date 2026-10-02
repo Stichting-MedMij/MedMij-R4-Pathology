@@ -18,14 +18,14 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "450291000146104",
-        "display": "anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor"
+        "code": "371491000",
+        "display": "Margin closest to tumor"
       }
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: anatomische locatie van directe invasie door goed gedifferentieerde neuro-endocriene tumor<br/>Waarde: muscularis propria<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Observatie: Margin closest to tumor<br/>Waarde: aanwezig<br/>Patiënt: G. Smalhart<br/>Monster: Colon Resectie</div>"
   },
   "subject": {
     "reference": "Patient/Pathology-Patient-Smalhart",
@@ -35,9 +35,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "86915006",
+        "code": "52101004",
         "system": "http://snomed.info/sct",
-        "display": "muscularis propria"
+        "display": "aanwezig"
       }
     ]
   },
