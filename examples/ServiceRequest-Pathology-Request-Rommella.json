@@ -37,9 +37,9 @@
     {
       "coding": [
         {
-          "code": "0",
-          "system": "http://medmij.nl/fhir/CodeSystem/MercuriusHealthScreeningType",
-          "display": "Geen bevolkingsonderzoek"
+          "code": "159101000146108",
+          "system": "http://snomed.info/sct",
+          "display": "bevolkingsonderzoek darmkanker"
         }
       ]
     }

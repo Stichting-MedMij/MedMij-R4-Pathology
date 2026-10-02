@@ -105,7 +105,7 @@
     },
     {
       "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-1-5",
-      "display": "Sample 1, Bevinding"
+      "display": "Sample 1, histologische type van niet-eenduidig benigne afwijkend weefsel"
     },
     {
       "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-1",
@@ -125,7 +125,7 @@
     },
     {
       "reference": "Observation/Pathology-Observation-Rommella-ProtocolDataItem-2-5",
-      "display": "Sample 2, Bevinding"
+      "display": "Sample 2, histologische type van niet-eenduidig benigne afwijkend weefsel"
     },
     {
       "reference": "Observation/Pathology-Observation-Rommella-ClinicalInformation",
