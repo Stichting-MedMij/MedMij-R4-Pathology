@@ -22,15 +22,17 @@ In beide situaties is het laboratorium (of de zorgaanbieder namens het laborator
 De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Doelgroep) van de functionele onderwerpen binnen MedMij.
 
 ### Kaders en uitgangspunten
+
+#### Algemeen
 - De uitwisseling vindt plaats binnen het MedMij Afsprakenstelsel (authenticatie, autorisatie, logging, etc.).
 - De patiënt raadpleegt gegevens via een PGO dat aan MedMij-eisen voldoet.
 - De zorgaanbieder stelt pathologiegegevens beschikbaar via een zorginformatiesysteem (XIS).
 - Alleen definitieve/geautoriseerde pathologieverslagen worden uitgewisseld.
 
-### Richtlijn en proces
+#### Richtlijn en proces
 Dit ontwerp is conform specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele onderwerpen binnen MedMij.
 
-### Reikwijdte
+#### Reikwijdte
 De reikwijdte van dit ontwerp is:
 - de functionele beschrijving voor het verzamelen van pathologieverslagen door de patiënt via de PGO;
 - de {{pagelink: FO, text: functionele dataset, anchor: Dataset}} voor de uitwisseling van pathologieverslagen die voortkomen uit pathologieonderzoek;
@@ -39,12 +41,12 @@ De reikwijdte van dit ontwerp is:
 Buiten scope:
 - Het wijzigen van pathologieverslagen door de patiënt.
 
-### Infrastructuur
+#### Infrastructuur
 Voor het opvragen van pathologieverslagen bij de bronsystemen wordt gebruikgemaakt van de Palga-infrastructuur. Deze infrastructuur ondersteunt de ontsluiting van pathologiegegevens vanuit aangesloten bronsystemen (XIS), via de DVA richting de PGO. De DVA kan de relevante bron(nen) voor de patiënt benaderen via de Palga-keten.
 
 Daarnaast gelden de specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Infrastructuur) van de functionele ontwerpen binnen MedMij.
 
-### Geografische reikwijdte
+#### Geografische reikwijdte
 Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Geografische_reikwijdte) van de functionele onderwerpen binnen MedMij.
 
 ### Kwalificatie en testen
